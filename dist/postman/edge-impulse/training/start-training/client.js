@@ -1,0 +1,40 @@
+/**
+ * Start model training for an Edge Impulse project.
+ * @param apiKey - Edge Impulse API key
+ * @param req - Start training request
+ * @returns Training job info
+ */
+export async function startTraining(apiKey, req) {
+    const url = `https://studio.edgeimpulse.com/v1/api/${req.projectId}/jobs/train/keras/${req.learnId}`;
+    // Extract only training parameters for the body
+    const { projectId, learnId, ...body } = req;
+    if (!body.mode)
+        body.mode = 'visual';
+    const response = await fetch(url, {
+        method: "POST",
+        headers: {
+            "x-api-key": apiKey,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
+    });
+    if (response.ok) {
+        return (await response.json());
+    }
+    // Print full error response for debugging
+    const errorText = await response.text();
+    const errorInfo = {
+        status: response.status,
+        statusText: response.statusText,
+        headers: Object.fromEntries(response.headers.entries()),
+        body: errorText
+    };
+    console.error("Edge Impulse API error response:", JSON.stringify(errorInfo, null, 2));
+    try {
+        const error = JSON.parse(errorText);
+        throw new Error(`Edge Impulse API error: ${error.message}`);
+    }
+    catch {
+        throw new Error(`Edge Impulse API error: ${errorText}`);
+    }
+}

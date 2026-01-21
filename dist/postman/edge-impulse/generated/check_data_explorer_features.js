@@ -1,0 +1,18 @@
+/**
+ * t-SNE2 output of the raw dataset
+ * Method: GET
+ * URL: https://studio.edgeimpulse.com/api/:projectId/raw-data/data-explorer/has-features
+ */
+export async function check_data_explorer_features(params, apiKey) {
+    // TODO: Implement parameter mapping
+    const res = await fetch(`https://studio.edgeimpulse.com/api/:projectId/raw-data/data-explorer/has-features`, {
+        method: 'GET',
+        headers: {
+            'x-api-key': apiKey,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        },
+        // body: JSON.stringify(params), // Uncomment for POST/PUT
+    });
+    return res.json();
+}

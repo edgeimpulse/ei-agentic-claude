@@ -1,0 +1,18 @@
+import { list_public_versions } from '../list_public_versions.ts';
+export function addList_public_versionsCommand(program) {
+    program.command('list-public-versions')
+        .description('Auto-generated command for list_public_versions')
+        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .option('--params <params>', 'JSON string of parameters')
+        .action(async (opts) => {
+        try {
+            const params = opts.params ? JSON.parse(opts.params) : {};
+            const res = await list_public_versions(params, opts.apiKey);
+            console.log(JSON.stringify(res, null, 2));
+        }
+        catch (e) {
+            console.error(e);
+            process.exit(1);
+        }
+    });
+}
