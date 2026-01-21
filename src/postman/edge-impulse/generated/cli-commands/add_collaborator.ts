@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { add_collaborator } from '../add_collaborator.ts';
+import { add_collaborator } from '../add_collaborator.js';
 
 export function addAdd_collaboratorCommand(program: Command) {
   program.command('add-collaborator')
     .description('Auto-generated command for add_collaborator')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { remove_project } from '../remove_project.ts';
+import { remove_project } from '../remove_project.js';
 
 export function addRemove_projectCommand(program: Command) {
   program.command('remove-project')
     .description('Auto-generated command for remove_project')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {
