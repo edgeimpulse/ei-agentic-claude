@@ -43,7 +43,6 @@ npm run cli -- list-projects
 npm run cli -- start-training --projectId <id>
 ```
 
-<img width="576" height="613" alt="image" src="https://github.com/user-attachments/assets/23ee0cd9-9256-4f8b-a712-d4b9f13ff7d2" />
 
 
 ## How it works
