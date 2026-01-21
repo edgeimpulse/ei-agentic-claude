@@ -18,6 +18,13 @@ claude mcp add --transport http postman https://mcp.postman.com/code \
   --header "Authorization: Bearer YOUR_POSTMAN_API_KEY"
 ```
 
+<img width="1082" height="23" alt="image" src="https://github.com/user-attachments/assets/360f2bb6-0634-4621-be38-1e08b995bafa" />
+
+
+Confirm created with:
+<img width="1082" height="24" alt="image" src="https://github.com/user-attachments/assets/38604722-f9b2-4256-a382-c4ccbbda8a3d" />
+
+
 2. **Prompt your agent:**
 
 > Build a CLI that lists my Edge Impulse projects and starts a training job using the Edge Impulse API collection.
