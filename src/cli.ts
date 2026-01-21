@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import { Command } from "commander";
-import { listProjects } from "./postman/edge-impulse/projects/list-projects/client";
-import { uploadData } from "./postman/edge-impulse/projects/upload-data/client";
-import { startTraining } from "./postman/edge-impulse/training/start-training/client";
-import type { UploadDataRequest, StartTrainingRequest } from "./postman/edge-impulse/shared/types";
+import { listProjects } from "./postman/edge-impulse/projects/list-projects/client.ts";
+import { uploadData } from "./postman/edge-impulse/projects/upload-data/client.ts";
+import { startTraining } from "./postman/edge-impulse/training/start-training/client.ts";
+import type { UploadDataRequest, StartTrainingRequest } from "./postman/edge-impulse/shared/types.ts";
 
 const program = new Command();
 
@@ -50,9 +50,29 @@ program
   .description("Start model training for a project")
   .requiredOption("--apiKey <apiKey>", "Edge Impulse API key")
   .requiredOption("--projectId <projectId>", "Project ID")
+  .requiredOption("--learnId <learnId>", "Learn ID (model block ID)")
+  .option("--mode <mode>", "Training mode: visual or expert", "visual")
+  .option("--param <keyValue...>", "Additional training parameters as key=value pairs")
   .action(async (opts) => {
     try {
-      const req: StartTrainingRequest = { projectId: opts.projectId };
+      // Parse additional parameters
+      let extraParams = {};
+      if (opts.param) {
+        for (const pair of opts.param) {
+          const [key, value] = pair.split("=");
+          // Try to parse numbers and booleans
+          let parsed: any = value;
+          if (value === "true" || value === "false") parsed = value === "true";
+          else if (!isNaN(Number(value))) parsed = Number(value);
+          extraParams[key] = parsed;
+        }
+      }
+      const req: StartTrainingRequest = {
+        projectId: opts.projectId,
+        learnId: opts.learnId,
+        mode: opts.mode,
+        ...extraParams
+      };
       const res = await startTraining(opts.apiKey, req);
       console.log(JSON.stringify(res, null, 2));
     } catch (e) {

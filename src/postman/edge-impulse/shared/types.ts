@@ -23,6 +23,9 @@ export interface UploadDataResponse {
 
 export interface StartTrainingRequest {
   projectId: string;
+  learnId: string;
+  mode?: 'visual' | 'expert';
+  [key: string]: any; // Allow additional training parameters
 }
 
 export interface StartTrainingResponse {

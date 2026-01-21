@@ -1,0 +1,19 @@
+{
+  "name": "ei-agentic-claude",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/cli.ts",
+  "bin": {
+    "cli": "./src/cli.ts"
+  },
+  "scripts": {
+    "cli": "ts-node-esm src/cli.ts"
+  },
+  "dependencies": {
+    "commander": "^11.0.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0"
+  }
+}

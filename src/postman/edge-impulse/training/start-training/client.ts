@@ -5,6 +5,7 @@
  */
 import type { StartTrainingRequest, StartTrainingResponse, EdgeImpulseError } from "../../shared/types";
 
+
 /**
  * Start model training for an Edge Impulse project.
  * @param apiKey - Edge Impulse API key
@@ -12,18 +13,28 @@ import type { StartTrainingRequest, StartTrainingResponse, EdgeImpulseError } fr
  * @returns Training job info
  */
 export async function startTraining(apiKey: string, req: StartTrainingRequest): Promise<StartTrainingResponse> {
-  const url = `https://studio.edgeimpulse.com/v1/api/${req.projectId}/jobs/train`;
+  const url = `https://studio.edgeimpulse.com/v1/api/${req.projectId}/jobs/train/keras/${req.learnId}`;
+  // Extract only training parameters for the body
+  const { projectId, learnId, ...body } = req;
+  if (!body.mode) body.mode = 'visual';
   const response = await fetch(url, {
     method: "POST",
     headers: {
       "x-api-key": apiKey,
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({})
+    body: JSON.stringify(body)
   });
   if (response.ok) {
     return (await response.json()) as StartTrainingResponse;
   }
-  const error = (await response.json()) as EdgeImpulseError;
-  throw new Error(`Edge Impulse API error: ${error.message}`);
+  // Try to parse error as JSON, else print raw text
+  let errorText = await response.text();
+  try {
+    const error = JSON.parse(errorText) as EdgeImpulseError;
+    throw new Error(`Edge Impulse API error: ${error.message}`);
+  } catch {
+    throw new Error(`Edge Impulse API error: ${errorText}`);
+  }
 }
+
