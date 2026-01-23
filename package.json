@@ -11,9 +11,14 @@
     "build": "tsc && node scripts/fix-dist-imports.js",
     "build:tsc": "tsc",
     "test": "vitest",
-    "smoke": "node ./scripts/smoke-test.js"
+    "test:unittests": "node scripts/test-reporter.js",
+    "list-apis": "node scripts/list-apis.js",
+    "smoke": "node ./scripts/smoke-test.js",
+    "mcp-server": "node dist/mcp-server.js",
+    "test-mcp": "node scripts/test-mcp-simple.js"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.3",
     "commander": "^11.0.0"
   },
   "devDependencies": {

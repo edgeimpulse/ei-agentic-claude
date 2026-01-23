@@ -1,0 +1,17 @@
+# Claude Desktop Configuration for Edge Impulse MCP Server
+
+# This configuration allows Claude to connect to your Edge Impulse API MCP server
+# Save this as ~/Library/Application Support/Claude/claude_desktop_config.json on macOS
+
+{
+  "mcpServers": {
+    "edge-impulse": {
+      "command": "node",
+      "args": ["/Users/eoinjordan/git/ei-agentic-claude/dist/mcp-server.js"],
+      "cwd": "/Users/eoinjordan/git/ei-agentic-claude",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
