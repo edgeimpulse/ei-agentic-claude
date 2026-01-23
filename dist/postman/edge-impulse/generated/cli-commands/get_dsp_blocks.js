@@ -1,4 +1,4 @@
-import { get_dsp_blocks } from '../get_dsp_blocks';
+import { get_dsp_blocks } from '../get_dsp_blocks.js';
 export function addGet_dsp_blocksCommand(program) {
     program.command('get-dsp-blocks')
         .description('Auto-generated command for get_dsp_blocks')

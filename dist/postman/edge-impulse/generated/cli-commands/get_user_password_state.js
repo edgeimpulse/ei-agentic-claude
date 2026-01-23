@@ -1,4 +1,4 @@
-import { get_user_password_state } from '../get_user_password_state';
+import { get_user_password_state } from '../get_user_password_state.js';
 export function addGet_user_password_stateCommand(program) {
     program.command('get-user-password-state')
         .description('Auto-generated command for get_user_password_state')

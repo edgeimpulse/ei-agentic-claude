@@ -1,4 +1,4 @@
-import { move_multiple_samples } from '../move_multiple_samples';
+import { move_multiple_samples } from '../move_multiple_samples.js';
 export function addMove_multiple_samplesCommand(program) {
     program.command('move-multiple-samples')
         .description('Auto-generated command for move_multiple_samples')

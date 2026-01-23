@@ -1,4 +1,4 @@
-import { upload_organization_header_image } from '../upload_organization_header_image';
+import { upload_organization_header_image } from '../upload_organization_header_image.js';
 export function addUpload_organization_header_imageCommand(program) {
     program.command('upload-organization-header-image')
         .description('Auto-generated command for upload_organization_header_image')

@@ -1,4 +1,4 @@
-import { get_transformation_job_status } from '../get_transformation_job_status';
+import { get_transformation_job_status } from '../get_transformation_job_status.js';
 export function addGet_transformation_job_statusCommand(program) {
     program.command('get-transformation-job-status')
         .description('Auto-generated command for get_transformation_job_status')

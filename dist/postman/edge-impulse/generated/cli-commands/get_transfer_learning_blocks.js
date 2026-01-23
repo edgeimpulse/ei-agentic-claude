@@ -1,4 +1,4 @@
-import { get_transfer_learning_blocks } from '../get_transfer_learning_blocks';
+import { get_transfer_learning_blocks } from '../get_transfer_learning_blocks.js';
 export function addGet_transfer_learning_blocksCommand(program) {
     program.command('get-transfer-learning-blocks')
         .description('Auto-generated command for get_transfer_learning_blocks')

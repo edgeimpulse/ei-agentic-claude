@@ -1,4 +1,4 @@
-import { update_note } from '../update_note';
+import { update_note } from '../update_note.js';
 export function addUpdate_noteCommand(program) {
     program.command('update-note')
         .description('Auto-generated command for update_note')

@@ -1,4 +1,4 @@
-import { get_url_of_export } from '../get_url_of_export';
+import { get_url_of_export } from '../get_url_of_export.js';
 export function addGet_url_of_exportCommand(program) {
     program.command('get-url-of-export')
         .description('Auto-generated command for get_url_of_export')

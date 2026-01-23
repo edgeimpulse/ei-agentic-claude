@@ -1,4 +1,4 @@
-import { generate_data_explorer_features } from '../generate_data_explorer_features';
+import { generate_data_explorer_features } from '../generate_data_explorer_features.js';
 export function addGenerate_data_explorer_featuresCommand(program) {
     program.command('generate-data-explorer-features')
         .description('Auto-generated command for generate_data_explorer_features')

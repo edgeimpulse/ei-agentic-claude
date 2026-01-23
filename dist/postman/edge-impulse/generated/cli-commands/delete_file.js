@@ -1,4 +1,4 @@
-import { delete_file } from '../delete_file';
+import { delete_file } from '../delete_file.js';
 export function addDelete_fileCommand(program) {
     program.command('delete-file')
         .description('Auto-generated command for delete_file')

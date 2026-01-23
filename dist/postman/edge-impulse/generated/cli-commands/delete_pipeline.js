@@ -1,4 +1,4 @@
-import { delete_pipeline } from '../delete_pipeline';
+import { delete_pipeline } from '../delete_pipeline.js';
 export function addDelete_pipelineCommand(program) {
     program.command('delete-pipeline')
         .description('Auto-generated command for delete_pipeline')

@@ -1,4 +1,4 @@
-import { disable_multiple_samples } from '../disable_multiple_samples';
+import { disable_multiple_samples } from '../disable_multiple_samples.js';
 export function addDisable_multiple_samplesCommand(program) {
     program.command('disable-multiple-samples')
         .description('Auto-generated command for disable_multiple_samples')

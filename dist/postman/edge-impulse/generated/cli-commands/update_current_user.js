@@ -1,4 +1,4 @@
-import { update_current_user } from '../update_current_user';
+import { update_current_user } from '../update_current_user.js';
 export function addUpdate_current_userCommand(program) {
     program.command('update-current-user')
         .description('Auto-generated command for update_current_user')

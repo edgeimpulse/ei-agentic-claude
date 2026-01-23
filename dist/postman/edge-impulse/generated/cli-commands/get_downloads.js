@@ -1,4 +1,4 @@
-import { get_downloads } from '../get_downloads';
+import { get_downloads } from '../get_downloads.js';
 export function addGet_downloadsCommand(program) {
     program.command('get-downloads')
         .description('Auto-generated command for get_downloads')

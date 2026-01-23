@@ -1,4 +1,4 @@
-import { refresh_data } from '../refresh_data';
+import { refresh_data } from '../refresh_data.js';
 export function addRefresh_dataCommand(program) {
     program.command('refresh-data')
         .description('Auto-generated command for refresh_data')

@@ -1,4 +1,4 @@
-import { get_data_explorer_settings } from '../get_data_explorer_settings';
+import { get_data_explorer_settings } from '../get_data_explorer_settings.js';
 export function addGet_data_explorer_settingsCommand(program) {
     program.command('get-data-explorer-settings')
         .description('Auto-generated command for get_data_explorer_settings')

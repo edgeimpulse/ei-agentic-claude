@@ -1,4 +1,4 @@
-import { resend_invitation } from '../resend_invitation';
+import { resend_invitation } from '../resend_invitation.js';
 export function addResend_invitationCommand(program) {
     program.command('resend-invitation')
         .description('Auto-generated command for resend_invitation')

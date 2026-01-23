@@ -1,4 +1,4 @@
-import { list_archived_pipelines } from '../list_archived_pipelines';
+import { list_archived_pipelines } from '../list_archived_pipelines.js';
 export function addList_archived_pipelinesCommand(program) {
     program.command('list-archived-pipelines')
         .description('Auto-generated command for list_archived_pipelines')

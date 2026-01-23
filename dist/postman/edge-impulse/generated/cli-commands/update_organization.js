@@ -1,4 +1,4 @@
-import { update_organization } from '../update_organization';
+import { update_organization } from '../update_organization.js';
 export function addUpdate_organizationCommand(program) {
     program.command('update-organization')
         .description('Auto-generated command for update_organization')

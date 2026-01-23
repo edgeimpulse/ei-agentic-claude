@@ -1,4 +1,4 @@
-import { find_segments } from '../find_segments';
+import { find_segments } from '../find_segments.js';
 export function addFind_segmentsCommand(program) {
     program.command('find-segments')
         .description('Auto-generated command for find_segments')

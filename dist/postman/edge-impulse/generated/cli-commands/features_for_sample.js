@@ -1,4 +1,4 @@
-import { features_for_sample } from '../features_for_sample';
+import { features_for_sample } from '../features_for_sample.js';
 export function addFeatures_for_sampleCommand(program) {
     program.command('features-for-sample')
         .description('Auto-generated command for features_for_sample')

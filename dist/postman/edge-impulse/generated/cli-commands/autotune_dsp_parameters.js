@@ -1,4 +1,4 @@
-import { autotune_dsp_parameters } from '../autotune_dsp_parameters';
+import { autotune_dsp_parameters } from '../autotune_dsp_parameters.js';
 export function addAutotune_dsp_parametersCommand(program) {
     program.command('autotune-dsp-parameters')
         .description('Auto-generated command for autotune_dsp_parameters')

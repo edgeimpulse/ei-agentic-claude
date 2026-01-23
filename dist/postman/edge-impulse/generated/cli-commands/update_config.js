@@ -1,4 +1,4 @@
-import { update_config } from '../update_config';
+import { update_config } from '../update_config.js';
 export function addUpdate_configCommand(program) {
     program.command('update-config')
         .description('Auto-generated command for update_config')

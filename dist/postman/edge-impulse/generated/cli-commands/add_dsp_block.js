@@ -1,4 +1,4 @@
-import { add_dsp_block } from '../add_dsp_block';
+import { add_dsp_block } from '../add_dsp_block.js';
 export function addAdd_dsp_blockCommand(program) {
     program.command('add-dsp-block')
         .description('Auto-generated command for add_dsp_block')

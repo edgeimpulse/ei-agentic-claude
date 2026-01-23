@@ -1,4 +1,4 @@
-import { get_raw_result } from '../get_raw_result';
+import { get_raw_result } from '../get_raw_result.js';
 export function addGet_raw_resultCommand(program) {
     program.command('get-raw-result')
         .description('Auto-generated command for get_raw_result')

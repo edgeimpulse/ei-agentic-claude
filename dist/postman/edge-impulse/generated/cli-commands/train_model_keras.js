@@ -1,4 +1,4 @@
-import { train_model_keras } from '../train_model_keras';
+import { train_model_keras } from '../train_model_keras.js';
 export function addTrain_model_kerasCommand(program) {
     program.command('train-model-keras')
         .description('Auto-generated command for train_model_keras')

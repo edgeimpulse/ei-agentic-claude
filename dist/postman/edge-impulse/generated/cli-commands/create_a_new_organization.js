@@ -1,4 +1,4 @@
-import { create_a_new_organization } from '../create_a_new_organization';
+import { create_a_new_organization } from '../create_a_new_organization.js';
 export function addCreate_a_new_organizationCommand(program) {
     program.command('create-a-new-organization')
         .description('Auto-generated command for create_a_new_organization')

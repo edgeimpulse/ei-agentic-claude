@@ -1,4 +1,4 @@
-import { retrieve_upload_portal_information } from '../retrieve_upload_portal_information';
+import { retrieve_upload_portal_information } from '../retrieve_upload_portal_information.js';
 export function addRetrieve_upload_portal_informationCommand(program) {
     program.command('retrieve-upload-portal-information')
         .description('Auto-generated command for retrieve_upload_portal_information')

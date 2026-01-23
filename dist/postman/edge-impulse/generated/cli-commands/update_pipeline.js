@@ -1,4 +1,4 @@
-import { update_pipeline } from '../update_pipeline';
+import { update_pipeline } from '../update_pipeline.js';
 export function addUpdate_pipelineCommand(program) {
     program.command('update-pipeline')
         .description('Auto-generated command for update_pipeline')

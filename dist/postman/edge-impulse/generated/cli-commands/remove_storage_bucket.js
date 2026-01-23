@@ -1,4 +1,4 @@
-import { remove_storage_bucket } from '../remove_storage_bucket';
+import { remove_storage_bucket } from '../remove_storage_bucket.js';
 export function addRemove_storage_bucketCommand(program) {
     program.command('remove-storage-bucket')
         .description('Auto-generated command for remove_storage_bucket')

@@ -1,4 +1,4 @@
-import { create_device } from '../create_device';
+import { create_device } from '../create_device.js';
 export function addCreate_deviceCommand(program) {
     program.command('create-device')
         .description('Auto-generated command for create_device')

@@ -1,4 +1,4 @@
-import { clear_performance_calibration_parameters } from '../clear_performance_calibration_parameters';
+import { clear_performance_calibration_parameters } from '../clear_performance_calibration_parameters.js';
 export function addClear_performance_calibration_parametersCommand(program) {
     program.command('clear-performance-calibration-parameters')
         .description('Auto-generated command for clear_performance_calibration_parameters')

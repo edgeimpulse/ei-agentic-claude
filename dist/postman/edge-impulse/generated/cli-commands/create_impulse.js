@@ -1,4 +1,4 @@
-import { create_impulse } from '../create_impulse';
+import { create_impulse } from '../create_impulse.js';
 export function addCreate_impulseCommand(program) {
     program.command('create-impulse')
         .description('Auto-generated command for create_impulse')

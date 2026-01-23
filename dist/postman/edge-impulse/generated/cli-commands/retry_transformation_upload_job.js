@@ -1,4 +1,4 @@
-import { retry_transformation_upload_job } from '../retry_transformation_upload_job';
+import { retry_transformation_upload_job } from '../retry_transformation_upload_job.js';
 export function addRetry_transformation_upload_jobCommand(program) {
     program.command('retry-transformation-upload-job')
         .description('Auto-generated command for retry_transformation_upload_job')

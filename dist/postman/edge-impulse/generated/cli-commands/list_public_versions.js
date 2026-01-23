@@ -1,4 +1,4 @@
-import { list_public_versions } from '../list_public_versions';
+import { list_public_versions } from '../list_public_versions.js';
 export function addList_public_versionsCommand(program) {
     program.command('list-public-versions')
         .description('Auto-generated command for list_public_versions')

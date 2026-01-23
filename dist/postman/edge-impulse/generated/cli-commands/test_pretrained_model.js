@@ -1,4 +1,4 @@
-import { test_pretrained_model } from '../test_pretrained_model';
+import { test_pretrained_model } from '../test_pretrained_model.js';
 export function addTest_pretrained_modelCommand(program) {
     program.command('test-pretrained-model')
         .description('Auto-generated command for test_pretrained_model')

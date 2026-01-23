@@ -1,4 +1,4 @@
-import { delete_versions } from '../delete_versions';
+import { delete_versions } from '../delete_versions.js';
 export function addDelete_versionsCommand(program) {
     program.command('delete-versions')
         .description('Auto-generated command for delete_versions')

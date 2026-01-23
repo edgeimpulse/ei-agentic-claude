@@ -1,4 +1,4 @@
-import { get_the_interval_in_ms_of_the_training_data } from '../get_the_interval_in_ms_of_the_training_data';
+import { get_the_interval_in_ms_of_the_training_data } from '../get_the_interval_in_ms_of_the_training_data.js';
 export function addGet_the_interval_in_ms_of_the_training_dataCommand(program) {
     program.command('get-the-interval-in-ms-of-the-training-data')
         .description('Auto-generated command for get_the_interval_in_ms_of_the_training_data')

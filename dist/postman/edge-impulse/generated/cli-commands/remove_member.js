@@ -1,4 +1,4 @@
-import { remove_member } from '../remove_member';
+import { remove_member } from '../remove_member.js';
 export function addRemove_memberCommand(program) {
     program.command('remove-member')
         .description('Auto-generated command for remove_member')

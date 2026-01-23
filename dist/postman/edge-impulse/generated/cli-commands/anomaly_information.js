@@ -1,4 +1,4 @@
-import { anomaly_information } from '../anomaly_information';
+import { anomaly_information } from '../anomaly_information.js';
 export function addAnomaly_informationCommand(program) {
     program.command('anomaly-information')
         .description('Auto-generated command for anomaly_information')

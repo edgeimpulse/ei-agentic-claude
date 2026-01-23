@@ -1,4 +1,4 @@
-import { update_dataset } from '../update_dataset';
+import { update_dataset } from '../update_dataset.js';
 export function addUpdate_datasetCommand(program) {
     program.command('update-dataset')
         .description('Auto-generated command for update_dataset')

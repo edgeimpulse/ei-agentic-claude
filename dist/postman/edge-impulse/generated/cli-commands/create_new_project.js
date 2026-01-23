@@ -1,4 +1,4 @@
-import { create_new_project } from '../create_new_project';
+import { create_new_project } from '../create_new_project.js';
 export function addCreate_new_projectCommand(program) {
     program.command('create-new-project')
         .description('Auto-generated command for create_new_project')

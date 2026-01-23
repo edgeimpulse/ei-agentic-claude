@@ -1,4 +1,4 @@
-import { list_versions } from '../list_versions';
+import { list_versions } from '../list_versions.js';
 export function addList_versionsCommand(program) {
     program.command('list-versions')
         .description('Auto-generated command for list_versions')

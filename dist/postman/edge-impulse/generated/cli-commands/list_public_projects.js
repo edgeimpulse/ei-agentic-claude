@@ -1,4 +1,4 @@
-import { list_public_projects } from '../list_public_projects';
+import { list_public_projects } from '../list_public_projects.js';
 export function addList_public_projectsCommand(program) {
     program.command('list-public-projects')
         .description('Auto-generated command for list_public_projects')

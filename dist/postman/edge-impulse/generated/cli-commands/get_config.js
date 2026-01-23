@@ -1,4 +1,4 @@
-import { get_config } from '../get_config';
+import { get_config } from '../get_config.js';
 export function addGet_configCommand(program) {
     program.command('get-config')
         .description('Auto-generated command for get_config')

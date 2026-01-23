@@ -1,4 +1,4 @@
-import { deployment_targets_data_sources } from '../deployment_targets_data_sources';
+import { deployment_targets_data_sources } from '../deployment_targets_data_sources.js';
 export function addDeployment_targets_data_sourcesCommand(program) {
     program.command('deployment-targets-data-sources')
         .description('Auto-generated command for deployment_targets_data_sources')

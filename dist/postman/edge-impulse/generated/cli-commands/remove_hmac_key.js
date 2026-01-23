@@ -1,4 +1,4 @@
-import { remove_hmac_key } from '../remove_hmac_key';
+import { remove_hmac_key } from '../remove_hmac_key.js';
 export function addRemove_hmac_keyCommand(program) {
     program.command('remove-hmac-key')
         .description('Auto-generated command for remove_hmac_key')

@@ -1,4 +1,4 @@
-import { get_ground_truth } from '../get_ground_truth';
+import { get_ground_truth } from '../get_ground_truth.js';
 export function addGet_ground_truthCommand(program) {
     program.command('get-ground-truth')
         .description('Auto-generated command for get_ground_truth')

@@ -1,4 +1,4 @@
-import { create_trial } from '../create_trial';
+import { create_trial } from '../create_trial.js';
 export function addCreate_trialCommand(program) {
     program.command('create-trial')
         .description('Auto-generated command for create_trial')

@@ -1,4 +1,4 @@
-import { get_sample } from '../get_sample';
+import { get_sample } from '../get_sample.js';
 export function addGet_sampleCommand(program) {
     program.command('get-sample')
         .description('Auto-generated command for get_sample')

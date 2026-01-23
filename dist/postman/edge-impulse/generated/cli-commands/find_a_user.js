@@ -1,4 +1,4 @@
-import { find_a_user } from '../find_a_user';
+import { find_a_user } from '../find_a_user.js';
 export function addFind_a_userCommand(program) {
     program.command('find-a-user')
         .description('Auto-generated command for find_a_user')

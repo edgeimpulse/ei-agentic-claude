@@ -1,4 +1,4 @@
-import { verify_bucket_connectivity } from '../verify_bucket_connectivity';
+import { verify_bucket_connectivity } from '../verify_bucket_connectivity.js';
 export function addVerify_bucket_connectivityCommand(program) {
     program.command('verify-bucket-connectivity')
         .description('Auto-generated command for verify_bucket_connectivity')

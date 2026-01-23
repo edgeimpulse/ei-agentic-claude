@@ -1,4 +1,4 @@
-import { create_pipeline } from '../create_pipeline';
+import { create_pipeline } from '../create_pipeline.js';
 export function addCreate_pipelineCommand(program) {
     program.command('create-pipeline')
         .description('Auto-generated command for create_pipeline')

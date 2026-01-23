@@ -1,4 +1,4 @@
-import { delete_photo } from '../delete_photo';
+import { delete_photo } from '../delete_photo.js';
 export function addDelete_photoCommand(program) {
     program.command('delete-photo')
         .description('Auto-generated command for delete_photo')

@@ -1,4 +1,4 @@
-import { save_parameters_for_pretrained_model } from '../save_parameters_for_pretrained_model';
+import { save_parameters_for_pretrained_model } from '../save_parameters_for_pretrained_model.js';
 export function addSave_parameters_for_pretrained_modelCommand(program) {
     program.command('save-parameters-for-pretrained-model')
         .description('Auto-generated command for save_parameters_for_pretrained_model')

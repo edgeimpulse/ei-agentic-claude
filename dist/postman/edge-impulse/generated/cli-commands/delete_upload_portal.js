@@ -1,4 +1,4 @@
-import { delete_upload_portal } from '../delete_upload_portal';
+import { delete_upload_portal } from '../delete_upload_portal.js';
 export function addDelete_upload_portalCommand(program) {
     program.command('delete-upload-portal')
         .description('Auto-generated command for delete_upload_portal')

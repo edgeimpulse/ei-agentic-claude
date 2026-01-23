@@ -1,4 +1,4 @@
-import { delete_create_project_file } from '../delete_create_project_file';
+import { delete_create_project_file } from '../delete_create_project_file.js';
 export function addDelete_create_project_fileCommand(program) {
     program.command('delete-create-project-file')
         .description('Auto-generated command for delete_create_project_file')

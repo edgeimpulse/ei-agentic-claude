@@ -1,4 +1,4 @@
-import { set_config } from '../set_config';
+import { set_config } from '../set_config.js';
 export function addSet_configCommand(program) {
     program.command('set-config')
         .description('Auto-generated command for set_config')

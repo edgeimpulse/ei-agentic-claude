@@ -1,4 +1,4 @@
-import { remove_project } from '../remove_project';
+import { remove_project } from '../remove_project.js';
 export function addRemove_projectCommand(program) {
     program.command('remove-project')
         .description('Auto-generated command for remove_project')

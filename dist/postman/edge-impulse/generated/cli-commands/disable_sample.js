@@ -1,4 +1,4 @@
-import { disable_sample } from '../disable_sample';
+import { disable_sample } from '../disable_sample.js';
 export function addDisable_sampleCommand(program) {
     program.command('disable-sample')
         .description('Auto-generated command for disable_sample')

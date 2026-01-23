@@ -1,4 +1,4 @@
-import { list_samples } from '../list_samples';
+import { list_samples } from '../list_samples.js';
 export function addList_samplesCommand(program) {
     program.command('list-samples')
         .description('Auto-generated command for list_samples')

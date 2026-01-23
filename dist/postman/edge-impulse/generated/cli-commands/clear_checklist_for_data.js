@@ -1,4 +1,4 @@
-import { clear_checklist_for_data } from '../clear_checklist_for_data';
+import { clear_checklist_for_data } from '../clear_checklist_for_data.js';
 export function addClear_checklist_for_dataCommand(program) {
     program.command('clear-checklist-for-data')
         .description('Auto-generated command for clear_checklist_for_data')

@@ -1,4 +1,4 @@
-import { keras_metadata } from '../keras_metadata';
+import { keras_metadata } from '../keras_metadata.js';
 export function addKeras_metadataCommand(program) {
     program.command('keras-metadata')
         .description('Auto-generated command for keras_metadata')

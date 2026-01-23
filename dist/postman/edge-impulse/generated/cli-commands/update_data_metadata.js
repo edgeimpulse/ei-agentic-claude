@@ -1,4 +1,4 @@
-import { update_data_metadata } from '../update_data_metadata';
+import { update_data_metadata } from '../update_data_metadata.js';
 export function addUpdate_data_metadataCommand(program) {
     program.command('update-data-metadata')
         .description('Auto-generated command for update_data_metadata')

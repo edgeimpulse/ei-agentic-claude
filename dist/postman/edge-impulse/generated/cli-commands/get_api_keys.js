@@ -1,4 +1,4 @@
-import { get_api_keys } from '../get_api_keys';
+import { get_api_keys } from '../get_api_keys.js';
 export function addGet_api_keysCommand(program) {
     program.command('get-api-keys')
         .description('Auto-generated command for get_api_keys')

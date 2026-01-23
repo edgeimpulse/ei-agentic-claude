@@ -1,4 +1,4 @@
-import { rename } from '../rename';
+import { rename } from '../rename.js';
 export function addRenameCommand(program) {
     program.command('rename')
         .description('Auto-generated command for rename')

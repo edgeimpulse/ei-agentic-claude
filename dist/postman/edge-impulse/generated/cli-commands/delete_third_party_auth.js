@@ -1,4 +1,4 @@
-import { delete_third_party_auth } from '../delete_third_party_auth';
+import { delete_third_party_auth } from '../delete_third_party_auth.js';
 export function addDelete_third_party_authCommand(program) {
     program.command('delete-third-party-auth')
         .description('Auto-generated command for delete_third_party_auth')

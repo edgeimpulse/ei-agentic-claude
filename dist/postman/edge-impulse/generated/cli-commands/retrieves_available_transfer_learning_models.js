@@ -1,4 +1,4 @@
-import { retrieves_available_transfer_learning_models } from '../retrieves_available_transfer_learning_models';
+import { retrieves_available_transfer_learning_models } from '../retrieves_available_transfer_learning_models.js';
 export function addRetrieves_available_transfer_learning_modelsCommand(program) {
     program.command('retrieves-available-transfer-learning-models')
         .description('Auto-generated command for retrieves_available_transfer_learning_models')

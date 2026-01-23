@@ -1,4 +1,4 @@
-import { make_a_version_public } from '../make_a_version_public';
+import { make_a_version_public } from '../make_a_version_public.js';
 export function addMake_a_version_publicCommand(program) {
     program.command('make-a-version-public')
         .description('Auto-generated command for make_a_version_public')

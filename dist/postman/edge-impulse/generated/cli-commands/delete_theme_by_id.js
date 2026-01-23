@@ -1,4 +1,4 @@
-import { delete_theme_by_id } from '../delete_theme_by_id';
+import { delete_theme_by_id } from '../delete_theme_by_id.js';
 export function addDelete_theme_by_idCommand(program) {
     program.command('delete-theme-by-id')
         .description('Auto-generated command for delete_theme_by_id')

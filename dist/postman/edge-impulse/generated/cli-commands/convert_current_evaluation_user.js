@@ -1,4 +1,4 @@
-import { convert_current_evaluation_user } from '../convert_current_evaluation_user';
+import { convert_current_evaluation_user } from '../convert_current_evaluation_user.js';
 export function addConvert_current_evaluation_userCommand(program) {
     program.command('convert-current-evaluation-user')
         .description('Auto-generated command for convert_current_evaluation_user')

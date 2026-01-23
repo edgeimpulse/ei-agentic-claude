@@ -1,4 +1,4 @@
-import { get_all_user_ids_active_last_30_days } from '../get_all_user_ids_active_last_30_days';
+import { get_all_user_ids_active_last_30_days } from '../get_all_user_ids_active_last_30_days.js';
 export function addGet_all_user_ids_active_last_30_daysCommand(program) {
     program.command('get-all-user-ids-active-last-30-days')
         .description('Auto-generated command for get_all_user_ids_active_last_30_days')

@@ -1,4 +1,4 @@
-import { list_storage_buckets } from '../list_storage_buckets';
+import { list_storage_buckets } from '../list_storage_buckets.js';
 export function addList_storage_bucketsCommand(program) {
     program.command('list-storage-buckets')
         .description('Auto-generated command for list_storage_buckets')

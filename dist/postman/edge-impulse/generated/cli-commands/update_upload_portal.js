@@ -1,4 +1,4 @@
-import { update_upload_portal } from '../update_upload_portal';
+import { update_upload_portal } from '../update_upload_portal.js';
 export function addUpdate_upload_portalCommand(program) {
     program.command('update-upload-portal')
         .description('Auto-generated command for update_upload_portal')

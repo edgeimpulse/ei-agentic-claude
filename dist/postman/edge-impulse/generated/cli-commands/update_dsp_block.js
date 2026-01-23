@@ -1,4 +1,4 @@
-import { update_dsp_block } from '../update_dsp_block';
+import { update_dsp_block } from '../update_dsp_block.js';
 export function addUpdate_dsp_blockCommand(program) {
     program.command('update-dsp-block')
         .description('Auto-generated command for update_dsp_block')

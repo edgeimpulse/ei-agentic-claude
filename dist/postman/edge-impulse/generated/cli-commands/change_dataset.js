@@ -1,4 +1,4 @@
-import { change_dataset } from '../change_dataset';
+import { change_dataset } from '../change_dataset.js';
 export function addChange_datasetCommand(program) {
     program.command('change-dataset')
         .description('Auto-generated command for change_dataset')

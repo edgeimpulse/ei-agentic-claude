@@ -1,4 +1,4 @@
-import { get_current_user } from '../get_current_user';
+import { get_current_user } from '../get_current_user.js';
 export function addGet_current_userCommand(program) {
     program.command('get-current-user')
         .description('Auto-generated command for get_current_user')

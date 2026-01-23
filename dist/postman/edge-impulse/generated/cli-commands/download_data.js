@@ -1,4 +1,4 @@
-import { download_data } from '../download_data';
+import { download_data } from '../download_data.js';
 export function addDownload_dataCommand(program) {
     program.command('download-data')
         .description('Auto-generated command for download_data')

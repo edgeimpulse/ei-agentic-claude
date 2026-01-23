@@ -1,4 +1,4 @@
-import { list_upload_portals } from '../list_upload_portals';
+import { list_upload_portals } from '../list_upload_portals.js';
 export function addList_upload_portalsCommand(program) {
     program.command('list-upload-portals')
         .description('Auto-generated command for list_upload_portals')

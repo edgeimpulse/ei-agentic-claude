@@ -1,4 +1,4 @@
-import { create_third_party_auth } from '../create_third_party_auth';
+import { create_third_party_auth } from '../create_third_party_auth.js';
 export function addCreate_third_party_authCommand(program) {
     program.command('create-third-party-auth')
         .description('Auto-generated command for create_third_party_auth')

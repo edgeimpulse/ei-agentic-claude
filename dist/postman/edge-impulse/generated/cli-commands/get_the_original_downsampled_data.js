@@ -1,4 +1,4 @@
-import { get_the_original_downsampled_data } from '../get_the_original_downsampled_data';
+import { get_the_original_downsampled_data } from '../get_the_original_downsampled_data.js';
 export function addGet_the_original_downsampled_dataCommand(program) {
     program.command('get-the-original-downsampled-data')
         .description('Auto-generated command for get_the_original_downsampled_data')

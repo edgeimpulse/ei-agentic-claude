@@ -1,4 +1,4 @@
-import { set_password_for_sso_user } from '../set_password_for_sso_user';
+import { set_password_for_sso_user } from '../set_password_for_sso_user.js';
 export function addSet_password_for_sso_userCommand(program) {
     program.command('set-password-for-sso-user')
         .description('Auto-generated command for set_password_for_sso_user')

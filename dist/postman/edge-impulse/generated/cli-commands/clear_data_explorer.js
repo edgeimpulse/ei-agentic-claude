@@ -1,4 +1,4 @@
-import { clear_data_explorer } from '../clear_data_explorer';
+import { clear_data_explorer } from '../clear_data_explorer.js';
 export function addClear_data_explorerCommand(program) {
     program.command('clear-data-explorer')
         .description('Auto-generated command for clear_data_explorer')

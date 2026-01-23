@@ -1,4 +1,4 @@
-import { white_label_information } from '../white_label_information';
+import { white_label_information } from '../white_label_information.js';
 export function addWhite_label_informationCommand(program) {
     program.command('white-label-information')
         .description('Auto-generated command for white_label_information')

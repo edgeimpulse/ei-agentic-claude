@@ -1,4 +1,4 @@
-import { list_active_projects } from '../list_active_projects';
+import { list_active_projects } from '../list_active_projects.js';
 export function addList_active_projectsCommand(program) {
     program.command('list-active-projects')
         .description('Auto-generated command for list_active_projects')

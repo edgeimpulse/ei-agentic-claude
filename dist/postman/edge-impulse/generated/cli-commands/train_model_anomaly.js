@@ -1,4 +1,4 @@
-import { train_model_anomaly } from '../train_model_anomaly';
+import { train_model_anomaly } from '../train_model_anomaly.js';
 export function addTrain_model_anomalyCommand(program) {
     program.command('train-model-anomaly')
         .description('Auto-generated command for train_model_anomaly')

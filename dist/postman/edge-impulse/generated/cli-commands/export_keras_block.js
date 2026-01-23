@@ -1,4 +1,4 @@
-import { export_keras_block } from '../export_keras_block';
+import { export_keras_block } from '../export_keras_block.js';
 export function addExport_keras_blockCommand(program) {
     program.command('export-keras-block')
         .description('Auto-generated command for export_keras_block')

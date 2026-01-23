@@ -1,4 +1,4 @@
-import { get_data_axes_summary } from '../get_data_axes_summary';
+import { get_data_axes_summary } from '../get_data_axes_summary.js';
 export function addGet_data_axes_summaryCommand(program) {
     program.command('get-data-axes-summary')
         .description('Auto-generated command for get_data_axes_summary')

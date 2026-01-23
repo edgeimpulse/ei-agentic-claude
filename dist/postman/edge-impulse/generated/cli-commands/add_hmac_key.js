@@ -1,4 +1,4 @@
-import { add_hmac_key } from '../add_hmac_key';
+import { add_hmac_key } from '../add_hmac_key.js';
 export function addAdd_hmac_keyCommand(program) {
     program.command('add-hmac-key')
         .description('Auto-generated command for add_hmac_key')

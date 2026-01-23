@@ -1,4 +1,4 @@
-import { retry_connection_to_dsp_block } from '../retry_connection_to_dsp_block';
+import { retry_connection_to_dsp_block } from '../retry_connection_to_dsp_block.js';
 export function addRetry_connection_to_dsp_blockCommand(program) {
     program.command('retry-connection-to-dsp-block')
         .description('Auto-generated command for retry_connection_to_dsp_block')

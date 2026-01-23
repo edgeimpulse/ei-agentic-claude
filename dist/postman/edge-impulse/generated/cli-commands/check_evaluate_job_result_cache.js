@@ -1,4 +1,4 @@
-import { check_evaluate_job_result_cache } from '../check_evaluate_job_result_cache';
+import { check_evaluate_job_result_cache } from '../check_evaluate_job_result_cache.js';
 export function addCheck_evaluate_job_result_cacheCommand(program) {
     program.command('check-evaluate-job-result-cache')
         .description('Auto-generated command for check_evaluate_job_result_cache')

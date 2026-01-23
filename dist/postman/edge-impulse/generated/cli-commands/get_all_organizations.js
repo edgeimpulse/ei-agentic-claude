@@ -1,4 +1,4 @@
-import { get_all_organizations } from '../get_all_organizations';
+import { get_all_organizations } from '../get_all_organizations.js';
 export function addGet_all_organizationsCommand(program) {
     program.command('get-all-organizations')
         .description('Auto-generated command for get_all_organizations')

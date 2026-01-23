@@ -1,4 +1,4 @@
-import { retry_processing } from '../retry_processing';
+import { retry_processing } from '../retry_processing.js';
 export function addRetry_processingCommand(program) {
     program.command('retry-processing')
         .description('Auto-generated command for retry_processing')

@@ -1,4 +1,4 @@
-import { list_transformation_jobs } from '../list_transformation_jobs';
+import { list_transformation_jobs } from '../list_transformation_jobs.js';
 export function addList_transformation_jobsCommand(program) {
     program.command('list-transformation-jobs')
         .description('Auto-generated command for list_transformation_jobs')

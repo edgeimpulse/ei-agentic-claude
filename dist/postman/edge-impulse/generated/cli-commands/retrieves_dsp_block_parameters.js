@@ -1,4 +1,4 @@
-import { retrieves_dsp_block_parameters } from '../retrieves_dsp_block_parameters';
+import { retrieves_dsp_block_parameters } from '../retrieves_dsp_block_parameters.js';
 export function addRetrieves_dsp_block_parametersCommand(program) {
     program.command('retrieves-dsp-block-parameters')
         .description('Auto-generated command for retrieves_dsp_block_parameters')

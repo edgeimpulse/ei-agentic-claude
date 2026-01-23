@@ -1,4 +1,4 @@
-import { admin_endpoint } from '../admin_endpoint';
+import { admin_endpoint } from '../admin_endpoint.js';
 export function addAdmin_endpointCommand(program) {
     program.command('admin-endpoint')
         .description('Auto-generated command for admin_endpoint')

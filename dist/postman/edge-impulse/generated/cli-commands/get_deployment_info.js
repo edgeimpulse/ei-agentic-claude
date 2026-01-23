@@ -1,4 +1,4 @@
-import { get_deployment_info } from '../get_deployment_info';
+import { get_deployment_info } from '../get_deployment_info.js';
 export function addGet_deployment_infoCommand(program) {
     program.command('get-deployment-info')
         .description('Auto-generated command for get_deployment_info')

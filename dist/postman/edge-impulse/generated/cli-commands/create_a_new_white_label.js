@@ -1,4 +1,4 @@
-import { create_a_new_white_label } from '../create_a_new_white_label';
+import { create_a_new_white_label } from '../create_a_new_white_label.js';
 export function addCreate_a_new_white_labelCommand(program) {
     program.command('create-a-new-white-label')
         .description('Auto-generated command for create_a_new_white_label')

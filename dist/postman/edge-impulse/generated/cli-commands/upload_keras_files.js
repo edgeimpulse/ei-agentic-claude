@@ -1,4 +1,4 @@
-import { upload_keras_files } from '../upload_keras_files';
+import { upload_keras_files } from '../upload_keras_files.js';
 export function addUpload_keras_filesCommand(program) {
     program.command('upload-keras-files')
         .description('Auto-generated command for upload_keras_files')

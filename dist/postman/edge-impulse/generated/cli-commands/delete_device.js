@@ -1,4 +1,4 @@
-import { delete_device } from '../delete_device';
+import { delete_device } from '../delete_device.js';
 export function addDelete_deviceCommand(program) {
     program.command('delete-device')
         .description('Auto-generated command for delete_device')

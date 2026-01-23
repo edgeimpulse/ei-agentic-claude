@@ -1,4 +1,4 @@
-import { deletes_a_white_label } from '../deletes_a_white_label';
+import { deletes_a_white_label } from '../deletes_a_white_label.js';
 export function addDeletes_a_white_labelCommand(program) {
     program.command('deletes-a-white-label')
         .description('Auto-generated command for deletes_a_white_label')

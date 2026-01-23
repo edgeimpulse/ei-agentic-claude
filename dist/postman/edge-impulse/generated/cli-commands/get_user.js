@@ -1,4 +1,4 @@
-import { get_user } from '../get_user';
+import { get_user } from '../get_user.js';
 export function addGet_userCommand(program) {
     program.command('get-user')
         .description('Auto-generated command for get_user')

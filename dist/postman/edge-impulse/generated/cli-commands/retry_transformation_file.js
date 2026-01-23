@@ -1,4 +1,4 @@
-import { retry_transformation_file } from '../retry_transformation_file';
+import { retry_transformation_file } from '../retry_transformation_file.js';
 export function addRetry_transformation_fileCommand(program) {
     program.command('retry-transformation-file')
         .description('Auto-generated command for retry_transformation_file')

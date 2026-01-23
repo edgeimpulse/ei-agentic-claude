@@ -1,4 +1,4 @@
-import { add_secret } from '../add_secret';
+import { add_secret } from '../add_secret.js';
 export function addAdd_secretCommand(program) {
     program.command('add-secret')
         .description('Auto-generated command for add_secret')

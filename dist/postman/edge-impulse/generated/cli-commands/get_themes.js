@@ -1,4 +1,4 @@
-import { get_themes } from '../get_themes';
+import { get_themes } from '../get_themes.js';
 export function addGet_themesCommand(program) {
     program.command('get-themes')
         .description('Auto-generated command for get_themes')

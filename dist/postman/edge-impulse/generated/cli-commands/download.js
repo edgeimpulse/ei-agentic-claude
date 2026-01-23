@@ -1,4 +1,4 @@
-import { download } from '../download';
+import { download } from '../download.js';
 export function addDownloadCommand(program) {
     program.command('download')
         .description('Auto-generated command for download')

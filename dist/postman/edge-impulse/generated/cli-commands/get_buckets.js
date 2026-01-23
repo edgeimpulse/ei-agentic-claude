@@ -1,4 +1,4 @@
-import { get_buckets } from '../get_buckets';
+import { get_buckets } from '../get_buckets.js';
 export function addGet_bucketsCommand(program) {
     program.command('get-buckets')
         .description('Auto-generated command for get_buckets')

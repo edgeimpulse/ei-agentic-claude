@@ -1,4 +1,4 @@
-import { start_transformation_job } from '../start_transformation_job';
+import { start_transformation_job } from '../start_transformation_job.js';
 export function addStart_transformation_jobCommand(program) {
     program.command('start-transformation-job')
         .description('Auto-generated command for start_transformation_job')

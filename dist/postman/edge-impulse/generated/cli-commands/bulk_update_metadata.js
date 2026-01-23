@@ -1,4 +1,4 @@
-import { bulk_update_metadata } from '../bulk_update_metadata';
+import { bulk_update_metadata } from '../bulk_update_metadata.js';
 export function addBulk_update_metadataCommand(program) {
     program.command('bulk-update-metadata')
         .description('Auto-generated command for bulk_update_metadata')

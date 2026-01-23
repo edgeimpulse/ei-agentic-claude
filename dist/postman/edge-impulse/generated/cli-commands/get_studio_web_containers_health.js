@@ -1,4 +1,4 @@
-import { get_studio_web_containers_health } from '../get_studio_web_containers_health';
+import { get_studio_web_containers_health } from '../get_studio_web_containers_health.js';
 export function addGet_studio_web_containers_healthCommand(program) {
     program.command('get-studio-web-containers-health')
         .description('Auto-generated command for get_studio_web_containers_health')

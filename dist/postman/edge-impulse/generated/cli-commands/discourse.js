@@ -1,4 +1,4 @@
-import { discourse } from '../discourse';
+import { discourse } from '../discourse.js';
 export function addDiscourseCommand(program) {
     program.command('discourse')
         .description('Auto-generated command for discourse')

@@ -1,4 +1,4 @@
-import { remove_all_samples } from '../remove_all_samples';
+import { remove_all_samples } from '../remove_all_samples.js';
 export function addRemove_all_samplesCommand(program) {
     program.command('remove-all-samples')
         .description('Auto-generated command for remove_all_samples')

@@ -1,4 +1,4 @@
-import { check_data_explorer_features } from '../check_data_explorer_features';
+import { check_data_explorer_features } from '../check_data_explorer_features.js';
 export function addCheck_data_explorer_featuresCommand(program) {
     program.command('check-data-explorer-features')
         .description('Auto-generated command for check_data_explorer_features')

@@ -1,4 +1,4 @@
-import { get_project } from '../get_project';
+import { get_project } from '../get_project.js';
 export function addGet_projectCommand(program) {
     program.command('get-project')
         .description('Auto-generated command for get_project')

@@ -1,4 +1,4 @@
-import { start_sampling } from '../start_sampling';
+import { start_sampling } from '../start_sampling.js';
 export function addStart_samplingCommand(program) {
     program.command('start-sampling')
         .description('Auto-generated command for start_sampling')

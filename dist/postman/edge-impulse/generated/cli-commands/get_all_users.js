@@ -1,4 +1,4 @@
-import { get_all_users } from '../get_all_users';
+import { get_all_users } from '../get_all_users.js';
 export function addGet_all_usersCommand(program) {
     program.command('get-all-users')
         .description('Auto-generated command for get_all_users')

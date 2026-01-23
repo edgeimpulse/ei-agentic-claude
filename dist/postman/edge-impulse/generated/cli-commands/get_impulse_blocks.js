@@ -1,4 +1,4 @@
-import { get_impulse_blocks } from '../get_impulse_blocks';
+import { get_impulse_blocks } from '../get_impulse_blocks.js';
 export function addGet_impulse_blocksCommand(program) {
     program.command('get-impulse-blocks')
         .description('Auto-generated command for get_impulse_blocks')

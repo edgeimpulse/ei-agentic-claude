@@ -1,4 +1,4 @@
-import { update_tags } from '../update_tags';
+import { update_tags } from '../update_tags.js';
 export function addUpdate_tagsCommand(program) {
     program.command('update-tags')
         .description('Auto-generated command for update_tags')

@@ -1,4 +1,4 @@
-import { get_global_metrics } from '../get_global_metrics';
+import { get_global_metrics } from '../get_global_metrics.js';
 export function addGet_global_metricsCommand(program) {
     program.command('get-global-metrics')
         .description('Auto-generated command for get_global_metrics')

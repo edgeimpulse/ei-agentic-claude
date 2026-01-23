@@ -1,4 +1,4 @@
-import { get_white_label_domain } from '../get_white_label_domain';
+import { get_white_label_domain } from '../get_white_label_domain.js';
 export function addGet_white_label_domainCommand(program) {
     program.command('get-white-label-domain')
         .description('Auto-generated command for get_white_label_domain')

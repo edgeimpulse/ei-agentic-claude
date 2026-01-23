@@ -1,4 +1,4 @@
-import { list_files_in_portal } from '../list_files_in_portal';
+import { list_files_in_portal } from '../list_files_in_portal.js';
 export function addList_files_in_portalCommand(program) {
     program.command('list-files-in-portal')
         .description('Auto-generated command for list_files_in_portal')

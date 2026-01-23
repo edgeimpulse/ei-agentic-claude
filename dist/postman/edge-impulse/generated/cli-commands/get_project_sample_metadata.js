@@ -1,4 +1,4 @@
-import { get_project_sample_metadata } from '../get_project_sample_metadata';
+import { get_project_sample_metadata } from '../get_project_sample_metadata.js';
 export function addGet_project_sample_metadataCommand(program) {
     program.command('get-project-sample-metadata')
         .description('Auto-generated command for get_project_sample_metadata')

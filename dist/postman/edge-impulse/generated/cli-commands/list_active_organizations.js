@@ -1,4 +1,4 @@
-import { list_active_organizations } from '../list_active_organizations';
+import { list_active_organizations } from '../list_active_organizations.js';
 export function addList_active_organizationsCommand(program) {
     program.command('list-active-organizations')
         .description('Auto-generated command for list_active_organizations')

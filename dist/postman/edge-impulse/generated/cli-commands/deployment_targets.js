@@ -1,4 +1,4 @@
-import { deployment_targets } from '../deployment_targets';
+import { deployment_targets } from '../deployment_targets.js';
 export function addDeployment_targetsCommand(program) {
     program.command('deployment-targets')
         .description('Auto-generated command for deployment_targets')

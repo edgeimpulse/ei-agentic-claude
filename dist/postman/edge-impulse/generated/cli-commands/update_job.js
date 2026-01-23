@@ -1,4 +1,4 @@
-import { update_job } from '../update_job';
+import { update_job } from '../update_job.js';
 export function addUpdate_jobCommand(program) {
     program.command('update-job')
         .description('Auto-generated command for update_job')

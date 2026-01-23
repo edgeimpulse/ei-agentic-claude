@@ -1,4 +1,4 @@
-import { transfer_ownership_organization } from '../transfer_ownership_organization';
+import { transfer_ownership_organization } from '../transfer_ownership_organization.js';
 export function addTransfer_ownership_organizationCommand(program) {
     program.command('transfer-ownership-organization')
         .description('Auto-generated command for transfer_ownership_organization')

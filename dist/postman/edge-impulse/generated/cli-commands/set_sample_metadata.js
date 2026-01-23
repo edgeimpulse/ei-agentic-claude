@@ -1,4 +1,4 @@
-import { set_sample_metadata } from '../set_sample_metadata';
+import { set_sample_metadata } from '../set_sample_metadata.js';
 export function addSet_sample_metadataCommand(program) {
     program.command('set-sample-metadata')
         .description('Auto-generated command for set_sample_metadata')

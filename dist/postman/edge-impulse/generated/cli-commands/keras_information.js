@@ -1,4 +1,4 @@
-import { keras_information } from '../keras_information';
+import { keras_information } from '../keras_information.js';
 export function addKeras_informationCommand(program) {
     program.command('keras-information')
         .description('Auto-generated command for keras_information')

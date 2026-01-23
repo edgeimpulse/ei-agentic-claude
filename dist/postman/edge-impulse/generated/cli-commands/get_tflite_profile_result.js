@@ -1,4 +1,4 @@
-import { get_tflite_profile_result } from '../get_tflite_profile_result';
+import { get_tflite_profile_result } from '../get_tflite_profile_result.js';
 export function addGet_tflite_profile_resultCommand(program) {
     program.command('get-tflite-profile-result')
         .description('Auto-generated command for get_tflite_profile_result')

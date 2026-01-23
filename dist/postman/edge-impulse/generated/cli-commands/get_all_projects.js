@@ -1,4 +1,4 @@
-import { get_all_projects } from '../get_all_projects';
+import { get_all_projects } from '../get_all_projects.js';
 export function addGet_all_projectsCommand(program) {
     program.command('get-all-projects')
         .description('Auto-generated command for get_all_projects')

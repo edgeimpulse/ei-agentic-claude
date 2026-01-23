@@ -1,4 +1,4 @@
-import { get_sample_slice } from '../get_sample_slice';
+import { get_sample_slice } from '../get_sample_slice.js';
 export function addGet_sample_sliceCommand(program) {
     program.command('get-sample-slice')
         .description('Auto-generated command for get_sample_slice')

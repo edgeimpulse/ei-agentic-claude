@@ -1,4 +1,4 @@
-import { get_development_keys } from '../get_development_keys';
+import { get_development_keys } from '../get_development_keys.js';
 export function addGet_development_keysCommand(program) {
     program.command('get-development-keys')
         .description('Auto-generated command for get_development_keys')

@@ -1,4 +1,4 @@
-import { run_pipelines } from '../run_pipelines';
+import { run_pipelines } from '../run_pipelines.js';
 export function addRun_pipelinesCommand(program) {
     program.command('run-pipelines')
         .description('Auto-generated command for run_pipelines')

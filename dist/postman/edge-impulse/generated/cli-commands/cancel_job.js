@@ -1,4 +1,4 @@
-import { cancel_job } from '../cancel_job';
+import { cancel_job } from '../cancel_job.js';
 export function addCancel_jobCommand(program) {
     program.command('cancel-job')
         .description('Auto-generated command for cancel_job')

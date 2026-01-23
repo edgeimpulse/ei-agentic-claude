@@ -1,4 +1,4 @@
-import { evaluate } from '../evaluate';
+import { evaluate } from '../evaluate.js';
 export function addEvaluateCommand(program) {
     program.command('evaluate')
         .description('Auto-generated command for evaluate')

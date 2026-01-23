@@ -1,4 +1,4 @@
-import { download_labels } from '../download_labels';
+import { download_labels } from '../download_labels.js';
 export function addDownload_labelsCommand(program) {
     program.command('download-labels')
         .description('Auto-generated command for download_labels')

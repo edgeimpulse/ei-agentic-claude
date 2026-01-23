@@ -1,4 +1,4 @@
-import { get_data_explorer_predictions } from '../get_data_explorer_predictions';
+import { get_data_explorer_predictions } from '../get_data_explorer_predictions.js';
 export function addGet_data_explorer_predictionsCommand(program) {
     program.command('get-data-explorer-predictions')
         .description('Auto-generated command for get_data_explorer_predictions')

@@ -1,4 +1,4 @@
-import { export_data_as_wav } from '../export_data_as_wav';
+import { export_data_as_wav } from '../export_data_as_wav.js';
 export function addExport_data_as_wavCommand(program) {
     program.command('export-data-as-wav')
         .description('Auto-generated command for export_data_as_wav')

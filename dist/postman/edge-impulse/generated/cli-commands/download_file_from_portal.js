@@ -1,4 +1,4 @@
-import { download_file_from_portal } from '../download_file_from_portal';
+import { download_file_from_portal } from '../download_file_from_portal.js';
 export function addDownload_file_from_portalCommand(program) {
     program.command('download-file-from-portal')
         .description('Auto-generated command for download_file_from_portal')

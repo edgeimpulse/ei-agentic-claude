@@ -1,4 +1,4 @@
-import { get_job_status } from '../get_job_status';
+import { get_job_status } from '../get_job_status.js';
 export function addGet_job_statusCommand(program) {
     program.command('get-job-status')
         .description('Auto-generated command for get_job_status')

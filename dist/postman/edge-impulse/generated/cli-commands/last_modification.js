@@ -1,4 +1,4 @@
-import { last_modification } from '../last_modification';
+import { last_modification } from '../last_modification.js';
 export function addLast_modificationCommand(program) {
     program.command('last-modification')
         .description('Auto-generated command for last_modification')

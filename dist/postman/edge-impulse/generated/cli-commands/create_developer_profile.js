@@ -1,4 +1,4 @@
-import { create_developer_profile } from '../create_developer_profile';
+import { create_developer_profile } from '../create_developer_profile.js';
 export function addCreate_developer_profileCommand(program) {
     program.command('create-developer-profile')
         .description('Auto-generated command for create_developer_profile')

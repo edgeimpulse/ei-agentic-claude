@@ -1,4 +1,4 @@
-import { list_data } from '../list_data';
+import { list_data } from '../list_data.js';
 export function addList_dataCommand(program) {
     program.command('list-data')
         .description('Auto-generated command for list_data')

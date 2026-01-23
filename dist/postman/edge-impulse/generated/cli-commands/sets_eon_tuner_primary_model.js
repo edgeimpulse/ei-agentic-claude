@@ -1,4 +1,4 @@
-import { sets_eon_tuner_primary_model } from '../sets_eon_tuner_primary_model';
+import { sets_eon_tuner_primary_model } from '../sets_eon_tuner_primary_model.js';
 export function addSets_eon_tuner_primary_modelCommand(program) {
     program.command('sets-eon-tuner-primary-model')
         .description('Auto-generated command for sets_eon_tuner_primary_model')

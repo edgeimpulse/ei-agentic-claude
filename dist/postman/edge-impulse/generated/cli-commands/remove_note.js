@@ -1,4 +1,4 @@
-import { remove_note } from '../remove_note';
+import { remove_note } from '../remove_note.js';
 export function addRemove_noteCommand(program) {
     program.command('remove-note')
         .description('Auto-generated command for remove_note')

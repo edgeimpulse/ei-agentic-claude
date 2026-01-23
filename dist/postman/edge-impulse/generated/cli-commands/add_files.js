@@ -1,4 +1,4 @@
-import { add_files } from '../add_files';
+import { add_files } from '../add_files.js';
 export function addAdd_filesCommand(program) {
     program.command('add-files')
         .description('Auto-generated command for add_files')

@@ -1,4 +1,4 @@
-import { upload_organization_logo } from '../upload_organization_logo';
+import { upload_organization_logo } from '../upload_organization_logo.js';
 export function addUpload_organization_logoCommand(program) {
     program.command('upload-organization-logo')
         .description('Auto-generated command for upload_organization_logo')

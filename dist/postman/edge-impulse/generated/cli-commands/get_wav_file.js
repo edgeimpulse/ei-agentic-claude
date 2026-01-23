@@ -1,4 +1,4 @@
-import { get_wav_file } from '../get_wav_file';
+import { get_wav_file } from '../get_wav_file.js';
 export function addGet_wav_fileCommand(program) {
     program.command('get-wav-file')
         .description('Auto-generated command for get_wav_file')

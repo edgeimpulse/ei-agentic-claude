@@ -1,4 +1,4 @@
-import { generate_features } from '../generate_features';
+import { generate_features } from '../generate_features.js';
 export function addGenerate_featuresCommand(program) {
     program.command('generate-features')
         .description('Auto-generated command for generate_features')

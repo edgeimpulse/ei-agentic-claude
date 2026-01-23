@@ -1,4 +1,4 @@
-import { get_impulse_including_disabled_blocks } from '../get_impulse_including_disabled_blocks';
+import { get_impulse_including_disabled_blocks } from '../get_impulse_including_disabled_blocks.js';
 export function addGet_impulse_including_disabled_blocksCommand(program) {
     program.command('get-impulse-including-disabled-blocks')
         .description('Auto-generated command for get_impulse_including_disabled_blocks')

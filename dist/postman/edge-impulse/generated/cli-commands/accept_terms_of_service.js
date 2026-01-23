@@ -1,4 +1,4 @@
-import { accept_terms_of_service } from '../accept_terms_of_service';
+import { accept_terms_of_service } from '../accept_terms_of_service.js';
 export function addAccept_terms_of_serviceCommand(program) {
     program.command('accept-terms-of-service')
         .description('Auto-generated command for accept_terms_of_service')

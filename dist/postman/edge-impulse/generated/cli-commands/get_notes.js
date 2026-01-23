@@ -1,4 +1,4 @@
-import { get_notes } from '../get_notes';
+import { get_notes } from '../get_notes.js';
 export function addGet_notesCommand(program) {
     program.command('get-notes')
         .description('Auto-generated command for get_notes')

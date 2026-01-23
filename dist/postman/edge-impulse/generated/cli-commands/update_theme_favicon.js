@@ -1,4 +1,4 @@
-import { update_theme_favicon } from '../update_theme_favicon';
+import { update_theme_favicon } from '../update_theme_favicon.js';
 export function addUpdate_theme_faviconCommand(program) {
     program.command('update-theme-favicon')
         .description('Auto-generated command for update_theme_favicon')

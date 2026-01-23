@@ -1,4 +1,4 @@
-import { delete_dsp_block } from '../delete_dsp_block';
+import { delete_dsp_block } from '../delete_dsp_block.js';
 export function addDelete_dsp_blockCommand(program) {
     program.command('delete-dsp-block')
         .description('Auto-generated command for delete_dsp_block')

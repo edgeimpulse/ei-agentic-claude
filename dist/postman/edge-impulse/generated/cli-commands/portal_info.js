@@ -1,4 +1,4 @@
-import { portal_info } from '../portal_info';
+import { portal_info } from '../portal_info.js';
 export function addPortal_infoCommand(program) {
     program.command('portal-info')
         .description('Auto-generated command for portal_info')

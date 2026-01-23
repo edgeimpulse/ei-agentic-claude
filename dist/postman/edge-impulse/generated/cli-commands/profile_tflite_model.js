@@ -1,4 +1,4 @@
-import { profile_tflite_model } from '../profile_tflite_model';
+import { profile_tflite_model } from '../profile_tflite_model.js';
 export function addProfile_tflite_modelCommand(program) {
     program.command('profile-tflite-model')
         .description('Auto-generated command for profile_tflite_model')

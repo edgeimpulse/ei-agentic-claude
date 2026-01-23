@@ -1,4 +1,4 @@
-import { add_transformation_block } from '../add_transformation_block';
+import { add_transformation_block } from '../add_transformation_block.js';
 export function addAdd_transformation_blockCommand(program) {
     program.command('add-transformation-block')
         .description('Auto-generated command for add_transformation_block')

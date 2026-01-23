@@ -1,4 +1,4 @@
-import { add_api_key } from '../add_api_key';
+import { add_api_key } from '../add_api_key.js';
 export function addAdd_api_keyCommand(program) {
     program.command('add-api-key')
         .description('Auto-generated command for add_api_key')

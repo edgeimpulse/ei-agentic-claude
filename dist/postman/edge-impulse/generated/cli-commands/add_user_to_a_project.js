@@ -1,4 +1,4 @@
-import { add_user_to_a_project } from '../add_user_to_a_project';
+import { add_user_to_a_project } from '../add_user_to_a_project.js';
 export function addAdd_user_to_a_projectCommand(program) {
     program.command('add-user-to-a-project')
         .description('Auto-generated command for add_user_to_a_project')

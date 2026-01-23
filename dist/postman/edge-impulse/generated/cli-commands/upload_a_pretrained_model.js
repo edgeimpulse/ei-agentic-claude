@@ -1,4 +1,4 @@
-import { upload_a_pretrained_model } from '../upload_a_pretrained_model';
+import { upload_a_pretrained_model } from '../upload_a_pretrained_model.js';
 export function addUpload_a_pretrained_modelCommand(program) {
     program.command('upload-a-pretrained-model')
         .description('Auto-generated command for upload_a_pretrained_model')

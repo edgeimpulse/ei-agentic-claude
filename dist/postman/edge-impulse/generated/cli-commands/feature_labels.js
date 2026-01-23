@@ -1,4 +1,4 @@
-import { feature_labels } from '../feature_labels';
+import { feature_labels } from '../feature_labels.js';
 export function addFeature_labelsCommand(program) {
     program.command('feature-labels')
         .description('Auto-generated command for feature_labels')

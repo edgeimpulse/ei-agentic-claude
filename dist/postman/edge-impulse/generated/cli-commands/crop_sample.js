@@ -1,4 +1,4 @@
-import { crop_sample } from '../crop_sample';
+import { crop_sample } from '../crop_sample.js';
 export function addCrop_sampleCommand(program) {
     program.command('crop-sample')
         .description('Auto-generated command for crop_sample')

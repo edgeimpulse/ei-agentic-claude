@@ -1,4 +1,4 @@
-import { delete_file_from_portal } from '../delete_file_from_portal';
+import { delete_file_from_portal } from '../delete_file_from_portal.js';
 export function addDelete_file_from_portalCommand(program) {
     program.command('delete-file-from-portal')
         .description('Auto-generated command for delete_file_from_portal')

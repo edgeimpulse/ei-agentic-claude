@@ -1,4 +1,4 @@
-import { profile_pretrained_model } from '../profile_pretrained_model';
+import { profile_pretrained_model } from '../profile_pretrained_model.js';
 export function addProfile_pretrained_modelCommand(program) {
     program.command('profile-pretrained-model')
         .description('Auto-generated command for profile_pretrained_model')

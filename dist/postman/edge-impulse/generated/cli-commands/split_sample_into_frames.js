@@ -1,4 +1,4 @@
-import { split_sample_into_frames } from '../split_sample_into_frames';
+import { split_sample_into_frames } from '../split_sample_into_frames.js';
 export function addSplit_sample_into_framesCommand(program) {
     program.command('split-sample-into-frames')
         .description('Auto-generated command for split_sample_into_frames')

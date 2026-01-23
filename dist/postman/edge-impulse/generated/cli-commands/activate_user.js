@@ -1,4 +1,4 @@
-import { activate_user } from '../activate_user';
+import { activate_user } from '../activate_user.js';
 export function addActivate_userCommand(program) {
     program.command('activate-user')
         .description('Auto-generated command for activate_user')

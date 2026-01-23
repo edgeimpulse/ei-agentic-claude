@@ -1,4 +1,4 @@
-import { get_global_white_label_metrics } from '../get_global_white_label_metrics';
+import { get_global_white_label_metrics } from '../get_global_white_label_metrics.js';
 export function addGet_global_white_label_metricsCommand(program) {
     program.command('get-global-white-label-metrics')
         .description('Auto-generated command for get_global_white_label_metrics')

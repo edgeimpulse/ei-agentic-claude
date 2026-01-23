@@ -1,4 +1,4 @@
-import { get_device } from '../get_device';
+import { get_device } from '../get_device.js';
 export function addGet_deviceCommand(program) {
     program.command('get-device')
         .description('Auto-generated command for get_device')

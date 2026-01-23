@@ -1,4 +1,4 @@
-import { remove_current_user_from_a_project } from '../remove_current_user_from_a_project';
+import { remove_current_user_from_a_project } from '../remove_current_user_from_a_project.js';
 export function addRemove_current_user_from_a_projectCommand(program) {
     program.command('remove-current-user-from-a-project')
         .description('Auto-generated command for remove_current_user_from_a_project')

@@ -1,4 +1,4 @@
-import { optimize_model } from '../optimize_model';
+import { optimize_model } from '../optimize_model.js';
 export function addOptimize_modelCommand(program) {
     program.command('optimize-model')
         .description('Auto-generated command for optimize_model')

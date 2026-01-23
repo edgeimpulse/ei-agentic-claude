@@ -1,4 +1,4 @@
-import { create_new_block_version } from '../create_new_block_version';
+import { create_new_block_version } from '../create_new_block_version.js';
 export function addCreate_new_block_versionCommand(program) {
     program.command('create-new-block-version')
         .description('Auto-generated command for create_new_block_version')

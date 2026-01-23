@@ -1,4 +1,4 @@
-import { download_keras_data_export } from '../download_keras_data_export';
+import { download_keras_data_export } from '../download_keras_data_export.js';
 export function addDownload_keras_data_exportCommand(program) {
     program.command('download-keras-data-export')
         .description('Auto-generated command for download_keras_data_export')

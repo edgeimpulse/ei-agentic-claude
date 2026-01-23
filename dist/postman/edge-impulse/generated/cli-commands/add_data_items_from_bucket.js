@@ -1,4 +1,4 @@
-import { add_data_items_from_bucket } from '../add_data_items_from_bucket';
+import { add_data_items_from_bucket } from '../add_data_items_from_bucket.js';
 export function addAdd_data_items_from_bucketCommand(program) {
     program.command('add-data-items-from-bucket')
         .description('Auto-generated command for add_data_items_from_bucket')

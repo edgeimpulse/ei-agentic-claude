@@ -1,4 +1,4 @@
-import { job_summary } from '../job_summary';
+import { job_summary } from '../job_summary.js';
 export function addJob_summaryCommand(program) {
     program.command('job-summary')
         .description('Auto-generated command for job_summary')

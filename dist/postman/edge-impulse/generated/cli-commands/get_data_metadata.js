@@ -1,4 +1,4 @@
-import { get_data_metadata } from '../get_data_metadata';
+import { get_data_metadata } from '../get_data_metadata.js';
 export function addGet_data_metadataCommand(program) {
     program.command('get-data-metadata')
         .description('Auto-generated command for get_data_metadata')

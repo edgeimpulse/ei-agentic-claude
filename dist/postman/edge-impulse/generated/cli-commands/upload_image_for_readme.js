@@ -1,4 +1,4 @@
-import { upload_image_for_readme } from '../upload_image_for_readme';
+import { upload_image_for_readme } from '../upload_image_for_readme.js';
 export function addUpload_image_for_readmeCommand(program) {
     program.command('upload-image-for-readme')
         .description('Auto-generated command for upload_image_for_readme')

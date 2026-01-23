@@ -1,4 +1,4 @@
-import { get_impulse } from '../get_impulse';
+import { get_impulse } from '../get_impulse.js';
 export function addGet_impulseCommand(program) {
     program.command('get-impulse')
         .description('Auto-generated command for get_impulse')

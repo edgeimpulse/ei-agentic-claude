@@ -1,4 +1,4 @@
-import { list_emails } from '../list_emails';
+import { list_emails } from '../list_emails.js';
 export function addList_emailsCommand(program) {
     program.command('list-emails')
         .description('Auto-generated command for list_emails')

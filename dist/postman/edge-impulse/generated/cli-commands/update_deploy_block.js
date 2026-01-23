@@ -1,4 +1,4 @@
-import { update_deploy_block } from '../update_deploy_block';
+import { update_deploy_block } from '../update_deploy_block.js';
 export function addUpdate_deploy_blockCommand(program) {
     program.command('update-deploy-block')
         .description('Auto-generated command for update_deploy_block')

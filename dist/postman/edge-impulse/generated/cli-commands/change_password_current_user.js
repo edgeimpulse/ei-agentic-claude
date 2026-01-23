@@ -1,4 +1,4 @@
-import { change_password_current_user } from '../change_password_current_user';
+import { change_password_current_user } from '../change_password_current_user.js';
 export function addChange_password_current_userCommand(program) {
     program.command('change-password-current-user')
         .description('Auto-generated command for change_password_current_user')

@@ -1,4 +1,4 @@
-import { list_all_jobs } from '../list_all_jobs';
+import { list_all_jobs } from '../list_all_jobs.js';
 export function addList_all_jobsCommand(program) {
     program.command('list-all-jobs')
         .description('Auto-generated command for list_all_jobs')

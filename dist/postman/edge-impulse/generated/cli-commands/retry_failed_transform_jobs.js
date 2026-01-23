@@ -1,4 +1,4 @@
-import { retry_failed_transform_jobs } from '../retry_failed_transform_jobs';
+import { retry_failed_transform_jobs } from '../retry_failed_transform_jobs.js';
 export function addRetry_failed_transform_jobsCommand(program) {
     program.command('retry-failed-transform-jobs')
         .description('Auto-generated command for retry_failed_transform_jobs')

@@ -1,4 +1,4 @@
-import { get_buckets_current_user } from '../get_buckets_current_user';
+import { get_buckets_current_user } from '../get_buckets_current_user.js';
 export function addGet_buckets_current_userCommand(program) {
     program.command('get-buckets-current-user')
         .description('Auto-generated command for get_buckets_current_user')

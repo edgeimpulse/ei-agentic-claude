@@ -1,4 +1,4 @@
-import { build_on_device_model } from '../build_on_device_model';
+import { build_on_device_model } from '../build_on_device_model.js';
 export function addBuild_on_device_modelCommand(program) {
     program.command('build-on-device-model')
         .description('Auto-generated command for build_on_device_model')

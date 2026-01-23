@@ -1,4 +1,4 @@
-import { get_all_third_party_auth } from '../get_all_third_party_auth';
+import { get_all_third_party_auth } from '../get_all_third_party_auth.js';
 export function addGet_all_third_party_authCommand(program) {
     program.command('get-all-third-party-auth')
         .description('Auto-generated command for get_all_third_party_auth')

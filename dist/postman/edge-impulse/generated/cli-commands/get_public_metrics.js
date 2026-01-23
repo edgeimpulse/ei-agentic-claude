@@ -1,4 +1,4 @@
-import { get_public_metrics } from '../get_public_metrics';
+import { get_public_metrics } from '../get_public_metrics.js';
 export function addGet_public_metricsCommand(program) {
     program.command('get-public-metrics')
         .description('Auto-generated command for get_public_metrics')

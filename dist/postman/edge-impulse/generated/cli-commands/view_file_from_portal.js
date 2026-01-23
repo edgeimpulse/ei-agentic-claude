@@ -1,4 +1,4 @@
-import { view_file_from_portal } from '../view_file_from_portal';
+import { view_file_from_portal } from '../view_file_from_portal.js';
 export function addView_file_from_portalCommand(program) {
     program.command('view-file-from-portal')
         .description('Auto-generated command for view_file_from_portal')

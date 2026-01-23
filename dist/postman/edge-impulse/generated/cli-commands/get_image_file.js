@@ -1,4 +1,4 @@
-import { get_image_file } from '../get_image_file';
+import { get_image_file } from '../get_image_file.js';
 export function addGet_image_fileCommand(program) {
     program.command('get-image-file')
         .description('Auto-generated command for get_image_file')

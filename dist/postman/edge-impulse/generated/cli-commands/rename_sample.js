@@ -1,4 +1,4 @@
-import { rename_sample } from '../rename_sample';
+import { rename_sample } from '../rename_sample.js';
 export function addRename_sampleCommand(program) {
     program.command('rename-sample')
         .description('Auto-generated command for rename_sample')

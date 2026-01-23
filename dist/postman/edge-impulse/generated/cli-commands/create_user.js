@@ -1,4 +1,4 @@
-import { create_user } from '../create_user';
+import { create_user } from '../create_user.js';
 export function addCreate_userCommand(program) {
     program.command('create-user')
         .description('Auto-generated command for create_user')

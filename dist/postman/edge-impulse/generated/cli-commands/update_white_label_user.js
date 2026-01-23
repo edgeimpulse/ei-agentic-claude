@@ -1,4 +1,4 @@
-import { update_white_label_user } from '../update_white_label_user';
+import { update_white_label_user } from '../update_white_label_user.js';
 export function addUpdate_white_label_userCommand(program) {
     program.command('update-white-label-user')
         .description('Auto-generated command for update_white_label_user')

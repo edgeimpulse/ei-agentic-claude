@@ -1,4 +1,4 @@
-import { classify_job_result } from '../classify_job_result';
+import { classify_job_result } from '../classify_job_result.js';
 export function addClassify_job_resultCommand(program) {
     program.command('classify-job-result')
         .description('Auto-generated command for classify_job_result')

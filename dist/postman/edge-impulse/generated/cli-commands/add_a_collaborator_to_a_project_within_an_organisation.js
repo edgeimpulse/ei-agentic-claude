@@ -1,4 +1,4 @@
-import { add_a_collaborator_to_a_project_within_an_organisation } from '../add_a_collaborator_to_a_project_within_an_organisation';
+import { add_a_collaborator_to_a_project_within_an_organisation } from '../add_a_collaborator_to_a_project_within_an_organisation.js';
 export function addAdd_a_collaborator_to_a_project_within_an_organisationCommand(program) {
     program.command('add-a-collaborator-to-a-project-within-an-organisation')
         .description('Auto-generated command for add_a_collaborator_to_a_project_within_an_organisation')

@@ -1,4 +1,4 @@
-import { get_a_white_label_project } from '../get_a_white_label_project';
+import { get_a_white_label_project } from '../get_a_white_label_project.js';
 export function addGet_a_white_label_projectCommand(program) {
     program.command('get-a-white-label-project')
         .description('Auto-generated command for get_a_white_label_project')

@@ -1,4 +1,4 @@
-import { create_new_organization_within_white_label_context } from '../create_new_organization_within_white_label_context';
+import { create_new_organization_within_white_label_context } from '../create_new_organization_within_white_label_context.js';
 export function addCreate_new_organization_within_white_label_contextCommand(program) {
     program.command('create-new-organization-within-white-label-context')
         .description('Auto-generated command for create_new_organization_within_white_label_context')

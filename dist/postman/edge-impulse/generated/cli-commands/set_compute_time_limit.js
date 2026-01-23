@@ -1,4 +1,4 @@
-import { set_compute_time_limit } from '../set_compute_time_limit';
+import { set_compute_time_limit } from '../set_compute_time_limit.js';
 export function addSet_compute_time_limitCommand(program) {
     program.command('set-compute-time-limit')
         .description('Auto-generated command for set_compute_time_limit')

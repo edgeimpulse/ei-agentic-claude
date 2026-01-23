@@ -1,4 +1,4 @@
-import { get_deploy_blocks } from '../get_deploy_blocks';
+import { get_deploy_blocks } from '../get_deploy_blocks.js';
 export function addGet_deploy_blocksCommand(program) {
     program.command('get-deploy-blocks')
         .description('Auto-generated command for get_deploy_blocks')

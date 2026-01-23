@@ -1,4 +1,4 @@
-import { request_reset_password } from '../request_reset_password';
+import { request_reset_password } from '../request_reset_password.js';
 export function addRequest_reset_passwordCommand(program) {
     program.command('request-reset-password')
         .description('Auto-generated command for request_reset_password')

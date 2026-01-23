@@ -1,4 +1,4 @@
-import { get_trial_logs } from '../get_trial_logs';
+import { get_trial_logs } from '../get_trial_logs.js';
 export function addGet_trial_logsCommand(program) {
     program.command('get-trial-logs')
         .description('Auto-generated command for get_trial_logs')

@@ -1,4 +1,4 @@
-import { add_note } from '../add_note';
+import { add_note } from '../add_note.js';
 export function addAdd_noteCommand(program) {
     program.command('add-note')
         .description('Auto-generated command for add_note')

@@ -1,4 +1,4 @@
-import { readme_io } from '../readme_io';
+import { readme_io } from '../readme_io.js';
 export function addReadme_ioCommand(program) {
     program.command('readme-io')
         .description('Auto-generated command for readme_io')

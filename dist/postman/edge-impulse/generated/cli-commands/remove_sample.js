@@ -1,4 +1,4 @@
-import { remove_sample } from '../remove_sample';
+import { remove_sample } from '../remove_sample.js';
 export function addRemove_sampleCommand(program) {
     program.command('remove-sample')
         .description('Auto-generated command for remove_sample')

@@ -1,4 +1,4 @@
-import { verify_reset_password_code } from '../verify_reset_password_code';
+import { verify_reset_password_code } from '../verify_reset_password_code.js';
 export function addVerify_reset_password_codeCommand(program) {
     program.command('verify-reset-password-code')
         .description('Auto-generated command for verify_reset_password_code')

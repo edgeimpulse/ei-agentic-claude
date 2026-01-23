@@ -1,4 +1,4 @@
-import { get_parameters } from '../get_parameters';
+import { get_parameters } from '../get_parameters.js';
 export function addGet_parametersCommand(program) {
     program.command('get-parameters')
         .description('Auto-generated command for get_parameters')

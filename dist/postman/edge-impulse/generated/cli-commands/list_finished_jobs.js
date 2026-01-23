@@ -1,4 +1,4 @@
-import { list_finished_jobs } from '../list_finished_jobs';
+import { list_finished_jobs } from '../list_finished_jobs.js';
 export function addList_finished_jobsCommand(program) {
     program.command('list-finished-jobs')
         .description('Auto-generated command for list_finished_jobs')

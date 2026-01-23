@@ -1,4 +1,4 @@
-import { edit_labels_for_multiple_samples } from '../edit_labels_for_multiple_samples';
+import { edit_labels_for_multiple_samples } from '../edit_labels_for_multiple_samples.js';
 export function addEdit_labels_for_multiple_samplesCommand(program) {
     program.command('edit-labels-for-multiple-samples')
         .description('Auto-generated command for edit_labels_for_multiple_samples')

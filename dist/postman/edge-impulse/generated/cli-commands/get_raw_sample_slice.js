@@ -1,4 +1,4 @@
-import { get_raw_sample_slice } from '../get_raw_sample_slice';
+import { get_raw_sample_slice } from '../get_raw_sample_slice.js';
 export function addGet_raw_sample_sliceCommand(program) {
     program.command('get-raw-sample-slice')
         .description('Auto-generated command for get_raw_sample_slice')

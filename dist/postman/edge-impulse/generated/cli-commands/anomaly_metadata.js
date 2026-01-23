@@ -1,4 +1,4 @@
-import { anomaly_metadata } from '../anomaly_metadata';
+import { anomaly_metadata } from '../anomaly_metadata.js';
 export function addAnomaly_metadataCommand(program) {
     program.command('anomaly-metadata')
         .description('Auto-generated command for anomaly_metadata')

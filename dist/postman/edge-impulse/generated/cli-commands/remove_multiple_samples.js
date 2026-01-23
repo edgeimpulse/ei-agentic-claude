@@ -1,4 +1,4 @@
-import { remove_multiple_samples } from '../remove_multiple_samples';
+import { remove_multiple_samples } from '../remove_multiple_samples.js';
 export function addRemove_multiple_samplesCommand(program) {
     program.command('remove-multiple-samples')
         .description('Auto-generated command for remove_multiple_samples')

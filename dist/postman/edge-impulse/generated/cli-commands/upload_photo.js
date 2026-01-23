@@ -1,4 +1,4 @@
-import { upload_photo } from '../upload_photo';
+import { upload_photo } from '../upload_photo.js';
 export function addUpload_photoCommand(program) {
     program.command('upload-photo')
         .description('Auto-generated command for upload_photo')

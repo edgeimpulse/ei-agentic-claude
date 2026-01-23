@@ -1,4 +1,4 @@
-import { get_white_label_user_metrics } from '../get_white_label_user_metrics';
+import { get_white_label_user_metrics } from '../get_white_label_user_metrics.js';
 export function addGet_white_label_user_metricsCommand(program) {
     program.command('get-white-label-user-metrics')
         .description('Auto-generated command for get_white_label_user_metrics')

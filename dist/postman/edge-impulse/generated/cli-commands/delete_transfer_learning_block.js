@@ -1,4 +1,4 @@
-import { delete_transfer_learning_block } from '../delete_transfer_learning_block';
+import { delete_transfer_learning_block } from '../delete_transfer_learning_block.js';
 export function addDelete_transfer_learning_blockCommand(program) {
     program.command('delete-transfer-learning-block')
         .description('Auto-generated command for delete_transfer_learning_block')

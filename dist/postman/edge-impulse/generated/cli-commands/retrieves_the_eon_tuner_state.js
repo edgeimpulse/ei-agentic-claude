@@ -1,4 +1,4 @@
-import { retrieves_the_eon_tuner_state } from '../retrieves_the_eon_tuner_state';
+import { retrieves_the_eon_tuner_state } from '../retrieves_the_eon_tuner_state.js';
 export function addRetrieves_the_eon_tuner_stateCommand(program) {
     program.command('retrieves-the-eon-tuner-state')
         .description('Auto-generated command for retrieves_the_eon_tuner_state')

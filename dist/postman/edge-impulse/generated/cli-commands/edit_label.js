@@ -1,4 +1,4 @@
-import { edit_label } from '../edit_label';
+import { edit_label } from '../edit_label.js';
 export function addEdit_labelCommand(program) {
     program.command('edit-label')
         .description('Auto-generated command for edit_label')

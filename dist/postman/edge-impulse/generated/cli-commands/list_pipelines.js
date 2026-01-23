@@ -1,4 +1,4 @@
-import { list_pipelines } from '../list_pipelines';
+import { list_pipelines } from '../list_pipelines.js';
 export function addList_pipelinesCommand(program) {
     program.command('list-pipelines')
         .description('Auto-generated command for list_pipelines')

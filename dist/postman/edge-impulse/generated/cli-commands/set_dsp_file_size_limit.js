@@ -1,4 +1,4 @@
-import { set_dsp_file_size_limit } from '../set_dsp_file_size_limit';
+import { set_dsp_file_size_limit } from '../set_dsp_file_size_limit.js';
 export function addSet_dsp_file_size_limitCommand(program) {
     program.command('set-dsp-file-size-limit')
         .description('Auto-generated command for set_dsp_file_size_limit')

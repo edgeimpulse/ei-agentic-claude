@@ -1,4 +1,4 @@
-import { organization_information } from '../organization_information';
+import { organization_information } from '../organization_information.js';
 export function addOrganization_informationCommand(program) {
     program.command('organization-information')
         .description('Auto-generated command for organization_information')

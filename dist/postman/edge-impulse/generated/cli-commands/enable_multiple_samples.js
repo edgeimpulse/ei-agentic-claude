@@ -1,4 +1,4 @@
-import { enable_multiple_samples } from '../enable_multiple_samples';
+import { enable_multiple_samples } from '../enable_multiple_samples.js';
 export function addEnable_multiple_samplesCommand(program) {
     program.command('enable-multiple-samples')
         .description('Auto-generated command for enable_multiple_samples')

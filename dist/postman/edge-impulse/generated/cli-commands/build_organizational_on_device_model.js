@@ -1,4 +1,4 @@
-import { build_organizational_on_device_model } from '../build_organizational_on_device_model';
+import { build_organizational_on_device_model } from '../build_organizational_on_device_model.js';
 export function addBuild_organizational_on_device_modelCommand(program) {
     program.command('build-organizational-on-device-model')
         .description('Auto-generated command for build_organizational_on_device_model')

@@ -1,4 +1,4 @@
-import { delete_data } from '../delete_data';
+import { delete_data } from '../delete_data.js';
 export function addDelete_dataCommand(program) {
     program.command('delete-data')
         .description('Auto-generated command for delete_data')

@@ -1,4 +1,4 @@
-import { get_theme_by_id } from '../get_theme_by_id';
+import { get_theme_by_id } from '../get_theme_by_id.js';
 export function addGet_theme_by_idCommand(program) {
     program.command('get-theme-by-id')
         .description('Auto-generated command for get_theme_by_id')

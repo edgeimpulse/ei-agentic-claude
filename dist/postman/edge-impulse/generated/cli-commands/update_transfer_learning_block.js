@@ -1,4 +1,4 @@
-import { update_transfer_learning_block } from '../update_transfer_learning_block';
+import { update_transfer_learning_block } from '../update_transfer_learning_block.js';
 export function addUpdate_transfer_learning_blockCommand(program) {
     program.command('update-transfer-learning-block')
         .description('Auto-generated command for update_transfer_learning_block')

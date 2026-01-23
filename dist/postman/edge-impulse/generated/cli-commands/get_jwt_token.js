@@ -1,4 +1,4 @@
-import { get_jwt_token } from '../get_jwt_token';
+import { get_jwt_token } from '../get_jwt_token.js';
 export function addGet_jwt_tokenCommand(program) {
     program.command('get-jwt-token')
         .description('Auto-generated command for get_jwt_token')

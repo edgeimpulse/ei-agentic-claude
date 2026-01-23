@@ -1,4 +1,4 @@
-import { sample_of_trained_features } from '../sample_of_trained_features';
+import { sample_of_trained_features } from '../sample_of_trained_features.js';
 export function addSample_of_trained_featuresCommand(program) {
     program.command('sample-of-trained-features')
         .description('Auto-generated command for sample_of_trained_features')

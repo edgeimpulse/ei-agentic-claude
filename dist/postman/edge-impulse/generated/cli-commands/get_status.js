@@ -1,4 +1,4 @@
-import { get_status } from '../get_status';
+import { get_status } from '../get_status.js';
 export function addGet_statusCommand(program) {
     program.command('get-status')
         .description('Auto-generated command for get_status')

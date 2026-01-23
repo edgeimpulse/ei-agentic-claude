@@ -1,4 +1,4 @@
-import { track_objects } from '../track_objects';
+import { track_objects } from '../track_objects.js';
 export function addTrack_objectsCommand(program) {
     program.command('track-objects')
         .description('Auto-generated command for track_objects')

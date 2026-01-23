@@ -1,4 +1,4 @@
-import { update_project } from '../update_project';
+import { update_project } from '../update_project.js';
 export function addUpdate_projectCommand(program) {
     program.command('update-project')
         .description('Auto-generated command for update_project')

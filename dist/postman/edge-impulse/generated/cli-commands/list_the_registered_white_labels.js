@@ -1,4 +1,4 @@
-import { list_the_registered_white_labels } from '../list_the_registered_white_labels';
+import { list_the_registered_white_labels } from '../list_the_registered_white_labels.js';
 export function addList_the_registered_white_labelsCommand(program) {
     program.command('list-the-registered-white-labels')
         .description('Auto-generated command for list_the_registered_white_labels')

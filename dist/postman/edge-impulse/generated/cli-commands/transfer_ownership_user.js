@@ -1,4 +1,4 @@
-import { transfer_ownership_user } from '../transfer_ownership_user';
+import { transfer_ownership_user } from '../transfer_ownership_user.js';
 export function addTransfer_ownership_userCommand(program) {
     program.command('transfer-ownership-user')
         .description('Auto-generated command for transfer_ownership_user')

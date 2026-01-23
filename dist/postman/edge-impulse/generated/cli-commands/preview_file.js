@@ -1,4 +1,4 @@
-import { preview_file } from '../preview_file';
+import { preview_file } from '../preview_file.js';
 export function addPreview_fileCommand(program) {
     program.command('preview-file')
         .description('Auto-generated command for preview_file')

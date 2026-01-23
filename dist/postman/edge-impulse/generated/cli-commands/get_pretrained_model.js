@@ -1,4 +1,4 @@
-import { get_pretrained_model } from '../get_pretrained_model';
+import { get_pretrained_model } from '../get_pretrained_model.js';
 export function addGet_pretrained_modelCommand(program) {
     program.command('get-pretrained-model')
         .description('Auto-generated command for get_pretrained_model')

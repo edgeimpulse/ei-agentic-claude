@@ -1,4 +1,4 @@
-import { project_information } from '../project_information';
+import { project_information } from '../project_information.js';
 export function addProject_informationCommand(program) {
     program.command('project-information')
         .description('Auto-generated command for project_information')

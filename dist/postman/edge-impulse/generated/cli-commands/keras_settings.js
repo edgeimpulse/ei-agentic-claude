@@ -1,4 +1,4 @@
-import { keras_settings } from '../keras_settings';
+import { keras_settings } from '../keras_settings.js';
 export function addKeras_settingsCommand(program) {
     program.command('keras-settings')
         .description('Auto-generated command for keras_settings')

@@ -1,4 +1,4 @@
-import { delete_an_organization } from '../delete_an_organization';
+import { delete_an_organization } from '../delete_an_organization.js';
 export function addDelete_an_organizationCommand(program) {
     program.command('delete-an-organization')
         .description('Auto-generated command for delete_an_organization')

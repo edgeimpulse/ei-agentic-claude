@@ -1,4 +1,4 @@
-import { performance_calibration } from '../performance_calibration';
+import { performance_calibration } from '../performance_calibration.js';
 export function addPerformance_calibrationCommand(program) {
     program.command('performance-calibration')
         .description('Auto-generated command for performance_calibration')

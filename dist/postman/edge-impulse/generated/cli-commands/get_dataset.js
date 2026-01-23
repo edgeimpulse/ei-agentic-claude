@@ -1,4 +1,4 @@
-import { get_dataset } from '../get_dataset';
+import { get_dataset } from '../get_dataset.js';
 export function addGet_datasetCommand(program) {
     program.command('get-dataset')
         .description('Auto-generated command for get_dataset')

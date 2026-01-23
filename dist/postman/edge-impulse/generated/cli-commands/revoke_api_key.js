@@ -1,4 +1,4 @@
-import { revoke_api_key } from '../revoke_api_key';
+import { revoke_api_key } from '../revoke_api_key.js';
 export function addRevoke_api_keyCommand(program) {
     program.command('revoke-api-key')
         .description('Auto-generated command for revoke_api_key')

@@ -1,4 +1,4 @@
-import { remove_collaborator } from '../remove_collaborator';
+import { remove_collaborator } from '../remove_collaborator.js';
 export function addRemove_collaboratorCommand(program) {
     program.command('remove-collaborator')
         .description('Auto-generated command for remove_collaborator')

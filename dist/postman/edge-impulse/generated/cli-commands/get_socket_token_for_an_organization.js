@@ -1,4 +1,4 @@
-import { get_socket_token_for_an_organization } from '../get_socket_token_for_an_organization';
+import { get_socket_token_for_an_organization } from '../get_socket_token_for_an_organization.js';
 export function addGet_socket_token_for_an_organizationCommand(program) {
     program.command('get-socket-token-for-an-organization')
         .description('Auto-generated command for get_socket_token_for_an_organization')

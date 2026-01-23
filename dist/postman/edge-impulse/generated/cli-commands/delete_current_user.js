@@ -1,4 +1,4 @@
-import { delete_current_user } from '../delete_current_user';
+import { delete_current_user } from '../delete_current_user.js';
 export function addDelete_current_userCommand(program) {
     program.command('delete-current-user')
         .description('Auto-generated command for delete_current_user')

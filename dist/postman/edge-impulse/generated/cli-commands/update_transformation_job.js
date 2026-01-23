@@ -1,4 +1,4 @@
-import { update_transformation_job } from '../update_transformation_job';
+import { update_transformation_job } from '../update_transformation_job.js';
 export function addUpdate_transformation_jobCommand(program) {
     program.command('update-transformation-job')
         .description('Auto-generated command for update_transformation_job')

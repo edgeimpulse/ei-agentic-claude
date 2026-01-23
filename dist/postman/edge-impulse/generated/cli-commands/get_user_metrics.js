@@ -1,4 +1,4 @@
-import { get_user_metrics } from '../get_user_metrics';
+import { get_user_metrics } from '../get_user_metrics.js';
 export function addGet_user_metricsCommand(program) {
     program.command('get-user-metrics')
         .description('Auto-generated command for get_user_metrics')

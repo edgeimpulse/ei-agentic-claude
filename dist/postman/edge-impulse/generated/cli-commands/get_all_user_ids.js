@@ -1,4 +1,4 @@
-import { get_all_user_ids } from '../get_all_user_ids';
+import { get_all_user_ids } from '../get_all_user_ids.js';
 export function addGet_all_user_idsCommand(program) {
     program.command('get-all-user-ids')
         .description('Auto-generated command for get_all_user_ids')

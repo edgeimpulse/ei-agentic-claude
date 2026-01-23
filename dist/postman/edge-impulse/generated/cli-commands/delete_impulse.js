@@ -1,4 +1,4 @@
-import { delete_impulse } from '../delete_impulse';
+import { delete_impulse } from '../delete_impulse.js';
 export function addDelete_impulseCommand(program) {
     program.command('delete-impulse')
         .description('Auto-generated command for delete_impulse')

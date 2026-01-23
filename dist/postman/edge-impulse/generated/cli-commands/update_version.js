@@ -1,4 +1,4 @@
-import { update_version } from '../update_version';
+import { update_version } from '../update_version.js';
 export function addUpdate_versionCommand(program) {
     program.command('update-version')
         .description('Auto-generated command for update_version')

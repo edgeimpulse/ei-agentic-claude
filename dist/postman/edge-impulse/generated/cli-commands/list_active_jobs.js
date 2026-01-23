@@ -1,4 +1,4 @@
-import { list_active_jobs } from '../list_active_jobs';
+import { list_active_jobs } from '../list_active_jobs.js';
 export function addList_active_jobsCommand(program) {
     program.command('list-active-jobs')
         .description('Auto-generated command for list_active_jobs')

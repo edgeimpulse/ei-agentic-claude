@@ -1,4 +1,4 @@
-import { user_cdn_resource } from '../user_cdn_resource';
+import { user_cdn_resource } from '../user_cdn_resource.js';
 export function addUser_cdn_resourceCommand(program) {
     program.command('user-cdn-resource')
         .description('Auto-generated command for user_cdn_resource')

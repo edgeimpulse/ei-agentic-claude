@@ -1,4 +1,4 @@
-import { create_new_empty_project } from '../create_new_empty_project';
+import { create_new_empty_project } from '../create_new_empty_project.js';
 export function addCreate_new_empty_projectCommand(program) {
     program.command('create-new-empty-project')
         .description('Auto-generated command for create_new_empty_project')

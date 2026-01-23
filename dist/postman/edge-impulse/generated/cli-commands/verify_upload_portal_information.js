@@ -1,4 +1,4 @@
-import { verify_upload_portal_information } from '../verify_upload_portal_information';
+import { verify_upload_portal_information } from '../verify_upload_portal_information.js';
 export function addVerify_upload_portal_informationCommand(program) {
     program.command('verify-upload-portal-information')
         .description('Auto-generated command for verify_upload_portal_information')

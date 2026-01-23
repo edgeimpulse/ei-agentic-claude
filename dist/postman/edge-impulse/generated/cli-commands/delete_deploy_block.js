@@ -1,4 +1,4 @@
-import { delete_deploy_block } from '../delete_deploy_block';
+import { delete_deploy_block } from '../delete_deploy_block.js';
 export function addDelete_deploy_blockCommand(program) {
     program.command('delete-deploy-block')
         .description('Auto-generated command for delete_deploy_block')

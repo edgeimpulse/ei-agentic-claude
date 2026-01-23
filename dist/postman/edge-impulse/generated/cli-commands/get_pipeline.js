@@ -1,4 +1,4 @@
-import { get_pipeline } from '../get_pipeline';
+import { get_pipeline } from '../get_pipeline.js';
 export function addGet_pipelineCommand(program) {
     program.command('get-pipeline')
         .description('Auto-generated command for get_pipeline')

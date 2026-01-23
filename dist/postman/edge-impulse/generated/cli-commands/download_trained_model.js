@@ -1,4 +1,4 @@
-import { download_trained_model } from '../download_trained_model';
+import { download_trained_model } from '../download_trained_model.js';
 export function addDownload_trained_modelCommand(program) {
     program.command('download-trained-model')
         .description('Auto-generated command for download_trained_model')

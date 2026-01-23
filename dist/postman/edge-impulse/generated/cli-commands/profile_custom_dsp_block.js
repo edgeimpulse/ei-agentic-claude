@@ -1,4 +1,4 @@
-import { profile_custom_dsp_block } from '../profile_custom_dsp_block';
+import { profile_custom_dsp_block } from '../profile_custom_dsp_block.js';
 export function addProfile_custom_dsp_blockCommand(program) {
     program.command('profile-custom-dsp-block')
         .description('Auto-generated command for profile_custom_dsp_block')

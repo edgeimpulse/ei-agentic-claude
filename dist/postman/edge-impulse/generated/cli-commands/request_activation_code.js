@@ -1,4 +1,4 @@
-import { request_activation_code } from '../request_activation_code';
+import { request_activation_code } from '../request_activation_code.js';
 export function addRequest_activation_codeCommand(program) {
     program.command('request-activation-code')
         .description('Auto-generated command for request_activation_code')

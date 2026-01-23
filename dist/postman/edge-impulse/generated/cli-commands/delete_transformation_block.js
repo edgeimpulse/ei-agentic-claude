@@ -1,4 +1,4 @@
-import { delete_transformation_block } from '../delete_transformation_block';
+import { delete_transformation_block } from '../delete_transformation_block.js';
 export function addDelete_transformation_blockCommand(program) {
     program.command('delete-transformation-block')
         .description('Auto-generated command for delete_transformation_block')

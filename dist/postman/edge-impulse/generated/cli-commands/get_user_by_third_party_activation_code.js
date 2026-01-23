@@ -1,4 +1,4 @@
-import { get_user_by_third_party_activation_code } from '../get_user_by_third_party_activation_code';
+import { get_user_by_third_party_activation_code } from '../get_user_by_third_party_activation_code.js';
 export function addGet_user_by_third_party_activation_codeCommand(program) {
     program.command('get-user-by-third-party-activation-code')
         .description('Auto-generated command for get_user_by_third_party_activation_code')

@@ -1,4 +1,4 @@
-import { get_window_settings } from '../get_window_settings';
+import { get_window_settings } from '../get_window_settings.js';
 export function addGet_window_settingsCommand(program) {
     program.command('get-window-settings')
         .description('Auto-generated command for get_window_settings')

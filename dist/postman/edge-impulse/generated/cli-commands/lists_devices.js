@@ -1,4 +1,4 @@
-import { lists_devices } from '../lists_devices';
+import { lists_devices } from '../lists_devices.js';
 export function addLists_devicesCommand(program) {
     program.command('lists-devices')
         .description('Auto-generated command for lists_devices')

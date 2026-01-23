@@ -1,4 +1,4 @@
-import { set_bounding_boxes } from '../set_bounding_boxes';
+import { set_bounding_boxes } from '../set_bounding_boxes.js';
 export function addSet_bounding_boxesCommand(program) {
     program.command('set-bounding-boxes')
         .description('Auto-generated command for set_bounding_boxes')

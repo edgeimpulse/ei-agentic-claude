@@ -1,4 +1,4 @@
-import { download_file } from '../download_file';
+import { download_file } from '../download_file.js';
 export function addDownload_fileCommand(program) {
     program.command('download-file')
         .description('Auto-generated command for download_file')

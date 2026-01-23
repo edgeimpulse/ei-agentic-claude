@@ -1,4 +1,4 @@
-import { classify_sample } from '../classify_sample';
+import { classify_sample } from '../classify_sample.js';
 export function addClassify_sampleCommand(program) {
     program.command('classify-sample')
         .description('Auto-generated command for classify_sample')

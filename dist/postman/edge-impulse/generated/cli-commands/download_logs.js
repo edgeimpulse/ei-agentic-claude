@@ -1,4 +1,4 @@
-import { download_logs } from '../download_logs';
+import { download_logs } from '../download_logs.js';
 export function addDownload_logsCommand(program) {
     program.command('download-logs')
         .description('Auto-generated command for download_logs')

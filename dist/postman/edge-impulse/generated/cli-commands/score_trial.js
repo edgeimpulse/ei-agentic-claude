@@ -1,4 +1,4 @@
-import { score_trial } from '../score_trial';
+import { score_trial } from '../score_trial.js';
 export function addScore_trialCommand(program) {
     program.command('score-trial')
         .description('Auto-generated command for score_trial')

@@ -1,4 +1,4 @@
-import { auto_label_an_image } from '../auto_label_an_image';
+import { auto_label_an_image } from '../auto_label_an_image.js';
 export function addAuto_label_an_imageCommand(program) {
     program.command('auto-label-an-image')
         .description('Auto-generated command for auto_label_an_image')

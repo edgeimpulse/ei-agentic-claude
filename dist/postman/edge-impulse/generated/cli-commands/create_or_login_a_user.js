@@ -1,4 +1,4 @@
-import { create_or_login_a_user } from '../create_or_login_a_user';
+import { create_or_login_a_user } from '../create_or_login_a_user.js';
 export function addCreate_or_login_a_userCommand(program) {
     program.command('create-or-login-a-user')
         .description('Auto-generated command for create_or_login_a_user')

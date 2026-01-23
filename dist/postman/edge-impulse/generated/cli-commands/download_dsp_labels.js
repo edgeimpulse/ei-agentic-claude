@@ -1,4 +1,4 @@
-import { download_dsp_labels } from '../download_dsp_labels';
+import { download_dsp_labels } from '../download_dsp_labels.js';
 export function addDownload_dsp_labelsCommand(program) {
     program.command('download-dsp-labels')
         .description('Auto-generated command for download_dsp_labels')

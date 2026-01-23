@@ -1,4 +1,4 @@
-import { object_detection_label_queue } from '../object_detection_label_queue';
+import { object_detection_label_queue } from '../object_detection_label_queue.js';
 export function addObject_detection_label_queueCommand(program) {
     program.command('object-detection-label-queue')
         .description('Auto-generated command for object_detection_label_queue')

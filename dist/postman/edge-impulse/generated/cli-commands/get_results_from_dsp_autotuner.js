@@ -1,4 +1,4 @@
-import { get_results_from_dsp_autotuner } from '../get_results_from_dsp_autotuner';
+import { get_results_from_dsp_autotuner } from '../get_results_from_dsp_autotuner.js';
 export function addGet_results_from_dsp_autotunerCommand(program) {
     program.command('get-results-from-dsp-autotuner')
         .description('Auto-generated command for get_results_from_dsp_autotuner')

@@ -1,4 +1,4 @@
-import { rotate_upload_portal_token } from '../rotate_upload_portal_token';
+import { rotate_upload_portal_token } from '../rotate_upload_portal_token.js';
 export function addRotate_upload_portal_tokenCommand(program) {
     program.command('rotate-upload-portal-token')
         .description('Auto-generated command for rotate_upload_portal_token')

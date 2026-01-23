@@ -1,4 +1,4 @@
-import { store_the_last_segment_length } from '../store_the_last_segment_length';
+import { store_the_last_segment_length } from '../store_the_last_segment_length.js';
 export function addStore_the_last_segment_lengthCommand(program) {
     program.command('store-the-last-segment-length')
         .description('Auto-generated command for store_the_last_segment_length')

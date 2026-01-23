@@ -1,4 +1,4 @@
-import { clear_dsp_block } from '../clear_dsp_block';
+import { clear_dsp_block } from '../clear_dsp_block.js';
 export function addClear_dsp_blockCommand(program) {
     program.command('clear-dsp-block')
         .description('Auto-generated command for clear_dsp_block')

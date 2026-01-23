@@ -1,4 +1,4 @@
-import { upload_a_data_explorer_screenshot } from '../upload_a_data_explorer_screenshot';
+import { upload_a_data_explorer_screenshot } from '../upload_a_data_explorer_screenshot.js';
 export function addUpload_a_data_explorer_screenshotCommand(program) {
     program.command('upload-a-data-explorer-screenshot')
         .description('Auto-generated command for upload_a_data_explorer_screenshot')

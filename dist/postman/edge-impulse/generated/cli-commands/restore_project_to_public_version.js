@@ -1,4 +1,4 @@
-import { restore_project_to_public_version } from '../restore_project_to_public_version';
+import { restore_project_to_public_version } from '../restore_project_to_public_version.js';
 export function addRestore_project_to_public_versionCommand(program) {
     program.command('restore-project-to-public-version')
         .description('Auto-generated command for restore_project_to_public_version')

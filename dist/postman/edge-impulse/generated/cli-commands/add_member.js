@@ -1,4 +1,4 @@
-import { add_member } from '../add_member';
+import { add_member } from '../add_member.js';
 export function addAdd_memberCommand(program) {
     program.command('add-member')
         .description('Auto-generated command for add_member')

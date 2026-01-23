@@ -1,4 +1,4 @@
-import { update_white_label_project } from '../update_white_label_project';
+import { update_white_label_project } from '../update_white_label_project.js';
 export function addUpdate_white_label_projectCommand(program) {
     program.command('update-white-label-project')
         .description('Auto-generated command for update_white_label_project')

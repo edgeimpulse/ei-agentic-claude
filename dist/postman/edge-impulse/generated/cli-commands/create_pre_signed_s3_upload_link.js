@@ -1,4 +1,4 @@
-import { create_pre_signed_s3_upload_link } from '../create_pre_signed_s3_upload_link';
+import { create_pre_signed_s3_upload_link } from '../create_pre_signed_s3_upload_link.js';
 export function addCreate_pre_signed_s3_upload_linkCommand(program) {
     program.command('create-pre-signed-s3-upload-link')
         .description('Auto-generated command for create_pre_signed_s3_upload_link')

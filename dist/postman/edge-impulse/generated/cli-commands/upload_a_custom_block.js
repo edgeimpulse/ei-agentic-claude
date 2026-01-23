@@ -1,4 +1,4 @@
-import { upload_a_custom_block } from '../upload_a_custom_block';
+import { upload_a_custom_block } from '../upload_a_custom_block.js';
 export function addUpload_a_custom_blockCommand(program) {
     program.command('upload-a-custom-block')
         .description('Auto-generated command for upload_a_custom_block')

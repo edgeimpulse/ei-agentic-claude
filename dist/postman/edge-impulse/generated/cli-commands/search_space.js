@@ -1,4 +1,4 @@
-import { search_space } from '../search_space';
+import { search_space } from '../search_space.js';
 export function addSearch_spaceCommand(program) {
     program.command('search-space')
         .description('Auto-generated command for search_space')

@@ -1,4 +1,4 @@
-import { give_access_to_project } from '../give_access_to_project';
+import { give_access_to_project } from '../give_access_to_project.js';
 export function addGive_access_to_projectCommand(program) {
     program.command('give-access-to-project')
         .description('Auto-generated command for give_access_to_project')

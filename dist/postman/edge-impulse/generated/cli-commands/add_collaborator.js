@@ -1,4 +1,4 @@
-import { add_collaborator } from '../add_collaborator';
+import { add_collaborator } from '../add_collaborator.js';
 export function addAdd_collaboratorCommand(program) {
     program.command('add-collaborator')
         .description('Auto-generated command for add_collaborator')

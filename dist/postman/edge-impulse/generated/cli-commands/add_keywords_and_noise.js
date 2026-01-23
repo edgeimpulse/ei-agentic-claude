@@ -1,4 +1,4 @@
-import { add_keywords_and_noise } from '../add_keywords_and_noise';
+import { add_keywords_and_noise } from '../add_keywords_and_noise.js';
 export function addAdd_keywords_and_noiseCommand(program) {
     program.command('add-keywords-and-noise')
         .description('Auto-generated command for add_keywords_and_noise')

@@ -1,4 +1,4 @@
-import { update_theme_logos } from '../update_theme_logos';
+import { update_theme_logos } from '../update_theme_logos.js';
 export function addUpdate_theme_logosCommand(program) {
     program.command('update-theme-logos')
         .description('Auto-generated command for update_theme_logos')

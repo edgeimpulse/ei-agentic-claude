@@ -1,4 +1,4 @@
-import { set_member_datasets } from '../set_member_datasets';
+import { set_member_datasets } from '../set_member_datasets.js';
 export function addSet_member_datasetsCommand(program) {
     program.command('set-member-datasets')
         .description('Auto-generated command for set_member_datasets')

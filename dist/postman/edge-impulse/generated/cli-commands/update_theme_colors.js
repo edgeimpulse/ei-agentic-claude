@@ -1,4 +1,4 @@
-import { update_theme_colors } from '../update_theme_colors';
+import { update_theme_colors } from '../update_theme_colors.js';
 export function addUpdate_theme_colorsCommand(program) {
     program.command('update-theme-colors')
         .description('Auto-generated command for update_theme_colors')

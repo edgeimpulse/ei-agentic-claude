@@ -1,4 +1,4 @@
-import { rename_file_from_portal } from '../rename_file_from_portal';
+import { rename_file_from_portal } from '../rename_file_from_portal.js';
 export function addRename_file_from_portalCommand(program) {
     program.command('rename-file-from-portal')
         .description('Auto-generated command for rename_file_from_portal')

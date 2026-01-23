@@ -1,4 +1,4 @@
-import { download_dsp_data } from '../download_dsp_data';
+import { download_dsp_data } from '../download_dsp_data.js';
 export function addDownload_dsp_dataCommand(program) {
     program.command('download-dsp-data')
         .description('Auto-generated command for download_dsp_data')

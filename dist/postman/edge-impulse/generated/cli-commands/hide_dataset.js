@@ -1,4 +1,4 @@
-import { hide_dataset } from '../hide_dataset';
+import { hide_dataset } from '../hide_dataset.js';
 export function addHide_datasetCommand(program) {
     program.command('hide-dataset')
         .description('Auto-generated command for hide_dataset')

@@ -1,4 +1,4 @@
-import { upload_performance_calibration_audio_files } from '../upload_performance_calibration_audio_files';
+import { upload_performance_calibration_audio_files } from '../upload_performance_calibration_audio_files.js';
 export function addUpload_performance_calibration_audio_filesCommand(program) {
     program.command('upload-performance-calibration-audio-files')
         .description('Auto-generated command for upload_performance_calibration_audio_files')

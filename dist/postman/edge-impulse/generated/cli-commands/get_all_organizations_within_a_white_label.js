@@ -1,4 +1,4 @@
-import { get_all_organizations_within_a_white_label } from '../get_all_organizations_within_a_white_label';
+import { get_all_organizations_within_a_white_label } from '../get_all_organizations_within_a_white_label.js';
 export function addGet_all_organizations_within_a_white_labelCommand(program) {
     program.command('get-all-organizations-within-a-white-label')
         .description('Auto-generated command for get_all_organizations_within_a_white_label')

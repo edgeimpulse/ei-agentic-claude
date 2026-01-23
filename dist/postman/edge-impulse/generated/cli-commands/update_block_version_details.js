@@ -1,4 +1,4 @@
-import { update_block_version_details } from '../update_block_version_details';
+import { update_block_version_details } from '../update_block_version_details.js';
 export function addUpdate_block_version_detailsCommand(program) {
     program.command('update-block-version-details')
         .description('Auto-generated command for update_block_version_details')

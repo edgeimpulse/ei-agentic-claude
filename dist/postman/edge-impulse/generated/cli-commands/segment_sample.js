@@ -1,4 +1,4 @@
-import { segment_sample } from '../segment_sample';
+import { segment_sample } from '../segment_sample.js';
 export function addSegment_sampleCommand(program) {
     program.command('segment-sample')
         .description('Auto-generated command for segment_sample')

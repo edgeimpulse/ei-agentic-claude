@@ -1,4 +1,4 @@
-import { get_syntiant_posterior_parameters } from '../get_syntiant_posterior_parameters';
+import { get_syntiant_posterior_parameters } from '../get_syntiant_posterior_parameters.js';
 export function addGet_syntiant_posterior_parametersCommand(program) {
     program.command('get-syntiant-posterior-parameters')
         .description('Auto-generated command for get_syntiant_posterior_parameters')

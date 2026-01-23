@@ -1,4 +1,4 @@
-import { add_a_storage_bucket } from '../add_a_storage_bucket';
+import { add_a_storage_bucket } from '../add_a_storage_bucket.js';
 export function addAdd_a_storage_bucketCommand(program) {
     program.command('add-a-storage-bucket')
         .description('Auto-generated command for add_a_storage_bucket')

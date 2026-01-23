@@ -1,4 +1,4 @@
-import { update_storage_bucket } from '../update_storage_bucket';
+import { update_storage_bucket } from '../update_storage_bucket.js';
 export function addUpdate_storage_bucketCommand(program) {
     program.command('update-storage-bucket')
         .description('Auto-generated command for update_storage_bucket')

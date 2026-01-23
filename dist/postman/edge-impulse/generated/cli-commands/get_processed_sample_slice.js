@@ -1,4 +1,4 @@
-import { get_processed_sample_slice } from '../get_processed_sample_slice';
+import { get_processed_sample_slice } from '../get_processed_sample_slice.js';
 export function addGet_processed_sample_sliceCommand(program) {
     program.command('get-processed-sample-slice')
         .description('Auto-generated command for get_processed_sample_slice')

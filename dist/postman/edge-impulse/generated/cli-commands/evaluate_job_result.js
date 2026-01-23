@@ -1,4 +1,4 @@
-import { evaluate_job_result } from '../evaluate_job_result';
+import { evaluate_job_result } from '../evaluate_job_result.js';
 export function addEvaluate_job_resultCommand(program) {
     program.command('evaluate-job-result')
         .description('Auto-generated command for evaluate_job_result')

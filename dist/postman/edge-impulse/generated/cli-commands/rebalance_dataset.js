@@ -1,4 +1,4 @@
-import { rebalance_dataset } from '../rebalance_dataset';
+import { rebalance_dataset } from '../rebalance_dataset.js';
 export function addRebalance_datasetCommand(program) {
     program.command('rebalance-dataset')
         .description('Auto-generated command for rebalance_dataset')

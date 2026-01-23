@@ -1,4 +1,4 @@
-import { get_video_file } from '../get_video_file';
+import { get_video_file } from '../get_video_file.js';
 export function addGet_video_fileCommand(program) {
     program.command('get-video-file')
         .description('Auto-generated command for get_video_file')

@@ -1,4 +1,4 @@
-import { delete_transformation_job } from '../delete_transformation_job';
+import { delete_transformation_job } from '../delete_transformation_job.js';
 export function addDelete_transformation_jobCommand(program) {
     program.command('delete-transformation-job')
         .description('Auto-generated command for delete_transformation_job')

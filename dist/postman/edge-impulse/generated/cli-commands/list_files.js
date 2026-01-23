@@ -1,4 +1,4 @@
-import { list_files } from '../list_files';
+import { list_files } from '../list_files.js';
 export function addList_filesCommand(program) {
     program.command('list-files')
         .description('Auto-generated command for list_files')

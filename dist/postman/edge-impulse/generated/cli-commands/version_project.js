@@ -1,4 +1,4 @@
-import { version_project } from '../version_project';
+import { version_project } from '../version_project.js';
 export function addVersion_projectCommand(program) {
     program.command('version-project')
         .description('Auto-generated command for version_project')

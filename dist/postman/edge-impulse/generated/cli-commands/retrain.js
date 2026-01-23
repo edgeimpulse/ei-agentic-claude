@@ -1,4 +1,4 @@
-import { retrain } from '../retrain';
+import { retrain } from '../retrain.js';
 export function addRetrainCommand(program) {
     program.command('retrain')
         .description('Auto-generated command for retrain')

@@ -1,4 +1,4 @@
-import { get_a_white_label_user } from '../get_a_white_label_user';
+import { get_a_white_label_user } from '../get_a_white_label_user.js';
 export function addGet_a_white_label_userCommand(program) {
     program.command('get-a-white-label-user')
         .description('Auto-generated command for get_a_white_label_user')

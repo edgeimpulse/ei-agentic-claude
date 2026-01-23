@@ -1,4 +1,4 @@
-import { get_raw_sample } from '../get_raw_sample';
+import { get_raw_sample } from '../get_raw_sample.js';
 export function addGet_raw_sampleCommand(program) {
     program.command('get-raw-sample')
         .description('Auto-generated command for get_raw_sample')

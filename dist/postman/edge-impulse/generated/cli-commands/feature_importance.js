@@ -1,4 +1,4 @@
-import { feature_importance } from '../feature_importance';
+import { feature_importance } from '../feature_importance.js';
 export function addFeature_importanceCommand(program) {
     program.command('feature-importance')
         .description('Auto-generated command for feature_importance')

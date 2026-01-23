@@ -1,4 +1,4 @@
-import { move_sample } from '../move_sample';
+import { move_sample } from '../move_sample.js';
 export function addMove_sampleCommand(program) {
     program.command('move-sample')
         .description('Auto-generated command for move_sample')

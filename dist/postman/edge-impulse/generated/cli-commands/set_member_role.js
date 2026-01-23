@@ -1,4 +1,4 @@
-import { set_member_role } from '../set_member_role';
+import { set_member_role } from '../set_member_role.js';
 export function addSet_member_roleCommand(program) {
     program.command('set-member-role')
         .description('Auto-generated command for set_member_role')

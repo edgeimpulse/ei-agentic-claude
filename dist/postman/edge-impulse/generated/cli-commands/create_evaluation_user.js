@@ -1,4 +1,4 @@
-import { create_evaluation_user } from '../create_evaluation_user';
+import { create_evaluation_user } from '../create_evaluation_user.js';
 export function addCreate_evaluation_userCommand(program) {
     program.command('create-evaluation-user')
         .description('Auto-generated command for create_evaluation_user')

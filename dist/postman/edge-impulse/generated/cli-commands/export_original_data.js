@@ -1,4 +1,4 @@
-import { export_original_data } from '../export_original_data';
+import { export_original_data } from '../export_original_data.js';
 export function addExport_original_dataCommand(program) {
     program.command('export-original-data')
         .description('Auto-generated command for export_original_data')

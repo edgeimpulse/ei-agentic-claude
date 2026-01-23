@@ -1,4 +1,4 @@
-import { add_new_data } from '../add_new_data';
+import { add_new_data } from '../add_new_data.js';
 export function addAdd_new_dataCommand(program) {
     program.command('add-new-data')
         .description('Auto-generated command for add_new_data')

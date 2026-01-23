@@ -1,4 +1,4 @@
-import { get_logs } from '../get_logs';
+import { get_logs } from '../get_logs.js';
 export function addGet_logsCommand(program) {
     program.command('get-logs')
         .description('Auto-generated command for get_logs')

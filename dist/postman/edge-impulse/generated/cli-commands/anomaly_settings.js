@@ -1,4 +1,4 @@
-import { anomaly_settings } from '../anomaly_settings';
+import { anomaly_settings } from '../anomaly_settings.js';
 export function addAnomaly_settingsCommand(program) {
     program.command('anomaly-settings')
         .description('Auto-generated command for anomaly_settings')

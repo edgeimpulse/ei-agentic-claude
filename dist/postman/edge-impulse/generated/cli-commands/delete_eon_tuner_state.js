@@ -1,4 +1,4 @@
-import { delete_eon_tuner_state } from '../delete_eon_tuner_state';
+import { delete_eon_tuner_state } from '../delete_eon_tuner_state.js';
 export function addDelete_eon_tuner_stateCommand(program) {
     program.command('delete-eon-tuner-state')
         .description('Auto-generated command for delete_eon_tuner_state')

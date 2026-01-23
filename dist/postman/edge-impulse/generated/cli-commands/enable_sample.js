@@ -1,4 +1,4 @@
-import { enable_sample } from '../enable_sample';
+import { enable_sample } from '../enable_sample.js';
 export function addEnable_sampleCommand(program) {
     program.command('enable-sample')
         .description('Auto-generated command for enable_sample')

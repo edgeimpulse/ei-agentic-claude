@@ -1,4 +1,4 @@
-import { save_performance_calibration_parameters } from '../save_performance_calibration_parameters';
+import { save_performance_calibration_parameters } from '../save_performance_calibration_parameters.js';
 export function addSave_performance_calibration_parametersCommand(program) {
     program.command('save-performance-calibration-parameters')
         .description('Auto-generated command for save_performance_calibration_parameters')

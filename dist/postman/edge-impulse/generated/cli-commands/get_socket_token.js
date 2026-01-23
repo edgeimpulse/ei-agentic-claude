@@ -1,4 +1,4 @@
-import { get_socket_token } from '../get_socket_token';
+import { get_socket_token } from '../get_socket_token.js';
 export function addGet_socket_tokenCommand(program) {
     program.command('get-socket-token')
         .description('Auto-generated command for get_socket_token')

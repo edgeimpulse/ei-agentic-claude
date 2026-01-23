@@ -1,20 +1,34 @@
 
+
 # Development & Production Usage
 
-## Development (TypeScript, ts-node)
+## Universal CLI Launcher (Recommended)
+Use the provided launcher script to automatically detect and run the CLI in the correct mode:
+
+```
+node launch-cli.mjs get-all-projects --api-key <your_api_key>
+```
+
+This script will:
+- Use `ts-node` and `.ts` sources if available (development mode)
+- Use compiled `.js` files from `dist` if running in production
+
+## Manual Usage
+
+### Development (TypeScript, ts-node)
 Run CLI commands directly with TypeScript using ts-node:
 
 ```
 npm run cli -- get-all-projects --api-key <your_api_key>
 ```
 
-## Production (after build)
+### Production (after build)
 First, build the project:
 
 ```
 npx tsc
 ```
-Then run the compiled CLI from the `dist` directory (or wherever your output is):
+Then run the compiled CLI from the `dist` directory:
 
 ```
 node dist/cli.js get-all-projects --api-key <your_api_key>
@@ -56,6 +70,24 @@ alias eicli='npm run cli -- --api-key $EI_API_KEY'
 Then run:
 ```sh
 eicli get-all-projects
+
+## New: `--params` JSON and optional `organizationId`
+
+Many generated commands accept a `--params` option which takes a JSON string of parameters. For project listing we made `organizationId` optional — if supplied the CLI will call the organization-scoped endpoint, otherwise it will call the user-facing projects endpoint.
+
+Examples:
+
+```sh
+# List projects for API key (no organization required)
+node launch-cli.mjs get-projects --api-key $EI_API_KEY --params '{"type":"classification"}'
+
+# List projects for an organization (organizationId is optional)
+node launch-cli.mjs get-projects --api-key $EI_API_KEY --params '{"organizationId":"1478","type":"classification"}'
+```
+
+The same `--params` JSON pattern is used by other commands — e.g., training commands accept `projectId`, `learnId`, and training parameters through `--params`.
+
+If you prefer top-level flags, many commands still accept specific flags generated in the CLI files (check `--help` for the command).
 ```
 
 **Want built-in support for config files or env vars?**
@@ -143,6 +175,20 @@ This project demonstrates a minimal, agentic workflow for Edge Impulse using a T
   ```sh
   npm run cli -- train-model-keras --api-key <your_api_key> --params '{"projectId":123,"learnId":456}'
   ```
+ 
+    ### Start training with `--params` (JSON)
+
+    You can pass the full training request as a JSON string using `--params`. This is useful when invoking from agents or scripts.
+
+    ```sh
+    # start training (Keras) with training parameters in --params
+    npm run cli -- train-model-keras --api-key <your_api_key> \
+      --params '{"projectId":123,"learnId":456,"mode":"visual","trainingCycles":30,"learningRate":0.01,"batchSize":64}'
+
+    # some generators use the command name `start-training` — same pattern applies
+    npm run cli -- start-training --api-key <your_api_key> \
+      --params '{"projectId":123,"learnId":456,"mode":"visual","trainingCycles":30}'
+    ```
 3. **Check job status:**
   ```sh
   npm run cli -- get-job-status --api-key <your_api_key> --params '{"projectId":123,"jobId":789}'
@@ -231,10 +277,11 @@ See the [Edge Impulse API docs](https://docs.edgeimpulse.com/apis/studio/jobs/tr
 
 **Example: Advanced configuration**
 ```sh
-npm run cli -- start-training --apiKey <your_api_key> --projectId <projectId> --learnId <learnId> \
+npm run cli -- start-training --api-key <your_api_key> --projectId <projectId> --learnId <learnId> \
   --mode visual \
   --param trainingCycles=50 learningRate=0.005 batchSize=64 autoClassWeights=true selectedModelType=int8
 ```
+
 
 Claude can generate or modify these commands to set any supported parameter for your Keras block.
 ## Proven Example: Train a Keras Block
