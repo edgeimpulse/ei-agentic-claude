@@ -338,3 +338,28 @@ node launch-cli.mjs retrain --api-key "$EI_API_KEY" --params '{"projectId":81459
 Notes:
 - Job status endpoints can be briefly unavailable after job creation; `wait-job` retries automatically.
 - Use `--params` to pass JSON parameters to generated CLI commands.
+
+## Testing
+
+This repository includes a small smoke test and unit tests to help contributors validate changes quickly.
+
+- Smoke test: a lightweight Node script that asserts key CLI help text is present. Run:
+
+```bash
+npm install
+npm run smoke
+```
+
+- Unit tests: written with Vitest. Run:
+
+```bash
+npm test
+```
+
+Files of interest:
+- `scripts/smoke-test.js` — smoke script that runs basic CLI help checks.
+- `test/cli.spec.ts` — Vitest tests asserting presence of key commands (`train-model-keras`, `wait-job`).
+
+Notes:
+- The project uses ESM (`type: module`), so the smoke script uses ESM imports.
+- CI: consider adding a GitHub Actions workflow to run `npm ci && npm run smoke && npm test` on PRs.

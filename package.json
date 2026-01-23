@@ -9,13 +9,16 @@
   "scripts": {
     "cli": "ts-node-esm src/cli.ts",
     "build": "tsc && node scripts/fix-dist-imports.js",
-    "build:tsc": "tsc"
+    "build:tsc": "tsc",
+    "test": "vitest",
+    "smoke": "node ./scripts/smoke-test.js"
   },
   "dependencies": {
     "commander": "^11.0.0"
   },
   "devDependencies": {
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
   }
 }
