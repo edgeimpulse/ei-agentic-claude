@@ -1,7 +1,7 @@
 
 # Edge Impulse Agentic CLI
 
-This CLI was auto-generated from Edge Impulse's REST API configurations on Postman, designed for use by agents like Claude. It provides a comprehensive interface to Edge Impulse APIs, but individual commands may require testing and extension.
+This CLI was auto-generated from Edge Impulse's REST API configurations on Postman, designed for use by agents like Claude. It provides a interface to Edge Impulse APIs, but individual commands may require testing and extension.
 
 ## Table of Contents
 - [Screenshots](#screenshots)
