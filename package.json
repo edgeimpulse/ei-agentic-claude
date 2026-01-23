@@ -7,7 +7,9 @@
     "cli": "./src/cli.ts"
   },
   "scripts": {
-    "cli": "ts-node-esm src/cli.ts"
+    "cli": "ts-node-esm src/cli.ts",
+    "build": "tsc && node scripts/fix-dist-imports.js",
+    "build:tsc": "tsc"
   },
   "dependencies": {
     "commander": "^11.0.0"

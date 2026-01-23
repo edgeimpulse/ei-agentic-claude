@@ -28,8 +28,15 @@ export async function startTraining(apiKey: string, req: StartTrainingRequest): 
   if (response.ok) {
     return (await response.json()) as StartTrainingResponse;
   }
-  // Try to parse error as JSON, else print raw text
-  let errorText = await response.text();
+  // Print full error response for debugging
+  const errorText = await response.text();
+  const errorInfo = {
+    status: response.status,
+    statusText: response.statusText,
+    headers: Object.fromEntries(response.headers.entries()),
+    body: errorText
+  };
+  console.error("Edge Impulse API error response:", JSON.stringify(errorInfo, null, 2));
   try {
     const error = JSON.parse(errorText) as EdgeImpulseError;
     throw new Error(`Edge Impulse API error: ${error.message}`);
