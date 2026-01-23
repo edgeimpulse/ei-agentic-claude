@@ -36,18 +36,8 @@ claude mcp add --transport http postman https://mcp.postman.com/code \
   --header "Authorization: Bearer YOUR_POSTMAN_API_KEY"
 ```
 
-2. **Prompt your agent:**
 
-> Build a CLI that lists my Edge Impulse projects and starts a training job using the Edge Impulse API collection.
-
-3. **Generated files:**
-- src/postman/edge-impulse/projects/list-projects/client.ts
-- src/postman/edge-impulse/projects/upload-data/client.ts
-- src/postman/edge-impulse/training/start-training/client.ts
-- src/postman/edge-impulse/shared/types.ts
-- src/cli.ts
-
-4. **Run the CLI:**
+2. **Run the CLI:**
 
 ```sh
 npm run cli -- list-projects
