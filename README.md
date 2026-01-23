@@ -107,7 +107,7 @@ npm run cli -- <command-name> --api-key <your_api_key> [--params '{"param1":"val
 - Run `npm run cli -- --help` to see all registered commands and options.
 - Use the exact generated command name (e.g., `get-all-projects`, `add-api-key`).
 
-**Unified option:** All commands require `--api-key <your_api_key>` (not `--apiKey`).
+**Unified option:** All commands require `--api-key <your_api_key>`
 
 **Example:**
 ```
