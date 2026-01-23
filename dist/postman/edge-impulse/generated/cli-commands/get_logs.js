@@ -1,8 +1,8 @@
-import { get_logs } from '../get_logs.ts';
+import { get_logs } from '../get_logs';
 export function addGet_logsCommand(program) {
     program.command('get-logs')
         .description('Auto-generated command for get_logs')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

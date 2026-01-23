@@ -1,8 +1,8 @@
-import { retrieve_upload_portal_information } from '../retrieve_upload_portal_information.ts';
+import { retrieve_upload_portal_information } from '../retrieve_upload_portal_information';
 export function addRetrieve_upload_portal_informationCommand(program) {
     program.command('retrieve-upload-portal-information')
         .description('Auto-generated command for retrieve_upload_portal_information')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { retry_transformation_file } from '../retry_transformation_file.ts';
+  import { retry_transformation_file } from '../retry_transformation_file';
 
 export function addRetry_transformation_fileCommand(program: Command) {
   program.command('retry-transformation-file')
     .description('Auto-generated command for retry_transformation_file')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

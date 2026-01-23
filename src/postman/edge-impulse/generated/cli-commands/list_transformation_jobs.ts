@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { list_transformation_jobs } from '../list_transformation_jobs.ts';
+  import { list_transformation_jobs } from '../list_transformation_jobs';
 
 export function addList_transformation_jobsCommand(program: Command) {
   program.command('list-transformation-jobs')
     .description('Auto-generated command for list_transformation_jobs')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

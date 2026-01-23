@@ -1,8 +1,8 @@
-import { clear_performance_calibration_parameters } from '../clear_performance_calibration_parameters.ts';
+import { clear_performance_calibration_parameters } from '../clear_performance_calibration_parameters';
 export function addClear_performance_calibration_parametersCommand(program) {
     program.command('clear-performance-calibration-parameters')
         .description('Auto-generated command for clear_performance_calibration_parameters')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

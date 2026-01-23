@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { remove_collaborator } from '../remove_collaborator.ts';
+  import { remove_collaborator } from '../remove_collaborator';
 
 export function addRemove_collaboratorCommand(program: Command) {
   program.command('remove-collaborator')
     .description('Auto-generated command for remove_collaborator')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_a_white_label_user } from '../get_a_white_label_user.ts';
+  import { get_a_white_label_user } from '../get_a_white_label_user';
 
 export function addGet_a_white_label_userCommand(program: Command) {
   program.command('get-a-white-label-user')
     .description('Auto-generated command for get_a_white_label_user')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

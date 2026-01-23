@@ -1,8 +1,8 @@
-import { start_transformation_job } from '../start_transformation_job.ts';
+import { start_transformation_job } from '../start_transformation_job';
 export function addStart_transformation_jobCommand(program) {
     program.command('start-transformation-job')
         .description('Auto-generated command for start_transformation_job')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

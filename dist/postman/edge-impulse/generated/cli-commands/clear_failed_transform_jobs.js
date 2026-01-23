@@ -1,8 +1,8 @@
-import { clear_failed_transform_jobs } from '../clear_failed_transform_jobs.ts';
+import { clear_failed_transform_jobs } from '../clear_failed_transform_jobs';
 export function addClear_failed_transform_jobsCommand(program) {
     program.command('clear-failed-transform-jobs')
         .description('Auto-generated command for clear_failed_transform_jobs')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

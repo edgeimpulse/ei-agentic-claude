@@ -1,8 +1,8 @@
-import { remove_all_samples_by_category } from '../remove_all_samples_by_category.ts';
+import { remove_all_samples_by_category } from '../remove_all_samples_by_category';
 export function addRemove_all_samples_by_categoryCommand(program) {
     program.command('remove-all-samples-by-category')
         .description('Auto-generated command for remove_all_samples_by_category')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

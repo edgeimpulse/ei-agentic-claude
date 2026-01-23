@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import { remove_project } from '../remove_project.js';
+  import { remove_project } from '../remove_project';
 
 export function addRemove_projectCommand(program: Command) {
   program.command('remove-project')

@@ -1,8 +1,8 @@
-import { readme_io } from '../readme_io.ts';
+import { readme_io } from '../readme_io';
 export function addReadme_ioCommand(program) {
     program.command('readme-io')
         .description('Auto-generated command for readme_io')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

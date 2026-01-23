@@ -1,8 +1,8 @@
-import { classify_job_result } from '../classify_job_result.ts';
+import { classify_job_result } from '../classify_job_result';
 export function addClassify_job_resultCommand(program) {
     program.command('classify-job-result')
         .description('Auto-generated command for classify_job_result')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

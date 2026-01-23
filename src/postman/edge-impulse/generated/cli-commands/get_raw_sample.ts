@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_raw_sample } from '../get_raw_sample.ts';
+  import { get_raw_sample } from '../get_raw_sample';
 
 export function addGet_raw_sampleCommand(program: Command) {
   program.command('get-raw-sample')
     .description('Auto-generated command for get_raw_sample')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

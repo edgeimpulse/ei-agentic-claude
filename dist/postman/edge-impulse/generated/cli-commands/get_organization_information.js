@@ -1,8 +1,8 @@
-import { get_organization_information } from '../get_organization_information.ts';
+import { get_organization_information } from '../get_organization_information';
 export function addGet_organization_informationCommand(program) {
     program.command('get-organization-information')
         .description('Auto-generated command for get_organization_information')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

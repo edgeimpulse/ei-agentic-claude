@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { auto_label_an_image } from '../auto_label_an_image.ts';
+  import { auto_label_an_image } from '../auto_label_an_image';
 
 export function addAuto_label_an_imageCommand(program: Command) {
   program.command('auto-label-an-image')
     .description('Auto-generated command for auto_label_an_image')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

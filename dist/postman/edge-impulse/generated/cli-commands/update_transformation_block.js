@@ -1,8 +1,8 @@
-import { update_transformation_block } from '../update_transformation_block.ts';
+import { update_transformation_block } from '../update_transformation_block';
 export function addUpdate_transformation_blockCommand(program) {
     program.command('update-transformation-block')
         .description('Auto-generated command for update_transformation_block')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

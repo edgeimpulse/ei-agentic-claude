@@ -1,8 +1,8 @@
-import { get_ground_truth } from '../get_ground_truth.ts';
+import { get_ground_truth } from '../get_ground_truth';
 export function addGet_ground_truthCommand(program) {
     program.command('get-ground-truth')
         .description('Auto-generated command for get_ground_truth')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

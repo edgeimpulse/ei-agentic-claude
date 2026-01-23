@@ -1,8 +1,8 @@
-import { update_third_party_auth } from '../update_third_party_auth.ts';
+import { update_third_party_auth } from '../update_third_party_auth';
 export function addUpdate_third_party_authCommand(program) {
     program.command('update-third-party-auth')
         .description('Auto-generated command for update_third_party_auth')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { crop_sample } from '../crop_sample.ts';
+  import { crop_sample } from '../crop_sample';
 
 export function addCrop_sampleCommand(program: Command) {
   program.command('crop-sample')
     .description('Auto-generated command for crop_sample')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,8 +1,8 @@
-import { bulk_update_metadata } from '../bulk_update_metadata.ts';
+import { bulk_update_metadata } from '../bulk_update_metadata';
 export function addBulk_update_metadataCommand(program) {
     program.command('bulk-update-metadata')
         .description('Auto-generated command for bulk_update_metadata')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

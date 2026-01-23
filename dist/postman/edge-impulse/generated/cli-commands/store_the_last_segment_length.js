@@ -1,8 +1,8 @@
-import { store_the_last_segment_length } from '../store_the_last_segment_length.ts';
+import { store_the_last_segment_length } from '../store_the_last_segment_length';
 export function addStore_the_last_segment_lengthCommand(program) {
     program.command('store-the-last-segment-length')
         .description('Auto-generated command for store_the_last_segment_length')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

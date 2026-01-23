@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { list_versions } from '../list_versions.ts';
+  import { list_versions } from '../list_versions';
 
 export function addList_versionsCommand(program: Command) {
   program.command('list-versions')
     .description('Auto-generated command for list_versions')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

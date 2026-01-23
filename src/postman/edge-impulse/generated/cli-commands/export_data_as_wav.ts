@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { export_data_as_wav } from '../export_data_as_wav.ts';
+  import { export_data_as_wav } from '../export_data_as_wav';
 
 export function addExport_data_as_wavCommand(program: Command) {
   program.command('export-data-as-wav')
     .description('Auto-generated command for export_data_as_wav')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

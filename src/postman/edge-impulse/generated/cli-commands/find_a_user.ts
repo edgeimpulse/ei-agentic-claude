@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { find_a_user } from '../find_a_user.ts';
+  import { find_a_user } from '../find_a_user';
 
 export function addFind_a_userCommand(program: Command) {
   program.command('find-a-user')
     .description('Auto-generated command for find_a_user')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

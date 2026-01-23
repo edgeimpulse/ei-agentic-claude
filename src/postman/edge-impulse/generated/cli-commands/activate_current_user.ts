@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { activate_current_user } from '../activate_current_user.ts';
+  import { activate_current_user } from '../activate_current_user';
 
 export function addActivate_current_userCommand(program: Command) {
   program.command('activate-current-user')
     .description('Auto-generated command for activate_current_user')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

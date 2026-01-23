@@ -1,8 +1,8 @@
-import { convert_current_evaluation_user } from '../convert_current_evaluation_user.ts';
+import { convert_current_evaluation_user } from '../convert_current_evaluation_user';
 export function addConvert_current_evaluation_userCommand(program) {
     program.command('convert-current-evaluation-user')
         .description('Auto-generated command for convert_current_evaluation_user')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

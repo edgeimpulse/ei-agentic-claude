@@ -1,8 +1,8 @@
-import { disable_multiple_samples } from '../disable_multiple_samples.ts';
+import { disable_multiple_samples } from '../disable_multiple_samples';
 export function addDisable_multiple_samplesCommand(program) {
     program.command('disable-multiple-samples')
         .description('Auto-generated command for disable_multiple_samples')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

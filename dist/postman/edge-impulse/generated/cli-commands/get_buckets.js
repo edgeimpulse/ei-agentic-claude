@@ -1,8 +1,8 @@
-import { get_buckets } from '../get_buckets.ts';
+import { get_buckets } from '../get_buckets';
 export function addGet_bucketsCommand(program) {
     program.command('get-buckets')
         .description('Auto-generated command for get_buckets')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

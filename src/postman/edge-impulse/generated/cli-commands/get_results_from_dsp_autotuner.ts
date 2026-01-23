@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_results_from_dsp_autotuner } from '../get_results_from_dsp_autotuner.ts';
+  import { get_results_from_dsp_autotuner } from '../get_results_from_dsp_autotuner';
 
 export function addGet_results_from_dsp_autotunerCommand(program: Command) {
   program.command('get-results-from-dsp-autotuner')
     .description('Auto-generated command for get_results_from_dsp_autotuner')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

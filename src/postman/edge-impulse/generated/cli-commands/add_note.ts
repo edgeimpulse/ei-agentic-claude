@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { add_note } from '../add_note.ts';
+  import { add_note } from '../add_note';
 
 export function addAdd_noteCommand(program: Command) {
   program.command('add-note')
     .description('Auto-generated command for add_note')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { delete_dsp_block } from '../delete_dsp_block.ts';
+  import { delete_dsp_block } from '../delete_dsp_block';
 
 export function addDelete_dsp_blockCommand(program: Command) {
   program.command('delete-dsp-block')
     .description('Auto-generated command for delete_dsp_block')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,8 +1,8 @@
-import { run_pipelines } from '../run_pipelines.ts';
+import { run_pipelines } from '../run_pipelines';
 export function addRun_pipelinesCommand(program) {
     program.command('run-pipelines')
         .description('Auto-generated command for run_pipelines')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

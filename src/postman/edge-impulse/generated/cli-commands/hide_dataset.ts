@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { hide_dataset } from '../hide_dataset.ts';
+  import { hide_dataset } from '../hide_dataset';
 
 export function addHide_datasetCommand(program: Command) {
   program.command('hide-dataset')
     .description('Auto-generated command for hide_dataset')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

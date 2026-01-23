@@ -1,8 +1,8 @@
-import { get_user_password_state } from '../get_user_password_state.ts';
+import { get_user_password_state } from '../get_user_password_state';
 export function addGet_user_password_stateCommand(program) {
     program.command('get-user-password-state')
         .description('Auto-generated command for get_user_password_state')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

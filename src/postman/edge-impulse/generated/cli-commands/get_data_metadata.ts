@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_data_metadata } from '../get_data_metadata.ts';
+  import { get_data_metadata } from '../get_data_metadata';
 
 export function addGet_data_metadataCommand(program: Command) {
   program.command('get-data-metadata')
     .description('Auto-generated command for get_data_metadata')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { search_space } from '../search_space.ts';
+  import { search_space } from '../search_space';
 
 export function addSearch_spaceCommand(program: Command) {
   program.command('search-space')
     .description('Auto-generated command for search_space')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,8 +1,8 @@
-import { get_secrets } from '../get_secrets.ts';
+import { get_secrets } from '../get_secrets';
 export function addGet_secretsCommand(program) {
     program.command('get-secrets')
         .description('Auto-generated command for get_secrets')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

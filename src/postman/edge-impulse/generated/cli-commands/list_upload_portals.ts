@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { list_upload_portals } from '../list_upload_portals.ts';
+  import { list_upload_portals } from '../list_upload_portals';
 
 export function addList_upload_portalsCommand(program: Command) {
   program.command('list-upload-portals')
     .description('Auto-generated command for list_upload_portals')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

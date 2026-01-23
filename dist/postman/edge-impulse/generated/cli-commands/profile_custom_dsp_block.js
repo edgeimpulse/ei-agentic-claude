@@ -1,8 +1,8 @@
-import { profile_custom_dsp_block } from '../profile_custom_dsp_block.ts';
+import { profile_custom_dsp_block } from '../profile_custom_dsp_block';
 export function addProfile_custom_dsp_blockCommand(program) {
     program.command('profile-custom-dsp-block')
         .description('Auto-generated command for profile_custom_dsp_block')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

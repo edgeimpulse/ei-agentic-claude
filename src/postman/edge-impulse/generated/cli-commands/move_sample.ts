@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { move_sample } from '../move_sample.ts';
+  import { move_sample } from '../move_sample';
 
 export function addMove_sampleCommand(program: Command) {
   program.command('move-sample')
     .description('Auto-generated command for move_sample')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

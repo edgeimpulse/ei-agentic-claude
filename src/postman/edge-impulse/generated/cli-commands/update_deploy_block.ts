@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { update_deploy_block } from '../update_deploy_block.ts';
+  import { update_deploy_block } from '../update_deploy_block';
 
 export function addUpdate_deploy_blockCommand(program: Command) {
   program.command('update-deploy-block')
     .description('Auto-generated command for update_deploy_block')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

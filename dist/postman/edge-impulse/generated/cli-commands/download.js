@@ -1,8 +1,8 @@
-import { download } from '../download.ts';
+import { download } from '../download';
 export function addDownloadCommand(program) {
     program.command('download')
         .description('Auto-generated command for download')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

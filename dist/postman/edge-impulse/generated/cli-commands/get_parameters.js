@@ -1,8 +1,8 @@
-import { get_parameters } from '../get_parameters.ts';
+import { get_parameters } from '../get_parameters';
 export function addGet_parametersCommand(program) {
     program.command('get-parameters')
         .description('Auto-generated command for get_parameters')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

@@ -1,8 +1,8 @@
-import { train_model_keras } from '../train_model_keras.ts';
+import { train_model_keras } from '../train_model_keras';
 export function addTrain_model_kerasCommand(program) {
     program.command('train-model-keras')
         .description('Auto-generated command for train_model_keras')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { create_or_login_a_user } from '../create_or_login_a_user.ts';
+  import { create_or_login_a_user } from '../create_or_login_a_user';
 
 export function addCreate_or_login_a_userCommand(program: Command) {
   program.command('create-or-login-a-user')
     .description('Auto-generated command for create_or_login_a_user')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

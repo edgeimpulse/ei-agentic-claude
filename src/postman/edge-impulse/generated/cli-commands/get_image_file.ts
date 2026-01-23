@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_image_file } from '../get_image_file.ts';
+  import { get_image_file } from '../get_image_file';
 
 export function addGet_image_fileCommand(program: Command) {
   program.command('get-image-file')
     .description('Auto-generated command for get_image_file')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

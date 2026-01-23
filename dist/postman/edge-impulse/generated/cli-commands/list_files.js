@@ -1,8 +1,8 @@
-import { list_files } from '../list_files.ts';
+import { list_files } from '../list_files';
 export function addList_filesCommand(program) {
     program.command('list-files')
         .description('Auto-generated command for list_files')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

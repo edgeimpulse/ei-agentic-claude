@@ -1,8 +1,8 @@
-import { generate_features } from '../generate_features.ts';
+import { generate_features } from '../generate_features';
 export function addGenerate_featuresCommand(program) {
     program.command('generate-features')
         .description('Auto-generated command for generate_features')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

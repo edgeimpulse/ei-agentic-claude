@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { object_detection_label_queue } from '../object_detection_label_queue.ts';
+  import { object_detection_label_queue } from '../object_detection_label_queue';
 
 export function addObject_detection_label_queueCommand(program: Command) {
   program.command('object-detection-label-queue')
     .description('Auto-generated command for object_detection_label_queue')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

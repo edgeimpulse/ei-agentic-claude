@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { set_password_for_sso_user } from '../set_password_for_sso_user.ts';
+  import { set_password_for_sso_user } from '../set_password_for_sso_user';
 
 export function addSet_password_for_sso_userCommand(program: Command) {
   program.command('set-password-for-sso-user')
     .description('Auto-generated command for set_password_for_sso_user')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,8 +1,8 @@
-import { get_all_users } from '../get_all_users.ts';
+import { get_all_users } from '../get_all_users';
 export function addGet_all_usersCommand(program) {
     program.command('get-all-users')
         .description('Auto-generated command for get_all_users')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

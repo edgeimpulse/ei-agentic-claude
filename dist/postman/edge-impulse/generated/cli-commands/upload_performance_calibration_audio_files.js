@@ -1,8 +1,8 @@
-import { upload_performance_calibration_audio_files } from '../upload_performance_calibration_audio_files.ts';
+import { upload_performance_calibration_audio_files } from '../upload_performance_calibration_audio_files';
 export function addUpload_performance_calibration_audio_filesCommand(program) {
     program.command('upload-performance-calibration-audio-files')
         .description('Auto-generated command for upload_performance_calibration_audio_files')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

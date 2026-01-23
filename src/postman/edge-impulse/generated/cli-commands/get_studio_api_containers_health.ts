@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_studio_api_containers_health } from '../get_studio_api_containers_health.ts';
+  import { get_studio_api_containers_health } from '../get_studio_api_containers_health';
 
 export function addGet_studio_api_containers_healthCommand(program: Command) {
   program.command('get-studio-api-containers-health')
     .description('Auto-generated command for get_studio_api_containers_health')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

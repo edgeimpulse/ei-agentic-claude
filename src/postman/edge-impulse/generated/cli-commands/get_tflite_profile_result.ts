@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_tflite_profile_result } from '../get_tflite_profile_result.ts';
+  import { get_tflite_profile_result } from '../get_tflite_profile_result';
 
 export function addGet_tflite_profile_resultCommand(program: Command) {
   program.command('get-tflite-profile-result')
     .description('Auto-generated command for get_tflite_profile_result')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

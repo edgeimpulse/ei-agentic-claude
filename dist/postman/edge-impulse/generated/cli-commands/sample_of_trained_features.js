@@ -1,8 +1,8 @@
-import { sample_of_trained_features } from '../sample_of_trained_features.ts';
+import { sample_of_trained_features } from '../sample_of_trained_features';
 export function addSample_of_trained_featuresCommand(program) {
     program.command('sample-of-trained-features')
         .description('Auto-generated command for sample_of_trained_features')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

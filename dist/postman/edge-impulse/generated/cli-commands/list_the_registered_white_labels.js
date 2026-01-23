@@ -1,8 +1,8 @@
-import { list_the_registered_white_labels } from '../list_the_registered_white_labels.ts';
+import { list_the_registered_white_labels } from '../list_the_registered_white_labels';
 export function addList_the_registered_white_labelsCommand(program) {
     program.command('list-the-registered-white-labels')
         .description('Auto-generated command for list_the_registered_white_labels')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

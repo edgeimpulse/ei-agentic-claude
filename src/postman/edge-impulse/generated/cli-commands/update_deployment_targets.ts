@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { update_deployment_targets } from '../update_deployment_targets.ts';
+  import { update_deployment_targets } from '../update_deployment_targets';
 
 export function addUpdate_deployment_targetsCommand(program: Command) {
   program.command('update-deployment-targets')
     .description('Auto-generated command for update_deployment_targets')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

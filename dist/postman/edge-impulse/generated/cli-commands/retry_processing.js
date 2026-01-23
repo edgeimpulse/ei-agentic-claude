@@ -1,8 +1,8 @@
-import { retry_processing } from '../retry_processing.ts';
+import { retry_processing } from '../retry_processing';
 export function addRetry_processingCommand(program) {
     program.command('retry-processing')
         .description('Auto-generated command for retry_processing')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

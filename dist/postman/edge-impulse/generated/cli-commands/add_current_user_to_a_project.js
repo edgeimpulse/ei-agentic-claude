@@ -1,8 +1,8 @@
-import { add_current_user_to_a_project } from '../add_current_user_to_a_project.ts';
+import { add_current_user_to_a_project } from '../add_current_user_to_a_project';
 export function addAdd_current_user_to_a_projectCommand(program) {
     program.command('add-current-user-to-a-project')
         .description('Auto-generated command for add_current_user_to_a_project')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

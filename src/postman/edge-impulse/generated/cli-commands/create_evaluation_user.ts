@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { create_evaluation_user } from '../create_evaluation_user.ts';
+  import { create_evaluation_user } from '../create_evaluation_user';
 
 export function addCreate_evaluation_userCommand(program: Command) {
   program.command('create-evaluation-user')
     .description('Auto-generated command for create_evaluation_user')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

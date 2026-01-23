@@ -1,8 +1,8 @@
-import { create_user } from '../create_user.ts';
+import { create_user } from '../create_user';
 export function addCreate_userCommand(program) {
     program.command('create-user')
         .description('Auto-generated command for create_user')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

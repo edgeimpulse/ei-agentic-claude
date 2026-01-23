@@ -1,8 +1,8 @@
-import { get_raw_result } from '../get_raw_result.ts';
+import { get_raw_result } from '../get_raw_result';
 export function addGet_raw_resultCommand(program) {
     program.command('get-raw-result')
         .description('Auto-generated command for get_raw_result')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

@@ -1,8 +1,8 @@
-import { admin_endpoint } from '../admin_endpoint.ts';
+import { admin_endpoint } from '../admin_endpoint';
 export function addAdmin_endpointCommand(program) {
     program.command('admin-endpoint')
         .description('Auto-generated command for admin_endpoint')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

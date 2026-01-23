@@ -1,8 +1,8 @@
-import { list_emails } from '../list_emails.ts';
+import { list_emails } from '../list_emails';
 export function addList_emailsCommand(program) {
     program.command('list-emails')
         .description('Auto-generated command for list_emails')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

@@ -1,8 +1,8 @@
-import { rename_sample } from '../rename_sample.ts';
+import { rename_sample } from '../rename_sample';
 export function addRename_sampleCommand(program) {
     program.command('rename-sample')
         .description('Auto-generated command for rename_sample')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

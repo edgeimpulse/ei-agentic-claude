@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { download_data } from '../download_data.ts';
+  import { download_data } from '../download_data';
 
 export function addDownload_dataCommand(program: Command) {
   program.command('download-data')
     .description('Auto-generated command for download_data')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

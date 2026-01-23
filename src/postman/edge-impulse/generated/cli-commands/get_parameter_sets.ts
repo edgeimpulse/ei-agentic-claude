@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_parameter_sets } from '../get_parameter_sets.ts';
+  import { get_parameter_sets } from '../get_parameter_sets';
 
 export function addGet_parameter_setsCommand(program: Command) {
   program.command('get-parameter-sets')
     .description('Auto-generated command for get_parameter_sets')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

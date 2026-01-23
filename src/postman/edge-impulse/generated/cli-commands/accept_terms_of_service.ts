@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { accept_terms_of_service } from '../accept_terms_of_service.ts';
+  import { accept_terms_of_service } from '../accept_terms_of_service';
 
 export function addAccept_terms_of_serviceCommand(program: Command) {
   program.command('accept-terms-of-service')
     .description('Auto-generated command for accept_terms_of_service')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

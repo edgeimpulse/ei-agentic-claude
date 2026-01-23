@@ -1,8 +1,8 @@
-import { revoke_api_key } from '../revoke_api_key.ts';
+import { revoke_api_key } from '../revoke_api_key';
 export function addRevoke_api_keyCommand(program) {
     program.command('revoke-api-key')
         .description('Auto-generated command for revoke_api_key')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

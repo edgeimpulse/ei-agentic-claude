@@ -1,8 +1,8 @@
-import { list_active_organizations } from '../list_active_organizations.ts';
+import { list_active_organizations } from '../list_active_organizations';
 export function addList_active_organizationsCommand(program) {
     program.command('list-active-organizations')
         .description('Auto-generated command for list_active_organizations')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

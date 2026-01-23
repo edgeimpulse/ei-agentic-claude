@@ -1,8 +1,8 @@
-import { list_public_versions } from '../list_public_versions.ts';
+import { list_public_versions } from '../list_public_versions';
 export function addList_public_versionsCommand(program) {
     program.command('list-public-versions')
         .description('Auto-generated command for list_public_versions')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

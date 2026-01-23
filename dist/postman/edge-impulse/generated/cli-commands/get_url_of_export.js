@@ -1,8 +1,8 @@
-import { get_url_of_export } from '../get_url_of_export.ts';
+import { get_url_of_export } from '../get_url_of_export';
 export function addGet_url_of_exportCommand(program) {
     program.command('get-url-of-export')
         .description('Auto-generated command for get_url_of_export')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_status } from '../get_status.ts';
+  import { get_status } from '../get_status';
 
 export function addGet_statusCommand(program: Command) {
   program.command('get-status')
     .description('Auto-generated command for get_status')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

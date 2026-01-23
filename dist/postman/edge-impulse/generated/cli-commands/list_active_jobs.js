@@ -1,8 +1,8 @@
-import { list_active_jobs } from '../list_active_jobs.ts';
+import { list_active_jobs } from '../list_active_jobs';
 export function addList_active_jobsCommand(program) {
     program.command('list-active-jobs')
         .description('Auto-generated command for list_active_jobs')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

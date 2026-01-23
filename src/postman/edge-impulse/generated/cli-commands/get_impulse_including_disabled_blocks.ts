@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_impulse_including_disabled_blocks } from '../get_impulse_including_disabled_blocks.ts';
+  import { get_impulse_including_disabled_blocks } from '../get_impulse_including_disabled_blocks';
 
 export function addGet_impulse_including_disabled_blocksCommand(program: Command) {
   program.command('get-impulse-including-disabled-blocks')
     .description('Auto-generated command for get_impulse_including_disabled_blocks')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

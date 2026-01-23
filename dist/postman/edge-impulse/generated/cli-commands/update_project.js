@@ -1,8 +1,8 @@
-import { update_project } from '../update_project.ts';
+import { update_project } from '../update_project';
 export function addUpdate_projectCommand(program) {
     program.command('update-project')
         .description('Auto-generated command for update_project')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

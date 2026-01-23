@@ -1,8 +1,8 @@
-import { get_device } from '../get_device.ts';
+import { get_device } from '../get_device';
 export function addGet_deviceCommand(program) {
     program.command('get-device')
         .description('Auto-generated command for get_device')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

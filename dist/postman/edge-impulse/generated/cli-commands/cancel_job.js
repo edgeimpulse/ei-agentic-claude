@@ -1,8 +1,8 @@
-import { cancel_job } from '../cancel_job.ts';
+import { cancel_job } from '../cancel_job';
 export function addCancel_jobCommand(program) {
     program.command('cancel-job')
         .description('Auto-generated command for cancel_job')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

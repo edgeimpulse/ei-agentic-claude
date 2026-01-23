@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_organizations } from '../get_organizations.ts';
+  import { get_organizations } from '../get_organizations';
 
 export function addGet_organizationsCommand(program: Command) {
   program.command('get-organizations')
     .description('Auto-generated command for get_organizations')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

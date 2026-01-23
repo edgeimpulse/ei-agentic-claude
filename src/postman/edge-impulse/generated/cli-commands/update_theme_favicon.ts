@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { update_theme_favicon } from '../update_theme_favicon.ts';
+  import { update_theme_favicon } from '../update_theme_favicon';
 
 export function addUpdate_theme_faviconCommand(program: Command) {
   program.command('update-theme-favicon')
     .description('Auto-generated command for update_theme_favicon')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

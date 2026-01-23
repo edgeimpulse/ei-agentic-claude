@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { transfer_ownership_organization } from '../transfer_ownership_organization.ts';
+  import { transfer_ownership_organization } from '../transfer_ownership_organization';
 
 export function addTransfer_ownership_organizationCommand(program: Command) {
   program.command('transfer-ownership-organization')
     .description('Auto-generated command for transfer_ownership_organization')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

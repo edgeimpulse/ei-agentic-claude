@@ -1,8 +1,8 @@
-import { delete_third_party_auth } from '../delete_third_party_auth.ts';
+import { delete_third_party_auth } from '../delete_third_party_auth';
 export function addDelete_third_party_authCommand(program) {
     program.command('delete-third-party-auth')
         .description('Auto-generated command for delete_third_party_auth')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

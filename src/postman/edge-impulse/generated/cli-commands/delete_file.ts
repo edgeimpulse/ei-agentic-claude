@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { delete_file } from '../delete_file.ts';
+  import { delete_file } from '../delete_file';
 
 export function addDelete_fileCommand(program: Command) {
   program.command('delete-file')
     .description('Auto-generated command for delete_file')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

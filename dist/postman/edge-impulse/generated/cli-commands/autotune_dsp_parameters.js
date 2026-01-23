@@ -1,8 +1,8 @@
-import { autotune_dsp_parameters } from '../autotune_dsp_parameters.ts';
+import { autotune_dsp_parameters } from '../autotune_dsp_parameters';
 export function addAutotune_dsp_parametersCommand(program) {
     program.command('autotune-dsp-parameters')
         .description('Auto-generated command for autotune_dsp_parameters')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

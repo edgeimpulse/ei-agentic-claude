@@ -1,8 +1,8 @@
-import { make_a_version_public } from '../make_a_version_public.ts';
+import { make_a_version_public } from '../make_a_version_public';
 export function addMake_a_version_publicCommand(program) {
     program.command('make-a-version-public')
         .description('Auto-generated command for make_a_version_public')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

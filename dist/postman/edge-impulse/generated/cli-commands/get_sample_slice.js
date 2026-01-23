@@ -1,8 +1,8 @@
-import { get_sample_slice } from '../get_sample_slice.ts';
+import { get_sample_slice } from '../get_sample_slice';
 export function addGet_sample_sliceCommand(program) {
     program.command('get-sample-slice')
         .description('Auto-generated command for get_sample_slice')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

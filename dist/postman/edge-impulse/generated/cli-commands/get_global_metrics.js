@@ -1,8 +1,8 @@
-import { get_global_metrics } from '../get_global_metrics.ts';
+import { get_global_metrics } from '../get_global_metrics';
 export function addGet_global_metricsCommand(program) {
     program.command('get-global-metrics')
         .description('Auto-generated command for get_global_metrics')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

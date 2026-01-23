@@ -1,8 +1,8 @@
-import { rebalance_dataset } from '../rebalance_dataset.ts';
+import { rebalance_dataset } from '../rebalance_dataset';
 export function addRebalance_datasetCommand(program) {
     program.command('rebalance-dataset')
         .description('Auto-generated command for rebalance_dataset')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

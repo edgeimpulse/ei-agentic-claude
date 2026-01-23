@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_pretrained_model } from '../get_pretrained_model.ts';
+  import { get_pretrained_model } from '../get_pretrained_model';
 
 export function addGet_pretrained_modelCommand(program: Command) {
   program.command('get-pretrained-model')
     .description('Auto-generated command for get_pretrained_model')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

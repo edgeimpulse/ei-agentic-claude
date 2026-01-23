@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { delete_current_user } from '../delete_current_user.ts';
+  import { delete_current_user } from '../delete_current_user';
 
 export function addDelete_current_userCommand(program: Command) {
   program.command('delete-current-user')
     .description('Auto-generated command for delete_current_user')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,8 +1,8 @@
-import { remove_user_from_a_project } from '../remove_user_from_a_project.ts';
+import { remove_user_from_a_project } from '../remove_user_from_a_project';
 export function addRemove_user_from_a_projectCommand(program) {
     program.command('remove-user-from-a-project')
         .description('Auto-generated command for remove_user_from_a_project')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

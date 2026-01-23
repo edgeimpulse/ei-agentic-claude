@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { rename_file_from_portal } from '../rename_file_from_portal.ts';
+  import { rename_file_from_portal } from '../rename_file_from_portal';
 
 export function addRename_file_from_portalCommand(program: Command) {
   program.command('rename-file-from-portal')
     .description('Auto-generated command for rename_file_from_portal')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

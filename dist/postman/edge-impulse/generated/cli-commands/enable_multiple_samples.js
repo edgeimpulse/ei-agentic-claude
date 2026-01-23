@@ -1,8 +1,8 @@
-import { enable_multiple_samples } from '../enable_multiple_samples.ts';
+import { enable_multiple_samples } from '../enable_multiple_samples';
 export function addEnable_multiple_samplesCommand(program) {
     program.command('enable-multiple-samples')
         .description('Auto-generated command for enable_multiple_samples')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

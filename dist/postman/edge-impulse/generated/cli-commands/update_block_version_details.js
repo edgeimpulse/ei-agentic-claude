@@ -1,8 +1,8 @@
-import { update_block_version_details } from '../update_block_version_details.ts';
+import { update_block_version_details } from '../update_block_version_details';
 export function addUpdate_block_version_detailsCommand(program) {
     program.command('update-block-version-details')
         .description('Auto-generated command for update_block_version_details')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

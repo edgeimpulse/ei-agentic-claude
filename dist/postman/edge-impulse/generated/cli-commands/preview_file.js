@@ -1,8 +1,8 @@
-import { preview_file } from '../preview_file.ts';
+import { preview_file } from '../preview_file';
 export function addPreview_fileCommand(program) {
     program.command('preview-file')
         .description('Auto-generated command for preview_file')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

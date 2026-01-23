@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { list_finished_jobs } from '../list_finished_jobs.ts';
+  import { list_finished_jobs } from '../list_finished_jobs';
 
 export function addList_finished_jobsCommand(program: Command) {
   program.command('list-finished-jobs')
     .description('Auto-generated command for list_finished_jobs')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

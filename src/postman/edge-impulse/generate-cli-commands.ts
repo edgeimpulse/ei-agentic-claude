@@ -24,13 +24,14 @@ function main() {
     const baseName = file.replace(/\.ts$/, '');
     const commandName = sanitizeCommandName(file);
     const importName = baseName;
+
     const commandStub = `import { Command } from 'commander';
-import { ${importName} } from '../${baseName}.ts';
+  import { ${importName} } from '../${baseName}';
 
 export function add${baseName.charAt(0).toUpperCase() + baseName.slice(1)}Command(program: Command) {
   program.command('${commandName}')
     .description('Auto-generated command for ${baseName}')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

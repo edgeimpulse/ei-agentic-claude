@@ -1,8 +1,8 @@
-import { upload_keras_files } from '../upload_keras_files.ts';
+import { upload_keras_files } from '../upload_keras_files';
 export function addUpload_keras_filesCommand(program) {
     program.command('upload-keras-files')
         .description('Auto-generated command for upload_keras_files')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

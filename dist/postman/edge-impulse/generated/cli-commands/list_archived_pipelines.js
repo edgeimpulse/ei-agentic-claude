@@ -1,8 +1,8 @@
-import { list_archived_pipelines } from '../list_archived_pipelines.ts';
+import { list_archived_pipelines } from '../list_archived_pipelines';
 export function addList_archived_pipelinesCommand(program) {
     program.command('list-archived-pipelines')
         .description('Auto-generated command for list_archived_pipelines')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

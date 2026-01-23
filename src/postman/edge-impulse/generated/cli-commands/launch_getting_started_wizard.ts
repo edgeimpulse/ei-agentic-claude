@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { launch_getting_started_wizard } from '../launch_getting_started_wizard.ts';
+  import { launch_getting_started_wizard } from '../launch_getting_started_wizard';
 
 export function addLaunch_getting_started_wizardCommand(program: Command) {
   program.command('launch-getting-started-wizard')
     .description('Auto-generated command for launch_getting_started_wizard')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,8 +1,8 @@
-import { update_theme_logos } from '../update_theme_logos.ts';
+import { update_theme_logos } from '../update_theme_logos';
 export function addUpdate_theme_logosCommand(program) {
     program.command('update-theme-logos')
         .description('Auto-generated command for update_theme_logos')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

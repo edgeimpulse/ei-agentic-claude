@@ -1,8 +1,8 @@
-import { get_data_explorer_settings } from '../get_data_explorer_settings.ts';
+import { get_data_explorer_settings } from '../get_data_explorer_settings';
 export function addGet_data_explorer_settingsCommand(program) {
     program.command('get-data-explorer-settings')
         .description('Auto-generated command for get_data_explorer_settings')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

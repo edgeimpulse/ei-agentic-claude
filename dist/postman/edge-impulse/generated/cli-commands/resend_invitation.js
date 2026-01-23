@@ -1,8 +1,8 @@
-import { resend_invitation } from '../resend_invitation.ts';
+import { resend_invitation } from '../resend_invitation';
 export function addResend_invitationCommand(program) {
     program.command('resend-invitation')
         .description('Auto-generated command for resend_invitation')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

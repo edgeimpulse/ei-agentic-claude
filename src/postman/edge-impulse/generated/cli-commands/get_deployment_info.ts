@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_deployment_info } from '../get_deployment_info.ts';
+  import { get_deployment_info } from '../get_deployment_info';
 
 export function addGet_deployment_infoCommand(program: Command) {
   program.command('get-deployment-info')
     .description('Auto-generated command for get_deployment_info')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

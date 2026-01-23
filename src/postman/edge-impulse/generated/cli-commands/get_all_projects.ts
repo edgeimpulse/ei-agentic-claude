@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import { get_all_projects } from '../get_all_projects.js';
+  import { get_all_projects } from '../get_all_projects';
 
 export function addGet_all_projectsCommand(program: Command) {
   program.command('get-all-projects')

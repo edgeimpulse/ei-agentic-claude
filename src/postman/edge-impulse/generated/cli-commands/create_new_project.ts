@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { create_new_project } from '../create_new_project.ts';
+  import { create_new_project } from '../create_new_project';
 
 export function addCreate_new_projectCommand(program: Command) {
   program.command('create-new-project')
     .description('Auto-generated command for create_new_project')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

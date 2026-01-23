@@ -1,8 +1,8 @@
-import { create_developer_profile } from '../create_developer_profile.ts';
+import { create_developer_profile } from '../create_developer_profile';
 export function addCreate_developer_profileCommand(program) {
     program.command('create-developer-profile')
         .description('Auto-generated command for create_developer_profile')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

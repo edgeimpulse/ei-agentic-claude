@@ -1,8 +1,8 @@
-import { add_member } from '../add_member.ts';
+import { add_member } from '../add_member';
 export function addAdd_memberCommand(program) {
     program.command('add-member')
         .description('Auto-generated command for add_member')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

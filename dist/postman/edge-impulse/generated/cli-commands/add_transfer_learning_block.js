@@ -1,8 +1,8 @@
-import { add_transfer_learning_block } from '../add_transfer_learning_block.ts';
+import { add_transfer_learning_block } from '../add_transfer_learning_block';
 export function addAdd_transfer_learning_blockCommand(program) {
     program.command('add-transfer-learning-block')
         .description('Auto-generated command for add_transfer_learning_block')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

@@ -1,8 +1,8 @@
-import { set_sample_metadata } from '../set_sample_metadata.ts';
+import { set_sample_metadata } from '../set_sample_metadata';
 export function addSet_sample_metadataCommand(program) {
     program.command('set-sample-metadata')
         .description('Auto-generated command for set_sample_metadata')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { change_password } from '../change_password.ts';
+  import { change_password } from '../change_password';
 
 export function addChange_passwordCommand(program: Command) {
   program.command('change-password')
     .description('Auto-generated command for change_password')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

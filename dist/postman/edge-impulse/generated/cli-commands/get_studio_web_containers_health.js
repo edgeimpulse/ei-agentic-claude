@@ -1,8 +1,8 @@
-import { get_studio_web_containers_health } from '../get_studio_web_containers_health.ts';
+import { get_studio_web_containers_health } from '../get_studio_web_containers_health';
 export function addGet_studio_web_containers_healthCommand(program) {
     program.command('get-studio-web-containers-health')
         .description('Auto-generated command for get_studio_web_containers_health')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

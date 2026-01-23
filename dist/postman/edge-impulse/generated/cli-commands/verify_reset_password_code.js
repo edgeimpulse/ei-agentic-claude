@@ -1,8 +1,8 @@
-import { verify_reset_password_code } from '../verify_reset_password_code.ts';
+import { verify_reset_password_code } from '../verify_reset_password_code';
 export function addVerify_reset_password_codeCommand(program) {
     program.command('verify-reset-password-code')
         .description('Auto-generated command for verify_reset_password_code')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

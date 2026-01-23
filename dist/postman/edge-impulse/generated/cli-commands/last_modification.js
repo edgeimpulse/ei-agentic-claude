@@ -1,8 +1,8 @@
-import { last_modification } from '../last_modification.ts';
+import { last_modification } from '../last_modification';
 export function addLast_modificationCommand(program) {
     program.command('last-modification')
         .description('Auto-generated command for last_modification')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

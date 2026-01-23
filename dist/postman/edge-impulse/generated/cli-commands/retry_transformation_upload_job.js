@@ -1,8 +1,8 @@
-import { retry_transformation_upload_job } from '../retry_transformation_upload_job.ts';
+import { retry_transformation_upload_job } from '../retry_transformation_upload_job';
 export function addRetry_transformation_upload_jobCommand(program) {
     program.command('retry-transformation-upload-job')
         .description('Auto-generated command for retry_transformation_upload_job')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

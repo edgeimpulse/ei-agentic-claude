@@ -1,8 +1,8 @@
-import { update_note } from '../update_note.ts';
+import { update_note } from '../update_note';
 export function addUpdate_noteCommand(program) {
     program.command('update-note')
         .description('Auto-generated command for update_note')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

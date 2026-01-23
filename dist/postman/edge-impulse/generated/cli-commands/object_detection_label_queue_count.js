@@ -1,8 +1,8 @@
-import { object_detection_label_queue_count } from '../object_detection_label_queue_count.ts';
+import { object_detection_label_queue_count } from '../object_detection_label_queue_count';
 export function addObject_detection_label_queue_countCommand(program) {
     program.command('object-detection-label-queue-count')
         .description('Auto-generated command for object_detection_label_queue_count')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

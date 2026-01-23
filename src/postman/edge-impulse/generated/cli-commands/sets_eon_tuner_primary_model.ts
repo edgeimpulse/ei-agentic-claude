@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { sets_eon_tuner_primary_model } from '../sets_eon_tuner_primary_model.ts';
+  import { sets_eon_tuner_primary_model } from '../sets_eon_tuner_primary_model';
 
 export function addSets_eon_tuner_primary_modelCommand(program: Command) {
   program.command('sets-eon-tuner-primary-model')
     .description('Auto-generated command for sets_eon_tuner_primary_model')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

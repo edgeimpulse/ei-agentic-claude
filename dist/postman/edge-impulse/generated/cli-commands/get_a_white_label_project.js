@@ -1,8 +1,8 @@
-import { get_a_white_label_project } from '../get_a_white_label_project.ts';
+import { get_a_white_label_project } from '../get_a_white_label_project';
 export function addGet_a_white_label_projectCommand(program) {
     program.command('get-a-white-label-project')
         .description('Auto-generated command for get_a_white_label_project')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

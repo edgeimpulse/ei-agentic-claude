@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { request_activation_code } from '../request_activation_code.ts';
+  import { request_activation_code } from '../request_activation_code';
 
 export function addRequest_activation_codeCommand(program: Command) {
   program.command('request-activation-code')
     .description('Auto-generated command for request_activation_code')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

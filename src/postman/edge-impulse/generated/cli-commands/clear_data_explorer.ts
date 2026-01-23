@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { clear_data_explorer } from '../clear_data_explorer.ts';
+  import { clear_data_explorer } from '../clear_data_explorer';
 
 export function addClear_data_explorerCommand(program: Command) {
   program.command('clear-data-explorer')
     .description('Auto-generated command for clear_data_explorer')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,8 +1,8 @@
-import { test_pretrained_model } from '../test_pretrained_model.ts';
+import { test_pretrained_model } from '../test_pretrained_model';
 export function addTest_pretrained_modelCommand(program) {
     program.command('test-pretrained-model')
         .description('Auto-generated command for test_pretrained_model')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

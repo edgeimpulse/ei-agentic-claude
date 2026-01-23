@@ -1,8 +1,8 @@
-import { give_access_to_project } from '../give_access_to_project.ts';
+import { give_access_to_project } from '../give_access_to_project';
 export function addGive_access_to_projectCommand(program) {
     program.command('give-access-to-project')
         .description('Auto-generated command for give_access_to_project')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

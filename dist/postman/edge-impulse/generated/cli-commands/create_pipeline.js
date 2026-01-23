@@ -1,8 +1,8 @@
-import { create_pipeline } from '../create_pipeline.ts';
+import { create_pipeline } from '../create_pipeline';
 export function addCreate_pipelineCommand(program) {
     program.command('create-pipeline')
         .description('Auto-generated command for create_pipeline')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { create_device } from '../create_device.ts';
+  import { create_device } from '../create_device';
 
 export function addCreate_deviceCommand(program: Command) {
   program.command('create-device')
     .description('Auto-generated command for create_device')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

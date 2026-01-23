@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import { get_user_metrics } from '../get_user_metrics.js';
+  import { get_user_metrics } from '../get_user_metrics';
 
 export function addGet_user_metricsCommand(program: Command) {
   program.command('get-user-metrics')

@@ -1,8 +1,8 @@
-import { refresh_data } from '../refresh_data.ts';
+import { refresh_data } from '../refresh_data';
 export function addRefresh_dataCommand(program) {
     program.command('refresh-data')
         .description('Auto-generated command for refresh_data')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

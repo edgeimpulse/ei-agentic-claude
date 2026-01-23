@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { generate_data_explorer_features } from '../generate_data_explorer_features.ts';
+  import { generate_data_explorer_features } from '../generate_data_explorer_features';
 
 export function addGenerate_data_explorer_featuresCommand(program: Command) {
   program.command('generate-data-explorer-features')
     .description('Auto-generated command for generate_data_explorer_features')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

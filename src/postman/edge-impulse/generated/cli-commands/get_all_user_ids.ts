@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_all_user_ids } from '../get_all_user_ids.ts';
+  import { get_all_user_ids } from '../get_all_user_ids';
 
 export function addGet_all_user_idsCommand(program: Command) {
   program.command('get-all-user-ids')
     .description('Auto-generated command for get_all_user_ids')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

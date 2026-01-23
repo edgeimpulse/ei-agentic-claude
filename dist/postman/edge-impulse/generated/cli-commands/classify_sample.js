@@ -1,8 +1,8 @@
-import { classify_sample } from '../classify_sample.ts';
+import { classify_sample } from '../classify_sample';
 export function addClassify_sampleCommand(program) {
     program.command('classify-sample')
         .description('Auto-generated command for classify_sample')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

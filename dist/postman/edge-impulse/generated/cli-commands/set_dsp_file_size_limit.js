@@ -1,8 +1,8 @@
-import { set_dsp_file_size_limit } from '../set_dsp_file_size_limit.ts';
+import { set_dsp_file_size_limit } from '../set_dsp_file_size_limit';
 export function addSet_dsp_file_size_limitCommand(program) {
     program.command('set-dsp-file-size-limit')
         .description('Auto-generated command for set_dsp_file_size_limit')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

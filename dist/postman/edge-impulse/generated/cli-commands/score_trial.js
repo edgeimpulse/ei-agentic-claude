@@ -1,8 +1,8 @@
-import { score_trial } from '../score_trial.ts';
+import { score_trial } from '../score_trial';
 export function addScore_trialCommand(program) {
     program.command('score-trial')
         .description('Auto-generated command for score_trial')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

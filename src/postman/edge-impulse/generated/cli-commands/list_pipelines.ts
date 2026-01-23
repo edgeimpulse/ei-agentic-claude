@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { list_pipelines } from '../list_pipelines.ts';
+  import { list_pipelines } from '../list_pipelines';
 
 export function addList_pipelinesCommand(program: Command) {
   program.command('list-pipelines')
     .description('Auto-generated command for list_pipelines')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

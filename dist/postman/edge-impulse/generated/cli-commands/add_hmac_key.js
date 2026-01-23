@@ -1,8 +1,8 @@
-import { add_hmac_key } from '../add_hmac_key.ts';
+import { add_hmac_key } from '../add_hmac_key';
 export function addAdd_hmac_keyCommand(program) {
     program.command('add-hmac-key')
         .description('Auto-generated command for add_hmac_key')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

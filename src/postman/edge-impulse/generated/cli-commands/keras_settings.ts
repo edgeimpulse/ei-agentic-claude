@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { keras_settings } from '../keras_settings.ts';
+  import { keras_settings } from '../keras_settings';
 
 export function addKeras_settingsCommand(program: Command) {
   program.command('keras-settings')
     .description('Auto-generated command for keras_settings')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

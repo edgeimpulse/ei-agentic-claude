@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { export_keras_block } from '../export_keras_block.ts';
+  import { export_keras_block } from '../export_keras_block';
 
 export function addExport_keras_blockCommand(program: Command) {
   program.command('export-keras-block')
     .description('Auto-generated command for export_keras_block')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,8 +1,8 @@
-import { get_trial_logs } from '../get_trial_logs.ts';
+import { get_trial_logs } from '../get_trial_logs';
 export function addGet_trial_logsCommand(program) {
     program.command('get-trial-logs')
         .description('Auto-generated command for get_trial_logs')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

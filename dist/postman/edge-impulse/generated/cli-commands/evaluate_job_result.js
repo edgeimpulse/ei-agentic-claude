@@ -1,8 +1,8 @@
-import { evaluate_job_result } from '../evaluate_job_result.ts';
+import { evaluate_job_result } from '../evaluate_job_result';
 export function addEvaluate_job_resultCommand(program) {
     program.command('evaluate-job-result')
         .description('Auto-generated command for evaluate_job_result')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

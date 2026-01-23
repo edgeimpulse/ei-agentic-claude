@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { invite_member } from '../invite_member.ts';
+  import { invite_member } from '../invite_member';
 
 export function addInvite_memberCommand(program: Command) {
   program.command('invite-member')
     .description('Auto-generated command for invite_member')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

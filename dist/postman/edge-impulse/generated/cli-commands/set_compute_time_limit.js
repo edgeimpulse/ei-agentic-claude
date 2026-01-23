@@ -1,8 +1,8 @@
-import { set_compute_time_limit } from '../set_compute_time_limit.ts';
+import { set_compute_time_limit } from '../set_compute_time_limit';
 export function addSet_compute_time_limitCommand(program) {
     program.command('set-compute-time-limit')
         .description('Auto-generated command for set_compute_time_limit')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

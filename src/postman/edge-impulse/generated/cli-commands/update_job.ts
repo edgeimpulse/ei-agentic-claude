@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { update_job } from '../update_job.ts';
+  import { update_job } from '../update_job';
 
 export function addUpdate_jobCommand(program: Command) {
   program.command('update-job')
     .description('Auto-generated command for update_job')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

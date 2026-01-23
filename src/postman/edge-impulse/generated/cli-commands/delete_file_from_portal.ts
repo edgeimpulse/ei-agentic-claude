@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { delete_file_from_portal } from '../delete_file_from_portal.ts';
+  import { delete_file_from_portal } from '../delete_file_from_portal';
 
 export function addDelete_file_from_portalCommand(program: Command) {
   program.command('delete-file-from-portal')
     .description('Auto-generated command for delete_file_from_portal')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

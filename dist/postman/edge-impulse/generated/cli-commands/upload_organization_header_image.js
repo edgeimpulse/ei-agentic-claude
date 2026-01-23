@@ -1,8 +1,8 @@
-import { upload_organization_header_image } from '../upload_organization_header_image.ts';
+import { upload_organization_header_image } from '../upload_organization_header_image';
 export function addUpload_organization_header_imageCommand(program) {
     program.command('upload-organization-header-image')
         .description('Auto-generated command for upload_organization_header_image')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

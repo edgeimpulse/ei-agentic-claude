@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { list_public_projects } from '../list_public_projects.ts';
+  import { list_public_projects } from '../list_public_projects';
 
 export function addList_public_projectsCommand(program: Command) {
   program.command('list-public-projects')
     .description('Auto-generated command for list_public_projects')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

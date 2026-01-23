@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { remove_hmac_key } from '../remove_hmac_key.ts';
+  import { remove_hmac_key } from '../remove_hmac_key';
 
 export function addRemove_hmac_keyCommand(program: Command) {
   program.command('remove-hmac-key')
     .description('Auto-generated command for remove_hmac_key')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

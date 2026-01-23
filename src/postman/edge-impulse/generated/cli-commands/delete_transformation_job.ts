@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { delete_transformation_job } from '../delete_transformation_job.ts';
+  import { delete_transformation_job } from '../delete_transformation_job';
 
 export function addDelete_transformation_jobCommand(program: Command) {
   program.command('delete-transformation-job')
     .description('Auto-generated command for delete_transformation_job')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

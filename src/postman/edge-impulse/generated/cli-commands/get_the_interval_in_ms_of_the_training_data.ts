@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_the_interval_in_ms_of_the_training_data } from '../get_the_interval_in_ms_of_the_training_data.ts';
+  import { get_the_interval_in_ms_of_the_training_data } from '../get_the_interval_in_ms_of_the_training_data';
 
 export function addGet_the_interval_in_ms_of_the_training_dataCommand(program: Command) {
   program.command('get-the-interval-in-ms-of-the-training-data')
     .description('Auto-generated command for get_the_interval_in_ms_of_the_training_data')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

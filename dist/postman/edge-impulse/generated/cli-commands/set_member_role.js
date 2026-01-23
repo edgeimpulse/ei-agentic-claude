@@ -1,8 +1,8 @@
-import { set_member_role } from '../set_member_role.ts';
+import { set_member_role } from '../set_member_role';
 export function addSet_member_roleCommand(program) {
     program.command('set-member-role')
         .description('Auto-generated command for set_member_role')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

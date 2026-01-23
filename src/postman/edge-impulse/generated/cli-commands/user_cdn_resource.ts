@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { user_cdn_resource } from '../user_cdn_resource.ts';
+  import { user_cdn_resource } from '../user_cdn_resource';
 
 export function addUser_cdn_resourceCommand(program: Command) {
   program.command('user-cdn-resource')
     .description('Auto-generated command for user_cdn_resource')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

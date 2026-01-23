@@ -1,8 +1,8 @@
-import { upload_photo } from '../upload_photo.ts';
+import { upload_photo } from '../upload_photo';
 export function addUpload_photoCommand(program) {
     program.command('upload-photo')
         .description('Auto-generated command for upload_photo')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

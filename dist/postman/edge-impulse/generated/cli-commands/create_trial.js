@@ -1,8 +1,8 @@
-import { create_trial } from '../create_trial.ts';
+import { create_trial } from '../create_trial';
 export function addCreate_trialCommand(program) {
     program.command('create-trial')
         .description('Auto-generated command for create_trial')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

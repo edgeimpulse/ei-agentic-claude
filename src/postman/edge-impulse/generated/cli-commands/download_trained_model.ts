@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { download_trained_model } from '../download_trained_model.ts';
+  import { download_trained_model } from '../download_trained_model';
 
 export function addDownload_trained_modelCommand(program: Command) {
   program.command('download-trained-model')
     .description('Auto-generated command for download_trained_model')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

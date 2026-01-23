@@ -1,8 +1,8 @@
-import { portal_info } from '../portal_info.ts';
+import { portal_info } from '../portal_info';
 export function addPortal_infoCommand(program) {
     program.command('portal-info')
         .description('Auto-generated command for portal_info')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

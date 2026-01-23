@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { clear_checklist_for_data } from '../clear_checklist_for_data.ts';
+  import { clear_checklist_for_data } from '../clear_checklist_for_data';
 
 export function addClear_checklist_for_dataCommand(program: Command) {
   program.command('clear-checklist-for-data')
     .description('Auto-generated command for clear_checklist_for_data')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

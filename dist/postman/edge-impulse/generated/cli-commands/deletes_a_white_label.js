@@ -1,8 +1,8 @@
-import { deletes_a_white_label } from '../deletes_a_white_label.ts';
+import { deletes_a_white_label } from '../deletes_a_white_label';
 export function addDeletes_a_white_labelCommand(program) {
     program.command('deletes-a-white-label')
         .description('Auto-generated command for deletes_a_white_label')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

@@ -1,8 +1,8 @@
-import { update_pipeline } from '../update_pipeline.ts';
+import { update_pipeline } from '../update_pipeline';
 export function addUpdate_pipelineCommand(program) {
     program.command('update-pipeline')
         .description('Auto-generated command for update_pipeline')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

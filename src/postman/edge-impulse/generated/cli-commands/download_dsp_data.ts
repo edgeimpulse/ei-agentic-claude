@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { download_dsp_data } from '../download_dsp_data.ts';
+  import { download_dsp_data } from '../download_dsp_data';
 
 export function addDownload_dsp_dataCommand(program: Command) {
   program.command('download-dsp-data')
     .description('Auto-generated command for download_dsp_data')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

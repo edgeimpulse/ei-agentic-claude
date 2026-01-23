@@ -1,8 +1,8 @@
-import { feature_importance } from '../feature_importance.ts';
+import { feature_importance } from '../feature_importance';
 export function addFeature_importanceCommand(program) {
     program.command('feature-importance')
         .description('Auto-generated command for feature_importance')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

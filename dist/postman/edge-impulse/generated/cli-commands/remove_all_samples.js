@@ -1,8 +1,8 @@
-import { remove_all_samples } from '../remove_all_samples.ts';
+import { remove_all_samples } from '../remove_all_samples';
 export function addRemove_all_samplesCommand(program) {
     program.command('remove-all-samples')
         .description('Auto-generated command for remove_all_samples')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

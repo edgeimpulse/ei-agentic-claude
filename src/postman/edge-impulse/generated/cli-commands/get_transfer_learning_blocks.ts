@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_transfer_learning_blocks } from '../get_transfer_learning_blocks.ts';
+  import { get_transfer_learning_blocks } from '../get_transfer_learning_blocks';
 
 export function addGet_transfer_learning_blocksCommand(program: Command) {
   program.command('get-transfer-learning-blocks')
     .description('Auto-generated command for get_transfer_learning_blocks')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -13,13 +13,21 @@ import type { UploadDataRequest, UploadDataResponse, EdgeImpulseError } from "..
  */
 export async function uploadData(apiKey: string, req: UploadDataRequest): Promise<UploadDataResponse> {
   const url = `https://studio.edgeimpulse.com/v1/api/${req.projectId}/data`;
+  let body: BodyInit;
+  if (typeof req.data === 'string') {
+    body = req.data;
+  } else if (req.data instanceof Buffer) {
+    body = req.data as unknown as BodyInit;
+  } else {
+    throw new Error('Invalid data type for upload: must be string or Buffer');
+  }
   const response = await fetch(url, {
     method: "POST",
     headers: {
       "x-api-key": apiKey,
       // Content-Type may need to be set based on data type
     },
-    body: req.data
+    body
   });
   if (response.ok) {
     return (await response.json()) as UploadDataResponse;

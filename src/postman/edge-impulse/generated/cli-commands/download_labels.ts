@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { download_labels } from '../download_labels.ts';
+  import { download_labels } from '../download_labels';
 
 export function addDownload_labelsCommand(program: Command) {
   program.command('download-labels')
     .description('Auto-generated command for download_labels')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import { add_collaborator } from '../add_collaborator.js';
+  import { add_collaborator } from '../add_collaborator';
 
 export function addAdd_collaboratorCommand(program: Command) {
   program.command('add-collaborator')

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_dsp_blocks } from '../get_dsp_blocks.ts';
+  import { get_dsp_blocks } from '../get_dsp_blocks';
 
 export function addGet_dsp_blocksCommand(program: Command) {
   program.command('get-dsp-blocks')
     .description('Auto-generated command for get_dsp_blocks')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

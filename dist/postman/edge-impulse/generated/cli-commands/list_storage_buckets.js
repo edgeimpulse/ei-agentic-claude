@@ -1,8 +1,8 @@
-import { list_storage_buckets } from '../list_storage_buckets.ts';
+import { list_storage_buckets } from '../list_storage_buckets';
 export function addList_storage_bucketsCommand(program) {
     program.command('list-storage-buckets')
         .description('Auto-generated command for list_storage_buckets')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

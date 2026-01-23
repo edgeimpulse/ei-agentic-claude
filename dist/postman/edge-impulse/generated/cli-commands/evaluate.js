@@ -1,8 +1,8 @@
-import { evaluate } from '../evaluate.ts';
+import { evaluate } from '../evaluate';
 export function addEvaluateCommand(program) {
     program.command('evaluate')
         .description('Auto-generated command for evaluate')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

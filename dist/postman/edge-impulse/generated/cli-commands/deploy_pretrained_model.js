@@ -1,8 +1,8 @@
-import { deploy_pretrained_model } from '../deploy_pretrained_model.ts';
+import { deploy_pretrained_model } from '../deploy_pretrained_model';
 export function addDeploy_pretrained_modelCommand(program) {
     program.command('deploy-pretrained-model')
         .description('Auto-generated command for deploy_pretrained_model')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

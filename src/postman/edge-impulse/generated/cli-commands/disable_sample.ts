@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { disable_sample } from '../disable_sample.ts';
+  import { disable_sample } from '../disable_sample';
 
 export function addDisable_sampleCommand(program: Command) {
   program.command('disable-sample')
     .description('Auto-generated command for disable_sample')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

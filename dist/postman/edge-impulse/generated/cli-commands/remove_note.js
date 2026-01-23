@@ -1,8 +1,8 @@
-import { remove_note } from '../remove_note.ts';
+import { remove_note } from '../remove_note';
 export function addRemove_noteCommand(program) {
     program.command('remove-note')
         .description('Auto-generated command for remove_note')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

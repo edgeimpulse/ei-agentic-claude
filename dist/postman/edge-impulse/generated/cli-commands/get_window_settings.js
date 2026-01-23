@@ -1,8 +1,8 @@
-import { get_window_settings } from '../get_window_settings.ts';
+import { get_window_settings } from '../get_window_settings';
 export function addGet_window_settingsCommand(program) {
     program.command('get-window-settings')
         .description('Auto-generated command for get_window_settings')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

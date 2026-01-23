@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { find_syntiant_posterior_parameters } from '../find_syntiant_posterior_parameters.ts';
+  import { find_syntiant_posterior_parameters } from '../find_syntiant_posterior_parameters';
 
 export function addFind_syntiant_posterior_parametersCommand(program: Command) {
   program.command('find-syntiant-posterior-parameters')
     .description('Auto-generated command for find_syntiant_posterior_parameters')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

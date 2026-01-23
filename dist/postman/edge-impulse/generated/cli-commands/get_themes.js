@@ -1,8 +1,8 @@
-import { get_themes } from '../get_themes.ts';
+import { get_themes } from '../get_themes';
 export function addGet_themesCommand(program) {
     program.command('get-themes')
         .description('Auto-generated command for get_themes')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

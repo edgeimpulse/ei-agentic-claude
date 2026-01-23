@@ -1,8 +1,8 @@
-import { get_public_metrics } from '../get_public_metrics.ts';
+import { get_public_metrics } from '../get_public_metrics';
 export function addGet_public_metricsCommand(program) {
     program.command('get-public-metrics')
         .description('Auto-generated command for get_public_metrics')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

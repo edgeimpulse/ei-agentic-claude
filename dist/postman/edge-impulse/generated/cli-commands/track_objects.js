@@ -1,8 +1,8 @@
-import { track_objects } from '../track_objects.ts';
+import { track_objects } from '../track_objects';
 export function addTrack_objectsCommand(program) {
     program.command('track-objects')
         .description('Auto-generated command for track_objects')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

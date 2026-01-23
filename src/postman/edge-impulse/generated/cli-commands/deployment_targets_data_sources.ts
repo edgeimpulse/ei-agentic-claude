@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { deployment_targets_data_sources } from '../deployment_targets_data_sources.ts';
+  import { deployment_targets_data_sources } from '../deployment_targets_data_sources';
 
 export function addDeployment_targets_data_sourcesCommand(program: Command) {
   program.command('deployment-targets-data-sources')
     .description('Auto-generated command for deployment_targets_data_sources')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

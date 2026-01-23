@@ -1,3 +1,25 @@
+
+# Development & Production Usage
+
+## Development (TypeScript, ts-node)
+Run CLI commands directly with TypeScript using ts-node:
+
+```
+npm run cli -- get-all-projects --api-key <your_api_key>
+```
+
+## Production (after build)
+First, build the project:
+
+```
+npx tsc
+```
+Then run the compiled CLI from the `dist` directory (or wherever your output is):
+
+```
+node dist/cli.js get-all-projects --api-key <your_api_key>
+```
+
 # Storing Your API Key for Easier CLI Usage
 
 You can avoid typing your API key every time by using one of these methods:
@@ -9,7 +31,7 @@ export EI_API_KEY=ei_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 Then run commands like:
 ```sh
-npm run cli -- get-all-projects --apiKey $EI_API_KEY
+npm run cli -- get-all-projects --api-key $EI_API_KEY
 ```
 
 **2. .env file with `dotenv-cli`:**
@@ -23,13 +45,13 @@ EI_API_KEY=your_api_key_here
 ```
 Run commands with:
 ```sh
-dotenv -e .env -- npm run cli -- get-all-projects --apiKey $EI_API_KEY
+dotenv -e .env -- npm run cli -- get-all-projects --api-key $EI_API_KEY
 ```
 
 **3. Shell alias:**
 Add to your shell profile:
 ```sh
-alias eicli='npm run cli -- --apiKey $EI_API_KEY'
+alias eicli='npm run cli -- --api-key $EI_API_KEY'
 ```
 Then run:
 ```sh
@@ -38,46 +60,44 @@ eicli get-all-projects
 
 **Want built-in support for config files or env vars?**
 Let us know or contribute a PR!
-# Auto-Generated CLI Commands
 
-All Edge Impulse API endpoints are now available as CLI commands. Each command is auto-generated from the Postman collection and follows this pattern:
+# Auto-Generated CLI Commands (Extensible Secondary Layer)
 
+All Edge Impulse API endpoints are available as CLI commands, auto-generated from the Postman collection. This auto-generation is designed as a secondary, extensible layer—making it easy to add, update, or extend commands as the API evolves.
+
+**Primary focus:** This repo is architected for agentic workflows, enabling Claude (or other LLM agents) to interact with Edge Impulse via a robust, typed interface. The CLI commands are a convenience layer for direct use and future extension.
+
+**Usage Pattern:**
 ```
-npm run cli -- <command-name> --apiKey <your_api_key> [--params '{"param1":"value1",...}']
-```
-
-## Command List (Partial)
-
-Below are some example commands. For the full list, see `src/postman/edge-impulse/generated/cli-commands/`.
-
-### NOTE: These are stubs and parameters may vary per endpoint, and will need to be matched to the API docs https://www.postman.com/edge-impulse/edge-impulse/overview.
-
-
-| Command Name                | Description (auto-generated)                |
-|----------------------------|---------------------------------------------|
-| add-api-key                | Add an API key                              |
-| get-all-projects           | Get all projects                            |
-| list-active-projects       | List all active projects                    |
-| list-samples               | List all samples                            |
-| get-user                   | Get user info                               |
-| upload-photo               | Upload a photo                              |
-| train-model-keras          | Train a Keras model                         |
-| get-job-status             | Get job status                              |
-| ...                        | ... (hundreds more see src/postman/edge-impulse/generated/cli-commands/ )                         |
-
-Each command matches a file in `src/postman/edge-impulse/generated/cli-commands/` (replace underscores with dashes for CLI usage).
-
-## Usage Example
-
-```
-npm run cli -- get-all-projects --apiKey <your_api_key>
-npm run cli -- add-api-key --apiKey <your_api_key> --params '{"projectId":123,"name":"test"}'
-npm run cli -- train-model-keras --apiKey <your_api_key> --params '{"projectId":123,"learnId":456,"trainingCycles":10}'
+npm run cli -- <command-name> --api-key <your_api_key> [--params '{"param1":"value1",...}']
 ```
 
-**Tip:** Use `--params` with a JSON string for any endpoint parameters. All endpoints require `--apiKey`.
+**How to discover available commands:**
+- All generated commands are in `src/postman/edge-impulse/generated/cli-commands/` (replace underscores with dashes for CLI usage).
+- Run `npm run cli -- --help` to see all registered commands and options.
+- Use the exact generated command name (e.g., `get-all-projects`, `add-api-key`).
 
-For advanced usage, see the generated files or the Edge Impulse API documentation.
+**Unified option:** All commands require `--api-key <your_api_key>` (not `--apiKey`).
+
+**Example:**
+```
+npm run cli -- get-all-projects --api-key <your_api_key>
+npm run cli -- add-api-key --api-key <your_api_key> --params '{"projectId":123,"name":"test"}'
+npm run cli -- train-model-keras --api-key <your_api_key> --params '{"projectId":123,"learnId":456,"trainingCycles":10}'
+```
+
+**Troubleshooting:**
+- If a command is not recognized, check the generated file name and use the corresponding CLI name.
+- If no commands appear in `--help`, ensure you have built the project (`npx tsc`) and that the generator does not include `.ts` in import paths.
+- For advanced usage, see the generated files or the Edge Impulse API documentation.
+
+**Tip:** You can add a test script to list all available commands:
+```json
+"scripts": {
+  ...,
+  "cli-list": "npm run cli -- --help"
+}
+```
 # Edge Impulse Claude Agentic Example
 
 This project demonstrates a minimal, agentic workflow for Edge Impulse using a TypeScript CLI and Claude. You can list projects, train Keras blocks, and (optionally) fetch evaluation metrics.
@@ -109,34 +129,33 @@ This project demonstrates a minimal, agentic workflow for Edge Impulse using a T
   ```
 5. **Run the CLI:**
   ```sh
-  npm run cli -- list-projects --apiKey <your_api_key>
-  npm run cli -- start-training --apiKey <your_api_key> --projectId <projectId> --learnId <learnId>
-  npm run cli -- job-status --apiKey <your_api_key> --projectId <projectId> --jobId <jobId>
-  npm run cli -- evaluate-block --apiKey <your_api_key> --projectId <projectId> --learnId <learnId>
+  npm run cli -- get-all-projects --api-key <your_api_key>
+  npm run cli -- add-api-key --api-key <your_api_key> --params '{"projectId":123,"name":"test"}'
+  npm run cli -- train-model-keras --api-key <your_api_key> --params '{"projectId":123,"learnId":456,"trainingCycles":10}'
   ```
 
 ## Agentic Workflow Example
 1. **List projects:**
   ```sh
-  npm run cli -- list-projects --apiKey <your_api_key>
+  npm run cli -- get-all-projects --api-key <your_api_key>
   ```
 2. **Start training:**
   ```sh
-  npm run cli -- start-training --apiKey <your_api_key> --projectId <projectId> --learnId <learnId>
+  npm run cli -- train-model-keras --api-key <your_api_key> --params '{"projectId":123,"learnId":456}'
   ```
 3. **Check job status:**
   ```sh
-  npm run cli -- job-status --apiKey <your_api_key> --projectId <projectId> --jobId <jobId>
+  npm run cli -- get-job-status --api-key <your_api_key> --params '{"projectId":123,"jobId":789}'
   ```
 4. **(Optional) Fetch evaluation metrics:**
   ```sh
-  npm run cli -- evaluate-block --apiKey <your_api_key> --projectId <projectId> --learnId <learnId>
+  npm run cli -- evaluate-block --api-key <your_api_key> --params '{"projectId":123,"learnId":456}'
   ```
 
 ## Advanced: Configure Keras Block Parameters
 You (or Claude) can configure any Keras block parameter at training time using the CLI's `--param` option. Example:
 ```sh
-npm run cli -- start-training --apiKey <your_api_key> --projectId <projectId> --learnId <learnId> \
+npm run cli -- start-training --api-key <your_api_key> --projectId <projectId> --learnId <learnId> \
   --mode visual \
   --param trainingCycles=50 learningRate=0.005 batchSize=64 autoClassWeights=true selectedModelType=int8
 ```
@@ -223,7 +242,7 @@ Claude can generate or modify these commands to set any supported parameter for 
 You can train a Keras (neural network) block in Edge Impulse directly from the CLI. Here is a real test:
 
 ```sh
-npm run cli -- start-training --apiKey <your_api_key> --projectId <projectId> --learnId <learnId> --mode visual --param trainingCycles=30 learningRate=0.01
+npm run cli -- start-training --api-key <your_api_key> --projectId <projectId> --learnId <learnId> --mode visual --param trainingCycles=30 learningRate=0.01
 ```
 
 **Example output:**

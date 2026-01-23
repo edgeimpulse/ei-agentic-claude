@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { classify } from '../classify.ts';
+  import { classify } from '../classify';
 
 export function addClassifyCommand(program: Command) {
   program.command('classify')
     .description('Auto-generated command for classify')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,8 +1,8 @@
-import { remove_storage_bucket } from '../remove_storage_bucket.ts';
+import { remove_storage_bucket } from '../remove_storage_bucket';
 export function addRemove_storage_bucketCommand(program) {
     program.command('remove-storage-bucket')
         .description('Auto-generated command for remove_storage_bucket')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

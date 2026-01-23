@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { delete_create_project_file } from '../delete_create_project_file.ts';
+  import { delete_create_project_file } from '../delete_create_project_file';
 
 export function addDelete_create_project_fileCommand(program: Command) {
   program.command('delete-create-project-file')
     .description('Auto-generated command for delete_create_project_file')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

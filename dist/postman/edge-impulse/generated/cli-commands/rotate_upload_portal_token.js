@@ -1,8 +1,8 @@
-import { rotate_upload_portal_token } from '../rotate_upload_portal_token.ts';
+import { rotate_upload_portal_token } from '../rotate_upload_portal_token';
 export function addRotate_upload_portal_tokenCommand(program) {
     program.command('rotate-upload-portal-token')
         .description('Auto-generated command for rotate_upload_portal_token')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

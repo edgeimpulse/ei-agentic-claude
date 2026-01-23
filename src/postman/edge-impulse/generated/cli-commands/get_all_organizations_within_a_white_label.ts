@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_all_organizations_within_a_white_label } from '../get_all_organizations_within_a_white_label.ts';
+  import { get_all_organizations_within_a_white_label } from '../get_all_organizations_within_a_white_label';
 
 export function addGet_all_organizations_within_a_white_labelCommand(program: Command) {
   program.command('get-all-organizations-within-a-white-label')
     .description('Auto-generated command for get_all_organizations_within_a_white_label')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

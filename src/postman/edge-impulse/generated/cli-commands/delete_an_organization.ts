@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { delete_an_organization } from '../delete_an_organization.ts';
+  import { delete_an_organization } from '../delete_an_organization';
 
 export function addDelete_an_organizationCommand(program: Command) {
   program.command('delete-an-organization')
     .description('Auto-generated command for delete_an_organization')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { train_model_anomaly } from '../train_model_anomaly.ts';
+  import { train_model_anomaly } from '../train_model_anomaly';
 
 export function addTrain_model_anomalyCommand(program: Command) {
   program.command('train-model-anomaly')
     .description('Auto-generated command for train_model_anomaly')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

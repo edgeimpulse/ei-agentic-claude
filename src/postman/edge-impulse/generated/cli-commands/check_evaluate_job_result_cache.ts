@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { check_evaluate_job_result_cache } from '../check_evaluate_job_result_cache.ts';
+  import { check_evaluate_job_result_cache } from '../check_evaluate_job_result_cache';
 
 export function addCheck_evaluate_job_result_cacheCommand(program: Command) {
   program.command('check-evaluate-job-result-cache')
     .description('Auto-generated command for check_evaluate_job_result_cache')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

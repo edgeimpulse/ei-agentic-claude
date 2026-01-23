@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { retrieves_available_transfer_learning_models } from '../retrieves_available_transfer_learning_models.ts';
+  import { retrieves_available_transfer_learning_models } from '../retrieves_available_transfer_learning_models';
 
 export function addRetrieves_available_transfer_learning_modelsCommand(program: Command) {
   program.command('retrieves-available-transfer-learning-models')
     .description('Auto-generated command for retrieves_available_transfer_learning_models')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

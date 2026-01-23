@@ -1,8 +1,8 @@
-import { verify_custom_dsp_block } from '../verify_custom_dsp_block.ts';
+import { verify_custom_dsp_block } from '../verify_custom_dsp_block';
 export function addVerify_custom_dsp_blockCommand(program) {
     program.command('verify-custom-dsp-block')
         .description('Auto-generated command for verify_custom_dsp_block')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

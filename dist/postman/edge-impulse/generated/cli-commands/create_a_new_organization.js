@@ -1,8 +1,8 @@
-import { create_a_new_organization } from '../create_a_new_organization.ts';
+import { create_a_new_organization } from '../create_a_new_organization';
 export function addCreate_a_new_organizationCommand(program) {
     program.command('create-a-new-organization')
         .description('Auto-generated command for create_a_new_organization')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

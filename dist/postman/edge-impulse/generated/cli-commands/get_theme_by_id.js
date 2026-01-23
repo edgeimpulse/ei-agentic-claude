@@ -1,8 +1,8 @@
-import { get_theme_by_id } from '../get_theme_by_id.ts';
+import { get_theme_by_id } from '../get_theme_by_id';
 export function addGet_theme_by_idCommand(program) {
     program.command('get-theme-by-id')
         .description('Auto-generated command for get_theme_by_id')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

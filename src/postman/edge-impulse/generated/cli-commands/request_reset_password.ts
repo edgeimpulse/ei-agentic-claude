@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { request_reset_password } from '../request_reset_password.ts';
+  import { request_reset_password } from '../request_reset_password';
 
 export function addRequest_reset_passwordCommand(program: Command) {
   program.command('request-reset-password')
     .description('Auto-generated command for request_reset_password')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

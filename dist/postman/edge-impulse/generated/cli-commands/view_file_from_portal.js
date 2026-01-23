@@ -1,8 +1,8 @@
-import { view_file_from_portal } from '../view_file_from_portal.ts';
+import { view_file_from_portal } from '../view_file_from_portal';
 export function addView_file_from_portalCommand(program) {
     program.command('view-file-from-portal')
         .description('Auto-generated command for view_file_from_portal')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

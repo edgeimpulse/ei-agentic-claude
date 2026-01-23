@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_white_label_domain } from '../get_white_label_domain.ts';
+  import { get_white_label_domain } from '../get_white_label_domain';
 
 export function addGet_white_label_domainCommand(program: Command) {
   program.command('get-white-label-domain')
     .description('Auto-generated command for get_white_label_domain')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

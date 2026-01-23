@@ -1,8 +1,8 @@
-import { get_data_axes_summary } from '../get_data_axes_summary.ts';
+import { get_data_axes_summary } from '../get_data_axes_summary';
 export function addGet_data_axes_summaryCommand(program) {
     program.command('get-data-axes-summary')
         .description('Auto-generated command for get_data_axes_summary')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

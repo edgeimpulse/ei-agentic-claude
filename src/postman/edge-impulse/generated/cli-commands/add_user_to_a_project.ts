@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { add_user_to_a_project } from '../add_user_to_a_project.ts';
+  import { add_user_to_a_project } from '../add_user_to_a_project';
 
 export function addAdd_user_to_a_projectCommand(program: Command) {
   program.command('add-user-to-a-project')
     .description('Auto-generated command for add_user_to_a_project')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

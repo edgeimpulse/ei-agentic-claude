@@ -1,8 +1,8 @@
-import { update_current_user } from '../update_current_user.ts';
+import { update_current_user } from '../update_current_user';
 export function addUpdate_current_userCommand(program) {
     program.command('update-current-user')
         .description('Auto-generated command for update_current_user')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

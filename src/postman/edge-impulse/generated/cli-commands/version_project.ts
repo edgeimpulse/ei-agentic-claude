@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { version_project } from '../version_project.ts';
+  import { version_project } from '../version_project';
 
 export function addVersion_projectCommand(program: Command) {
   program.command('version-project')
     .description('Auto-generated command for version_project')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

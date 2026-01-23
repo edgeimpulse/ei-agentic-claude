@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { anomaly_metadata } from '../anomaly_metadata.ts';
+  import { anomaly_metadata } from '../anomaly_metadata';
 
 export function addAnomaly_metadataCommand(program: Command) {
   program.command('anomaly-metadata')
     .description('Auto-generated command for anomaly_metadata')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

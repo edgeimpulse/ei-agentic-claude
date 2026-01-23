@@ -1,8 +1,8 @@
-import { add_deploy_block } from '../add_deploy_block.ts';
+import { add_deploy_block } from '../add_deploy_block';
 export function addAdd_deploy_blockCommand(program) {
     program.command('add-deploy-block')
         .description('Auto-generated command for add_deploy_block')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

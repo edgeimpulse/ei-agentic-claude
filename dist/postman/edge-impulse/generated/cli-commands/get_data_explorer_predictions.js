@@ -1,8 +1,8 @@
-import { get_data_explorer_predictions } from '../get_data_explorer_predictions.ts';
+import { get_data_explorer_predictions } from '../get_data_explorer_predictions';
 export function addGet_data_explorer_predictionsCommand(program) {
     program.command('get-data-explorer-predictions')
         .description('Auto-generated command for get_data_explorer_predictions')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

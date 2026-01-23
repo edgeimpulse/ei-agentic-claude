@@ -1,8 +1,8 @@
-import { discourse } from '../discourse.ts';
+import { discourse } from '../discourse';
 export function addDiscourseCommand(program) {
     program.command('discourse')
         .description('Auto-generated command for discourse')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

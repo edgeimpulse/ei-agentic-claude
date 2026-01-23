@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_dataset } from '../get_dataset.ts';
+  import { get_dataset } from '../get_dataset';
 
 export function addGet_datasetCommand(program: Command) {
   program.command('get-dataset')
     .description('Auto-generated command for get_dataset')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

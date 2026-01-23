@@ -1,8 +1,8 @@
-import { restore_project_to_version } from '../restore_project_to_version.ts';
+import { restore_project_to_version } from '../restore_project_to_version';
 export function addRestore_project_to_versionCommand(program) {
     program.command('restore-project-to-version')
         .description('Auto-generated command for restore_project_to_version')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

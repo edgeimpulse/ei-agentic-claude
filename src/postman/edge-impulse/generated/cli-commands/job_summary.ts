@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { job_summary } from '../job_summary.ts';
+  import { job_summary } from '../job_summary';
 
 export function addJob_summaryCommand(program: Command) {
   program.command('job-summary')
     .description('Auto-generated command for job_summary')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

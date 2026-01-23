@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { segment_sample } from '../segment_sample.ts';
+  import { segment_sample } from '../segment_sample';
 
 export function addSegment_sampleCommand(program: Command) {
   program.command('segment-sample')
     .description('Auto-generated command for segment_sample')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

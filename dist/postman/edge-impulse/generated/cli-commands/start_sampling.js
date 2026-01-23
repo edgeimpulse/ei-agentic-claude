@@ -1,8 +1,8 @@
-import { start_sampling } from '../start_sampling.ts';
+import { start_sampling } from '../start_sampling';
 export function addStart_samplingCommand(program) {
     program.command('start-sampling')
         .description('Auto-generated command for start_sampling')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

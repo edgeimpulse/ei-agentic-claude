@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { download_keras_data_export } from '../download_keras_data_export.ts';
+  import { download_keras_data_export } from '../download_keras_data_export';
 
 export function addDownload_keras_data_exportCommand(program: Command) {
   program.command('download-keras-data-export')
     .description('Auto-generated command for download_keras_data_export')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

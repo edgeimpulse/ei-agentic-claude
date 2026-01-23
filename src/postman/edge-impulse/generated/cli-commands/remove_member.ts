@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { remove_member } from '../remove_member.ts';
+  import { remove_member } from '../remove_member';
 
 export function addRemove_memberCommand(program: Command) {
   program.command('remove-member')
     .description('Auto-generated command for remove_member')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

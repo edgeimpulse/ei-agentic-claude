@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { list_samples } from '../list_samples.ts';
+  import { list_samples } from '../list_samples';
 
 export function addList_samplesCommand(program: Command) {
   program.command('list-samples')
     .description('Auto-generated command for list_samples')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

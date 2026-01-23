@@ -1,8 +1,8 @@
-import { get_development_keys } from '../get_development_keys.ts';
+import { get_development_keys } from '../get_development_keys';
 export function addGet_development_keysCommand(program) {
     program.command('get-development-keys')
         .description('Auto-generated command for get_development_keys')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

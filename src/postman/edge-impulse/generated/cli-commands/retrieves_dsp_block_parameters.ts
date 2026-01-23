@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { retrieves_dsp_block_parameters } from '../retrieves_dsp_block_parameters.ts';
+  import { retrieves_dsp_block_parameters } from '../retrieves_dsp_block_parameters';
 
 export function addRetrieves_dsp_block_parametersCommand(program: Command) {
   program.command('retrieves-dsp-block-parameters')
     .description('Auto-generated command for retrieves_dsp_block_parameters')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

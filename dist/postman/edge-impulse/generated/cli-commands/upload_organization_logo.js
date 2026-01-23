@@ -1,8 +1,8 @@
-import { upload_organization_logo } from '../upload_organization_logo.ts';
+import { upload_organization_logo } from '../upload_organization_logo';
 export function addUpload_organization_logoCommand(program) {
     program.command('upload-organization-logo')
         .description('Auto-generated command for upload_organization_logo')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

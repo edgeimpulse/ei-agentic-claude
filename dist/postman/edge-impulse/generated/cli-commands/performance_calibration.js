@@ -1,8 +1,8 @@
-import { performance_calibration } from '../performance_calibration.ts';
+import { performance_calibration } from '../performance_calibration';
 export function addPerformance_calibrationCommand(program) {
     program.command('performance-calibration')
         .description('Auto-generated command for performance_calibration')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

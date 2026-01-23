@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { export_original_data } from '../export_original_data.ts';
+  import { export_original_data } from '../export_original_data';
 
 export function addExport_original_dataCommand(program: Command) {
   program.command('export-original-data')
     .description('Auto-generated command for export_original_data')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { update_version } from '../update_version.ts';
+  import { update_version } from '../update_version';
 
 export function addUpdate_versionCommand(program: Command) {
   program.command('update-version')
     .description('Auto-generated command for update_version')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

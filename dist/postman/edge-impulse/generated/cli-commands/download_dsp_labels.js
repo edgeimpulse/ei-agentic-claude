@@ -1,8 +1,8 @@
-import { download_dsp_labels } from '../download_dsp_labels.ts';
+import { download_dsp_labels } from '../download_dsp_labels';
 export function addDownload_dsp_labelsCommand(program) {
     program.command('download-dsp-labels')
         .description('Auto-generated command for download_dsp_labels')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

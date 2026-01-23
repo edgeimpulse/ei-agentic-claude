@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_jwt_token } from '../get_jwt_token.ts';
+  import { get_jwt_token } from '../get_jwt_token';
 
 export function addGet_jwt_tokenCommand(program: Command) {
   program.command('get-jwt-token')
     .description('Auto-generated command for get_jwt_token')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { save_performance_calibration_parameters } from '../save_performance_calibration_parameters.ts';
+  import { save_performance_calibration_parameters } from '../save_performance_calibration_parameters';
 
 export function addSave_performance_calibration_parametersCommand(program: Command) {
   program.command('save-performance-calibration-parameters')
     .description('Auto-generated command for save_performance_calibration_parameters')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

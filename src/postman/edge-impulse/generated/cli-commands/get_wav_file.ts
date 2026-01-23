@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { get_wav_file } from '../get_wav_file.ts';
+  import { get_wav_file } from '../get_wav_file';
 
 export function addGet_wav_fileCommand(program: Command) {
   program.command('get-wav-file')
     .description('Auto-generated command for get_wav_file')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

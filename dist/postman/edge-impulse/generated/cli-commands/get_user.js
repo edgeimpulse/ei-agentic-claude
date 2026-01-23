@@ -1,8 +1,8 @@
-import { get_user } from '../get_user.ts';
+import { get_user } from '../get_user';
 export function addGet_userCommand(program) {
     program.command('get-user')
         .description('Auto-generated command for get_user')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

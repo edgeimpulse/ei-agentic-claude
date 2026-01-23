@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { delete_theme_by_id } from '../delete_theme_by_id.ts';
+  import { delete_theme_by_id } from '../delete_theme_by_id';
 
 export function addDelete_theme_by_idCommand(program: Command) {
   program.command('delete-theme-by-id')
     .description('Auto-generated command for delete_theme_by_id')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,8 +1,8 @@
-import { update_theme_colors } from '../update_theme_colors.ts';
+import { update_theme_colors } from '../update_theme_colors';
 export function addUpdate_theme_colorsCommand(program) {
     program.command('update-theme-colors')
         .description('Auto-generated command for update_theme_colors')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

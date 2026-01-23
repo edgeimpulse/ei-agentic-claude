@@ -1,8 +1,8 @@
-import { update_upload_portal } from '../update_upload_portal.ts';
+import { update_upload_portal } from '../update_upload_portal';
 export function addUpdate_upload_portalCommand(program) {
     program.command('update-upload-portal')
         .description('Auto-generated command for update_upload_portal')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

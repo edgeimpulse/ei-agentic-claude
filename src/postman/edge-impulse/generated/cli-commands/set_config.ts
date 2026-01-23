@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { set_config } from '../set_config.ts';
+  import { set_config } from '../set_config';
 
 export function addSet_configCommand(program: Command) {
   program.command('set-config')
     .description('Auto-generated command for set_config')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { anomaly_settings } from '../anomaly_settings.ts';
+  import { anomaly_settings } from '../anomaly_settings';
 
 export function addAnomaly_settingsCommand(program: Command) {
   program.command('anomaly-settings')
     .description('Auto-generated command for anomaly_settings')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

@@ -1,8 +1,8 @@
-import { get_job_status } from '../get_job_status.ts';
+import { get_job_status } from '../get_job_status';
 export function addGet_job_statusCommand(program) {
     program.command('get-job-status')
         .description('Auto-generated command for get_job_status')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

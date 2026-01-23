@@ -1,8 +1,8 @@
-import { activate_user } from '../activate_user.ts';
+import { activate_user } from '../activate_user';
 export function addActivate_userCommand(program) {
     program.command('activate-user')
         .description('Auto-generated command for activate_user')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

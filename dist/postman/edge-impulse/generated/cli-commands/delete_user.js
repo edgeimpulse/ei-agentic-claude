@@ -1,8 +1,8 @@
-import { delete_user } from '../delete_user.ts';
+import { delete_user } from '../delete_user';
 export function addDelete_userCommand(program) {
     program.command('delete-user')
         .description('Auto-generated command for delete_user')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

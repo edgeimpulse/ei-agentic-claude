@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { set_bounding_boxes } from '../set_bounding_boxes.ts';
+  import { set_bounding_boxes } from '../set_bounding_boxes';
 
 export function addSet_bounding_boxesCommand(program: Command) {
   program.command('set-bounding-boxes')
     .description('Auto-generated command for set_bounding_boxes')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

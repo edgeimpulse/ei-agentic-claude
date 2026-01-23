@@ -1,8 +1,8 @@
-import { update_transformation_job } from '../update_transformation_job.ts';
+import { update_transformation_job } from '../update_transformation_job';
 export function addUpdate_transformation_jobCommand(program) {
     program.command('update-transformation-job')
         .description('Auto-generated command for update_transformation_job')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

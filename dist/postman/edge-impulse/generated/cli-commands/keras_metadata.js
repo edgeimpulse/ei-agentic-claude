@@ -1,8 +1,8 @@
-import { keras_metadata } from '../keras_metadata.ts';
+import { keras_metadata } from '../keras_metadata';
 export function addKeras_metadataCommand(program) {
     program.command('keras-metadata')
         .description('Auto-generated command for keras_metadata')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

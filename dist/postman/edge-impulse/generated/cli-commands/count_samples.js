@@ -1,8 +1,8 @@
-import { count_samples } from '../count_samples.ts';
+import { count_samples } from '../count_samples';
 export function addCount_samplesCommand(program) {
     program.command('count-samples')
         .description('Auto-generated command for count_samples')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

@@ -1,10 +1,10 @@
 import { Command } from 'commander';
-import { upload_a_custom_block } from '../upload_a_custom_block.ts';
+  import { upload_a_custom_block } from '../upload_a_custom_block';
 
 export function addUpload_a_custom_blockCommand(program: Command) {
   program.command('upload-a-custom-block')
     .description('Auto-generated command for upload_a_custom_block')
-    .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
     .option('--params <params>', 'JSON string of parameters')
     .action(async (opts) => {
       try {

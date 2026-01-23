@@ -1,8 +1,8 @@
-import { delete_photo } from '../delete_photo.ts';
+import { delete_photo } from '../delete_photo';
 export function addDelete_photoCommand(program) {
     program.command('delete-photo')
         .description('Auto-generated command for delete_photo')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

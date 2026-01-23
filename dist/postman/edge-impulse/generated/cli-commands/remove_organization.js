@@ -1,8 +1,8 @@
-import { remove_organization } from '../remove_organization.ts';
+import { remove_organization } from '../remove_organization';
 export function addRemove_organizationCommand(program) {
     program.command('remove-organization')
         .description('Auto-generated command for remove_organization')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

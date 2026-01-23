@@ -1,8 +1,8 @@
-import { add_new_data } from '../add_new_data.ts';
+import { add_new_data } from '../add_new_data';
 export function addAdd_new_dataCommand(program) {
     program.command('add-new-data')
         .description('Auto-generated command for add_new_data')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {

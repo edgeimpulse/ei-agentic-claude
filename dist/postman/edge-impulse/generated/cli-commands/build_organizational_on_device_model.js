@@ -1,8 +1,8 @@
-import { build_organizational_on_device_model } from '../build_organizational_on_device_model.ts';
+import { build_organizational_on_device_model } from '../build_organizational_on_device_model';
 export function addBuild_organizational_on_device_modelCommand(program) {
     program.command('build-organizational-on-device-model')
         .description('Auto-generated command for build_organizational_on_device_model')
-        .requiredOption('--apiKey <apiKey>', 'Edge Impulse API key')
+        .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
         .option('--params <params>', 'JSON string of parameters')
         .action(async (opts) => {
         try {
