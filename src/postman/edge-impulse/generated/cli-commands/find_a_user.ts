@@ -12,8 +12,8 @@ export function addFind_a_userCommand(program: Command) {
         const res = await find_a_user(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'find-a-user' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

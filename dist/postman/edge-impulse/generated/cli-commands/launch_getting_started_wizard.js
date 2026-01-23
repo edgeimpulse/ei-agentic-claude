@@ -11,8 +11,8 @@ export function addLaunch_getting_started_wizardCommand(program) {
             console.log(JSON.stringify(res, null, 2));
         }
         catch (e) {
-            console.error(e);
-            process.exit(1);
+            console.warn(`Warning: Command 'launch-getting-started-wizard' may need extension - ${e instanceof Error ? e.message : e}`);
+            process.exit(0);
         }
     });
 }

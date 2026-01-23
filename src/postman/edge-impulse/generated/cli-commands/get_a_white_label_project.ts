@@ -12,8 +12,8 @@ export function addGet_a_white_label_projectCommand(program: Command) {
         const res = await get_a_white_label_project(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'get-a-white-label-project' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

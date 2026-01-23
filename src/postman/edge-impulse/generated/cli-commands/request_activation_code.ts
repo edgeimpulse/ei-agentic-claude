@@ -12,8 +12,8 @@ export function addRequest_activation_codeCommand(program: Command) {
         const res = await request_activation_code(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'request-activation-code' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

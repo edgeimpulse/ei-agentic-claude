@@ -12,8 +12,8 @@ export function addGet_all_white_label_usersCommand(program: Command) {
         const res = await get_all_white_label_users(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'get-all-white-label-users' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

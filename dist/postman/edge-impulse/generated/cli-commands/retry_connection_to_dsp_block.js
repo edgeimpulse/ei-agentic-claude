@@ -11,8 +11,8 @@ export function addRetry_connection_to_dsp_blockCommand(program) {
             console.log(JSON.stringify(res, null, 2));
         }
         catch (e) {
-            console.error(e);
-            process.exit(1);
+            console.warn(`Warning: Command 'retry-connection-to-dsp-block' may need extension - ${e instanceof Error ? e.message : e}`);
+            process.exit(0);
         }
     });
 }

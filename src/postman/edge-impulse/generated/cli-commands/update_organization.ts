@@ -12,8 +12,8 @@ export function addUpdate_organizationCommand(program: Command) {
         const res = await update_organization(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'update-organization' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

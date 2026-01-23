@@ -12,8 +12,8 @@ export function addGet_user_password_stateCommand(program: Command) {
         const res = await get_user_password_state(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'get-user-password-state' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

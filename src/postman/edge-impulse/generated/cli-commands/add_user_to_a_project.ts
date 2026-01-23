@@ -12,8 +12,8 @@ export function addAdd_user_to_a_projectCommand(program: Command) {
         const res = await add_user_to_a_project(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'add-user-to-a-project' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

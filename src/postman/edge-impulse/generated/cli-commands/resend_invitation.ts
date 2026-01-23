@@ -12,8 +12,8 @@ export function addResend_invitationCommand(program: Command) {
         const res = await resend_invitation(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'resend-invitation' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

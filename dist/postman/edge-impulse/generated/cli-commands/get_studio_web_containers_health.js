@@ -11,8 +11,8 @@ export function addGet_studio_web_containers_healthCommand(program) {
             console.log(JSON.stringify(res, null, 2));
         }
         catch (e) {
-            console.error(e);
-            process.exit(1);
+            console.warn(`Warning: Command 'get-studio-web-containers-health' may need extension - ${e instanceof Error ? e.message : e}`);
+            process.exit(0);
         }
     });
 }

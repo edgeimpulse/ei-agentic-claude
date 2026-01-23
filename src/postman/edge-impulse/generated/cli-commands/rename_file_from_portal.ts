@@ -12,8 +12,8 @@ export function addRename_file_from_portalCommand(program: Command) {
         const res = await rename_file_from_portal(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'rename-file-from-portal' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

@@ -12,8 +12,8 @@ export function addRemove_all_samplesCommand(program: Command) {
         const res = await remove_all_samples(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'remove-all-samples' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

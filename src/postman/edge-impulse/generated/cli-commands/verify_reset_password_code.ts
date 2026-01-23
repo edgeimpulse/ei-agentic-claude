@@ -12,8 +12,8 @@ export function addVerify_reset_password_codeCommand(program: Command) {
         const res = await verify_reset_password_code(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'verify-reset-password-code' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

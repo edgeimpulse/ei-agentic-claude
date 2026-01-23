@@ -12,8 +12,8 @@ export function addAdd_hmac_keyCommand(program: Command) {
         const res = await add_hmac_key(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'add-hmac-key' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

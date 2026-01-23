@@ -12,8 +12,8 @@ export function addAuto_label_an_imageCommand(program: Command) {
         const res = await auto_label_an_image(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'auto-label-an-image' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

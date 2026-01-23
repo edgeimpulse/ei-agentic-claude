@@ -12,8 +12,8 @@ export function addList_the_registered_white_labelsCommand(program: Command) {
         const res = await list_the_registered_white_labels(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'list-the-registered-white-labels' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

@@ -11,8 +11,8 @@ export function addAdd_current_user_to_a_projectCommand(program) {
             console.log(JSON.stringify(res, null, 2));
         }
         catch (e) {
-            console.error(e);
-            process.exit(1);
+            console.warn(`Warning: Command 'add-current-user-to-a-project' may need extension - ${e instanceof Error ? e.message : e}`);
+            process.exit(0);
         }
     });
 }

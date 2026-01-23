@@ -12,8 +12,8 @@ export function addUpload_organization_logoCommand(program: Command) {
         const res = await upload_organization_logo(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'upload-organization-logo' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

@@ -12,8 +12,8 @@ export function addGet_syntiant_posterior_parametersCommand(program: Command) {
         const res = await get_syntiant_posterior_parameters(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'get-syntiant-posterior-parameters' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

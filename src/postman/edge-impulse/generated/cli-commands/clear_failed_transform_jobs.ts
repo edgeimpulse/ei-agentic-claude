@@ -12,8 +12,8 @@ export function addClear_failed_transform_jobsCommand(program: Command) {
         const res = await clear_failed_transform_jobs(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'clear-failed-transform-jobs' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

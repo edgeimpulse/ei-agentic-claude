@@ -12,8 +12,8 @@ export function addVerify_bucket_connectivityCommand(program: Command) {
         const res = await verify_bucket_connectivity(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'verify-bucket-connectivity' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

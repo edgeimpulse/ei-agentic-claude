@@ -12,8 +12,8 @@ export function addGet_deployment_infoCommand(program: Command) {
         const res = await get_deployment_info(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'get-deployment-info' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

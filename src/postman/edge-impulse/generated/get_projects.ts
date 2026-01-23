@@ -37,5 +37,12 @@ export async function get_projects(params: any, apiKey: string) {
     const text = await res.text();
     throw new Error(`Unexpected non-JSON response from server: ${text.slice(0, 1000)}`);
   }
-  return res.json();
+  if (res.ok) return res.json();
+  const text = await res.text();
+  try {
+    const err = JSON.parse(text);
+    throw new Error(`Edge Impulse API error: ${err.message || JSON.stringify(err)}`);
+  } catch {
+    throw new Error(`Edge Impulse API error: ${res.status} ${res.statusText} - ${text}`);
+  }
 }

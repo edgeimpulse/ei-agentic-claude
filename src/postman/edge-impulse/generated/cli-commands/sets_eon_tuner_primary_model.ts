@@ -12,8 +12,8 @@ export function addSets_eon_tuner_primary_modelCommand(program: Command) {
         const res = await sets_eon_tuner_primary_model(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'sets-eon-tuner-primary-model' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

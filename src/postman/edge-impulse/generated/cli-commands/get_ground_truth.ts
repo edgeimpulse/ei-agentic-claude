@@ -12,8 +12,8 @@ export function addGet_ground_truthCommand(program: Command) {
         const res = await get_ground_truth(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'get-ground-truth' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

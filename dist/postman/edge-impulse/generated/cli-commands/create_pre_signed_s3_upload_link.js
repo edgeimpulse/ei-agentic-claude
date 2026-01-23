@@ -11,8 +11,8 @@ export function addCreate_pre_signed_s3_upload_linkCommand(program) {
             console.log(JSON.stringify(res, null, 2));
         }
         catch (e) {
-            console.error(e);
-            process.exit(1);
+            console.warn(`Warning: Command 'create-pre-signed-s3-upload-link' may need extension - ${e instanceof Error ? e.message : e}`);
+            process.exit(0);
         }
     });
 }

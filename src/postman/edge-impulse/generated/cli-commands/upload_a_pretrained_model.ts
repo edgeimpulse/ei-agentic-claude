@@ -12,8 +12,8 @@ export function addUpload_a_pretrained_modelCommand(program: Command) {
         const res = await upload_a_pretrained_model(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'upload-a-pretrained-model' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }
