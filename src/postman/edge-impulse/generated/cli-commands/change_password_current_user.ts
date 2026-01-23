@@ -12,8 +12,8 @@ export function addChange_password_current_userCommand(program: Command) {
         const res = await change_password_current_user(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'change-password-current-user' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

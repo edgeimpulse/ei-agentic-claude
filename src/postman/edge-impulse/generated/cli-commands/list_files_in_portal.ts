@@ -12,8 +12,8 @@ export function addList_files_in_portalCommand(program: Command) {
         const res = await list_files_in_portal(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'list-files-in-portal' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

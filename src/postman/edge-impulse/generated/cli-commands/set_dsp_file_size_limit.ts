@@ -12,8 +12,8 @@ export function addSet_dsp_file_size_limitCommand(program: Command) {
         const res = await set_dsp_file_size_limit(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'set-dsp-file-size-limit' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

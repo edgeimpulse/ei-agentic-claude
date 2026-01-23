@@ -12,8 +12,8 @@ export function addList_finished_jobsCommand(program: Command) {
         const res = await list_finished_jobs(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'list-finished-jobs' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

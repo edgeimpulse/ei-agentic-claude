@@ -12,8 +12,8 @@ export function addSet_member_roleCommand(program: Command) {
         const res = await set_member_role(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'set-member-role' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

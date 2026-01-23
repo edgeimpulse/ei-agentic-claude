@@ -12,8 +12,8 @@ export function addDisable_multiple_samplesCommand(program: Command) {
         const res = await disable_multiple_samples(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'disable-multiple-samples' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

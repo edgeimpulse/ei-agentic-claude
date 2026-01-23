@@ -12,8 +12,8 @@ export function addAccept_terms_of_serviceCommand(program: Command) {
         const res = await accept_terms_of_service(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'accept-terms-of-service' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

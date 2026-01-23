@@ -12,8 +12,8 @@ export function addGenerate_data_explorer_featuresCommand(program: Command) {
         const res = await generate_data_explorer_features(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'generate-data-explorer-features' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

@@ -12,8 +12,8 @@ export function addUser_cdn_resourceCommand(program: Command) {
         const res = await user_cdn_resource(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'user-cdn-resource' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

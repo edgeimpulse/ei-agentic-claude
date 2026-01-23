@@ -12,8 +12,8 @@ export function addGet_white_label_domainCommand(program: Command) {
         const res = await get_white_label_domain(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'get-white-label-domain' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

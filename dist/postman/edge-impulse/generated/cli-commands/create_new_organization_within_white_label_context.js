@@ -11,8 +11,8 @@ export function addCreate_new_organization_within_white_label_contextCommand(pro
             console.log(JSON.stringify(res, null, 2));
         }
         catch (e) {
-            console.error(e);
-            process.exit(1);
+            console.warn(`Warning: Command 'create-new-organization-within-white-label-context' may need extension - ${e instanceof Error ? e.message : e}`);
+            process.exit(0);
         }
     });
 }

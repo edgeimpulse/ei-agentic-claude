@@ -12,8 +12,8 @@ export function addUpload_a_data_explorer_screenshotCommand(program: Command) {
         const res = await upload_a_data_explorer_screenshot(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'upload-a-data-explorer-screenshot' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

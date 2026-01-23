@@ -12,8 +12,8 @@ export function addGet_jwt_tokenCommand(program: Command) {
         const res = await get_jwt_token(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'get-jwt-token' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

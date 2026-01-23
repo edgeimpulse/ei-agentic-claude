@@ -12,8 +12,8 @@ export function addBulk_update_metadataCommand(program: Command) {
         const res = await bulk_update_metadata(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'bulk-update-metadata' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

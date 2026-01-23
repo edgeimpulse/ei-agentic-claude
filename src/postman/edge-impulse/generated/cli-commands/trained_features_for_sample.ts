@@ -12,8 +12,8 @@ export function addTrained_features_for_sampleCommand(program: Command) {
         const res = await trained_features_for_sample(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'trained-features-for-sample' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

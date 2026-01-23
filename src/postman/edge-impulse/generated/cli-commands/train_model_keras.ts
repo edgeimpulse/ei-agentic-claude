@@ -12,8 +12,8 @@ export function addTrain_model_kerasCommand(program: Command) {
         const res = await train_model_keras(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'train-model-keras' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

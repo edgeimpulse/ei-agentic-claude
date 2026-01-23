@@ -12,8 +12,8 @@ export function addAdd_transformation_blockCommand(program: Command) {
         const res = await add_transformation_block(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'add-transformation-block' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

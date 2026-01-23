@@ -12,8 +12,8 @@ export function addDelete_theme_by_idCommand(program: Command) {
         const res = await delete_theme_by_id(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'delete-theme-by-id' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

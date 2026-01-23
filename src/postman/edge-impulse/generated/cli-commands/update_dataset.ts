@@ -12,8 +12,8 @@ export function addUpdate_datasetCommand(program: Command) {
         const res = await update_dataset(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'update-dataset' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

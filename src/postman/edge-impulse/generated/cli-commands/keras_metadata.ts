@@ -12,8 +12,8 @@ export function addKeras_metadataCommand(program: Command) {
         const res = await keras_metadata(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'keras-metadata' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

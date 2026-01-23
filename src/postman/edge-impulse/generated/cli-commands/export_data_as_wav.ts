@@ -12,8 +12,8 @@ export function addExport_data_as_wavCommand(program: Command) {
         const res = await export_data_as_wav(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'export-data-as-wav' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

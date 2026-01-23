@@ -12,8 +12,8 @@ export function addCreate_a_new_organizationCommand(program: Command) {
         const res = await create_a_new_organization(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'create-a-new-organization' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

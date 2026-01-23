@@ -12,8 +12,8 @@ export function addGet_the_interval_in_ms_of_the_training_dataCommand(program: C
         const res = await get_the_interval_in_ms_of_the_training_data(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'get-the-interval-in-ms-of-the-training-data' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

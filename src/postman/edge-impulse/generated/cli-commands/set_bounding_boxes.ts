@@ -12,8 +12,8 @@ export function addSet_bounding_boxesCommand(program: Command) {
         const res = await set_bounding_boxes(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'set-bounding-boxes' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

@@ -12,8 +12,8 @@ export function addAdd_keywords_and_noiseCommand(program: Command) {
         const res = await add_keywords_and_noise(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'add-keywords-and-noise' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

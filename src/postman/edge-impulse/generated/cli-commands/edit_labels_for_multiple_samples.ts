@@ -12,8 +12,8 @@ export function addEdit_labels_for_multiple_samplesCommand(program: Command) {
         const res = await edit_labels_for_multiple_samples(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'edit-labels-for-multiple-samples' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

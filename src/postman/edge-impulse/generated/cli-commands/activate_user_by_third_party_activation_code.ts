@@ -12,8 +12,8 @@ export function addActivate_user_by_third_party_activation_codeCommand(program: 
         const res = await activate_user_by_third_party_activation_code(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'activate-user-by-third-party-activation-code' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

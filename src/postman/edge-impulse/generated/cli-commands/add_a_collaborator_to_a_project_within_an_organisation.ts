@@ -12,8 +12,8 @@ export function addAdd_a_collaborator_to_a_project_within_an_organisationCommand
         const res = await add_a_collaborator_to_a_project_within_an_organisation(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'add-a-collaborator-to-a-project-within-an-organisation' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

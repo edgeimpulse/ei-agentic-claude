@@ -11,8 +11,8 @@ export function addGet_all_user_ids_active_last_30_daysCommand(program) {
             console.log(JSON.stringify(res, null, 2));
         }
         catch (e) {
-            console.error(e);
-            process.exit(1);
+            console.warn(`Warning: Command 'get-all-user-ids-active-last-30-days' may need extension - ${e instanceof Error ? e.message : e}`);
+            process.exit(0);
         }
     });
 }

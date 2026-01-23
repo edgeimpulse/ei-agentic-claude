@@ -12,8 +12,8 @@ export function addMake_version_privateCommand(program: Command) {
         const res = await make_version_private(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'make-version-private' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

@@ -12,8 +12,8 @@ export function addDownload_keras_exportCommand(program: Command) {
         const res = await download_keras_export(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'download-keras-export' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }

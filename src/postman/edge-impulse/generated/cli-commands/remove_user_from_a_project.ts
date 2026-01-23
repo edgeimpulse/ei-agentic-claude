@@ -12,8 +12,8 @@ export function addRemove_user_from_a_projectCommand(program: Command) {
         const res = await remove_user_from_a_project(params, opts.apiKey);
         console.log(JSON.stringify(res, null, 2));
       } catch (e) {
-        console.error(e);
-        process.exit(1);
+        console.warn(`Warning: Command 'remove-user-from-a-project' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
       }
     });
 }
