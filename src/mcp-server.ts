@@ -22,6 +22,7 @@ const __dirname = path.dirname(__filename);
 class EdgeImpulseMCPServer {
   private server: Server;
   private apiFunctions: Map<string, Function> = new Map();
+  private initialized = false;
 
   constructor() {
     this.server = new Server(
@@ -35,9 +36,15 @@ class EdgeImpulseMCPServer {
         },
       }
     );
+  }
 
+  /**
+   * Initialize the server by loading API functions and setting up handlers
+   */
+  async initialize() {
+    await this.loadAPIFunctions();
     this.setupToolHandlers();
-    this.loadAPIFunctions();
+    this.initialized = true;
   }
 
   /**
@@ -45,11 +52,10 @@ class EdgeImpulseMCPServer {
    * Supports both development (src/) and production (dist/) environments
    */
   private async loadAPIFunctions() {
-    // Check if we're running from dist (production) or src (development)
-    const isDist = __dirname.includes('/dist/') || __dirname.includes('\\dist\\');
-    const apiDir = isDist
-      ? path.resolve(__dirname, "../src/postman/edge-impulse/generated")
-      : path.resolve(__dirname, "postman/edge-impulse/generated");
+    // Use fs.existsSync to reliably determine which directory exists
+    const distApiDir = path.resolve(__dirname, "../src/postman/edge-impulse/generated");
+    const srcApiDir = path.resolve(__dirname, "postman/edge-impulse/generated");
+    const apiDir = fs.existsSync(srcApiDir) ? srcApiDir : distApiDir;
 
     try {
       const files = fs.readdirSync(apiDir).filter(f => f.endsWith('.ts') || f.endsWith('.js'));
@@ -58,10 +64,8 @@ class EdgeImpulseMCPServer {
         const filePath = path.join(apiDir, file);
         const module = await import(pathToFileURL(filePath).href);
 
-        // Find the main exported function
-        const apiFunction = Object.values(module).find(v =>
-          typeof v === 'function' && v.constructor.name === 'AsyncFunction'
-        ) as Function;
+        // More robust function detection: check for default export first, then any function
+        const apiFunction = module.default || Object.values(module).find(v => typeof v === 'function') as Function;
 
         if (apiFunction) {
           const functionName = path.basename(file, path.extname(file));
@@ -70,8 +74,14 @@ class EdgeImpulseMCPServer {
       }
 
       console.error(`Loaded ${this.apiFunctions.size} API functions`);
+
+      // Fail fast if no functions were loaded
+      if (this.apiFunctions.size === 0) {
+        throw new Error(`No API functions found in ${apiDir}. Ensure the generated files exist.`);
+      }
     } catch (error) {
       console.error("Error loading API functions:", error);
+      throw error; // Re-throw to fail fast
     }
   }
 
@@ -83,7 +93,7 @@ class EdgeImpulseMCPServer {
     this.server.setRequestHandler(ListToolsRequestSchema, async () => {
       const tools = Array.from(this.apiFunctions.entries()).map(([name, func]) => ({
         name,
-        description: `Edge Impulse API: ${name.replace(/_/g, ' ')}`,
+        description: `Edge Impulse API function: ${name.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}`,
         inputSchema: {
           type: "object",
           properties: {
@@ -93,7 +103,7 @@ class EdgeImpulseMCPServer {
             },
             apiKey: {
               type: "string",
-              description: "Edge Impulse API key"
+              description: "Edge Impulse API key (required)"
             }
           },
           required: ["apiKey"]
@@ -118,6 +128,14 @@ class EdgeImpulseMCPServer {
       try {
         const { params = {}, apiKey } = args as { params?: any; apiKey: string };
 
+        // Validate required apiKey
+        if (!apiKey || typeof apiKey !== 'string' || apiKey.trim() === '') {
+          throw new McpError(
+            ErrorCode.InvalidParams,
+            "apiKey is required and must be a non-empty string"
+          );
+        }
+
         // Call the API function
         const result = await apiFunction(params, apiKey);
 
@@ -130,15 +148,16 @@ class EdgeImpulseMCPServer {
           ]
         };
       } catch (error) {
-        return {
-          content: [
-            {
-              type: "text",
-              text: `Error calling ${name}: ${error instanceof Error ? error.message : String(error)}`
-            }
-          ],
-          isError: true
-        };
+        // Re-throw McpError instances as-is for consistency
+        if (error instanceof McpError) {
+          throw error;
+        }
+
+        // Wrap other errors as McpError
+        throw new McpError(
+          ErrorCode.InternalError,
+          `Error calling ${name}: ${error instanceof Error ? error.message : String(error)}`
+        );
       }
     });
   }
@@ -147,6 +166,10 @@ class EdgeImpulseMCPServer {
    * Start the MCP server with stdio transport
    */
   async run() {
+    if (!this.initialized) {
+      throw new Error("Server must be initialized before running. Call initialize() first.");
+    }
+
     const transport = new StdioServerTransport();
     await this.server.connect(transport);
     console.error("Edge Impulse MCP server running on stdio");
@@ -155,4 +178,6 @@ class EdgeImpulseMCPServer {
 
 // Start the server
 const server = new EdgeImpulseMCPServer();
-server.run().catch(console.error);
+server.initialize().then(() => {
+  return server.run();
+}).catch(console.error);
