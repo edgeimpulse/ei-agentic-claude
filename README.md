@@ -1,6 +1,7 @@
 
 # Edge Impulse Claude Code MCP Integration
 
+
 A complete **Model Context Protocol (MCP) server** that enables Claude Code to interact with all 365+ Edge Impulse APIs through natural language. This project provides seamless integration between Anthropic's Claude Code and Edge Impulse's machine learning platform.
 
 ## ✨ Features
@@ -46,6 +47,9 @@ export EI_API_KEY=your_edge_impulse_api_key
 ```bash
 claude -p "Show me all my Edge Impulse projects"
 ```
+=======
+This CLI was auto-generated from Edge Impulse's REST API configurations on Postman, designed for use by agents like Claude. It provides a interface to Edge Impulse APIs, but individual commands may require testing and extension.
+
 
 ## Table of Contents
 - [Quick Start](#quick-start)
