@@ -1,0 +1,19 @@
+import { Command } from 'commander';
+  import { deployment_targets } from '../deployment_targets';
+
+export function addDeployment_targetsCommand(program: Command) {
+  program.command('deployment-targets')
+    .description('Auto-generated command for deployment_targets')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
+    .option('--params <params>', 'JSON string of parameters')
+    .action(async (opts) => {
+      try {
+        const params = opts.params ? JSON.parse(opts.params) : {};
+        const res = await deployment_targets(params, opts.apiKey);
+        console.log(JSON.stringify(res, null, 2));
+      } catch (e) {
+        console.error(e);
+        process.exit(1);
+      }
+    });
+}

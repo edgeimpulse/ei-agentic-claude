@@ -1,0 +1,18 @@
+/**
+ * Get information about all third party authentication partners
+ * Method: GET
+ * URL: https://studio.edgeimpulse.com/api/third-party-auth
+ */
+export async function get_all_third_party_auth(params, apiKey) {
+    // TODO: Implement parameter mapping
+    const res = await fetch(`https://studio.edgeimpulse.com/api/third-party-auth`, {
+        method: 'GET',
+        headers: {
+            'x-api-key': apiKey,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        },
+        // body: JSON.stringify(params), // Uncomment for POST/PUT
+    });
+    return res.json();
+}

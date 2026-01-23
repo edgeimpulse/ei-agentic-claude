@@ -1,0 +1,18 @@
+/**
+ * Count all raw data by category.
+ * Method: GET
+ * URL: https://studio.edgeimpulse.com/api/:projectId/raw-data/count?category=<string>&labels=<string>&filename=<string>&maxLength=<integer>&minLength=<integer>&minFrequency=<number>&maxFrequency=<number>&signatureValidity=<string>&includeDisabled=<string>
+ */
+export async function count_samples(params, apiKey) {
+    // TODO: Implement parameter mapping
+    const res = await fetch(`https://studio.edgeimpulse.com/api/:projectId/raw-data/count?category=<string>&labels=<string>&filename=<string>&maxLength=<integer>&minLength=<integer>&minFrequency=<number>&maxFrequency=<number>&signatureValidity=<string>&includeDisabled=<string>`, {
+        method: 'GET',
+        headers: {
+            'x-api-key': apiKey,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        },
+        // body: JSON.stringify(params), // Uncomment for POST/PUT
+    });
+    return res.json();
+}
