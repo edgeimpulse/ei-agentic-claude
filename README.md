@@ -90,8 +90,6 @@ The same `--params` JSON pattern is used by other commands — e.g., training co
 If you prefer top-level flags, many commands still accept specific flags generated in the CLI files (check `--help` for the command).
 ```
 
-**Want built-in support for config files or env vars?**
-Let us know or contribute a PR!
 
 # Auto-Generated CLI Commands (Extensible Secondary Layer)
 
