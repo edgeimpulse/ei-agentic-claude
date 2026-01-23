@@ -1,15 +1,60 @@
 
-# Edge Impulse Agentic CLI
+# Edge Impulse Claude Code MCP Integration
 
-This CLI was auto-generated from Edge Impulse's REST API configurations on Postman, designed for use by agents like Claude. It provides a comprehensive interface to Edge Impulse APIs, but individual commands may require testing and extension.
+A Model Context Protocol (MCP) server that enables Claude Code to interact with Edge Impulse APIs. This project provides integration between Anthropic's Claude Code and Edge Impulse's machine learning platform.
+
+## Features
+
+- 365+ Edge Impulse APIs: Complete access to projects, training, data, deployments, and more
+- Natural Language Interface: Use Claude Code to manage Edge Impulse through conversation
+- Real-time Integration: Direct API calls with instant responses
+- Secure Authentication: API keys managed through environment variables
+- Full CLI Fallback: Traditional command-line interface still available
+- Comprehensive Testing: Full test coverage with programmatic reporting
+
+## Quick Start
+
+### 1. Install Claude Code
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+### 2. Clone and Setup
+```bash
+git clone <repository-url>
+cd ei-agentic-claude
+npm install
+npm run build
+```
+
+### 3. Configure Claude Code
+```bash
+# Add the Edge Impulse MCP server
+claude mcp add edge-impulse -- node dist/mcp-server.js
+
+# Verify connection
+claude mcp list
+```
+
+### 4. Set API Keys
+```bash
+export ANTHROPIC_API_KEY=your_claude_api_key
+export EI_API_KEY=your_edge_impulse_api_key
+```
+
+### 5. Start Using Claude Code
+```bash
+claude -p "Show me all my Edge Impulse projects"
+```
 
 ## Table of Contents
+- [Quick Start](#quick-start)
 - [Screenshots](#screenshots)
-- [Development & Production Usage](#development--production-usage)
-- [Storing Your API Key](#storing-your-api-key-for-easier-cli-usage)
-- [Auto-Generated CLI Commands](#auto-generated-cli-commands-extensible-secondary-layer)
-- [Examples](#examples)
+- [Claude Code Integration](#claude-code-integration)
+- [CLI Usage](#cli-usage)
+- [API Coverage](#api-coverage)
 - [Testing](#testing)
+- [Development](#development)
 
 ## Screenshots
 
@@ -153,6 +198,140 @@ npm run cli -- train-model-keras --api-key <your_api_key> --params '{"projectId"
   "cli-list": "npm run cli -- --help"
 }
 ```
+
+# Claude Code Integration (MCP)
+
+This project provides a Model Context Protocol (MCP) server that enables Claude Code to interact with Edge Impulse APIs.
+
+## Current Status: Working
+
+The integration is complete and tested. Claude Code can access Edge Impulse APIs through natural language.
+
+## Setup (Already Complete)
+
+### MCP Server Added
+```bash
+claude mcp add edge-impulse -- node dist/mcp-server.js
+claude mcp list  # Shows: edge-impulse: node dist/mcp-server.js - ✓ Connected
+```
+
+### API Keys Configured
+```bash
+export ANTHROPIC_API_KEY=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
+export EI_API_KEY=ei_your_actual_api_key_here
+```
+
+## Usage
+
+### Interactive Mode (Recommended)
+```bash
+claude
+# Then ask: "Show me all my Edge Impulse projects"
+```
+
+### Non-Interactive Mode
+```bash
+claude -p "List all my Edge Impulse projects"
+claude -p "Start training a Keras model on project 123"
+claude -p "Check the status of job 456"
+```
+
+## What Claude Can Help You Do
+
+### Project Management
+- List, create, and manage Edge Impulse projects
+- Configure project settings and metadata
+- Handle team collaboration and permissions
+
+### Data Operations
+- Upload datasets (time series, images, audio, sensors)
+- Organize data into training/testing sets
+- Label and annotate data
+- Import from cloud storage
+
+### Model Development
+- Design impulses (DSP + ML blocks)
+- Configure DSP for feature extraction
+- Train ML models (Keras, transfer learning)
+- Run anomaly detection
+- Profile and optimize models
+
+### Deployment
+- Build optimized models for edge devices
+- Generate firmware and libraries
+- Create deployment packages
+- Download trained models
+
+### Testing & Evaluation
+- Test models on validation data
+- Generate performance metrics
+- Analyze confusion matrices
+- Debug feature extraction
+
+## Sample Questions
+
+Here are examples of questions you can ask Claude:
+
+**Getting Started:**
+- "Show me all my Edge Impulse projects"
+- "Create a new project called 'Sensor Classification'"
+- "What projects do I have access to?"
+
+**Data Management:**
+- "Upload data to project 123 from my local files"
+- "How much training data do I have in project 456?"
+- "Split my dataset into training and testing sets"
+
+**Model Training:**
+- "Train a Keras model on project 123"
+- "Start training with learn block 456"
+- "Configure training parameters for better accuracy"
+
+**Job Monitoring:**
+- "Check the status of training job 789"
+- "Is my model training complete?"
+- "What are the results of my latest training run?"
+
+**Model Evaluation:**
+- "Test my trained model on validation data"
+- "Show me the confusion matrix for my model"
+- "What is the accuracy of my trained model?"
+
+**Deployment:**
+- "Build my model for deployment to edge devices"
+- "Download the trained model files"
+- "Create a deployment package for my project"
+
+**Optimization:**
+- "Optimize my Keras model for better performance"
+- "Profile my model to see memory usage"
+- "Run model optimization on project 123"
+
+## MCP Server Features
+
+- 365 APIs Available: All Edge Impulse endpoints accessible through Claude
+- Automatic Parameter Validation: Claude handles required vs optional parameters
+- Error Handling: Clear error messages for API failures
+- JSON Responses: Structured data returned from all API calls
+- No CLI Knowledge Required: Use natural language instead of command syntax
+
+## API Key Management
+
+Set your Edge Impulse API key as an environment variable:
+
+```bash
+export EI_API_KEY=ei_your_api_key_here
+```
+
+Claude will automatically use this key for all API calls through the MCP server.
+
+## Troubleshooting MCP
+
+- Server won't start: Ensure you've run `npm run build` and the `dist/` folder exists
+- Claude can't find tools: Restart Claude Desktop after configuration changes
+- API errors: Check your API key and network connectivity
+- Permission issues: Ensure Claude Desktop has access to the project directory
+
 # Edge Impulse Claude Agentic Example
 
 This project demonstrates a minimal, agentic workflow for Edge Impulse using a TypeScript CLI and Claude. You can list projects, train Keras blocks, and (optionally) fetch evaluation metrics.

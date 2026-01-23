@@ -4,8 +4,12 @@
  * URL: https://studio.edgeimpulse.com/api/organizations/:organizationId/jobs/:jobId/status
  */
 export async function get_job_status(params: any, apiKey: string) {
-  // TODO: Implement parameter mapping
-  const res = await fetch(`https://studio.edgeimpulse.com/api/organizations/:organizationId/jobs/:jobId/status`, {
+  const organizationId = params?.organizationId;
+  const jobId = params?.jobId;
+  if (!organizationId) throw new Error('Missing required parameter `organizationId`.');
+  if (!jobId) throw new Error('Missing required parameter `jobId`.');
+  const url = `https://studio.edgeimpulse.com/api/organizations/${encodeURIComponent(String(organizationId))}/jobs/${encodeURIComponent(String(jobId))}/status`;
+  const res = await fetch(url, {
     method: 'GET',
     headers: {
       'x-api-key': apiKey,
@@ -14,5 +18,12 @@ export async function get_job_status(params: any, apiKey: string) {
     },
     // body: JSON.stringify(params), // Uncomment for POST/PUT
   });
-  return res.json();
+  if (res.ok) return res.json();
+  const text = await res.text();
+  try {
+    const err = JSON.parse(text);
+    throw new Error(`Edge Impulse API error: ${err.message || JSON.stringify(err)}`);
+  } catch {
+    throw new Error(`Edge Impulse API error: ${res.status} ${res.statusText} - ${text}`);
+  }
 }
