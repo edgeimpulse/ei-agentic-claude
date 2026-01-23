@@ -22,7 +22,7 @@ function main() {
         const commandName = sanitizeCommandName(file);
         const importName = baseName;
         const commandStub = `import { Command } from 'commander';
-  import { ${importName} } from '../${baseName}';
+  import { ${importName} } from '../${baseName}.js';
 
 export function add${baseName.charAt(0).toUpperCase() + baseName.slice(1)}Command(program: Command) {
   program.command('${commandName}')

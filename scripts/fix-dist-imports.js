@@ -30,8 +30,10 @@ if (fs.existsSync(cliCommandsDir)) {
     const p = path.join(cliCommandsDir, f);
     let c = await fs.promises.readFile(p, 'utf8');
     // replace from '../some_name' or "../some_name" with ../some_name.js when .js missing
-    c = c.replace(/from\s+(['"])\.\.\/([^'"\.]+)\1/g, (m, quote, name) => {
-      return `from ${quote}../${name}.js${quote}`;
+    c = c.replace(/from\s+(['"])((?:\.\.\/)+[^'"\s]+?)\1/g, (m, quote, rel) => {
+      // only append .js when there's no extension already
+      if (/\.(js|json)$/.test(rel)) return `from ${quote}${rel}${quote}`;
+      return `from ${quote}${rel}.js${quote}`;
     });
     await fs.promises.writeFile(p, c, 'utf8');
   }
@@ -51,3 +53,25 @@ for (const f of fixFiles) {
   await fs.promises.writeFile(p, content, 'utf8');
 }
 console.log('Cleaned accidental double quotes in CLI command imports.');
+
+// Additionally, patch any remaining relative imports across dist to include .js
+async function patchAllRelativeImports(dir) {
+  const entries = await fs.promises.readdir(dir, { withFileTypes: true });
+  for (const ent of entries) {
+    const p = path.join(dir, ent.name);
+    if (ent.isDirectory()) {
+      await patchAllRelativeImports(p);
+      continue;
+    }
+    if (!ent.isFile() || !p.endsWith('.js')) continue;
+    let c = await fs.promises.readFile(p, 'utf8');
+    const updated = c.replace(/from\s+(['"])((?:\.\.\/|\.\/)+[^'"\s]+?)\1/g, (m, quote, rel) => {
+      if (/\.(js|json)$/.test(rel)) return `from ${quote}${rel}${quote}`;
+      return `from ${quote}${rel}.js${quote}`;
+    });
+    if (updated !== c) await fs.promises.writeFile(p, updated, 'utf8');
+  }
+}
+
+await patchAllRelativeImports(path.join(__dirname, '..', 'dist'));
+console.log('Patched remaining relative imports across dist to include .js extensions.');
