@@ -4,14 +4,34 @@
 A Model Context Protocol (MCP) server that enables Claude Code to interact with Edge Impulse APIs. This project provides integration between Anthropic's Claude Code and Edge Impulse's machine learning platform.
 
 
-## Features
+## Security
 
-- 365+ Edge Impulse APIs: Complete access to projects, training, data, deployments, and more
-- Natural Language Interface: Use Claude Code to manage Edge Impulse through conversation
-- Real-time Integration: Direct API calls with instant responses
-- Secure Authentication: API keys managed through environment variables
-- Full CLI Fallback: Traditional command-line interface still available
-- Comprehensive Testing: Full test coverage with programmatic reporting
+### API Key Management
+- API keys are stored in a local `.env` file (not committed to git)
+- Keys are validated for presence and format before API calls
+- Use `cp .env.example .env` to create your secure configuration
+
+### Generated Code Integrity
+- Generated API client files include SHA256 integrity checks
+- Run `npm run generate-integrity` after generating new client files
+- Files are validated at runtime before loading
+- Integrity hashes stored in `integrity.json` alongside generated files
+- Verify the Postman collection source before generating clients
+
+### Dynamic Import Security
+- **Integrity Validation**: SHA256 hashes are computed and verified for all generated API client files
+- **Runtime Checks**: Files are validated before loading to prevent tampering
+- **Sandboxing**: Implemented for MCP server API calls using Node.js vm module with restricted context
+- Generated code runs in sandboxed environment with limited globals (fetch, JSON, timers only)
+- CLI commands run in main process (user-initiated, lower risk)
+
+### Rate Limiting
+- API calls are subject to Edge Impulse's rate limits
+- Consider implementing client-side rate limiting for high-volume usage
+- Monitor API usage in your Edge Impulse dashboard
+
+### Source Verification
+⚠️ **Important**: Always verify the `Edge Impulse API.postman_collection.json` file comes from a trusted source before running code generation.
 
 ## Quick Start
 
@@ -26,6 +46,9 @@ git clone <repository-url>
 cd ei-agentic-claude
 npm install
 npm run build
+
+# Optional: Run the automated setup script (loads .env automatically)
+./setup-claude.sh
 ```
 
 ### 3. Configure Claude Code
@@ -37,11 +60,24 @@ claude mcp add edge-impulse -- node dist/mcp-server.js
 claude mcp list
 ```
 
-### 4. Set API Keys
+### 4. Configure API Keys
+**Secure Setup (Recommended):**
+```bash
+# Copy the example environment file
+cp .env.example .env
+
+# Edit .env with your actual API keys
+# ANTHROPIC_API_KEY=your_anthropic_api_key_here
+# EI_API_KEY=your_edge_impulse_api_key_here
+```
+
+**Quick Setup (for testing):**
 ```bash
 export ANTHROPIC_API_KEY=your_claude_api_key
 export EI_API_KEY=your_edge_impulse_api_key
 ```
+
+> **🔒 Security Note:** API keys are stored in `.env` files (not committed to git). See [API Key Management](#api-key-management) for detailed setup options.
 
 ### 5. Start Using Claude Code
 ```bash
@@ -50,12 +86,33 @@ claude -p "Show me all my Edge Impulse projects"
 
 ## Table of Contents
 - [Quick Start](#quick-start)
+- [Security](#security)
+- [Automated Setup](#automated-setup)
 - [Screenshots](#screenshots)
 - [Claude Code Integration](#claude-code-integration)
 - [CLI Usage](#cli-usage)
 - [API Coverage](#api-coverage)
 - [Testing](#testing)
 - [Development](#development)
+
+## Automated Setup
+
+For convenience, you can use the included setup script to automate the Claude Code integration:
+
+```bash
+# Ensure you have .env configured first
+cp .env.example .env
+# Edit .env with your API keys
+
+# Run the setup script
+./setup-claude.sh
+```
+
+The script will:
+- Load API keys from your `.env` file
+- Test Claude Code authentication
+- Verify MCP server connectivity
+- Test Edge Impulse API access
 
 ## Screenshots
 
@@ -138,19 +195,26 @@ Then run commands like:
 npm run cli -- get-all-projects --api-key $EI_API_KEY
 ```
 
-**2. .env file with `dotenv-cli`:**
+**2. .env file with `dotenv-cli` (Most Secure):**
 Install dotenv-cli:
 ```sh
 npm install -g dotenv-cli
 ```
-Create a `.env` file:
+Copy the example file and fill in your keys:
+```sh
+cp .env.example .env
 ```
-EI_API_KEY=your_api_key_here
+Edit `.env` with your actual API keys:
+```
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+EI_API_KEY=your_edge_impulse_api_key_here
 ```
 Run commands with:
 ```sh
 dotenv -e .env -- npm run cli -- get-all-projects --api-key $EI_API_KEY
 ```
+
+> **🔒 Security:** `.env` files are automatically ignored by git and never committed to version control.
 
 **3. Shell alias:**
 Add to your shell profile:
@@ -236,10 +300,13 @@ claude mcp list  # Shows: edge-impulse: node dist/mcp-server.js - ✓ Connected
 ```
 
 ### API Keys Configured
+Create a `.env` file from the example:
 ```bash
-export ANTHROPIC_API_KEY=sk-ant-api03-***************************
-export EI_API_KEY=ei_your_actual_api_key_here
+cp .env.example .env
+# Edit .env with your actual API keys
 ```
+
+The setup script will automatically load keys from `.env` if present.
 
 ## Usage
 

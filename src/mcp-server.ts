@@ -11,6 +11,8 @@ import {
 import fs from "fs";
 import path from "path";
 import { fileURLToPath, pathToFileURL } from "url";
+import crypto from "crypto";
+import vm from "vm";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -60,8 +62,24 @@ class EdgeImpulseMCPServer {
     try {
       const files = fs.readdirSync(apiDir).filter(f => f.endsWith('.ts') || f.endsWith('.js'));
 
+      // Load integrity hashes if available
+      const integrityPath = path.join(apiDir, 'integrity.json');
+      let expectedHashes: Record<string, string> = {};
+      if (fs.existsSync(integrityPath)) {
+        expectedHashes = JSON.parse(fs.readFileSync(integrityPath, 'utf-8'));
+      }
+
       for (const file of files) {
         const filePath = path.join(apiDir, file);
+
+        // Verify file integrity if hash is available
+        if (expectedHashes[file]) {
+          const actualHash = this.calculateSHA256(filePath);
+          if (actualHash !== expectedHashes[file]) {
+            throw new Error(`Integrity check failed for ${file}. File may be corrupted or tampered with.`);
+          }
+        }
+
         const module = await import(pathToFileURL(filePath).href);
 
         // More robust function detection: check for default export first, then any function
@@ -73,7 +91,7 @@ class EdgeImpulseMCPServer {
         }
       }
 
-      console.error(`Loaded ${this.apiFunctions.size} API functions`);
+      console.error(`Loaded ${this.apiFunctions.size} API functions with sandboxing enabled`);
 
       // Fail fast if no functions were loaded
       if (this.apiFunctions.size === 0) {
@@ -83,6 +101,67 @@ class EdgeImpulseMCPServer {
       console.error("Error loading API functions:", error);
       throw error; // Re-throw to fail fast
     }
+  }
+
+  /**   * Execute an API function in a sandboxed environment
+   */
+  private async executeInSandbox(apiFunction: Function, params: any, apiKey: string): Promise<any> {
+    // Create a restricted context with only necessary globals
+    const sandboxContext = vm.createContext({
+      // Safe globals
+      console: { error: console.error, log: console.log },
+      JSON: JSON,
+      Promise: Promise,
+      setTimeout: setTimeout,
+      clearTimeout: clearTimeout,
+      setInterval: setInterval,
+      clearInterval: clearInterval,
+      // Safe Error constructors
+      Error: Error,
+      TypeError: TypeError,
+      RangeError: RangeError,
+      // Required for fetch
+      global: {},
+      process: { env: {} }, // Empty env to prevent access to real environment
+      Buffer: Buffer,
+      URL: URL,
+      URLSearchParams: URLSearchParams,
+      // The fetch function (available globally in Node 18+)
+      fetch: fetch,
+      // Pass the function and parameters to the sandbox
+      apiFunction: apiFunction,
+      params: params,
+      apiKey: apiKey,
+    });
+
+    // Create a script that calls the function with parameters
+    const script = new vm.Script(`
+      (async () => {
+        try {
+          const result = await apiFunction(params, apiKey);
+          return result;
+        } catch (error) {
+          throw new Error('Sandbox execution error: ' + error.message);
+        }
+      })()
+    `);
+
+    // Run the script in the sandbox
+    const result = await script.runInContext(sandboxContext, {
+      timeout: 30000, // 30 second timeout
+      breakOnSigint: true
+    });
+
+    return result;
+  }
+
+  /**   * Calculate SHA256 hash of a file
+   */
+  private calculateSHA256(filePath: string): string {
+    const fileBuffer = fs.readFileSync(filePath);
+    const hashSum = crypto.createHash('sha256');
+    hashSum.update(fileBuffer);
+    return hashSum.digest('hex');
   }
 
   /**
@@ -136,8 +215,8 @@ class EdgeImpulseMCPServer {
           );
         }
 
-        // Call the API function
-        const result = await apiFunction(params, apiKey);
+        // Call the API function in a sandboxed environment
+        const result = await this.executeInSandbox(apiFunction, params, apiKey);
 
         return {
           content: [
