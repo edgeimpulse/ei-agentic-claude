@@ -3,6 +3,7 @@
 
 A Model Context Protocol (MCP) server that enables Claude Code to interact with Edge Impulse APIs. This project provides integration between Anthropic's Claude Code and Edge Impulse's machine learning platform.
 
+
 ## Features
 
 - 365+ Edge Impulse APIs: Complete access to projects, training, data, deployments, and more
@@ -69,6 +70,25 @@ claude -p "Show me all my Edge Impulse projects"
 
 ### Testing Framework
 <img width="1207" height="274" alt="Screenshot 2026-01-23 at 17 29 24" src="https://github.com/user-attachments/assets/fe91d73b-ec09-4b4d-a669-1286fe43382a" />
+
+## What can claude do?? Well it can configure your project from 99.6 to 100% accuracy on the first try!!
+
+Use it to configure your blocks and review your config, e.g.
+
+<img width="1802" height="326" alt="image" src="https://github.com/user-attachments/assets/4c57622d-44f3-43a7-a80a-b3c1bbe0cf17" />
+<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/85622e5d-13f4-4d4a-a447-e048aef353ac" />
+<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/098071bd-904f-4af2-ab34-72513066c659" />
+<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/e9c80bdf-1215-4684-8e1a-bbbdcf31457e" />
+
+
+## BC
+<img width="1118" height="2080" alt="image" src="https://github.com/user-attachments/assets/9da7bf78-cd12-4fb9-968b-0136f21af2b2" />
+
+
+## AC
+<img width="1118" height="1942" alt="image" src="https://github.com/user-attachments/assets/135adfba-0814-4b9e-a8bf-16f785baab9b" />
+
+
 
 # Development & Production Usage
 
