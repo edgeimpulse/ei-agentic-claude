@@ -30,9 +30,6 @@ A Model Context Protocol (MCP) server that enables Claude Code to interact with 
 - Consider implementing client-side rate limiting for high-volume usage
 - Monitor API usage in your Edge Impulse dashboard
 
-### Source Verification
-⚠️ **Important**: Always verify the `Edge Impulse API.postman_collection.json` file comes from a trusted source before running code generation.
-
 ## Quick Start
 
 ### 1. Install Claude Code
