@@ -6,7 +6,7 @@ echo "🚀 Setting up Claude Code + Edge Impulse MCP Integration"
 echo ""
 
 # Set API keys (you'll need to replace these with your actual keys)
-export ANTHROPIC_API_KEY="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"
+export ANTHROPIC_API_KEY="sk-ant-api03-***************************"
 export EI_API_KEY="ei_your_edge_impulse_api_key_here"  # Replace with your actual EI key
 
 echo "✅ API keys configured"

@@ -217,7 +217,7 @@ claude mcp list  # Shows: edge-impulse: node dist/mcp-server.js - ✓ Connected
 
 ### API Keys Configured
 ```bash
-export ANTHROPIC_API_KEY=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
+export ANTHROPIC_API_KEY=sk-ant-api03-***************************
 export EI_API_KEY=ei_your_actual_api_key_here
 ```
 
