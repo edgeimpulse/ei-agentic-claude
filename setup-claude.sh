@@ -2,31 +2,36 @@
 
 # Claude Code + Edge Impulse MCP Setup Script
 
-echo "🚀 Setting up Claude Code + Edge Impulse MCP Integration"
+echo "Setting up Claude Code + Edge Impulse MCP Integration"
 echo ""
 
-# Set API keys (you'll need to replace these with your actual keys)
-export ANTHROPIC_API_KEY="sk-ant-api03-***************************"
-export EI_API_KEY="ei_your_edge_impulse_api_key_here"  # Replace with your actual EI key
-
-echo "✅ API keys configured"
+# Load API keys from .env file if it exists
+if [ -f .env ]; then
+  echo "Loading API keys from .env file..."
+  set -a
+  source .env
+  set +a
+else
+  echo "No .env file found. Please create one from .env.example with your API keys."
+  echo "API keys configured (using placeholder values)"
+fi
 echo ""
 
 # Test Claude Code authentication
-echo "🧪 Testing Claude Code authentication..."
-~/.local/bin/claude -p "Hello! Claude Code + Edge Impulse MCP integration test" --model sonnet
+echo "Testing Claude Code authentication..."
+~/.local/bin/claude -p "Test message" --model sonnet
 echo ""
 
 # Test MCP server connectivity
-echo "🔗 Testing MCP server connectivity..."
+echo "Testing MCP server connectivity..."
 ~/.local/bin/claude mcp list
 echo ""
 
 # Test Edge Impulse API access
-echo "🎯 Testing Edge Impulse API access..."
-~/.local/bin/claude -p "Show me 3 Edge Impulse API functions you can access" --model sonnet
+echo "Testing Edge Impulse API access..."
+~/.local/bin/claude -p "List available Edge Impulse API functions" --model sonnet
 echo ""
 
-echo "🎉 Setup complete! You can now use:"
+echo "Setup complete! You can now use:"
 echo "  claude -p 'your Edge Impulse questions'"
 echo "  claude  # for interactive mode"
