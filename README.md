@@ -128,6 +128,16 @@ The script will:
 ### Testing Framework
 <img width="1207" height="274" alt="Screenshot 2026-01-23 at 17 29 24" src="https://github.com/user-attachments/assets/fe91d73b-ec09-4b4d-a669-1286fe43382a" />
 
+## Tutorials
+
+- **Wheeled ROS2 Robot:** Basic setup and navigation in ROS2, building on wheeled robot demos. Covers URDF, sensor integration, and navigation stacks.
+- **Robotic Arm:** Introduction to arm control, kinematics, and basic movements. Includes trajectory planning and simple controllers.
+- **Simulated Robotic Arm (Gazebo):** Setting up arm simulation in Gazebo, integrating with the ROS2 stack and testing control loops.
+- **Simulated Arm with Manual Training & Imitation:** Record teleoperation demonstrations, train policies (imitation learning / RL), and reproduce on a second arm.
+- **Arm on Wheeled Robot:** Integrate arm manipulation with wheeled mobility to perform combined tasks (pick-and-place while moving).
+
+These tutorials map to example workflows for scene reconstruction, simulation, model profiling for NPUs, and ROS-based deployment pipelines. If you want, I can scaffold one tutorial with example URDF, launch files, and a Gazebo scene.
+
 ## What can claude do?? Well it can configure your project from 99.6 to 100% accuracy on the first try!!
 
 Use it to configure your blocks and review your config, e.g.
@@ -274,6 +284,87 @@ npm run cli -- train-model-keras --api-key <your_api_key> --params '{"projectId"
 - If a command is not recognized, check the generated file name and use the corresponding CLI name.
 - If no commands appear in `--help`, ensure you have built the project (`npx tsc`) and that the generator does not include `.ts` in import paths.
 - For advanced usage, see the generated files or the Edge Impulse API documentation.
+
+## Docker Image & Tests
+
+**Build image**
+
+```bash
+docker build -t ei-agentic-claude:latest .
+```
+
+**Run (interactive, sandboxed)**
+
+```bash
+# Interactive (stdio transport)
+docker run --rm -it --name ei-mcp ei-agentic-claude:latest
+
+# Detached, no network, limited resources
+docker run --rm -d --name ei-mcp --network none --cpus=0.5 --memory=512m ei-agentic-claude:latest
+```
+
+**Automated container test**
+
+This repository includes a small test script that builds the image, runs it, and waits for the MCP server startup message. It verifies the container can start in the sandboxed runtime used by the project.
+
+- Script: `scripts/docker-test.sh`
+- NPM script: `npm run docker:test`
+
+Run the test:
+
+```bash
+npm run docker:test
+```
+
+Notes:
+- The test looks for the log line `Edge Impulse MCP server running on stdio` to determine success.
+- The container is not mounted to host paths; do not pass host volumes to keep runtime sandboxed.
+- If you need the container to run as a specific UID/GID (for mounted volumes), update the Dockerfile to accept build args and chown accordingly.
+
+Note: If you want the container to call external LLM APIs (Anthropic/Claude), run it with network enabled and supply `ANTHROPIC_API_KEY`:
+
+```bash
+# Example: run with bridge network and pass Anthropic key from env
+docker run --rm -d --name ei-mcp --network bridge \
+  -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY \
+  -v $(pwd)/.env.test:/app/.env.test:ro \
+  ei-agentic-claude:latest
+```
+
+Running with `--network none` will prevent outbound requests to LLM services; for secure environments prefer an isolated bridge and limit container capabilities.
+
+If you prefer mounting your env file to a different path, the container entrypoint will load `/app/.env.test` first, then `/app/.env`. Environment variables defined there (for example `ANTHROPIC_API_KEY`, `EI_API_KEY`, and project IDs) will be exported into the process environment before the MCP server starts.
+
+## Iterative Prompt Testing
+
+This project includes tools to generate and iterate on prompts targeted to optimize impulse/block configuration.
+
+- Generate per-goal prompts (already implemented by `scripts/generate-prompts.js`) and run them with `npm run prompt:test`.
+- Per-goal prompt files are written to `/tmp/prompts-<projectId>-<goal>.json`. Each file includes an `apply_cli` suggestion showing a CLI command you can run to test or apply recommended changes.
+- Workflow:
+  1. Run `npm run project:test` to fetch project JSONs into `/tmp` (requires `EI_API_KEY` in `.env.test`).
+  2. Run `npm run prompt:test` to generate prompt files.
+  3. Inspect `/tmp/prompts-<projectId>-<goal>.json`, refine prompts, and optionally run the `apply_cli` commands (adjust placeholders like `<learnId>`/`<versionId>`).
+
+If you want automated calls to Anthropic, add `ANTHROPIC_API_KEY` to `.env.test` and I can extend the runner to call the LLM and store responses.
+
+## Project Tests (local, secure)
+
+Create a local `.env.test` file containing your Edge Impulse API key and project IDs. This repository already includes a `./.env.test` for convenience (it is ignored by git). Do NOT commit credentials to source control.
+
+Run per-project connectivity tests:
+
+```bash
+# Ensure dependencies are installed
+npm install
+
+# Run the project tests (sources .env.test, runs 'get-project' for each project)
+npm run project:test
+```
+
+Outputs are saved to `/tmp/run-project-output.json` for inspection. Errors are printed to `/tmp/run-project-err.log`.
+
+
 
 **Tip:** You can add a test script to list all available commands:
 ```json
