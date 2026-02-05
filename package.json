@@ -7,6 +7,7 @@
     "cli": "./src/cli.ts"
   },
   "scripts": {
+    "pretest": "npm run build",
     "cli": "ts-node-esm src/cli.ts",
     "build": "tsc && node scripts/fix-dist-imports.js",
     "build:tsc": "tsc",
