@@ -30,6 +30,9 @@ Thumbs.db
 *.log
 .idea/
 .vscode/
+issues.md
+outputs/
+config/projects.json
 
 # Ignore Postman environment files
 *.postman_environment.json

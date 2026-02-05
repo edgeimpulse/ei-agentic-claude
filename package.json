@@ -11,7 +11,7 @@
     "build": "tsc && node scripts/fix-dist-imports.js",
     "build:tsc": "tsc",
     "generate-integrity": "node src/postman/edge-impulse/generate-integrity.js",
-    "test": "vitest",
+    "test": "vitest run --testTimeout=30000",
     "test:unittests": "node scripts/test-reporter.js",
     "list-apis": "node scripts/list-apis.js",
     "smoke": "node ./scripts/smoke-test.js",

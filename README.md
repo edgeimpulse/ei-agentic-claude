@@ -138,24 +138,6 @@ The script will:
 
 These tutorials map to example workflows for scene reconstruction, simulation, model profiling for NPUs, and ROS-based deployment pipelines. If you want, I can scaffold one tutorial with example URDF, launch files, and a Gazebo scene.
 
-## What can claude do?? Well it can configure your project from 99.6 to 100% accuracy on the first try!!
-
-Use it to configure your blocks and review your config, e.g.
-
-<img width="1802" height="326" alt="image" src="https://github.com/user-attachments/assets/4c57622d-44f3-43a7-a80a-b3c1bbe0cf17" />
-<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/85622e5d-13f4-4d4a-a447-e048aef353ac" />
-<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/098071bd-904f-4af2-ab34-72513066c659" />
-<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/e9c80bdf-1215-4684-8e1a-bbbdcf31457e" />
-
-
-## BC
-<img width="1118" height="2080" alt="image" src="https://github.com/user-attachments/assets/9da7bf78-cd12-4fb9-968b-0136f21af2b2" />
-
-
-## AC
-<img width="1118" height="1942" alt="image" src="https://github.com/user-attachments/assets/135adfba-0814-4b9e-a8bf-16f785baab9b" />
-
-
 
 # Development & Production Usage
 
@@ -293,47 +275,36 @@ npm run cli -- train-model-keras --api-key <your_api_key> --params '{"projectId"
 docker build -t ei-agentic-claude:latest .
 ```
 
-**Run (interactive, sandboxed)**
+**Run (stdio transport)**
 
 ```bash
-# Interactive (stdio transport)
-docker run --rm -it --name ei-mcp ei-agentic-claude:latest
-
-# Detached, no network, limited resources
-docker run --rm -d --name ei-mcp --network none --cpus=0.5 --memory=512m ei-agentic-claude:latest
+docker run --rm -it --name ei-mcp \
+  -v "$PWD/.env.test:/app/.env.test:ro" \
+  ei-agentic-claude:latest
 ```
 
 **Automated container test**
 
-This repository includes a small test script that builds the image, runs it, and waits for the MCP server startup message. It verifies the container can start in the sandboxed runtime used by the project.
-
 - Script: `scripts/docker-test.sh`
 - NPM script: `npm run docker:test`
 
-Run the test:
+This builds the image, runs a container, and waits (30s) for the readiness log `Edge Impulse MCP server running on stdio`.
 
-```bash
-npm run docker:test
-```
+**Project connectivity test**
 
-Notes:
-- The test looks for the log line `Edge Impulse MCP server running on stdio` to determine success.
-- The container is not mounted to host paths; do not pass host volumes to keep runtime sandboxed.
-- If you need the container to run as a specific UID/GID (for mounted volumes), update the Dockerfile to accept build args and chown accordingly.
+- Script: `scripts/run-project-tests.sh`
+- NPM script: `npm run project:test`
+- Uses `.env.test` for `EI_API_KEY`/project IDs; each CLI call has a 60s timeout to avoid hangs.
 
-Note: If you want the container to call external LLM APIs (Anthropic/Claude), run it with network enabled and supply `ANTHROPIC_API_KEY`:
+**Prompt/LLM integration (simulated)**
 
-```bash
-# Example: run with bridge network and pass Anthropic key from env
-docker run --rm -d --name ei-mcp --network bridge \
-  -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY \
-  -v $(pwd)/.env.test:/app/.env.test:ro \
-  ei-agentic-claude:latest
-```
+- Script: `scripts/test-apply-flow.sh`
+- NPM script: `npm run test:apply-flow`
+- Generates prompts from project JSONs, simulates LLM responses, and produces dry-run apply scripts. Each project fetch uses a 60s timeout and falls back to placeholders if the API response is not JSON.
 
-Running with `--network none` will prevent outbound requests to LLM services; for secure environments prefer an isolated bridge and limit container capabilities.
+**LLM keys**
 
-If you prefer mounting your env file to a different path, the container entrypoint will load `/app/.env.test` first, then `/app/.env`. Environment variables defined there (for example `ANTHROPIC_API_KEY`, `EI_API_KEY`, and project IDs) will be exported into the process environment before the MCP server starts.
+If you want outbound Anthropic calls from the container, run with network enabled and mount an env file that includes `ANTHROPIC_API_KEY` and `EI_API_KEY` (see `.env.example` and `.env.test.sample`).
 
 ## Iterative Prompt Testing
 
