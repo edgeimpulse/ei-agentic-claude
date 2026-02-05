@@ -3,6 +3,40 @@
 
 A Model Context Protocol (MCP) server that enables Claude Code to interact with Edge Impulse APIs. This project provides integration between Anthropic's Claude Code and Edge Impulse's machine learning platform.
 
+## Example of usage
+
+### CLI Usage
+<img width="1111" height="571" alt="Screenshot 2026-01-23 at 16 54 01" src="https://github.com/user-attachments/assets/3fd11801-2948-48ad-b71f-f5117eb9a7f7" />
+
+### Calling API on Block
+<img width="1111" height="76" alt="Screenshot 2026-01-23 at 17 13 32" src="https://github.com/user-attachments/assets/8821b5da-021f-4fd3-a27d-0ee020ab5960" />
+
+### Job Status
+<img width="1207" height="76" alt="Screenshot 2026-01-23 at 17 17 13" src="https://github.com/user-attachments/assets/3adb2bd6-da51-4c0e-8f16-a61765c32af1" />
+
+### Testing Framework
+<img width="1207" height="274" alt="Screenshot 2026-01-23 at 17 29 24" src="https://github.com/user-attachments/assets/fe91d73b-ec09-4b4d-a669-1286fe43382a" />
+
+## What can claude do?? Well it can configure your project from 99.6 to 100% accuracy on the first try!!
+
+Use it to configure your blocks and review your config, e.g.
+
+<img width="1802" height="326" alt="image" src="https://github.com/user-attachments/assets/4c57622d-44f3-43a7-a80a-b3c1bbe0cf17" />
+<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/85622e5d-13f4-4d4a-a447-e048aef353ac" />
+<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/098071bd-904f-4af2-ab34-72513066c659" />
+<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/e9c80bdf-1215-4684-8e1a-bbbdcf31457e" />
+
+
+## BC
+<img width="1118" height="2080" alt="image" src="https://github.com/user-attachments/assets/9da7bf78-cd12-4fb9-968b-0136f21af2b2" />
+
+
+## AC
+<img width="1118" height="1942" alt="image" src="https://github.com/user-attachments/assets/135adfba-0814-4b9e-a8bf-16f785baab9b" />
+
+
+
+
 
 ## Security
 
@@ -29,9 +63,6 @@ A Model Context Protocol (MCP) server that enables Claude Code to interact with 
 - API calls are subject to Edge Impulse's rate limits
 - Consider implementing client-side rate limiting for high-volume usage
 - Monitor API usage in your Edge Impulse dashboard
-
-### Source Verification
-⚠️ **Important**: Always verify the `Edge Impulse API.postman_collection.json` file comes from a trusted source before running code generation.
 
 ## Quick Start
 
