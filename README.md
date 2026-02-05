@@ -287,6 +287,11 @@ MCP server and CLI for Edge Impulse APIs, with Docker image, prompt-generation t
 - Tests: Vitest unit suite, Docker smoke, project connectivity, prompt/LLM simulation, apply-flow dry run.
 - Sample env files: `.env.example` and `.env.test.sample` (redacted) — actual secrets stay local.
 
+## Screenshots (orientation)
+- CLI help and commands: ![CLI usage](https://github.com/user-attachments/assets/3fd11801-2948-48ad-b71f-f5117eb9a7f7)
+- Invoke API block: ![Call block](https://github.com/user-attachments/assets/8821b5da-021f-4fd3-a27d-0ee020ab5960)
+- Job status output: ![Job status](https://github.com/user-attachments/assets/3adb2bd6-da51-4c0e-8f16-a61765c32af1)
+
 ## Prerequisites
 - Node 20+
 - npm 9+
