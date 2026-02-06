@@ -33,6 +33,6 @@ export async function registerGeneratedCommands(program) {
 function calculateSHA256(filePath) {
     const fileBuffer = fs.readFileSync(filePath);
     const hashSum = crypto.createHash('sha256');
-    hashSum.update(filePath);
+    hashSum.update(fileBuffer); // hash actual file contents
     return hashSum.digest('hex');
 }
