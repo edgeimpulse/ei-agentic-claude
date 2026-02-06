@@ -8,7 +8,7 @@
   },
   "scripts": {
     "cli": "ts-node-esm src/cli.ts",
-    "build": "tsc && node scripts/fix-dist-imports.js",
+    "build": "tsc && node scripts/fix-dist-imports.js && node scripts/generate-integrity-dist.js",
     "build:tsc": "tsc",
     "generate-integrity": "node src/postman/edge-impulse/generate-integrity.js",
     "test": "vitest run --testTimeout=30000",
