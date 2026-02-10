@@ -15,9 +15,9 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
-# Install production-only deps
+# Install production-only deps without running lifecycle scripts (already built in builder)
 COPY package.json package-lock.json* ./
-RUN npm ci --omit=dev --no-progress
+RUN npm ci --omit=dev --no-progress --ignore-scripts
 
 # Copy built dist and original generated API sources required at runtime
 COPY --from=builder /app/dist ./dist

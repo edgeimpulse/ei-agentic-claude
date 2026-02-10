@@ -1,7 +1,19 @@
 
 # Edge Impulse Claude Code MCP Integration
 
-A Model Context Protocol (MCP) server that enables Claude Code to interact with Edge Impulse APIs. This project provides integration between Anthropic's Claude Code and Edge Impulse's machine learning platform.
+[![CI](https://github.com/edgeimpulse/ei-agentic-claude/actions/workflows/ci.yml/badge.svg)](https://github.com/edgeimpulse/ei-agentic-claude/actions/workflows/ci.yml)
+[![Publish](https://github.com/edgeimpulse/ei-agentic-claude/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/edgeimpulse/ei-agentic-claude/actions/workflows/npm-publish.yml)
+[![npm](https://img.shields.io/npm/v/ei-agentic-claude.svg)](https://www.npmjs.com/package/ei-agentic-claude)
+[![npm downloads](https://img.shields.io/npm/dm/ei-agentic-claude.svg)](https://www.npmjs.com/package/ei-agentic-claude)
+
+A Model Context Protocol (MCP) server and CLI that lets Claude Code call the Edge Impulse APIs. Installable from npm and pluggable as a Claude skill.
+
+- npm package: https://www.npmjs.com/package/ei-agentic-claude
+- Install (CLI + MCP): `npm install -g ei-agentic-claude`
+- CLI entrypoint: `edge-impulse-cli --help`
+- MCP entrypoint: `edge-impulse-mcp --help`
+- Claude skill: `claude mcp add edge-impulse -- edge-impulse-mcp`
+- Status badges: CI = tests/build, Publish = npm release workflow
 
 ## Example of usage
 
@@ -115,20 +127,12 @@ export EI_API_KEY=your_edge_impulse_api_key
 claude -p "Show me all my Edge Impulse projects"
 ```
 
-## Install as a Claude Skill (after publish)
-- Install from npm (global): `npm install -g ei-agentic-claude`
-- Add the MCP server to Claude: `claude mcp add edge-impulse -- edge-impulse-mcp`
+## Install from npm + Claude skill
+- npm install: `npm install -g ei-agentic-claude`
+- CLI entrypoint: `edge-impulse-cli --help`
+- MCP server entrypoint: `edge-impulse-mcp --help`
+- Add as Claude skill: `claude mcp add edge-impulse -- edge-impulse-mcp`
 - Verify: `claude mcp list`
-- Call the CLI directly: `edge-impulse-cli get-all-projects --api-key $EI_API_KEY`
-- For local dev without global install, use `node dist/mcp-server.js` or `npm run cli -- ...`.
-
-## Publish & Release Checklist
-1. Clean build: `npm ci && npm run build`
-2. Tests: `npm test`, `npm run smoke`, and `npm run docker:test` (if Docker available)
-3. Package verification: `npm pack` then `npm install ./ei-agentic-claude-*.tgz` and run `edge-impulse-cli --help`
-4. Publish: `npm publish --access public`
-5. Tag and push: `git tag vX.Y.Z && git push --tags`
-6. Update screenshots/README if CLI flags change.
 
 ## Table of Contents
 - [Quick Start](#quick-start)
