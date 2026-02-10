@@ -1,7 +1,19 @@
 
 # Edge Impulse Claude Code MCP Integration
 
-A Model Context Protocol (MCP) server that enables Claude Code to interact with Edge Impulse APIs. This project provides integration between Anthropic's Claude Code and Edge Impulse's machine learning platform.
+[![CI](https://github.com/edgeimpulse/ei-agentic-claude/actions/workflows/ci.yml/badge.svg)](https://github.com/edgeimpulse/ei-agentic-claude/actions/workflows/ci.yml)
+[![Publish](https://github.com/edgeimpulse/ei-agentic-claude/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/edgeimpulse/ei-agentic-claude/actions/workflows/npm-publish.yml)
+[![npm](https://img.shields.io/npm/v/ei-agentic-claude.svg)](https://www.npmjs.com/package/ei-agentic-claude)
+[![npm downloads](https://img.shields.io/npm/dm/ei-agentic-claude.svg)](https://www.npmjs.com/package/ei-agentic-claude)
+
+A Model Context Protocol (MCP) server and CLI that lets Claude Code call the Edge Impulse APIs. Installable from npm and pluggable as a Claude skill.
+
+- npm package: https://www.npmjs.com/package/ei-agentic-claude
+- Install (CLI + MCP): `npm install -g ei-agentic-claude`
+- CLI entrypoint: `edge-impulse-cli --help`
+- MCP entrypoint: `edge-impulse-mcp --help`
+- Claude skill: `claude mcp add edge-impulse -- edge-impulse-mcp`
+- Status badges: CI = tests/build, Publish = npm release workflow
 
 ## Example of usage
 
@@ -114,6 +126,13 @@ export EI_API_KEY=your_edge_impulse_api_key
 ```bash
 claude -p "Show me all my Edge Impulse projects"
 ```
+
+## Install from npm + Claude skill
+- npm install: `npm install -g ei-agentic-claude`
+- CLI entrypoint: `edge-impulse-cli --help`
+- MCP server entrypoint: `edge-impulse-mcp --help`
+- Add as Claude skill: `claude mcp add edge-impulse -- edge-impulse-mcp`
+- Verify: `claude mcp list`
 
 ## Table of Contents
 - [Quick Start](#quick-start)
