@@ -30,11 +30,13 @@
   },
   "homepage": "https://github.com/edgeimpulse/ei-agentic-claude#readme",
   "keywords": [
-    "edge impulse",
-    "claude",
+    "edge-impulse",
     "mcp",
+    "model context protocol",
+    "claude",
     "cli",
-    "agent"
+    "edge ai",
+    "embedded ml"
   ],
   "scripts": {
     "cli:dev": "ts-node-esm src/cli.ts",
