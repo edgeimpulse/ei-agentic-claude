@@ -31,7 +31,27 @@ jobs:
       - name: Test
         run: npm test --if-present
 
+      - name: Read package version
+        id: pkg
+        run: echo "version=$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: Check if version already published
+        id: published
+        run: |
+          PUBLISHED=$(npm view ei-agentic-claude version 2>/dev/null || true)
+          echo "published_version=${PUBLISHED}" >> "$GITHUB_OUTPUT"
+          if [ "$PUBLISHED" = "${{ steps.pkg.outputs.version }}" ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Publish
+        if: steps.published.outputs.exists == 'false'
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Skip (already published)
+        if: steps.published.outputs.exists == 'true'
+        run: echo "Version ${{ steps.pkg.outputs.version }} already on npm; skipping publish."
