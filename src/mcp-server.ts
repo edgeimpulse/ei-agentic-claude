@@ -54,10 +54,10 @@ class EdgeImpulseMCPServer {
    * Supports both development (src/) and production (dist/) environments
    */
   private async loadAPIFunctions() {
-    // Use fs.existsSync to reliably determine which directory exists
-    const distApiDir = path.resolve(__dirname, "../src/postman/edge-impulse/generated");
-    const srcApiDir = path.resolve(__dirname, "postman/edge-impulse/generated");
-    const apiDir = fs.existsSync(srcApiDir) ? srcApiDir : distApiDir;
+    // Prefer built assets in dist; fall back to sources for ts-node
+    const builtApiDir = path.resolve(__dirname, "postman/edge-impulse/generated");
+    const sourceApiDir = path.resolve(__dirname, "../src/postman/edge-impulse/generated");
+    const apiDir = fs.existsSync(builtApiDir) ? builtApiDir : sourceApiDir;
 
     try {
       const files = fs.readdirSync(apiDir).filter(f => f.endsWith('.ts') || f.endsWith('.js'));
@@ -95,7 +95,7 @@ class EdgeImpulseMCPServer {
 
       // Fail fast if no functions were loaded
       if (this.apiFunctions.size === 0) {
-        throw new Error(`No API functions found in ${apiDir}. Ensure the generated files exist.`);
+        throw new Error(`No API functions found in ${apiDir}. Ensure the generated files exist in dist or src.`);
       }
     } catch (error) {
       console.error("Error loading API functions:", error);

@@ -115,6 +115,21 @@ export EI_API_KEY=your_edge_impulse_api_key
 claude -p "Show me all my Edge Impulse projects"
 ```
 
+## Install as a Claude Skill (after publish)
+- Install from npm (global): `npm install -g ei-agentic-claude`
+- Add the MCP server to Claude: `claude mcp add edge-impulse -- edge-impulse-mcp`
+- Verify: `claude mcp list`
+- Call the CLI directly: `edge-impulse-cli get-all-projects --api-key $EI_API_KEY`
+- For local dev without global install, use `node dist/mcp-server.js` or `npm run cli -- ...`.
+
+## Publish & Release Checklist
+1. Clean build: `npm ci && npm run build`
+2. Tests: `npm test`, `npm run smoke`, and `npm run docker:test` (if Docker available)
+3. Package verification: `npm pack` then `npm install ./ei-agentic-claude-*.tgz` and run `edge-impulse-cli --help`
+4. Publish: `npm publish --access public`
+5. Tag and push: `git tag vX.Y.Z && git push --tags`
+6. Update screenshots/README if CLI flags change.
+
 ## Table of Contents
 - [Quick Start](#quick-start)
 - [Security](#security)
