@@ -11,3 +11,6 @@ coverage
 *.env.*
 outputs
 tmp
+config/projects.json
+.idea
+.vscode
