@@ -1,6 +1,6 @@
 {
   "name": "ei-agentic-claude",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Claude-compatible MCP server and CLI for Edge Impulse APIs",
   "type": "module",
   "license": "UNLICENSED",
