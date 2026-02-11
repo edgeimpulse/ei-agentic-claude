@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Install dev deps for build
 COPY package.json package-lock.json* ./
-RUN npm ci --no-progress
+RUN npm ci --no-progress --ignore-scripts
 
 # Copy sources and build
 COPY . .
