@@ -23,7 +23,10 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --include=optional
+        run: |
+          npm install --include=optional
+          ROLLUP_VERSION=$(node -p "require('rollup/package.json').version")
+          npm install --no-save "@rollup/rollup-linux-x64-gnu@${ROLLUP_VERSION}"
 
       - name: Build project (generates dist integrity)
         run: npm run build
