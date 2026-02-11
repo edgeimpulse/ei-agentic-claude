@@ -21,10 +21,11 @@ A Model Context Protocol (MCP) server and CLI that lets Claude Code call the Edg
 <img width="1111" height="571" alt="Screenshot 2026-01-23 at 16 54 01" src="https://github.com/user-attachments/assets/3fd11801-2948-48ad-b71f-f5117eb9a7f7" />
 
 ### Calling API on Block
-<img width="1111" height="76" alt="Screenshot 2026-01-23 at 17 13 32" src="https://github.com/user-attachments/assets/8821b5da-021f-4fd3-a27d-0ee020ab5960" />
+<img width="1600" height="109" alt="blur3" src="https://github.com/user-attachments/assets/8256f310-3861-4b94-8d7a-47d9fe3426dc" />
 
 ### Job Status
-<img width="1207" height="76" alt="Screenshot 2026-01-23 at 17 17 13" src="https://github.com/user-attachments/assets/3adb2bd6-da51-4c0e-8f16-a61765c32af1" />
+<img width="1600" height="101" alt="blur2" src="https://github.com/user-attachments/assets/48be3ed8-c0ca-4450-aa09-b4626cb03bb8" />
+
 
 ### Testing Framework
 <img width="1207" height="274" alt="Screenshot 2026-01-23 at 17 29 24" src="https://github.com/user-attachments/assets/fe91d73b-ec09-4b4d-a669-1286fe43382a" />
@@ -33,19 +34,15 @@ A Model Context Protocol (MCP) server and CLI that lets Claude Code call the Edg
 
 Use it to configure your blocks and review your config, e.g.
 
-<img width="1802" height="326" alt="image" src="https://github.com/user-attachments/assets/4c57622d-44f3-43a7-a80a-b3c1bbe0cf17" />
-<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/85622e5d-13f4-4d4a-a447-e048aef353ac" />
-<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/098071bd-904f-4af2-ab34-72513066c659" />
-<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/e9c80bdf-1215-4684-8e1a-bbbdcf31457e" />
+<img width="1600" height="289" alt="blur1" src="https://github.com/user-attachments/assets/68f8e293-7f0f-4e3d-832a-251706ba4cb8" />
 
 
-## BC
-<img width="1118" height="2080" alt="image" src="https://github.com/user-attachments/assets/9da7bf78-cd12-4fb9-968b-0136f21af2b2" />
+
+<img width="800" height="274" alt="dspconfig" src="https://github.com/user-attachments/assets/1fb7e1f1-bcb8-4771-912e-2228ff342a83" />
 
 
-## AC
-<img width="1118" height="1942" alt="image" src="https://github.com/user-attachments/assets/135adfba-0814-4b9e-a8bf-16f785baab9b" />
 
+<img width="1198" height="769" alt="improvementspercent" src="https://github.com/user-attachments/assets/b0e37891-24e6-4e0a-a143-bc10fdbad716" />
 
 
 
