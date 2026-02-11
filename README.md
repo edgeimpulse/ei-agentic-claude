@@ -29,7 +29,7 @@ A Model Context Protocol (MCP) server and CLI that lets Claude Code call the Edg
 ### Testing Framework
 <img width="1207" height="274" alt="Screenshot 2026-01-23 at 17 29 24" src="https://github.com/user-attachments/assets/fe91d73b-ec09-4b4d-a669-1286fe43382a" />
 
-## What can claude do?? Well it can configure your project from 99.6 to 100% accuracy on the first try!!
+## Block configuration example
 
 Use it to configure your blocks and review your config, e.g.
 
@@ -177,17 +177,6 @@ The script will:
 
 ### Testing Framework
 <img width="1207" height="274" alt="Screenshot 2026-01-23 at 17 29 24" src="https://github.com/user-attachments/assets/fe91d73b-ec09-4b4d-a669-1286fe43382a" />
-
-## Tutorials
-
-- **Wheeled ROS2 Robot:** Basic setup and navigation in ROS2, building on wheeled robot demos. Covers URDF, sensor integration, and navigation stacks.
-- **Robotic Arm:** Introduction to arm control, kinematics, and basic movements. Includes trajectory planning and simple controllers.
-- **Simulated Robotic Arm (Gazebo):** Setting up arm simulation in Gazebo, integrating with the ROS2 stack and testing control loops.
-- **Simulated Arm with Manual Training & Imitation:** Record teleoperation demonstrations, train policies (imitation learning / RL), and reproduce on a second arm.
-- **Arm on Wheeled Robot:** Integrate arm manipulation with wheeled mobility to perform combined tasks (pick-and-place while moving).
-
-These tutorials map to example workflows for scene reconstruction, simulation, model profiling for NPUs, and ROS-based deployment pipelines. If you want, I can scaffold one tutorial with example URDF, launch files, and a Gazebo scene.
-
 
 # Development & Production Usage
 
