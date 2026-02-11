@@ -30,18 +30,19 @@ A Model Context Protocol (MCP) server and CLI that lets Claude Code call the Edg
 ### Testing Framework
 <img width="1207" height="274" alt="Screenshot 2026-01-23 at 17 29 24" src="https://github.com/user-attachments/assets/fe91d73b-ec09-4b4d-a669-1286fe43382a" />
 
-## Block configuration example
+#### Block configuration example
 
 Use it to configure your blocks and review your config, e.g.
+
+#### Ask for optimization to a project aiming for 100% accuracy
 
 <img width="1600" height="289" alt="blur1" src="https://github.com/user-attachments/assets/68f8e293-7f0f-4e3d-832a-251706ba4cb8" />
 
 
-
+#### An example of the config changes made 
 <img width="800" height="274" alt="dspconfig" src="https://github.com/user-attachments/assets/1fb7e1f1-bcb8-4771-912e-2228ff342a83" />
 
-
-
+#### Performance improvement on a simple time series motion project was impressive
 <img width="1198" height="769" alt="improvementspercent" src="https://github.com/user-attachments/assets/b0e37891-24e6-4e0a-a143-bc10fdbad716" />
 
 
