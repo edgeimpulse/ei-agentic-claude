@@ -16,7 +16,19 @@ export async function registerGeneratedCommands(program: Command) {
     const full = path.join(commandsDir, file);
     // Use dynamic import so ts-node ESM or Node ESM can load the module correctly.
     const mod = await import(pathToFileURL(full).href);
-    const fn = Object.values(mod).find(v => typeof v === 'function');
+    const fn = Object.values(mod).find(v => typeof v === 'function') as ((program: Command) => void) | undefined;
     if (fn) fn(program);
+  }
+
+  // Also register cli-helpers
+  const helpersDir = path.join(__dirname, "cli-helpers");
+  if (fs.existsSync(helpersDir)) {
+    const helperFiles = fs.readdirSync(helpersDir).filter(f => f.endsWith('.js') || f.endsWith('.ts'));
+    for (const file of helperFiles) {
+      const full = path.join(helpersDir, file);
+      const mod = await import(pathToFileURL(full).href);
+      const fn = Object.values(mod).find(v => typeof v === 'function' && (v as any).name?.includes('Command')) as ((program: Command) => void) | undefined;
+      if (fn) fn(program);
+    }
   }
 }
