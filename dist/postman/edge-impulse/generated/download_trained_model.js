@@ -3,16 +3,8 @@
  * Method: GET
  * URL: https://studio.edgeimpulse.com/api/:projectId/learn-data/:learnId/model/:modelDownloadId
  */
+import { buildEiUrl, eiFetchJson } from "./_request.js";
 export async function download_trained_model(params, apiKey) {
-    // TODO: Implement parameter mapping
-    const res = await fetch(`https://studio.edgeimpulse.com/api/:projectId/learn-data/:learnId/model/:modelDownloadId`, {
-        method: 'GET',
-        headers: {
-            'x-api-key': apiKey,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        },
-        // body: JSON.stringify(params), // Uncomment for POST/PUT
-    });
-    return res.json();
+    const url = buildEiUrl("https://studio.edgeimpulse.com/api/:projectId/learn-data/:learnId/model/:modelDownloadId", params ?? {});
+    return eiFetchJson(url, apiKey, { method: "GET" });
 }

@@ -3,16 +3,8 @@
  * Method: GET
  * URL: https://studio.edgeimpulse.com/api/projects/public?limit=<integer>&offset=<integer>&project=<string>
  */
+import { buildEiUrl, eiFetchJson } from "./_request.js";
 export async function list_public_projects(params, apiKey) {
-    // TODO: Implement parameter mapping
-    const res = await fetch(`https://studio.edgeimpulse.com/api/projects/public?limit=<integer>&offset=<integer>&project=<string>`, {
-        method: 'GET',
-        headers: {
-            'x-api-key': apiKey,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        },
-        // body: JSON.stringify(params), // Uncomment for POST/PUT
-    });
-    return res.json();
+    const url = buildEiUrl("https://studio.edgeimpulse.com/api/projects/public?limit=<integer>&offset=<integer>&project=<string>", params ?? {});
+    return eiFetchJson(url, apiKey, { method: "GET" });
 }

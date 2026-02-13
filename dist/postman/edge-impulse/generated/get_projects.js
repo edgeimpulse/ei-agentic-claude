@@ -1,8 +1,3 @@
-/**
- * Retrieve all projects for the organization.
- * Method: GET
- * URL: https://studio.edgeimpulse.com/api/organizations/:organizationId/projects
- */
 export async function get_projects(params, apiKey) {
     // `organizationId` is optional. If provided, call org-scoped endpoint;
     // otherwise call the user-facing projects endpoint. Any primitive params

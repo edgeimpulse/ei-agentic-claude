@@ -3,16 +3,8 @@
  * Method: POST
  * URL: https://studio.edgeimpulse.com/api/:projectId/dsp-file-size-limit
  */
+import { buildEiUrl, eiFetchJson } from "./_request.js";
 export async function set_dsp_file_size_limit(params, apiKey) {
-    // TODO: Implement parameter mapping
-    const res = await fetch(`https://studio.edgeimpulse.com/api/:projectId/dsp-file-size-limit`, {
-        method: 'POST',
-        headers: {
-            'x-api-key': apiKey,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        },
-        // body: JSON.stringify(params), // Uncomment for POST/PUT
-    });
-    return res.json();
+    const url = buildEiUrl("https://studio.edgeimpulse.com/api/:projectId/dsp-file-size-limit", params ?? {});
+    return eiFetchJson(url, apiKey, { method: "POST", body: JSON.stringify(params ?? {}) });
 }

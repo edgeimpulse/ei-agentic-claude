@@ -3,6 +3,8 @@
  * Method: POST
  * URL: https://studio.edgeimpulse.com/api/:projectId/jobs/train/keras/:learnId
  */
+import { buildEiUrl, eiFetchJson } from "./_request.js";
+
 export async function train_model_keras(params: any, apiKey: string) {
   const projectId = params?.projectId;
   const learnId = params?.learnId;

@@ -3,16 +3,8 @@
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/api/organizations/:organizationId/deploy/:deployId
  */
+import { buildEiUrl, eiFetchJson } from "./_request.js";
 export async function delete_deploy_block(params, apiKey) {
-    // TODO: Implement parameter mapping
-    const res = await fetch(`https://studio.edgeimpulse.com/api/organizations/:organizationId/deploy/:deployId`, {
-        method: 'DELETE',
-        headers: {
-            'x-api-key': apiKey,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        },
-        // body: JSON.stringify(params), // Uncomment for POST/PUT
-    });
-    return res.json();
+    const url = buildEiUrl("https://studio.edgeimpulse.com/api/organizations/:organizationId/deploy/:deployId", params ?? {});
+    return eiFetchJson(url, apiKey, { method: "DELETE" });
 }

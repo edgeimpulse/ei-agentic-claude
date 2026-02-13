@@ -3,6 +3,8 @@
  * Method: GET
  * URL: https://studio.edgeimpulse.com/api/organizations/:organizationId/projects
  */
+import { buildEiUrl, eiFetchJson } from "./_request.js";
+
 export async function get_projects(params: any, apiKey: string) {
   // `organizationId` is optional. If provided, call org-scoped endpoint;
   // otherwise call the user-facing projects endpoint. Any primitive params

@@ -3,6 +3,8 @@
  * Method: POST
  * URL: https://studio.edgeimpulse.com/api/:projectId/jobs/optimize
  */
+import { buildEiUrl, eiFetchJson } from "./_request.js";
+
 export async function optimize_model(params: any, apiKey: string) {
   const projectId = params?.projectId;
   if (!projectId) throw new Error('Missing required parameter `projectId`.');

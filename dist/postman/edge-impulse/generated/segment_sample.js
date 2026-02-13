@@ -3,16 +3,8 @@
  * Method: POST
  * URL: https://studio.edgeimpulse.com/api/:projectId/raw-data/:sampleId/segment
  */
+import { buildEiUrl, eiFetchJson } from "./_request.js";
 export async function segment_sample(params, apiKey) {
-    // TODO: Implement parameter mapping
-    const res = await fetch(`https://studio.edgeimpulse.com/api/:projectId/raw-data/:sampleId/segment`, {
-        method: 'POST',
-        headers: {
-            'x-api-key': apiKey,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        },
-        // body: JSON.stringify(params), // Uncomment for POST/PUT
-    });
-    return res.json();
+    const url = buildEiUrl("https://studio.edgeimpulse.com/api/:projectId/raw-data/:sampleId/segment", params ?? {});
+    return eiFetchJson(url, apiKey, { method: "POST", body: JSON.stringify(params ?? {}) });
 }
