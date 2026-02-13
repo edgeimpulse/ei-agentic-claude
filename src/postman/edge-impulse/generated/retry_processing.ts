@@ -1,5 +1,4 @@
 /**
- * If a sample failed processing, retry the processing operation.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/retry-processing
  */

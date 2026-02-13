@@ -1,5 +1,4 @@
 /**
- * Upload a photo for a user. This function is only available through a JWT token, and is not available for all users.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/users/:userId/photo
  */

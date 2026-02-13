@@ -1,11 +1,14 @@
 /**
- * Returns the latency, RAM and ROM used for the pretrained model - upload first via  `uploadPretrainedModel`. This is using the project's selected latency device. Updates are streamed over the websocket API (or can be retrieved through the /stdout endpoint). Use getProfileTfliteJobResult to get the results when the job is completed.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/pretrained-model/profile
  */
 export async function profile_pretrained_model(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/pretrained-model/profile`;
     for (const key of pathParams) {
         const value = params?.[key];

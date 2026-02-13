@@ -1,5 +1,4 @@
 /**
- * t-SNE2 output of the raw dataset
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/data-explorer/has-features
  */

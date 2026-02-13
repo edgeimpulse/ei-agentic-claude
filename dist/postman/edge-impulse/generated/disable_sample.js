@@ -1,5 +1,4 @@
 /**
- * Disable a sample, ensuring that it is excluded from the dataset.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/disable
  */

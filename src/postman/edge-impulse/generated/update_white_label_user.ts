@@ -1,5 +1,4 @@
 /**
- * White label admin only API to update user properties.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/users/:userId
  */

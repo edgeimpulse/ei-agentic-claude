@@ -1,5 +1,4 @@
 /**
- * Remove a collaborator to a project. Note that you cannot invoke this function if only a single collaborator is present.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/collaborators/remove
  */

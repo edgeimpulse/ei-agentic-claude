@@ -1,5 +1,4 @@
 /**
- * Updates a transfer learning block. Only values in the body will be updated.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/transfer-learning/:transferLearningId
  */

@@ -1,5 +1,4 @@
 /**
- * Change the password for a user account. This function is only available through a JWT token.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/users/:userId/change-password
  */

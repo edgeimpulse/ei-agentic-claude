@@ -1,5 +1,4 @@
 /**
- * Get information about a portal
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/portals/:portalId
  */

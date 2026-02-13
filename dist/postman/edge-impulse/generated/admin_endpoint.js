@@ -1,5 +1,4 @@
 /**
- * Test endpoint that can only be reached with admin rights.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/test-admin
  */

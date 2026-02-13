@@ -1,5 +1,4 @@
 /**
- * Update the data item metadata.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/data/:dataId
  */

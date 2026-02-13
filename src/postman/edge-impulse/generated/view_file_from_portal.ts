@@ -1,5 +1,4 @@
 /**
- * View a file that's located in an upload portal (requires JWT auth). Will return a signed URL to the bucket.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/portals/:portalId/files/view
  */

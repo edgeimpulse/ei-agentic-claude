@@ -23,7 +23,7 @@ const checks = [
     name: 'top-level help',
     cmd: process.execPath,
     args: [launcher, '--help'],
-    expect: /train-model-keras|retrain|wait-job/
+    expect: /train-model-keras|get-job-status|list-active-projects/
   },
   {
     name: 'train-model-keras help',
@@ -32,10 +32,10 @@ const checks = [
     expect: /Auto-generated command for train_model_keras|--projectId|--learnId/
   },
   {
-    name: 'wait-job help',
+    name: 'get-job-status help',
     cmd: process.execPath,
-    args: [launcher, 'wait-job', '--help'],
-    expect: /Poll a job until completion|--projectId|--jobId/
+    args: [launcher, 'get-job-status', '--help'],
+    expect: /Auto-generated command for get_job_status|--params/
   }
 ];
 

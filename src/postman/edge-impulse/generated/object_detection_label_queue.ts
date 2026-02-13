@@ -1,5 +1,4 @@
 /**
- * Get all unlabeled items from the object detection queue.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/label-object-detection-queue
  */

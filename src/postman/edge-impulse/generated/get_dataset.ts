@@ -1,5 +1,4 @@
 /**
- * Get information about a dataset
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/dataset/:dataset
  */

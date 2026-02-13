@@ -1,5 +1,4 @@
 /**
- * Verify whether the reset password code for the user is valid.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api-user-verify-reset-password-code
  */

@@ -1,5 +1,4 @@
 /**
- * Set information about a dataset
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/dataset/:dataset
  */

@@ -1,5 +1,4 @@
 /**
- * Update all data items. HEADs all underlying buckets to retrieve the last file information. Use this API after uploading data directly to S3.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/data/refresh
  */

@@ -1,5 +1,4 @@
 /**
- * Download all data for selected data items. This function does not query the underlying bucket.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/data/download
  */

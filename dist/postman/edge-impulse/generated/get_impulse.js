@@ -1,11 +1,14 @@
 /**
- * Retrieve the impulse for this project
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/impulse
  */
 export async function get_impulse(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/impulse`;
     for (const key of pathParams) {
         const value = params?.[key];

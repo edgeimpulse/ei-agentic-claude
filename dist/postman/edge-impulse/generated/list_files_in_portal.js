@@ -1,5 +1,4 @@
 /**
- * List all files and directories in specified prefix.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/portals/:portalId/files
  */

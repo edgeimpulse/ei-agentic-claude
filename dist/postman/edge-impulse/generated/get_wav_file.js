@@ -1,11 +1,14 @@
 /**
- * Get the synthetic sample as a WAV file
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/wav
  */
 export async function get_wav_file(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/wav`;
     for (const key of pathParams) {
         const value = params?.[key];

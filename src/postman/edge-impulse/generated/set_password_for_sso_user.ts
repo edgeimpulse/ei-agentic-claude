@@ -1,5 +1,4 @@
 /**
- * Set the password for a new SSO user. This function is only available through an SSO access token.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/users/:userId/set-password
  */

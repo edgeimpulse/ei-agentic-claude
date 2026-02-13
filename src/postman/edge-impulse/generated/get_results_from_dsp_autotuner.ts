@@ -1,5 +1,4 @@
 /**
- * Get a set of parameters, found as a result of running the DSP autotuner.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/get-autotuner-results
  */

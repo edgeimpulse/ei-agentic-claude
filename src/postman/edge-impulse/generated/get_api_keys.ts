@@ -1,5 +1,4 @@
 /**
- * Retrieve all API keys. This does **not** return the full API key, but only a portion (for security purposes).
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/apikeys
  */

@@ -1,5 +1,4 @@
 /**
- * Update some or all of the deployment targets enabled for this white label.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/whitelabel/:whitelabelIdentifier/deploymentTargets
  */

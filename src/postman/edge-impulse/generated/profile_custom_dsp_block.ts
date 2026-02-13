@@ -1,5 +1,4 @@
 /**
- * Returns performance characteristics for a custom DSP block (needs `hasTfliteImplementation`). Updates are streamed over the websocket API (or can be retrieved through the /stdout endpoint). Use getProfileTfliteJobResult to get the results when the job is completed.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/profile
  */

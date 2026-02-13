@@ -1,5 +1,4 @@
 /**
- * Add a storage bucket.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/buckets
  */

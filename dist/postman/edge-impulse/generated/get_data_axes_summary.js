@@ -1,5 +1,4 @@
 /**
- * Get a list of axes that are present in the training data.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/data-axes
  */

@@ -1,5 +1,4 @@
 /**
- * Restore a project to a certain version. This can only applied to a project without data, and will overwrite your impulse and all settings.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/restore
  */

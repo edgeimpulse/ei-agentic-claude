@@ -1,5 +1,4 @@
 /**
- * White label admin only API to get marketing metrics about a user.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/users/:userId/metrics
  */

@@ -1,5 +1,4 @@
 /**
- * Verify whether we can reach a bucket before adding it.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/buckets/verify
  */

@@ -1,5 +1,4 @@
 /**
- * Get a sample of trained features, this extracts a number of samples and their features.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/training/anomaly/:learnId/features/get-graph
  */

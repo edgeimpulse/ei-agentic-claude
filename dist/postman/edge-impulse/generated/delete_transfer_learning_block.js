@@ -1,5 +1,4 @@
 /**
- * Deletes a transfer learning block.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/secrets/:secretId
  */

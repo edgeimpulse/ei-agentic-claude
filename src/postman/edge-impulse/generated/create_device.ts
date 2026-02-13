@@ -1,5 +1,4 @@
 /**
- * Create a new device. If you set `ifNotExists` to `false` and the device already exists, the `deviceType` will be overwritten.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/devices/create
  */

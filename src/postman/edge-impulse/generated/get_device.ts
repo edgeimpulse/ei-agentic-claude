@@ -1,5 +1,4 @@
 /**
- * Retrieves a single device
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/device/:deviceId
  */

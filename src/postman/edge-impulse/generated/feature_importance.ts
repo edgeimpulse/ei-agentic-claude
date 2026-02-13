@@ -1,5 +1,4 @@
 /**
- * Retrieve the feature importance for a DSP block (only available for blocks where dimensionalityReduction is not enabled)
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/features/importance
  */

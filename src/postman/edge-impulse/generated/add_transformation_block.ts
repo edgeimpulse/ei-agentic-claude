@@ -1,5 +1,4 @@
 /**
- * Adds a transformation block.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/transformation
  */

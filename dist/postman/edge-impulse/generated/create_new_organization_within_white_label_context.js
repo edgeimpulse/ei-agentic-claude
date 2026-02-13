@@ -1,5 +1,4 @@
 /**
- * Create a new organization. This is an internal API only available to white label admins
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/organizations
  */

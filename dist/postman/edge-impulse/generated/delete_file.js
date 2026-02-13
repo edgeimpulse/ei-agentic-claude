@@ -1,5 +1,4 @@
 /**
- * Delete a single file from a data item.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/data/:dataId/download
  */

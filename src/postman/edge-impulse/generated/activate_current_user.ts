@@ -1,5 +1,4 @@
 /**
- * Activate the current user account (requires an activation code). This function is only available through a JWT token.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/user/activate
  */

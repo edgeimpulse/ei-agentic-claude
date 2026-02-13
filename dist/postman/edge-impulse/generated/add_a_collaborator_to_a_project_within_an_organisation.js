@@ -1,5 +1,4 @@
 /**
- * Add a new collaborator to a project owned by an organisation.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/add-project-collaborator
  */

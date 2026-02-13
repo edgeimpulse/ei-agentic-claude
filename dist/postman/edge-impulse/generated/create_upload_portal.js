@@ -1,5 +1,4 @@
 /**
- * Creates a new upload portal for the organization.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/portals/create
  */

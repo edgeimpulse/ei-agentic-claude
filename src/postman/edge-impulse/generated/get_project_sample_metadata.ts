@@ -1,5 +1,4 @@
 /**
- * Get metadata for all samples in a project.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/metadata
  */

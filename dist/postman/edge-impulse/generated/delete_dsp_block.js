@@ -1,5 +1,4 @@
 /**
- * Deletes a dsp block.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/dsp/:dspId
  */

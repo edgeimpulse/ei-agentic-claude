@@ -1,5 +1,4 @@
 /**
- * Deletes all samples for this project over all categories. This also invalidates all DSP and learn blocks. Note that this does not delete the data from cold storage.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/delete-all
  */

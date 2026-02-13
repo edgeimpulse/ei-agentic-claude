@@ -1,5 +1,4 @@
 /**
- * Remove a file from a create project job. Only files for which no jobs are running can be deleted.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/create-project/:createProjectId/files/:createProjectFileId
  */

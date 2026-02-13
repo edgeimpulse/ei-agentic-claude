@@ -1,5 +1,4 @@
 /**
- * Download output from a DSP block over all data in the training set, already sliced in windows. In Numpy binary format.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp-data/:dspId/x/:category
  */

@@ -1,5 +1,4 @@
 /**
- * Track objects between two samples. Source sample should have bounding boxes set.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/track-objects
  */

@@ -1,5 +1,4 @@
 /**
- * Remove a transformation job. This will stop all running jobs.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/create-project/:createProjectId
  */

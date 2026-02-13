@@ -1,5 +1,4 @@
 /**
- * Clear all checklist flags for selected data items.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/data/clear-checklist
  */

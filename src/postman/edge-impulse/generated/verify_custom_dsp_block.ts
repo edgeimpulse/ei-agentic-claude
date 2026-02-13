@@ -1,5 +1,4 @@
 /**
- * Verify the validity of a custom DSP block
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/verify-dsp-block/url
  */

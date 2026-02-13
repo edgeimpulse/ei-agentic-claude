@@ -1,5 +1,4 @@
 /**
- * Sets the label (also known as class) of the sample. Use the same label for similar types of data, as they are used during training.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/edit-label
  */

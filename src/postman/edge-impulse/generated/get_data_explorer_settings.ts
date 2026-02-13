@@ -1,5 +1,4 @@
 /**
- * Get data explorer configuration, like the type of data, and the input / dsp block to use.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/data-explorer/settings
  */

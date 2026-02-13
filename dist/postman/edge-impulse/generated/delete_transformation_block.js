@@ -1,5 +1,4 @@
 /**
- * Deletes a transformation block.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/transformation/:transformationId
  */

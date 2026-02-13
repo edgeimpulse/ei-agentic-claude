@@ -1,5 +1,4 @@
 /**
- * Set configuration parameters for the DSP block. Only values set in the body will be overwritten.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId
  */

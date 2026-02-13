@@ -1,5 +1,4 @@
 /**
- * Get slice of sample data, and run it through the DSP block. This only the axes selected by the DSP block. E.g. if you have selected only accX and accY as inputs for the DSP block, but the raw sample also contains accZ, accZ is filtered out.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/raw-data/:sampleId/slice/run/readonly
  */

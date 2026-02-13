@@ -1,11 +1,14 @@
 /**
- * White label admin only API to get the list of all projects.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/projects
  */
 export async function get_all_white_label_projects(params, apiKey) {
     const pathParams = ["organizationId"];
+<<<<<<< HEAD
+    const queryParams = ["active", "sort", "filters", "limit", "offset", "search"];
+=======
     const queryParams = ["name", "active", "sort", "limit", "offset"];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/projects`;
     for (const key of pathParams) {
         const value = params?.[key];

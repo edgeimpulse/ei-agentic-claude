@@ -1,5 +1,4 @@
 /**
- * Revoke an HMAC key. Note that if you revoke the development key some services (such as automatic provisioning of devices through the serial daemon) will no longer work.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/hmackeys/:hmacId
  */

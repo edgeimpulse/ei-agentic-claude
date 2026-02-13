@@ -1,5 +1,4 @@
 /**
- * Create a new project. This API can only be called using a JWT token.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/projects/create
  */

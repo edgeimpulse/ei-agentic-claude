@@ -1,5 +1,4 @@
 /**
- * Retrieve list of active projects. If authenticating using JWT token this lists all the projects the user has access to, if authenticating using an API key, this only lists that project.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/projects
  */

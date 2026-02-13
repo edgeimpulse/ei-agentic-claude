@@ -1,5 +1,4 @@
 /**
- * Get all finished jobs for this organization
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/jobs/history
  */

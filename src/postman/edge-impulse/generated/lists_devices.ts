@@ -1,5 +1,4 @@
 /**
- * List all devices for this project. Devices get included here if they connect to the remote management API or if they have sent data to the ingestion API and had the `device_id` field set.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/devices
  */

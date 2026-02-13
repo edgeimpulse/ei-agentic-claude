@@ -1,5 +1,4 @@
 /**
- * Add an HMAC key. If you set `developmentKey` to `true` this flag will be removed from the current development HMAC key.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/hmackeys
  */

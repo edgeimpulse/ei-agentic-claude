@@ -1,5 +1,4 @@
 /**
- * Create a new empty project within an organization.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/new-project
  */

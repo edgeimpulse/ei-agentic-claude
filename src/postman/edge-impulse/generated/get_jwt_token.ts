@@ -1,5 +1,4 @@
 /**
- * Get a JWT token to authenticate with the API.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api-login
  */

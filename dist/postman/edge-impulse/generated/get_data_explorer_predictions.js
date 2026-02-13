@@ -1,5 +1,4 @@
 /**
- * Predictions for every data explorer point (only available when using current impulse to populate data explorer)
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/data-explorer/predictions
  */

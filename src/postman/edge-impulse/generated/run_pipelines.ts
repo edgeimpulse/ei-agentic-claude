@@ -1,5 +1,4 @@
 /**
- * Run an organizational pipeline
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/pipelines/:pipelineId/run
  */

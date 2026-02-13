@@ -1,5 +1,4 @@
 /**
- * Export all the data in the project as it was uploaded to Edge Impulse.  Updates are streamed over the websocket API.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/export/original
  */

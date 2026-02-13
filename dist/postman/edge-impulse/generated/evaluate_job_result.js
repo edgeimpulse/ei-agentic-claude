@@ -1,11 +1,14 @@
 /**
- * Get evaluate job result, containing detailed performance statistics for every possible variant of the impulse.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/deployment/evaluate
  */
 export async function evaluate_job_result(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/deployment/evaluate`;
     for (const key of pathParams) {
         const value = params?.[key];

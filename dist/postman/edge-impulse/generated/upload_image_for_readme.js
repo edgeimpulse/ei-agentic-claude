@@ -1,5 +1,4 @@
 /**
- * Uploads an image to the user CDN and returns the path.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/readme/upload-image
  */

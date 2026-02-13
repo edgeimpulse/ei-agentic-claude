@@ -1,5 +1,4 @@
 /**
- * Deletes all samples for this project over a single category. Note that this does not delete the data from cold storage.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/delete-all/:category
  */

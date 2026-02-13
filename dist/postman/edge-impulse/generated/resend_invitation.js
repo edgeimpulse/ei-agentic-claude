@@ -1,5 +1,4 @@
 /**
- * Resend an invitation to a member in an organization.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/members/:memberId/resend-invite
  */

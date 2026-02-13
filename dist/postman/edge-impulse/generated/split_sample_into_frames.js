@@ -1,5 +1,4 @@
 /**
- * Split a video sample into individual frames.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/split
  */

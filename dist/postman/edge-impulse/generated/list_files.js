@@ -1,5 +1,4 @@
 /**
- * Lists all files included by the filter.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/data/files
  */

@@ -1,5 +1,4 @@
 /**
- * Uploads and updates the organization logo
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/logo
  */

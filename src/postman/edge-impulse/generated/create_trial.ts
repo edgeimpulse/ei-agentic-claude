@@ -1,5 +1,4 @@
 /**
- * Create trial
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/optimize/:jobId/create-trial
  */

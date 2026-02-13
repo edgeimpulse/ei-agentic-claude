@@ -1,5 +1,4 @@
 /**
- * Update config
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/optimize/config
  */

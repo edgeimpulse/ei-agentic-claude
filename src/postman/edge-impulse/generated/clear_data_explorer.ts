@@ -1,5 +1,4 @@
 /**
- * Remove the current data explorer state
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/data-explorer/clear
  */

@@ -1,5 +1,4 @@
 /**
- * Get all versions for this project.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/versions
  */

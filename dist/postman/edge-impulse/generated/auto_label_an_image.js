@@ -1,5 +1,4 @@
 /**
- * Classify an image using another neural network.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/autolabel
  */

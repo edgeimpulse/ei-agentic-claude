@@ -1,5 +1,4 @@
 /**
- * Delete all data for selected data items. This removes all data in the underlying data bucket.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/data/delete
  */

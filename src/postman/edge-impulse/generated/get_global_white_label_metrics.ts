@@ -1,5 +1,4 @@
 /**
- * White label admin only API to get global metrics.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/metrics
  */

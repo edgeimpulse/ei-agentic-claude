@@ -1,5 +1,4 @@
 /**
- * Deletes the sample. Note that this does not delete the data from cold storage.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId
  */

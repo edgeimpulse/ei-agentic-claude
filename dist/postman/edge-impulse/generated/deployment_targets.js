@@ -1,5 +1,4 @@
 /**
- * List all deployment targets
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/deployment/targets
  */

@@ -1,11 +1,14 @@
 /**
- * Classifies all items in the testing dataset against the current impulse. Updates are streamed over the websocket API.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/classify
  */
 export async function classify(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/classify`;
     for (const key of pathParams) {
         const value = params?.[key];

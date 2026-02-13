@@ -1,5 +1,4 @@
 /**
- * Configure the Keras block, such as its minimum confidence score. Use the impulse blocks to find the learnId.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/training/keras/:learnId
  */

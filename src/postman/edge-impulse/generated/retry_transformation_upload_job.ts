@@ -1,5 +1,4 @@
 /**
- * Retry the upload job from a transformation job. Only jobs that have failed can be retried.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/create-project/:createProjectId/upload/retry
  */

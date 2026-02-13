@@ -1,5 +1,4 @@
 /**
- * Updates a transformation block. Only values in the body will be updated.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/transformation/:transformationId
  */

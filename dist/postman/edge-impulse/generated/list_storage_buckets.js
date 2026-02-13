@@ -1,5 +1,4 @@
 /**
- * Retrieve all configured storage buckets. This does not list the secret key.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/buckets
  */

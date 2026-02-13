@@ -1,5 +1,4 @@
 /**
- * Retrieve a subset of files from the portal, to be used in the data source wizard.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/portals/:portalId/verify
  */

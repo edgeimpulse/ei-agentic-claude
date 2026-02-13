@@ -1,5 +1,4 @@
 /**
- * Get metadata about a trained anomaly block. Use the impulse blocks to find the learnId.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/training/anomaly/:learnId/metadata
  */

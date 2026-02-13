@@ -1,5 +1,4 @@
 /**
- * Adds or updates the metadata associated to a sample.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/metadata
  */

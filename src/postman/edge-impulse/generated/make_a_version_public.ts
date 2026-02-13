@@ -1,5 +1,4 @@
 /**
- * Make a version of a project public. This makes all data and state available (read-only) on a public URL, and allows users to clone this project.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/versions/:versionId/make-public
  */

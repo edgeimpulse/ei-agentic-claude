@@ -1,5 +1,4 @@
 /**
- * Get the results from a job started from startProfileTfliteJob.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/profile-tflite/:jobId/result
  */

@@ -1,5 +1,4 @@
 /**
- * Get information about a Keras block, such as its dependencies. Use the impulse blocks to find the learnId.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/training/keras/:learnId
  */

@@ -1,5 +1,4 @@
 /**
- * Take the raw training set and generate features from them. Updates are streamed over the websocket API.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/generate-features
  */

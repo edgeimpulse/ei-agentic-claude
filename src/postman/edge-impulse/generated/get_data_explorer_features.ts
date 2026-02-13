@@ -1,5 +1,4 @@
 /**
- * t-SNE2 output of the raw dataset using embeddings from this Keras block
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/training/keras/:learnId/data-explorer/features
  */

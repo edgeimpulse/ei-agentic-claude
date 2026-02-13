@@ -1,5 +1,4 @@
 /**
- * Reset the password for a user.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api-user-reset-password
  */

@@ -1,5 +1,4 @@
 /**
- * Crop a sample to within a new range.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/crop
  */

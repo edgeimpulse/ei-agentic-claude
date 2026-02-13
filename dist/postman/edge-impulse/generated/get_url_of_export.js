@@ -1,5 +1,4 @@
 /**
- * Get the URL to the exported artefacts for an export job of a project.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/export/get-url
  */

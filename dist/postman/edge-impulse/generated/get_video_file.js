@@ -1,11 +1,14 @@
 /**
- * Get a sample as an video file. This only applies to samples with video data.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/video
  */
 export async function get_video_file(params, apiKey) {
     const pathParams = ["projectId", "sampleId"];
+<<<<<<< HEAD
+    const queryParams = ["afterInputBlock", "cacheKey", "impulseId"];
+=======
     const queryParams = ["afterInputBlock"];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/video`;
     for (const key of pathParams) {
         const value = params?.[key];

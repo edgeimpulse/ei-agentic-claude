@@ -1,5 +1,4 @@
 /**
- * Retrieves DSP block parameters
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/optimize/dsp-parameters
  */

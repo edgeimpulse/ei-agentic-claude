@@ -1,5 +1,4 @@
 /**
- * Download the labels for this learning block. This is data already processed by the signal processing blocks. Not all blocks support this function. If so, a GenericApiResponse is returned with an error message.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/training/:learnId/y
  */

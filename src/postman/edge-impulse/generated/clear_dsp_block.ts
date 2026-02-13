@@ -1,5 +1,4 @@
 /**
- * Clear generated features for a DSP block (used in tests).
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/clear
  */

@@ -1,5 +1,4 @@
 /**
- * Get trained features for a single sample. This runs both the DSP prerequisites and the anomaly classifier.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/training/anomaly/:learnId/features/get-graph/classification/:sampleId
  */

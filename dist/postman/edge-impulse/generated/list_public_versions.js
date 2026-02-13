@@ -1,5 +1,4 @@
 /**
- * Get all public versions for this project. You don't need any authentication for this function.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/versions/public
  */

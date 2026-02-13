@@ -1,5 +1,4 @@
 /**
- * Download a file from an upload portal (requires JWT auth). Will return a signed URL to the bucket.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/portals/:portalId/files/download
  */

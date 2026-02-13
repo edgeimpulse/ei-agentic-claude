@@ -1,5 +1,4 @@
 /**
- * Invite a member to an organization.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/members/invite
  */

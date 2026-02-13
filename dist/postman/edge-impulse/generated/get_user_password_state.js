@@ -1,5 +1,4 @@
 /**
- * Tells whether the user needs to set its password.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api-user-need-to-set-password/:usernameOrEmail
  */

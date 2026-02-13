@@ -1,5 +1,4 @@
 /**
- * Retrieve all configured upload portals.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/portals
  */

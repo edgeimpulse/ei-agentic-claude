@@ -1,5 +1,4 @@
 /**
- * Add a collaborator to a project.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/collaborators/add
  */

@@ -1,5 +1,4 @@
 /**
- * Get a list of all emails sent by Edge Impulse regarding this project.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/emails
  */

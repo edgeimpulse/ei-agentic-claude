@@ -1,5 +1,4 @@
 /**
- * Update the properties of a transformation job.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/create-project/:createProjectId
  */

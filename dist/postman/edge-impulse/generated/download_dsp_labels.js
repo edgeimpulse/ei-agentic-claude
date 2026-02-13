@@ -1,5 +1,4 @@
 /**
- * Download labels for a DSP block over all data in the training set, already sliced in windows.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp-data/:dspId/y/:category
  */

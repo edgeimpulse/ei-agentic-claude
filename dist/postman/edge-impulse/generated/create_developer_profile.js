@@ -1,5 +1,4 @@
 /**
- * Create a developer profile for the current active user.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/user/create-developer-profile
  */

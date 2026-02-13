@@ -1,5 +1,4 @@
 /**
- * Runs the DSP block against a sample. This will move the sliding window (dependent on the sliding window length and the sliding window increase parameters in the impulse) over the complete file, and run the DSP function for every window that is extracted.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/features/get-graph/classification/:sampleId
  */

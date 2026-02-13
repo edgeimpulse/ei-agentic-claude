@@ -1,5 +1,4 @@
 /**
- * Get the last modification date for a project (will be upped when data is modified, or when an impulse is trained)
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/last-modification
  */

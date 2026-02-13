@@ -1,11 +1,14 @@
 /**
- * Get metadata about a trained Keras block. Use the impulse blocks to find the learnId.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/training/keras/:learnId/metadata
  */
 export async function keras_metadata(params, apiKey) {
     const pathParams = ["projectId", "learnId"];
+<<<<<<< HEAD
+    const queryParams = ["excludeLabels"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/training/keras/:learnId/metadata`;
     for (const key of pathParams) {
         const value = params?.[key];

@@ -1,5 +1,4 @@
 /**
- * Get a sample of trained features, this extracts a number of samples and their labels. Used to visualize the current training set.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/features/get-graph/:category
  */

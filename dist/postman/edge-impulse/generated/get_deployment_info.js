@@ -1,11 +1,14 @@
 /**
- * Gives information on whether a deployment was already built for a type
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/deployment
  */
 export async function get_deployment_info(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["type", "modelType", "engine", "impulseId"];
+=======
     const queryParams = ["type", "modelType", "engine"];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/deployment`;
     for (const key of pathParams) {
         const value = params?.[key];

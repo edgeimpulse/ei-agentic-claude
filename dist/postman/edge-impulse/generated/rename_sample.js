@@ -1,5 +1,4 @@
 /**
- * Sets the file name of the sample. This name does not need to be unique, but it's highly recommended to do so.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/rename
  */

@@ -1,11 +1,14 @@
 /**
- * Takes in a TFLite file and builds the model and SDK. Updates are streamed over the websocket API (or can be retrieved through the /stdout endpoint). Use getProfileTfliteJobResult to get the results when the job is completed.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/deploy-pretrained-model
  */
 export async function deploy_pretrained_model(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/deploy-pretrained-model`;
     for (const key of pathParams) {
         const value = params?.[key];

@@ -1,5 +1,4 @@
 /**
- * Download the logs for a job (as a text file).
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/jobs/:jobId/stdout/download
  */

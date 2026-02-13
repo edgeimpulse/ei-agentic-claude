@@ -1,5 +1,4 @@
 /**
- * Get window settings
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/optimize/window-settings
  */

@@ -1,5 +1,4 @@
 /**
- * Retrieve an organizational pipelines
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/pipelines/:pipelineId
  */

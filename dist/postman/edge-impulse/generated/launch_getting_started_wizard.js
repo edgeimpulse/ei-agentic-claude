@@ -1,5 +1,4 @@
 /**
- * This clears out *all data in your project*, and is irrevocable. This function is only available through a JWT token, and is not available to all users.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/launch-getting-started
  */

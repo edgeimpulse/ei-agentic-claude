@@ -1,11 +1,14 @@
 /**
- * Retrieve the metadata from a generated DSP block.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/metadata
  */
 export async function get_metadata(params, apiKey) {
     const pathParams = ["projectId", "dspId"];
+<<<<<<< HEAD
+    const queryParams = ["excludeIncludedSamples", "category"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/metadata`;
     for (const key of pathParams) {
         const value = params?.[key];

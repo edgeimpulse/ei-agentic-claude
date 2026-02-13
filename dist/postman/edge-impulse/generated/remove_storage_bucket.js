@@ -1,5 +1,4 @@
 /**
- * Remove a storage bucket. This will render any data in this storage bucket unreachable.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/buckets/:bucketId
  */

@@ -1,5 +1,4 @@
 /**
- * Delete a device. When this device sends a new message to ingestion or connects to remote management the device will be recreated.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/device/:deviceId
  */

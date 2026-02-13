@@ -1,5 +1,4 @@
 /**
- * Set the current name for a device.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/devices/:deviceId/rename
  */

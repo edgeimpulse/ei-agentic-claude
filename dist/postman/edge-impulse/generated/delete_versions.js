@@ -1,5 +1,4 @@
 /**
- * Delete a version. This does not delete the version from cold storage.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/versions/:versionId
  */

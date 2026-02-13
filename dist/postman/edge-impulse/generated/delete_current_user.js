@@ -1,5 +1,4 @@
 /**
- * Delete a user. This function is only available through a JWT token, and can only remove the current user.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/user
  */

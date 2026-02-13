@@ -1,5 +1,4 @@
 /**
- * Move a sample to another category (e.g. from test to training).
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/move
  */

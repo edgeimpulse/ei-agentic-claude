@@ -1,5 +1,4 @@
 /**
- * Set the datasets a guest member has access to in an organization.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/members/:memberId/datasets
  */

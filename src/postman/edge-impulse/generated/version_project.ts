@@ -1,5 +1,4 @@
 /**
- * Create a new version of the project. This stores all data and configuration offsite. If you have access to the enterprise version of Edge Impulse you can store your data in your own storage buckets (only through JWT token authentication).
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/version
  */

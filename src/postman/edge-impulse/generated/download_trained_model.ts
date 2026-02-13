@@ -1,5 +1,4 @@
 /**
- * Download a trained model for a learning block. Depending on the block this can be a TensorFlow model, or the cluster centroids.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/learn-data/:learnId/model/:modelDownloadId
  */

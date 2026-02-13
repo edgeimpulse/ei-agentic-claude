@@ -1,5 +1,4 @@
 /**
- * Export all the data in the project in WAV format.  Updates are streamed over the websocket API.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/export/wav
  */

@@ -1,5 +1,4 @@
 /**
- * Creates a signed link to securely upload data to s3 bucket directly from the client.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/portals/:portalId/upload-link
  */

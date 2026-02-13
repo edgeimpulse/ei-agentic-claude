@@ -1,5 +1,4 @@
 /**
- * List all organizational storage buckets that the current user has access to. This function is only available through a JWT token.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/users/buckets
  */

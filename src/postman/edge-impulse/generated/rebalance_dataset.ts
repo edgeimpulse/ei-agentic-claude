@@ -1,5 +1,4 @@
 /**
- * Rebalances the dataset over training / testing categories. This resets the category for all data and splits it 80%/20% between training and testing. This is a deterministic process based on the hash of the name of the data.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/rebalance
  */

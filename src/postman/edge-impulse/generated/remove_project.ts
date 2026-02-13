@@ -1,5 +1,4 @@
 /**
- * Remove the current project, and all data associated with it. This is irrevocable!
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId
  */

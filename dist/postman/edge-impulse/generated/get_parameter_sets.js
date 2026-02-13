@@ -1,11 +1,14 @@
 /**
- * Get performance calibration parameter sets
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/parameter-sets
  */
 export async function get_parameter_sets(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/parameter-sets`;
     for (const key of pathParams) {
         const value = params?.[key];

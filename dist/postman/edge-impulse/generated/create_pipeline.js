@@ -1,5 +1,4 @@
 /**
- * Create an organizational pipelines
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/pipelines
  */

@@ -1,11 +1,14 @@
 /**
- * Upload a pretrained model and receive info back about the input/output tensors. If you want to deploy a pretrained model from the API, see `startDeployPretrainedModelJob`.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/pretrained-model/upload
  */
 export async function upload_a_pretrained_model(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/pretrained-model/upload`;
     for (const key of pathParams) {
         const value = params?.[key];

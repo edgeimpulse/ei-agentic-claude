@@ -1,11 +1,14 @@
 /**
- * List all information about this project.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId
  */
 export async function project_information(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId`;
     for (const key of pathParams) {
         const value = params?.[key];

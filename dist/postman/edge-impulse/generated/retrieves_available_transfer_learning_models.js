@@ -1,5 +1,4 @@
 /**
- * Retrieves available transfer learning models
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/optimize/transfer-learning-models
  */

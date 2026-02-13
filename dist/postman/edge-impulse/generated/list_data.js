@@ -1,5 +1,4 @@
 /**
- * Lists all data items. This can be filtered by the ?filter parameter.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/data
  */

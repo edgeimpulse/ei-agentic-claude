@@ -1,5 +1,4 @@
 /**
- * Add an API key.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/apikeys
  */

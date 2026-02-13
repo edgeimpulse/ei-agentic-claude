@@ -1,5 +1,4 @@
 /**
- * Find start and end times for all non-noise events in a sample
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/find-segments
  */

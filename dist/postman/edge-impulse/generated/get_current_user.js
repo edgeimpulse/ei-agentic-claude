@@ -1,11 +1,14 @@
 /**
- * Get information about the current user. This function is only available through a JWT token.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/user
  */
 export async function get_current_user(params, apiKey) {
     const pathParams = [];
+<<<<<<< HEAD
+    const queryParams = ["excludeProjects"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/user`;
     for (const key of pathParams) {
         const value = params?.[key];

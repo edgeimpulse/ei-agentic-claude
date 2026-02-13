@@ -1,5 +1,4 @@
 /**
- * Retry a transformation action on a file from a transformation job. Only files that have failed can be retried.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/create-project/:createProjectId/files/:createProjectFileId/retry
  */

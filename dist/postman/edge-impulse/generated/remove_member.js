@@ -1,5 +1,4 @@
 /**
- * Remove a member from an organization. Note that you cannot invoke this function if only a single member is present to the organization.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/members/remove
  */

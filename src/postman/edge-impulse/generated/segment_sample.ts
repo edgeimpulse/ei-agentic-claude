@@ -1,5 +1,4 @@
 /**
- * Slice a sample into multiple segments. The original file will be marked as deleted, but you can crop any created segment to retrieve the original file.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/segment
  */

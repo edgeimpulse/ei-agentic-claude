@@ -1,5 +1,4 @@
 /**
- * Get a white label domain given its unique identifier.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/whitelabel/:whitelabelIdentifier/domain
  */

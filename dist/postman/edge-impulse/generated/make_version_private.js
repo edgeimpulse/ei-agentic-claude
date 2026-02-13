@@ -1,5 +1,4 @@
 /**
- * Make a public version private.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/versions/:versionId/make-private
  */

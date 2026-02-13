@@ -1,5 +1,4 @@
 /**
- * Retrieve all deploy blocks.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/deploy
  */

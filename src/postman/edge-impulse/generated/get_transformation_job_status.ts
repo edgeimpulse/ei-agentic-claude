@@ -1,5 +1,4 @@
 /**
- * Get the current status of a transformation job job.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/create-project/:createProjectId
  */

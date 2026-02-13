@@ -1,5 +1,4 @@
 /**
- * Download the data of an exported Keras block - needs to be exported via 'exportKerasBlockData' first
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/training/keras/:learnId/download-data
  */

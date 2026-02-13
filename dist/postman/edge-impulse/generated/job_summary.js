@@ -1,5 +1,4 @@
 /**
- * Get a summary of jobs, grouped by key. Used to report to users how much compute they've used.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/summary
  */

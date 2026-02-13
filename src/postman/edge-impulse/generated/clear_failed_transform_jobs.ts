@@ -1,5 +1,4 @@
 /**
- * Clear all failed transform job from a create project job. Only jobs that have failed will be cleared.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/create-project/:createProjectId/transform/clear
  */

@@ -1,5 +1,4 @@
 /**
- * List all organizations for a user. This function is only available through a JWT token.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/users/:userId/organizations
  */

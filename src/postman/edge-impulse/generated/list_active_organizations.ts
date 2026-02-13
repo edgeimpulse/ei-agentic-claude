@@ -1,5 +1,4 @@
 /**
- * Retrieve list of organizations that a user is a part of. If authenticating using JWT token this lists all the organizations the user has access to, if authenticating using an API key, this only lists that organization.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations
  */

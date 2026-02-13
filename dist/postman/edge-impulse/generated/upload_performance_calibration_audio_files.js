@@ -1,11 +1,14 @@
 /**
- * Upload a zip files with a wav file and its Label metadata to run performance calibration on it.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/files
  */
 export async function upload_performance_calibration_audio_files(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/files`;
     for (const key of pathParams) {
         const value = params?.[key];

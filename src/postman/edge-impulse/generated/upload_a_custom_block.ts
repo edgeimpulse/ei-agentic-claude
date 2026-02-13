@@ -1,5 +1,4 @@
 /**
- * Upload a zip file containing a custom transformation or deployment block.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/custom-block
  */

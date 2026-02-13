@@ -25,6 +25,24 @@ function shortHash(input) {
   return crypto.createHash('sha1').update(input).digest('hex').slice(0, 8);
 }
 
+<<<<<<< HEAD
+function resolveParam(spec, param) {
+  if (!param || typeof param !== 'object') return param;
+  if (param.$ref && typeof param.$ref === 'string') {
+    const match = param.$ref.match(/^#\/components\/parameters\/(.+)$/);
+    if (match && spec?.components?.parameters) {
+      return spec.components.parameters[match[1]] || param;
+    }
+  }
+  return param;
+}
+
+function unique(items) {
+  return Array.from(new Set(items.filter(Boolean)));
+}
+
+=======
+>>>>>>> origin/main
 function extractClientOps() {
   const ops = new Map();
   const files = fs.readdirSync(clientsDir).filter((f) => f.endsWith('.ts'));
@@ -49,6 +67,15 @@ function extractClientOps() {
   return ops;
 }
 
+<<<<<<< HEAD
+function renderClient({ method, canonicalPath, pathParams, queryParams, baseUrl, exportName }) {
+  const fullPath = baseUrl.replace(/\/$/, '') + canonicalPath;
+  return `/**
+ * Method: ${method}
+ * URL: ${fullPath}
+ */
+export async function ${exportName}(params: any, apiKey: string) {
+=======
 function generateClientFile({ method, canonicalPath, operationId, pathParams, queryParams, baseUrl }) {
   const fileBase = operationId
     ? toSnakeCase(operationId)
@@ -61,6 +88,7 @@ function generateClientFile({ method, canonicalPath, operationId, pathParams, qu
  * URL: ${fullPath}
  */
 export async function ${fileBase}(params: any, apiKey: string) {
+>>>>>>> origin/main
   const pathParams: string[] = ${JSON.stringify(pathParams)};
   const queryParams: string[] = ${JSON.stringify(queryParams)};
 
@@ -116,6 +144,37 @@ export async function ${fileBase}(params: any, apiKey: string) {
   return data !== null ? data : text;
 }
 `;
+<<<<<<< HEAD
+}
+
+function generateClientFile({ method, canonicalPath, operationId, pathParams, queryParams, baseUrl, targetName }) {
+  const fileBase = operationId
+    ? toSnakeCase(operationId)
+    : toSnakeCase(`${method}_${canonicalPath.replace(/[/:]+/g, '_')}`);
+  const fileName = `${fileBase}.ts`;
+
+  let finalName = targetName || fileName;
+  let exportName = finalName.replace(/\.ts$/, '');
+
+  const targetPath = path.join(clientsDir, finalName);
+  if (fs.existsSync(targetPath) && !targetName) {
+    const hash = shortHash(`${method} ${canonicalPath}`);
+    exportName = `${fileBase}_openapi_${hash}`;
+    finalName = `${exportName}.ts`;
+  }
+
+  const finalContents = renderClient({
+    method,
+    canonicalPath,
+    pathParams,
+    queryParams,
+    baseUrl,
+    exportName
+  });
+
+  fs.writeFileSync(path.join(clientsDir, finalName), finalContents, 'utf8');
+  return finalName;
+=======
 
   let targetName = fileName;
   let exportName = fileBase;
@@ -133,6 +192,7 @@ export async function ${fileBase}(params: any, apiKey: string) {
 
   fs.writeFileSync(path.join(clientsDir, targetName), finalContents, 'utf8');
   return targetName;
+>>>>>>> origin/main
 }
 
 function main() {
@@ -145,7 +205,13 @@ function main() {
   const paths = spec.paths || {};
   for (const [rawPath, methods] of Object.entries(paths)) {
     if (!methods || typeof methods !== 'object') continue;
+<<<<<<< HEAD
+    const pathLevelParams = Array.isArray(methods.parameters)
+      ? methods.parameters.map((p) => resolveParam(spec, p))
+      : [];
+=======
     const pathLevelParams = Array.isArray(methods.parameters) ? methods.parameters : [];
+>>>>>>> origin/main
     for (const [method, op] of Object.entries(methods)) {
       if (!httpMethods.has(method)) continue;
       const operation = op || {};
@@ -154,18 +220,37 @@ function main() {
 
       const params = [
         ...pathLevelParams,
+<<<<<<< HEAD
+        ...(Array.isArray(operation.parameters)
+          ? operation.parameters.map((p) => resolveParam(spec, p))
+          : [])
+      ];
+      const pathParams = params.filter((p) => p && p.in === 'path').map((p) => p.name);
+      const queryParams = params.filter((p) => p && p.in === 'query').map((p) => p.name);
+
+      const derivedPathParams = Array.from(
+        canonicalPath.matchAll(/:([^/]+)/g),
+        (m) => m[1]
+      );
+=======
         ...(Array.isArray(operation.parameters) ? operation.parameters : [])
       ];
       const pathParams = params.filter((p) => p.in === 'path').map((p) => p.name);
       const queryParams = params.filter((p) => p.in === 'query').map((p) => p.name);
+>>>>>>> origin/main
 
       const key = `${method.toUpperCase()} ${canonicalPath}`;
       openapiOps.set(key, {
         method: method.toUpperCase(),
         canonicalPath,
         operationId: opId,
+<<<<<<< HEAD
+        pathParams: unique([...pathParams, ...derivedPathParams]),
+        queryParams: unique(queryParams)
+=======
         pathParams,
         queryParams
+>>>>>>> origin/main
       });
     }
   }
@@ -190,6 +275,13 @@ function main() {
     if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
   }
 
+<<<<<<< HEAD
+  // Rewrite existing client files from OpenAPI to ensure parameters and names are correct
+  for (const [key, op] of openapiOps.entries()) {
+    const existing = clientOps.get(key);
+    if (!existing) continue;
+    generateClientFile({ ...op, baseUrl, targetName: existing.file });
+=======
   const generatedFiles = fs.readdirSync(clientsDir).filter((f) => f.endsWith('.ts'));
   for (const file of generatedFiles) {
     const base = file.replace(/\.ts$/, '');
@@ -202,6 +294,7 @@ function main() {
       `export async function ${base}`
     );
     fs.writeFileSync(filePath, updated, 'utf8');
+>>>>>>> origin/main
   }
 
   console.log(`OpenAPI operations: ${openapiOps.size}`);

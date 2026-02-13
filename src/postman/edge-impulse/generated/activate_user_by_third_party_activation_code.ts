@@ -1,5 +1,4 @@
 /**
- * Activate a user that was created by a third party. This function is only available through a JWT token.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/user/activate-by-third-party-activation-code
  */

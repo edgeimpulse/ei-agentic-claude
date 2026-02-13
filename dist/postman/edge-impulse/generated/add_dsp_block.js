@@ -1,5 +1,4 @@
 /**
- * Adds a dsp block.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/dsp
  */

@@ -1,5 +1,4 @@
 /**
- * Retrieve all projects for the organization.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/projects
  */

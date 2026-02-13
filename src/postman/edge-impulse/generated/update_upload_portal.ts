@@ -1,5 +1,4 @@
 /**
- * Updates an upload portal for the organization.
  * Method: PUT
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/portals/:portalId/update
  */

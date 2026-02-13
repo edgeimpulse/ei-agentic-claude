@@ -1,5 +1,4 @@
 /**
- * Completely clears the EON tuner state for this project.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/optimize/state
  */

@@ -1,5 +1,4 @@
 /**
- * Generate features for the data explorer
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/data-explorer-features
  */

@@ -1,5 +1,4 @@
 /**
- * Start sampling on a device. This function returns immediately. Updates are streamed through the websocket API.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/device/:deviceId/start-sampling
  */

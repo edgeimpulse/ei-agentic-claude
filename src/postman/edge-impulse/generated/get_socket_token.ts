@@ -1,5 +1,4 @@
 /**
- * Get a token to authenticate with the web socket interface.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/socket-token
  */

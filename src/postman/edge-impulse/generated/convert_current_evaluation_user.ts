@@ -1,5 +1,4 @@
 /**
- * Convert current evaluation user account to regular account.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/user/convert
  */

@@ -1,5 +1,4 @@
 /**
- * Create a new user and project
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api-user-create
  */

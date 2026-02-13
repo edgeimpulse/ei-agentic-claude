@@ -1,5 +1,4 @@
 /**
- * White label admin only API to get project information.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/projects/:projectId
  */

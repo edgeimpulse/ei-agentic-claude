@@ -1,5 +1,4 @@
 /**
- * Get a data item. This will HEAD the underlying bucket to retrieve the last file information.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/data/:dataId
  */

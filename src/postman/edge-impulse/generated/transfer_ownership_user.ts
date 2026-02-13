@@ -1,5 +1,4 @@
 /**
- * Transfer ownership of a project to another user.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/collaborators/transfer-ownership
  */

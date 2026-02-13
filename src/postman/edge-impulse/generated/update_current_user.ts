@@ -1,5 +1,4 @@
 /**
- * Update user properties such as name. This function is only available through a JWT token.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/user
  */

@@ -1,5 +1,4 @@
 /**
- * Updates storage bucket details. This only updates fields that were set in the request body.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/buckets/:bucketId
  */

@@ -1,5 +1,4 @@
 /**
- * Sets EON tuner primary model
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/set-tuner-primary-job
  */

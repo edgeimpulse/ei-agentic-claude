@@ -1,5 +1,4 @@
 /**
- * Get the interval of the training data; if multiple intervals are present, the interval of the longest data item is returned.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/data-interval
  */

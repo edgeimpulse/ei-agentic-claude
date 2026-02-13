@@ -1,5 +1,4 @@
 /**
- * Get the status for a job.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/jobs/:jobId/status
  */

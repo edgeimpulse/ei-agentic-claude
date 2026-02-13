@@ -1,5 +1,4 @@
 /**
- * Download a single file from a data item.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/data/:dataId/files/download
  */

@@ -1,11 +1,14 @@
 /**
- * Get evaluate job result, containing detailed performance statistics for every possible variant of the impulse. This only checks cache, and throws an error if there is no data in cache.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/deployment/evaluate/cache
  */
 export async function check_evaluate_job_result_cache(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/deployment/evaluate/cache`;
     for (const key of pathParams) {
         const value = params?.[key];

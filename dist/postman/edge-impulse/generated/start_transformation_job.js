@@ -1,5 +1,4 @@
 /**
- * Start a transformation job to fetch data from the organization and put it in a project, or transform into new data.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/create-project
  */

@@ -1,5 +1,4 @@
 /**
- * Get information about an anomaly block, such as its dependencies. Use the impulse blocks to find the learnId.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/training/anomaly/:learnId
  */

@@ -1,5 +1,4 @@
 /**
- * Updates a version, this only updates fields that were set in the body.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/versions/:versionId
  */

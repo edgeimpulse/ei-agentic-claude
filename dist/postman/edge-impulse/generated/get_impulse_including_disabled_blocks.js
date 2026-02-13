@@ -1,11 +1,14 @@
 /**
- * Retrieve the impulse for this project including disabled blocks
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/impulse/all
  */
 export async function get_impulse_including_disabled_blocks(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/impulse/all`;
     for (const key of pathParams) {
         const value = params?.[key];

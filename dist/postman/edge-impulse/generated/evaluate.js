@@ -1,11 +1,14 @@
 /**
- * Evaluates every variant of the current impulse. Updates are streamed over the websocket API.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/evaluate
  */
 export async function evaluate(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/evaluate`;
     for (const key of pathParams) {
         const value = params?.[key];

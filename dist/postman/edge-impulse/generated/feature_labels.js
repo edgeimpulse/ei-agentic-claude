@@ -1,5 +1,4 @@
 /**
- * Retrieve the names of the features the DSP block generates
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/features/labels
  */

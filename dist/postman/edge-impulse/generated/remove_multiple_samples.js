@@ -1,11 +1,14 @@
 /**
- * Deletes samples. Note that this does not delete the data from cold storage.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/batch/delete
  */
 export async function remove_multiple_samples(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["category", "labels", "filename", "maxLength", "minLength", "minFrequency", "maxFrequency", "signatureValidity", "includeDisabled", "ids", "excludeIds", "minLabel", "maxLabel", "search", "dataType", "minId", "maxId", "metadata", "minDate", "maxDate"];
+=======
     const queryParams = ["category", "labels", "filename", "maxLength", "minLength", "minFrequency", "maxFrequency", "signatureValidity", "includeDisabled", "ids"];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/batch/delete`;
     for (const key of pathParams) {
         const value = params?.[key];

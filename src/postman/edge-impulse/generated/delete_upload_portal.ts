@@ -1,5 +1,4 @@
 /**
- * Deletes an upload portal for the organization.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/portals/:portalId/delete
  */

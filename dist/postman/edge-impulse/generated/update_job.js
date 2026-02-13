@@ -1,5 +1,4 @@
 /**
- * Update a job.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/:jobId/update
  */

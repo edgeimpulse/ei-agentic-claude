@@ -1,5 +1,4 @@
 /**
- * Deletes a deploy block.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/deploy/:deployId
  */

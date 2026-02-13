@@ -1,5 +1,4 @@
 /**
- * Lists all possible DSP and ML blocks available for this white label.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/whitelabel/:whitelabelIdentifier/impulse/blocks
  */

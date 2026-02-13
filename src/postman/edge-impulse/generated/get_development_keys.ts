@@ -1,5 +1,4 @@
 /**
- * Retrieve the development API and HMAC keys for a project. These keys are specifically marked to be used during development. These keys can be `undefined` if no development keys are set.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/devkeys
  */

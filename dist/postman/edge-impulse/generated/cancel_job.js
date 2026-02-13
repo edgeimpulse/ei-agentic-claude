@@ -1,5 +1,4 @@
 /**
- * Cancel a running job.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/jobs/:jobId/cancel
  */

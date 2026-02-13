@@ -1,5 +1,4 @@
 /**
- * Add keywords and noise data to a project (for getting started guide)
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/keywords-noise
  */

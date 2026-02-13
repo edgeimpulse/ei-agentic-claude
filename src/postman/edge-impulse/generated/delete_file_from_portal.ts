@@ -1,5 +1,4 @@
 /**
- * Delete a file from an upload portal (requires JWT auth).
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/portals/:portalId/files/delete
  */

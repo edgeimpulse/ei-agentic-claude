@@ -1,5 +1,4 @@
 /**
- * Retrieve all HMAC keys.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/hmackeys
  */

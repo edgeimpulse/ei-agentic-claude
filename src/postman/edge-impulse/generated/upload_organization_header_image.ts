@@ -1,5 +1,4 @@
 /**
- * Uploads and updates the organization header image
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/header
  */

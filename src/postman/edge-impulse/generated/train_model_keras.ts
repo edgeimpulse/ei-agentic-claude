@@ -1,5 +1,4 @@
 /**
- * Take the output from a DSP block and train a neural network using Keras. Updates are streamed over the websocket API.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/train/keras/:learnId
  */

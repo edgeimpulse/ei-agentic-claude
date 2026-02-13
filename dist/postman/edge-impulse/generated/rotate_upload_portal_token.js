@@ -1,5 +1,4 @@
 /**
- * Rotates the token for an upload portal.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/portals/:portalId/rotate-token
  */

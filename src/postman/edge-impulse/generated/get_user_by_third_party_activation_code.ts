@@ -1,5 +1,4 @@
 /**
- * Get information about a user through an activation code. This function is only available through a JWT token.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/user/by-third-party-activation-code
  */

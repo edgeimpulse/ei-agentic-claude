@@ -1,11 +1,14 @@
 /**
- * Get performance calibration status
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/status
  */
 export async function get_status(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/status`;
     for (const key of pathParams) {
         const value = params?.[key];

@@ -1,5 +1,4 @@
 /**
- * Change the DSP file size limit for the project. This function is only available through a JWT token, and is not available to all users.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp-file-size-limit
  */

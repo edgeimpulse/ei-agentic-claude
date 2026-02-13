@@ -1,5 +1,4 @@
 /**
- * Hide a dataset (does not remove underlying data)
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/dataset/:dataset/hide
  */

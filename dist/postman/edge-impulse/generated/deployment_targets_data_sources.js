@@ -1,11 +1,14 @@
 /**
- * List deployment targets for a project from data sources page  (it shows some things like all Linux deploys, and hides 'fake' deploy targets like mobile phone / computer)
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/deployment/targets/data-sources
  */
 export async function deployment_targets_data_sources(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
+    const queryParams = ["impulseId"];
+=======
     const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/deployment/targets/data-sources`;
     for (const key of pathParams) {
         const value = params?.[key];
