@@ -12,7 +12,8 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "skills"
   ],
   "bin": {
     "edge-impulse-cli": "./dist/cli.js",
