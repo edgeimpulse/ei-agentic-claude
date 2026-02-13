@@ -14,8 +14,10 @@ function sanitizeCommandName(name) {
     return name.replace(/\.ts$/, '').replace(/_/g, '-');
 }
 function main() {
-    if (!fs.existsSync(CLI_COMMANDS_DIR))
-        fs.mkdirSync(CLI_COMMANDS_DIR);
+    if (fs.existsSync(CLI_COMMANDS_DIR)) {
+        fs.rmSync(CLI_COMMANDS_DIR, { recursive: true, force: true });
+    }
+    fs.mkdirSync(CLI_COMMANDS_DIR, { recursive: true });
     const files = fs.readdirSync(GENERATED_DIR).filter(f => f.endsWith('.ts'));
     for (const file of files) {
         const baseName = file.replace(/\.ts$/, '');

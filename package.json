@@ -1,6 +1,6 @@
 {
   "name": "ei-agentic-claude",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Claude-compatible MCP server and CLI for Edge Impulse APIs",
   "type": "module",
   "license": "UNLICENSED",
@@ -39,14 +39,10 @@
     "embedded ml"
   ],
   "scripts": {
-    "cli:dev": "ts-node-esm src/cli.ts",
-    "cli": "node dist/cli.js",
-    "build": "tsc && node scripts/fix-dist-imports.js && node scripts/generate-integrity-dist.js",
+    "cli": "ts-node-esm src/cli.ts",
+    "build": "node scripts/clean-dist.js && tsc && node scripts/fix-dist-imports.js",
     "build:tsc": "tsc",
-    "prepare": "npm run build",
-    "prepack": "npm run build",
-    "generate-integrity": "node src/postman/edge-impulse/generate-integrity.js",
-    "test": "vitest run --testTimeout=30000",
+    "test": "vitest --run --pool=forks",
     "test:unittests": "node scripts/test-reporter.js",
     "list-apis": "node scripts/list-apis.js",
     "smoke": "node ./scripts/smoke-test.js",
@@ -69,6 +65,7 @@
   "devDependencies": {
     "ts-node": "^10.9.1",
     "typescript": "^5.0.0",
-    "vitest": "^1.0.0"
+    "vitest": "^1.0.0",
+    "yaml": "^2.5.0"
   }
 }

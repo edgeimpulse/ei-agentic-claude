@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { execFileSync } from 'child_process';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 function run(cmd, args = []){
   try{
@@ -11,7 +12,9 @@ function run(cmd, args = []){
   }
 }
 
-const launcher = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', 'launch-cli.mjs');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const launcher = path.resolve(__dirname, '..', 'launch-cli.mjs');
 
 console.log('Running smoke tests...');
 

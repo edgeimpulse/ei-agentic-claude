@@ -1,51 +1,55 @@
 /**
  * Retrieve all projects for the organization.
  * Method: GET
- * URL: https://studio.edgeimpulse.com/api/organizations/:organizationId/projects
+ * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/projects
  */
 export async function get_projects(params, apiKey) {
-    // `organizationId` is optional. If provided, call org-scoped endpoint;
-    // otherwise call the user-facing projects endpoint. Any primitive params
-    // (string/number/boolean) will be appended as query parameters (e.g. `type`).
-    const organizationId = params?.organizationId;
-    const query = new URLSearchParams();
-    if (params) {
-        for (const [k, v] of Object.entries(params)) {
-            if (k === 'organizationId')
-                continue;
-            if (v === undefined || v === null)
-                continue;
-            const t = typeof v;
-            if (t === 'string' || t === 'number' || t === 'boolean') {
-                query.append(k, String(v));
-            }
+    const pathParams = ["organizationId"];
+    const queryParams = [];
+    let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/projects`;
+    for (const key of pathParams) {
+        const value = params?.[key];
+        if (value === undefined || value === null) {
+            throw new Error(`Missing required path param: ${key}`);
+        }
+        url = url.replace(`:${key}`, encodeURIComponent(String(value)));
+    }
+    const urlObj = new URL(url);
+    for (const key of queryParams) {
+        const value = params?.[key];
+        if (value !== undefined && value !== null) {
+            urlObj.searchParams.set(key, String(value));
         }
     }
-    const urlBase = organizationId
-        ? `https://studio.edgeimpulse.com/api/organizations/${encodeURIComponent(String(organizationId))}/projects`
-        : `https://studio.edgeimpulse.com/v1/api/projects`;
-    const url = query.toString() ? `${urlBase}?${query.toString()}` : urlBase;
-    const res = await fetch(url, {
+    const bodyParams = { ...(params || {}) };
+    for (const key of pathParams)
+        delete bodyParams[key];
+    for (const key of queryParams)
+        delete bodyParams[key];
+    const hasBody = !['GET', 'HEAD'].includes('GET') && Object.keys(bodyParams).length > 0;
+    const res = await fetch(urlObj.toString(), {
         method: 'GET',
         headers: {
             'x-api-key': apiKey,
             'Content-Type': 'application/json',
             'Accept': 'application/json',
         },
+        ...(hasBody ? { body: JSON.stringify(bodyParams) } : {}),
     });
     const contentType = res.headers.get('content-type') || '';
-    if (!contentType.includes('application/json')) {
-        const text = await res.text();
-        throw new Error(`Unexpected non-JSON response from server: ${text.slice(0, 1000)}`);
-    }
-    if (res.ok)
-        return res.json();
     const text = await res.text();
-    try {
-        const err = JSON.parse(text);
-        throw new Error(`Edge Impulse API error: ${err.message || JSON.stringify(err)}`);
+    let data = null;
+    if (contentType.includes('application/json')) {
+        try {
+            data = JSON.parse(text);
+        }
+        catch {
+            data = null;
+        }
     }
-    catch {
-        throw new Error(`Edge Impulse API error: ${res.status} ${res.statusText} - ${text}`);
+    if (!res.ok) {
+        const message = data?.message || data?.error || text || res.statusText;
+        throw new Error(`HTTP ${res.status}: ${message}`);
     }
+    return data !== null ? data : text;
 }

@@ -1,35 +1,55 @@
 /**
  * Take the output from a DSP block and train a neural network using Keras. Updates are streamed over the websocket API.
  * Method: POST
- * URL: https://studio.edgeimpulse.com/api/:projectId/jobs/train/keras/:learnId
+ * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/train/keras/:learnId
  */
 export async function train_model_keras(params, apiKey) {
-    const projectId = params?.projectId;
-    const learnId = params?.learnId;
-    if (!projectId || !learnId) {
-        throw new Error('Missing required parameters `projectId` and `learnId`. Pass via --params');
+    const pathParams = ["projectId", "learnId"];
+    const queryParams = [];
+    let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/train/keras/:learnId`;
+    for (const key of pathParams) {
+        const value = params?.[key];
+        if (value === undefined || value === null) {
+            throw new Error(`Missing required path param: ${key}`);
+        }
+        url = url.replace(`:${key}`, encodeURIComponent(String(value)));
     }
-    const { projectId: _p, learnId: _l, ...body } = params;
-    if (!body.mode)
-        body.mode = 'visual';
-    const url = `https://studio.edgeimpulse.com/v1/api/${encodeURIComponent(String(projectId))}/jobs/train/keras/${encodeURIComponent(String(learnId))}`;
-    const res = await fetch(url, {
+    const urlObj = new URL(url);
+    for (const key of queryParams) {
+        const value = params?.[key];
+        if (value !== undefined && value !== null) {
+            urlObj.searchParams.set(key, String(value));
+        }
+    }
+    const bodyParams = { ...(params || {}) };
+    for (const key of pathParams)
+        delete bodyParams[key];
+    for (const key of queryParams)
+        delete bodyParams[key];
+    const hasBody = !['GET', 'HEAD'].includes('POST') && Object.keys(bodyParams).length > 0;
+    const res = await fetch(urlObj.toString(), {
         method: 'POST',
         headers: {
             'x-api-key': apiKey,
             'Content-Type': 'application/json',
             'Accept': 'application/json',
         },
-        body: JSON.stringify(body),
+        ...(hasBody ? { body: JSON.stringify(bodyParams) } : {}),
     });
-    if (res.ok)
-        return res.json();
+    const contentType = res.headers.get('content-type') || '';
     const text = await res.text();
-    try {
-        const err = JSON.parse(text);
-        throw new Error(`Edge Impulse API error: ${err.message || JSON.stringify(err)}`);
+    let data = null;
+    if (contentType.includes('application/json')) {
+        try {
+            data = JSON.parse(text);
+        }
+        catch {
+            data = null;
+        }
     }
-    catch {
-        throw new Error(`Edge Impulse API error: ${res.status} ${res.statusText} - ${text}`);
+    if (!res.ok) {
+        const message = data?.message || data?.error || text || res.statusText;
+        throw new Error(`HTTP ${res.status}: ${message}`);
     }
+    return data !== null ? data : text;
 }

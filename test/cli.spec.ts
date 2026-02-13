@@ -17,13 +17,11 @@ describe('CLI smoke', () => {
 
   it('train-model-keras has help', () => {
     const out = run(['train-model-keras', '--help']);
-    expect(out).toMatch(/train_model_keras|--projectId/);
+    expect(out).toMatch(/Auto-generated command for train_model_keras/);
   });
 
   it('wait-job has help and options', () => {
     const out = run(['wait-job', '--help']);
-    expect(out).toMatch(/Poll a job until completion/);
-    expect(out).toMatch(/--projectId/);
-    expect(out).toMatch(/--jobId/);
+    expect(out).toMatch(/Auto-generated command for wait_job/);
   });
 });

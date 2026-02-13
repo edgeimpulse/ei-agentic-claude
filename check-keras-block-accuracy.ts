@@ -16,9 +16,13 @@ async function getKerasBlockEvaluation(apiKey: string, projectId: string, learnI
 }
 
 (async () => {
-  const apiKey = 'ei_00f1f4cd29c8f2254d4793cf6736e66501456bb809036099246a4ecb5cb28ff9';
-  const projectId = '814590';
-  const learnId = '50';
+  const apiKey = process.env.EI_API_KEY;
+  if (!apiKey) {
+    console.error('Please set EI_API_KEY environment variable');
+    process.exit(1);
+  }
+  const projectId = process.env.PROJECT_ID || '814590';
+  const learnId = process.env.LEARN_ID || '50';
   try {
     const result = await getKerasBlockEvaluation(apiKey, projectId, learnId);
     console.log('Keras Block Evaluation Metrics:');
