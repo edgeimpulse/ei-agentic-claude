@@ -69,17 +69,17 @@ describe('API Coverage Tests', () => {
       {
         file: 'train_model_keras.ts',
         missingParams: [{}], // Missing projectId and learnId
-        expectedError: /Missing required parameters `projectId` and `learnId`/
+        expectedError: /Missing required path param: projectId/
       },
       {
         file: 'optimize_model.ts',
         missingParams: [{}], // Missing projectId
-        expectedError: /Missing required parameter `projectId`/
+        expectedError: /Missing required path param: projectId/
       },
       {
         file: 'retrain.ts',
         missingParams: [{}], // Missing projectId
-        expectedError: /Missing required parameter `projectId`/
+        expectedError: /Missing required path param: projectId/
       }
     ];
 
