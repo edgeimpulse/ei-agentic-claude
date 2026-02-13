@@ -33,6 +33,14 @@ A Model Context Protocol (MCP) server and CLI that lets Claude Code call the Edg
 - Claude skill: `claude mcp add edge-impulse -- edge-impulse-mcp`
 - Status badges: CI = tests/build, Publish = npm release workflow
 
+## Skills
+
+This repository includes a `skills/` directory containing curated "skill packs" (documentation and helper scripts) for common workflows such as safe operations, issue triage, dry-run apply plans, regenerating clients, and release gating.
+
+- Location (GitHub): https://github.com/edgeimpulse/ei-agentic-claude/tree/main/skills
+
+Safety note: the `skills/` folder is documentation-first — it contains `SKILL.md` guides and small helper scripts (for example, `collect-logs.sh`). No credentials or secrets are stored here. The README link above will also be visible on the npm package page; it safely redirects to the GitHub `skills/` folder.
+
 ## Example of usage
 
 ### CLI Usage
