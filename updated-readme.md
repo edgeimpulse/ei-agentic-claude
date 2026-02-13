@@ -1,14 +1,14 @@
 Testing
-api key -  ei_05febb65941ef91246bb92697a6cb6d9ff37ebb60b0ad8013d719919ef777fac
+api key -  ei_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-project - 888999
+project - XXXX
 
 
-this organization is only for mcp testing so do all tests on it https://studio.edgeimpulse.com/studio/888999/impulse/1/learning/anomaly-gmm/16
+this organization is only for mcp testing so do all tests on it https://studio.edgeimpulse.com/studio/XXXX/impulse/1/learning/anomaly-gmm/16
 
-https://studio.edgeimpulse.com/organization/398945
+https://studio.edgeimpulse.com/organization/XXXXXX
 
-org api key - ei_9eb88cff4b3c31518e74e2137cdab58cf8465c376efafdc4
+org api key - ei_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
 
@@ -60,7 +60,7 @@ The minimal request to the `api/training/files` endpoint is the following:
 
 ```
 POST https://ingestion.edgeimpulse.com/api/training/files
-X-Api-Key: ei_6040df080906d06f090e05013b7090580b707a0b050eb04d00350504070a2040
+X-Api-Key: ei_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Content-Length: 442
 Content-Type: multipart/form-data; boundary=999e13bfdfc8bcc05b97f4784410806e
 
@@ -81,7 +81,7 @@ The minimal request to the `api/training/data` endpoint is the following:
 
 ```
 POST https://ingestion.edgeimpulse.com/api/training/data
-X-Api-Key: ei_6040df080906d06f090e05013b7090580b707a0b050eb04d00350504070a2040
+X-Api-Key: ei_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 X-File-Name: test.cbor
 Content-Type: application/cbor
 Content-Length: 265

@@ -40,3 +40,4 @@ config/projects.json
 # Ignore API keys and secrets
 apikey*
 secret*
+updated-readme.md
