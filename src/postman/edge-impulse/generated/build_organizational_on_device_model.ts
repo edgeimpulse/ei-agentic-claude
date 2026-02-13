@@ -1,14 +1,11 @@
 /**
+ * Generate code to run the impulse on an embedded device using an organizational deployment block. When this step is complete use `downloadBuild` to download the artefacts.  Updates are streamed over the websocket API.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/build-ondevice-model/organization
  */
 export async function build_organizational_on_device_model(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["impulseId"];
-=======
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/build-ondevice-model/organization`;
   for (const key of pathParams) {

@@ -3,11 +3,7 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/ai-actions/:actionId
  */
 export async function get_aiaction(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId","actionId"];
-=======
   const pathParams: string[] = [];
->>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/ai-actions/:actionId`;

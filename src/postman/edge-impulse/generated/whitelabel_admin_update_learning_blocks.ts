@@ -3,11 +3,7 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/learningBlocks
  */
 export async function whitelabel_admin_update_learning_blocks(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["organizationId"];
-=======
   const pathParams: string[] = [];
->>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/learningBlocks`;

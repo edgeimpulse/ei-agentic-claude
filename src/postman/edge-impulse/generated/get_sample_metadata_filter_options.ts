@@ -3,13 +3,8 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/metadata-filter-options
  */
 export async function get_sample_metadata_filter_options(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId"];
-  const queryParams: string[] = ["category","limit","offset"];
-=======
   const pathParams: string[] = [];
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/metadata-filter-options`;
   for (const key of pathParams) {

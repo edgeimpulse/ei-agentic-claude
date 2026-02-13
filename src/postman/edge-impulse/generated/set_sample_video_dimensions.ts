@@ -3,11 +3,7 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/video-dimensions
  */
 export async function set_sample_video_dimensions(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId","sampleId"];
-=======
   const pathParams: string[] = [];
->>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/video-dimensions`;

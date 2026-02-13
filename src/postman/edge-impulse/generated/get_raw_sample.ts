@@ -1,14 +1,11 @@
 /**
+ * Get raw sample data, but with only the axes selected by the DSP block. E.g. if you have selected only accX and accY as inputs for the DSP block, but the raw sample also contains accZ, accZ is filtered out. If you pass dspId = 0 this will return a raw graph without any processing.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/raw-data/:sampleId
  */
 export async function get_raw_sample(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId","dspId","sampleId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["limitPayloadValues","truncateStructuredLabels","useCachedUpsampledData"];
-=======
   const queryParams: string[] = ["limitPayloadValues"];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/raw-data/:sampleId`;
   for (const key of pathParams) {

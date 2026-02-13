@@ -1,14 +1,11 @@
 /**
+ * Sets the impulse for this project.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/impulse
  */
 export async function create_impulse(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["impulseId"];
-=======
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/impulse`;
   for (const key of pathParams) {

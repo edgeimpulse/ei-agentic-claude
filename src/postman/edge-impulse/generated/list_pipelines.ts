@@ -1,14 +1,11 @@
 /**
+ * Retrieve all organizational pipelines
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/pipelines
  */
 export async function list_pipelines(params: any, apiKey: string) {
   const pathParams: string[] = ["organizationId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["projectId"];
-=======
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/pipelines`;
   for (const key of pathParams) {

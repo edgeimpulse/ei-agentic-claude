@@ -3,11 +3,7 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/optimize//:jobId/trial/:trialId/end-trial
  */
 export async function end_trial(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId","jobId","trialId"];
-=======
   const pathParams: string[] = [];
->>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/optimize//:jobId/trial/:trialId/end-trial`;

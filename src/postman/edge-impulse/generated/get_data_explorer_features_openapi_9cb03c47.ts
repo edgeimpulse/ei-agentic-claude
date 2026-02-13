@@ -3,11 +3,7 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/data-explorer/features
  */
 export async function get_data_explorer_features_openapi_9cb03c47(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId"];
-=======
   const pathParams: string[] = [];
->>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/data-explorer/features`;

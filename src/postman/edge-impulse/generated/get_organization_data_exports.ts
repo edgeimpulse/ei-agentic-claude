@@ -3,13 +3,8 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/exports
  */
 export async function get_organization_data_exports(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["organizationId"];
-  const queryParams: string[] = ["limit","offset"];
-=======
   const pathParams: string[] = [];
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/exports`;
   for (const key of pathParams) {

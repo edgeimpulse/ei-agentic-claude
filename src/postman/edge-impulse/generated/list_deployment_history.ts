@@ -3,13 +3,8 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/deployment/history
  */
 export async function list_deployment_history(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId"];
-  const queryParams: string[] = ["impulseId","limit","offset"];
-=======
   const pathParams: string[] = [];
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/deployment/history`;
   for (const key of pathParams) {

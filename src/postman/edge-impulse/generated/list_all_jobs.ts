@@ -1,14 +1,11 @@
 /**
+ * Get all jobs for this organization
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/jobs/all
  */
 export async function list_all_jobs(params: any, apiKey: string) {
   const pathParams: string[] = ["organizationId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["startDate","endDate","limit","offset","excludePipelineTransformJobs","rootOnly","key","category","finished"];
-=======
   const queryParams: string[] = ["startDate","endDate","limit","offset","excludePipelineTransformJobs","rootOnly"];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/jobs/all`;
   for (const key of pathParams) {

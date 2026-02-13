@@ -3,11 +3,7 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/organizations/:innerOrganizationId/restore
  */
 export async function whitelabel_admin_restore_organization(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["organizationId","innerOrganizationId"];
-=======
   const pathParams: string[] = [];
->>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/organizations/:innerOrganizationId/restore`;

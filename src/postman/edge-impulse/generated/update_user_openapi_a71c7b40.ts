@@ -3,11 +3,7 @@
  * URL: https://studio.edgeimpulse.com/v1/api/users/:userId
  */
 export async function update_user_openapi_a71c7b40(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["userId"];
-=======
   const pathParams: string[] = [];
->>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/users/:userId`;

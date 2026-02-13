@@ -3,13 +3,8 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/imported-from
  */
 export async function get_all_imported_from(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId"];
-  const queryParams: string[] = ["limit","offset"];
-=======
   const pathParams: string[] = [];
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/imported-from`;
   for (const key of pathParams) {

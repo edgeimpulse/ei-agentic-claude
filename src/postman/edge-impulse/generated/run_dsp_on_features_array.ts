@@ -3,11 +3,7 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/run
  */
 export async function run_dsp_on_features_array(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId","dspId"];
-=======
   const pathParams: string[] = [];
->>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/run`;

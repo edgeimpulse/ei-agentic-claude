@@ -3,11 +3,7 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/users/:userId
  */
 export async function whitelabel_admin_delete_user(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["organizationId","userId"];
-=======
   const pathParams: string[] = [];
->>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/users/:userId`;

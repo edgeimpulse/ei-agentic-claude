@@ -3,11 +3,7 @@
  * URL: https://studio.edgeimpulse.com/v1/api/users/:userId/trials
  */
 export async function list_enterprise_trials_user(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["userId"];
-=======
   const pathParams: string[] = [];
->>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/users/:userId/trials`;

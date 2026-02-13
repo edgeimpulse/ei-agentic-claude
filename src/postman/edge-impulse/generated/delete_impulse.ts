@@ -1,14 +1,11 @@
 /**
+ * Completely clears the impulse for this project.
  * Method: DELETE
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/impulse
  */
 export async function delete_impulse(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["impulseId"];
-=======
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/impulse`;
   for (const key of pathParams) {

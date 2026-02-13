@@ -3,11 +3,7 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/csv-wizard/uploaded-file/download
  */
 export async function download_csv_wizard_uploaded_file(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId"];
-=======
   const pathParams: string[] = [];
->>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/csv-wizard/uploaded-file/download`;

@@ -3,13 +3,8 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/classify/v2/:sampleId/raw-data/:windowIndex
  */
 export async function get_sample_window_from_cache(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId","sampleId","windowIndex"];
-  const queryParams: string[] = ["impulseId","truncateStructuredLabels"];
-=======
   const pathParams: string[] = [];
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/classify/v2/:sampleId/raw-data/:windowIndex`;
   for (const key of pathParams) {

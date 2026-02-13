@@ -3,13 +3,8 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/:jobId/stdout/download
  */
 export async function download_jobs_logs(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId","jobId"];
-  const queryParams: string[] = ["limit","logLevel"];
-=======
   const pathParams: string[] = [];
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/:jobId/stdout/download`;
   for (const key of pathParams) {

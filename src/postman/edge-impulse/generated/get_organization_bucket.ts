@@ -3,11 +3,7 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/buckets/:bucketId
  */
 export async function get_organization_bucket(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["organizationId","bucketId"];
-=======
   const pathParams: string[] = [];
->>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/buckets/:bucketId`;

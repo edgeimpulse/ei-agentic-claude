@@ -3,13 +3,8 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/classify/v2/:sampleId
  */
 export async function classify_sample_v2(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId","sampleId"];
-  const queryParams: string[] = ["includeDebugInfo","variant","impulseId","truncateStructuredLabels"];
-=======
   const pathParams: string[] = [];
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/classify/v2/:sampleId`;
   for (const key of pathParams) {

@@ -3,13 +3,8 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/:jobId/cancel
  */
 export async function cancel_job_openapi_fb29d5e2(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId","jobId"];
-  const queryParams: string[] = ["forceCancel"];
-=======
   const pathParams: string[] = [];
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/:jobId/cancel`;
   for (const key of pathParams) {

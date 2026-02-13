@@ -1,14 +1,11 @@
 /**
+ * Download the build artefacts for a project
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/deployment/download
  */
 export async function download(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["type","modelType","engine","impulseId"];
-=======
   const queryParams: string[] = ["type","modelType","engine"];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/deployment/download`;
   for (const key of pathParams) {

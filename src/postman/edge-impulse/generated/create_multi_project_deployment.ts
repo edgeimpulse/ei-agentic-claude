@@ -3,11 +3,7 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/multi-project-deployment/start
  */
 export async function create_multi_project_deployment(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["organizationId"];
-=======
   const pathParams: string[] = [];
->>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/multi-project-deployment/start`;

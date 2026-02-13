@@ -1,14 +1,11 @@
 /**
+ * Get the original, uncropped, downsampled data.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/original
  */
 export async function get_the_original_downsampled_data(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId","sampleId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["limitPayloadValues","zoomStart","zoomEnd","impulseId","truncateStructuredLabels"];
-=======
   const queryParams: string[] = ["limitPayloadValues","zoomStart","zoomEnd"];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/original`;
   for (const key of pathParams) {

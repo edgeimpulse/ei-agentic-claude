@@ -1,14 +1,11 @@
 /**
+ * Set the current posterior parameters for the Syntiant deployment target
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/deployment/syntiant/posterior
  */
 export async function set_syntiant_posterior_parameters(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["impulseId"];
-=======
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/deployment/syntiant/posterior`;
   for (const key of pathParams) {

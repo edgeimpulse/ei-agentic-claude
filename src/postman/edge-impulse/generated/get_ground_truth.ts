@@ -1,14 +1,11 @@
 /**
+ * Get performance calibration ground truth data
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/ground-truth
  */
 export async function get_ground_truth(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["impulseId"];
-=======
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/ground-truth`;
   for (const key of pathParams) {

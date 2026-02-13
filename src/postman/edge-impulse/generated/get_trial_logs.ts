@@ -1,14 +1,11 @@
 /**
+ * Get the logs for a trial.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/optimize/trial/:trialId/stdout
  */
 export async function get_trial_logs(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId","trialId"];
-<<<<<<< HEAD
-  const queryParams: string[] = [];
-=======
   const queryParams: string[] = ["limit","logLevel"];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/optimize/trial/:trialId/stdout`;
   for (const key of pathParams) {

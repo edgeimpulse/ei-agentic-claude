@@ -1,14 +1,11 @@
 /**
+ * White label admin only API to list all information about an organization.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/organizations/:innerOrganizationId
  */
 export async function get_organization_information(params: any, apiKey: string) {
   const pathParams: string[] = ["organizationId","innerOrganizationId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["includeDeleted"];
-=======
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/organizations/:innerOrganizationId`;
   for (const key of pathParams) {

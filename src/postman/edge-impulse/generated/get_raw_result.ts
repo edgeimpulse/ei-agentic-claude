@@ -1,14 +1,11 @@
 /**
+ * Get performance calibration raw result
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/raw-result
  */
 export async function get_raw_result(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["impulseId"];
-=======
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/raw-result`;
   for (const key of pathParams) {

@@ -3,13 +3,8 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/dataset/:dataset/files/download-folder
  */
 export async function download_dataset_folder(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["organizationId","dataset"];
-  const queryParams: string[] = ["path"];
-=======
   const pathParams: string[] = [];
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/dataset/:dataset/files/download-folder`;
   for (const key of pathParams) {

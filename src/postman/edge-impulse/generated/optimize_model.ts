@@ -1,14 +1,11 @@
 /**
+ * Evaluates optimal model architecture
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/optimize
  */
 export async function optimize_model(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["extendedFromJobId"];
-=======
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/optimize`;
   for (const key of pathParams) {

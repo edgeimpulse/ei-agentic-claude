@@ -3,13 +3,8 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/classify/anomaly-gmm/v2/:blockId/:sampleId
  */
 export async function classify_sample_by_learn_block_v2(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId","sampleId","blockId"];
-  const queryParams: string[] = ["variant","truncateStructuredLabels"];
-=======
   const pathParams: string[] = [];
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/classify/anomaly-gmm/v2/:blockId/:sampleId`;
   for (const key of pathParams) {

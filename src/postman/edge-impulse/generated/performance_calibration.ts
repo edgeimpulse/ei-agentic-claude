@@ -1,14 +1,11 @@
 /**
+ * Simulates real world usage and returns performance metrics.
  * Method: POST
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/performance-calibration
  */
 export async function performance_calibration(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["impulseId"];
-=======
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/performance-calibration`;
   for (const key of pathParams) {

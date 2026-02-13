@@ -1,14 +1,11 @@
 /**
+ * Retrieve the downloads for a project.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/downloads
  */
 export async function get_downloads(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["impulseId"];
-=======
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/downloads`;
   for (const key of pathParams) {

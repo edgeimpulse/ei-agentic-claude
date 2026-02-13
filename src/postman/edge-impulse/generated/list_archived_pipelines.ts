@@ -1,14 +1,11 @@
 /**
+ * Retrieve all archived organizational pipelines
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/pipelines/archived
  */
 export async function list_archived_pipelines(params: any, apiKey: string) {
   const pathParams: string[] = ["organizationId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["projectId"];
-=======
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/pipelines/archived`;
   for (const key of pathParams) {

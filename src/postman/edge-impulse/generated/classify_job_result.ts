@@ -1,14 +1,11 @@
 /**
+ * Get classify job result, containing the result for the complete testing dataset.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/classify/all/result
  */
 export async function classify_job_result(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["featureExplorerOnly","variant","impulseId","truncateStructuredLabels"];
-=======
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/classify/all/result`;
   for (const key of pathParams) {

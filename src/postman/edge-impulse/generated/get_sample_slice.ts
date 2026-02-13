@@ -1,14 +1,11 @@
 /**
+ * Get a slice of a sample.
  * Method: GET
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/slice
  */
 export async function get_sample_slice(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId","sampleId"];
-<<<<<<< HEAD
-  const queryParams: string[] = ["sliceStart","sliceEnd","impulseId","truncateStructuredLabels"];
-=======
   const queryParams: string[] = ["sliceStart","sliceEnd"];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/slice`;
   for (const key of pathParams) {

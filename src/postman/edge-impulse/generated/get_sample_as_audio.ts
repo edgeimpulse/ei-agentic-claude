@@ -3,13 +3,8 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/wav
  */
 export async function get_sample_as_audio(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId","sampleId"];
-  const queryParams: string[] = ["axisIx","sliceStart","sliceEnd","cacheKey"];
-=======
   const pathParams: string[] = [];
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/wav`;
   for (const key of pathParams) {

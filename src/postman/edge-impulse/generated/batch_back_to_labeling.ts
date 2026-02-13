@@ -3,13 +3,8 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/batch/back-to-labeling
  */
 export async function batch_back_to_labeling(params: any, apiKey: string) {
-<<<<<<< HEAD
-  const pathParams: string[] = ["projectId"];
-  const queryParams: string[] = ["category","labels","filename","maxLength","minLength","minFrequency","maxFrequency","signatureValidity","includeDisabled","ids","excludeIds","minLabel","maxLabel","search","dataType","minId","maxId","metadata","minDate","maxDate"];
-=======
   const pathParams: string[] = [];
   const queryParams: string[] = [];
->>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/batch/back-to-labeling`;
   for (const key of pathParams) {
