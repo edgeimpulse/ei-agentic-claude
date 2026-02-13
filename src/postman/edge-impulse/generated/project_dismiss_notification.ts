@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dismiss-notification
  */
 export async function project_dismiss_notification(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/dismiss-notification`;

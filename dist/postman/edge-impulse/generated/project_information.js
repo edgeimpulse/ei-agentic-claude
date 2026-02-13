@@ -4,7 +4,11 @@
  */
 export async function project_information(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
     const queryParams = ["impulseId"];
+=======
+    const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId`;
     for (const key of pathParams) {
         const value = params?.[key];

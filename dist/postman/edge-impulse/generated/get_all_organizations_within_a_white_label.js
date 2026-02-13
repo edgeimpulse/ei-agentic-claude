@@ -4,7 +4,11 @@
  */
 export async function get_all_organizations_within_a_white_label(params, apiKey) {
     const pathParams = ["organizationId"];
+<<<<<<< HEAD
     const queryParams = ["active", "includeDeleted", "sort", "filters", "limit", "offset", "search"];
+=======
+    const queryParams = ["name", "active", "sort", "limit", "offset"];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/organizations`;
     for (const key of pathParams) {
         const value = params?.[key];

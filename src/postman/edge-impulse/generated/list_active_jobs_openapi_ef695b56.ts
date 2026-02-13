@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs
  */
 export async function list_active_jobs_openapi_ef695b56(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId"];
   const queryParams: string[] = ["rootOnly"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs`;
   for (const key of pathParams) {

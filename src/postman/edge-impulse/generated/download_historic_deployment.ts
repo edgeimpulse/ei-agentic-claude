@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/deployment/history/:deploymentVersion/download
  */
 export async function download_historic_deployment(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","deploymentVersion"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/deployment/history/:deploymentVersion/download`;

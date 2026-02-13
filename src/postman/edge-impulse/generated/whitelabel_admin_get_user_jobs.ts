@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/users/:userId/jobs
  */
 export async function whitelabel_admin_get_user_jobs(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["organizationId","userId"];
   const queryParams: string[] = ["limit","offset"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/users/:userId/jobs`;
   for (const key of pathParams) {

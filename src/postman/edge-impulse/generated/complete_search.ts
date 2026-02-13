@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/optimize/:jobId/complete-search
  */
 export async function complete_search(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","jobId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/optimize/:jobId/complete-search`;

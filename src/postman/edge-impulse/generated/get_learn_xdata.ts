@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/training/:learnId/x
  */
 export async function get_learn_xdata(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","learnId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/training/:learnId/x`;

@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/profile-tflite/:jobId/result
  */
 export async function get_profile_tflite_job_result(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","jobId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/profile-tflite/:jobId/result`;

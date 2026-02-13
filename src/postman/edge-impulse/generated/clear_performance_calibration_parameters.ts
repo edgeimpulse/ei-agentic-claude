@@ -4,7 +4,11 @@
  */
 export async function clear_performance_calibration_parameters(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
+<<<<<<< HEAD
   const queryParams: string[] = ["impulseId"];
+=======
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/parameters`;
   for (const key of pathParams) {

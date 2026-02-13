@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/dataset/:dataset/files/view
  */
 export async function view_dataset_file(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["organizationId","dataset"];
   const queryParams: string[] = ["path"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/dataset/:dataset/files/view`;
   for (const key of pathParams) {

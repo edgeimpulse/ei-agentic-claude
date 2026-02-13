@@ -4,7 +4,11 @@
  */
 export async function list_public_projects(params, apiKey) {
     const pathParams = [];
+<<<<<<< HEAD
     const queryParams = ["limit", "offset", "project", "projectTypes", "sort"];
+=======
+    const queryParams = ["limit", "offset", "project"];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/projects/public`;
     for (const key of pathParams) {
         const value = params?.[key];

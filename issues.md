@@ -28,7 +28,10 @@ Test Matrix
 | I4 | Medium | MCP test harness | Resolved | `test-mcp-simple.js` timed out and didn't support chunked JSONL. | Rewrote harness to buffer JSONL, increased timeout, and added functional MCP calls. |
 | I5 | Low | Admin org endpoints | Resolved | Admin-only endpoints not in the OpenAPI spec were removed to align CLI with OpenAPI coverage. | CLI now matches OpenAPI operations; org validation uses `list_active_organizations`. |
 | I6 | High | OpenAPI coverage | Resolved | OpenAPI spec has 544 operations; generated clients/CLI now cover all 544 with no extras. | Added reconciliation script and regenerated clients/CLI. |
+<<<<<<< HEAD
 | I7 | High | OpenAPI parameter resolution | Resolved | `$ref` parameters were not resolved, leaving missing path params in some generated clients. | Reconcile script now resolves `$ref` parameters and derives path params from URLs, then rewrites existing clients. |
+=======
+>>>>>>> origin/main
 
 # OpenAPI Validation
 Date: 2026-02-13

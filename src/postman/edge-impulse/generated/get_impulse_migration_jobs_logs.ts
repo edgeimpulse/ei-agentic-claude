@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/impulse-migration/stdout
  */
 export async function get_impulse_migration_jobs_logs(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId"];
   const queryParams: string[] = ["limit","logLevel"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/impulse-migration/stdout`;
   for (const key of pathParams) {

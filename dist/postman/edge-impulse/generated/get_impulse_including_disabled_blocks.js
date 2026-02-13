@@ -4,7 +4,11 @@
  */
 export async function get_impulse_including_disabled_blocks(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
     const queryParams = ["impulseId"];
+=======
+    const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/impulse/all`;
     for (const key of pathParams) {
         const value = params?.[key];

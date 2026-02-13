@@ -4,7 +4,11 @@
  */
 export async function count_samples(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
     const queryParams = ["category", "labels", "filename", "maxLength", "minLength", "minFrequency", "maxFrequency", "signatureValidity", "includeDisabled", "minLabel", "maxLabel", "search", "dataType", "minId", "maxId", "metadata", "minDate", "maxDate"];
+=======
+    const queryParams = ["category", "labels", "filename", "maxLength", "minLength", "minFrequency", "maxFrequency", "signatureValidity", "includeDisabled"];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/count`;
     for (const key of pathParams) {
         const value = params?.[key];

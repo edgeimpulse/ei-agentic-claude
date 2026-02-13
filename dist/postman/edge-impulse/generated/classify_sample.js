@@ -4,7 +4,11 @@
  */
 export async function classify_sample(params, apiKey) {
     const pathParams = ["projectId", "sampleId"];
+<<<<<<< HEAD
     const queryParams = ["includeDebugInfo", "impulseId"];
+=======
+    const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/classify/:sampleId`;
     for (const key of pathParams) {
         const value = params?.[key];

@@ -4,7 +4,11 @@
  */
 export async function list_pipelines(params, apiKey) {
     const pathParams = ["organizationId"];
+<<<<<<< HEAD
     const queryParams = ["projectId"];
+=======
+    const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/pipelines`;
     for (const key of pathParams) {
         const value = params?.[key];

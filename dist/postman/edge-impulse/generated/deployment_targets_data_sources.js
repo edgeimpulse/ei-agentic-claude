@@ -4,7 +4,11 @@
  */
 export async function deployment_targets_data_sources(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
     const queryParams = ["impulseId"];
+=======
+    const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/deployment/targets/data-sources`;
     for (const key of pathParams) {
         const value = params?.[key];

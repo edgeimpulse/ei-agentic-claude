@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/raw-data/:sampleId/slice/run
  */
 export async function run_dsp_sample_slice(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","dspId","sampleId"];
   const queryParams: string[] = ["sliceStart","sliceEnd"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/raw-data/:sampleId/slice/run`;
   for (const key of pathParams) {

@@ -4,7 +4,11 @@
  */
 export async function get_organization_information(params, apiKey) {
     const pathParams = ["organizationId", "innerOrganizationId"];
+<<<<<<< HEAD
     const queryParams = ["includeDeleted"];
+=======
+    const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/organizations/:innerOrganizationId`;
     for (const key of pathParams) {
         const value = params?.[key];

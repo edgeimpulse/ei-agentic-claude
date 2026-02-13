@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/download-impulses-detailed
  */
 export async function download_detailed_impulses(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId"];
   const queryParams: string[] = ["format"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/download-impulses-detailed`;
   for (const key of pathParams) {

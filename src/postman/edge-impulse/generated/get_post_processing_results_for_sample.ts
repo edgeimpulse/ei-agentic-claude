@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/post-processing/:postProcessingId/samples/:sampleId
  */
 export async function get_post_processing_results_for_sample(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","postProcessingId","sampleId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/post-processing/:postProcessingId/samples/:sampleId`;

@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/development-boards/:developmentBoardId
  */
 export async function whitelabel_admin_remove_development_board(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["organizationId","developmentBoardId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/development-boards/:developmentBoardId`;

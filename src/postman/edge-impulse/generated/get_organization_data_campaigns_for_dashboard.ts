@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/campaign-dashboard/:campaignDashboardId/campaigns
  */
 export async function get_organization_data_campaigns_for_dashboard(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["organizationId","campaignDashboardId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/campaign-dashboard/:campaignDashboardId/campaigns`;

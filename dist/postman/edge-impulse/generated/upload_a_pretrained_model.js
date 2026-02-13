@@ -4,7 +4,11 @@
  */
 export async function upload_a_pretrained_model(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
     const queryParams = ["impulseId"];
+=======
+    const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/pretrained-model/upload`;
     for (const key of pathParams) {
         const value = params?.[key];

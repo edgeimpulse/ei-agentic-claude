@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/devices/:deviceId/request-model-update
  */
 export async function request_device_model_update(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","deviceId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/devices/:deviceId/request-model-update`;

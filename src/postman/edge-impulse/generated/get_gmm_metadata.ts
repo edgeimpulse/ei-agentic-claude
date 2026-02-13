@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/training/anomaly/:learnId/gmm/metadata
  */
 export async function get_gmm_metadata(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","learnId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/training/anomaly/:learnId/gmm/metadata`;

@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/organizations/:innerOrganizationId/members
  */
 export async function whitelabel_admin_add_user_to_organization(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["organizationId","innerOrganizationId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/organizations/:innerOrganizationId/members`;

@@ -4,7 +4,11 @@
  */
 export async function list_all_jobs(params, apiKey) {
     const pathParams = ["organizationId"];
+<<<<<<< HEAD
     const queryParams = ["startDate", "endDate", "limit", "offset", "excludePipelineTransformJobs", "rootOnly", "key", "category", "finished"];
+=======
+    const queryParams = ["startDate", "endDate", "limit", "offset", "excludePipelineTransformJobs", "rootOnly"];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/jobs/all`;
     for (const key of pathParams) {
         const value = params?.[key];

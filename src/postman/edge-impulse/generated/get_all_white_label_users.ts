@@ -4,7 +4,11 @@
  */
 export async function get_all_white_label_users(params: any, apiKey: string) {
   const pathParams: string[] = ["organizationId"];
+<<<<<<< HEAD
   const queryParams: string[] = ["active","tier","fields","sort","filters","limit","offset","search"];
+=======
+  const queryParams: string[] = ["user","active","tier","fields","sort","limit","offset"];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/users`;
   for (const key of pathParams) {

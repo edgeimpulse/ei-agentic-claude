@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/dataset
  */
 export async function add_organization_dataset(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["organizationId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/dataset`;

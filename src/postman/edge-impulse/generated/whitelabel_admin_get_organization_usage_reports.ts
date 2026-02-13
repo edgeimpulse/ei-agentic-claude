@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/organizations/:innerOrganizationId/usage/reports
  */
 export async function whitelabel_admin_get_organization_usage_reports(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["organizationId","innerOrganizationId"];
   const queryParams: string[] = ["limit","offset"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/organizations/:innerOrganizationId/usage/reports`;
   for (const key of pathParams) {

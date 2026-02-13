@@ -4,7 +4,11 @@
  */
 export async function get_current_user(params: any, apiKey: string) {
   const pathParams: string[] = [];
+<<<<<<< HEAD
   const queryParams: string[] = ["excludeProjects"];
+=======
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/user`;
   for (const key of pathParams) {

@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/to-labeling-queue
  */
 export async function move_to_labeling_queue(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","sampleId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/to-labeling-queue`;

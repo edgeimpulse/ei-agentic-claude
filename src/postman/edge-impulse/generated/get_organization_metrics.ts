@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/metrics
  */
 export async function get_organization_metrics(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["organizationId"];
   const queryParams: string[] = ["excludeEdgeImpulseUsers","projectVisibility"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/metrics`;
   for (const key of pathParams) {

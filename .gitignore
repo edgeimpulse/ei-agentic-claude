@@ -30,6 +30,9 @@ Thumbs.db
 *.log
 .idea/
 .vscode/
+issues.md
+outputs/
+config/projects.json
 
 # Ignore Postman environment files
 *.postman_environment.json
@@ -37,3 +40,4 @@ Thumbs.db
 # Ignore API keys and secrets
 apikey*
 secret*
+updated-readme.md

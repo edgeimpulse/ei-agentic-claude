@@ -1,3 +1,4 @@
+import { Command } from 'commander';
 import { getTrainingJobStatus } from '../postman/edge-impulse/training/start-training/status';
 
 export async function waitJob(apiKey: string, projectId: string | number, jobId: string | number, opts?: {intervalMs?: number, timeoutMs?: number}) {
@@ -34,6 +35,28 @@ export async function waitJob(apiKey: string, projectId: string | number, jobId:
     if (Date.now() - start > timeoutMs) throw new Error(`Timeout waiting for job ${jobId}`);
     await new Promise(r => setTimeout(r, intervalMs));
   }
+}
+
+export function addWait_jobCommand(program: Command) {
+  program.command('wait-job')
+    .description('Auto-generated command for wait_job')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
+    .requiredOption('--project-id <projectId>', 'Project ID')
+    .requiredOption('--job-id <jobId>', 'Job ID')
+    .option('--interval-ms <intervalMs>', 'Polling interval in milliseconds', '5000')
+    .option('--timeout-ms <timeoutMs>', 'Timeout in milliseconds', '1800000')
+    .action(async (opts) => {
+      try {
+        const res = await waitJob(opts.apiKey, opts.projectId, opts.jobId, {
+          intervalMs: parseInt(opts.intervalMs),
+          timeoutMs: parseInt(opts.timeoutMs)
+        });
+        console.log(JSON.stringify(res, null, 2));
+      } catch (e) {
+        console.warn(`Warning: Command 'wait-job' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
+      }
+    });
 }
 
 export default waitJob;

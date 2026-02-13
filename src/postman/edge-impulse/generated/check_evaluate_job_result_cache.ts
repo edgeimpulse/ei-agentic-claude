@@ -4,7 +4,11 @@
  */
 export async function check_evaluate_job_result_cache(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
+<<<<<<< HEAD
   const queryParams: string[] = ["impulseId"];
+=======
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/deployment/evaluate/cache`;
   for (const key of pathParams) {

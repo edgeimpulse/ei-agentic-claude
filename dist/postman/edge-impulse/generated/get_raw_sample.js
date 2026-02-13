@@ -4,7 +4,11 @@
  */
 export async function get_raw_sample(params, apiKey) {
     const pathParams = ["projectId", "dspId", "sampleId"];
+<<<<<<< HEAD
     const queryParams = ["limitPayloadValues", "truncateStructuredLabels", "useCachedUpsampledData"];
+=======
+    const queryParams = ["limitPayloadValues"];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/raw-data/:sampleId`;
     for (const key of pathParams) {
         const value = params?.[key];

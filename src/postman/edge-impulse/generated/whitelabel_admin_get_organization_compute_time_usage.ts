@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/organizations/:innerOrganizationId/usage/computeTime
  */
 export async function whitelabel_admin_get_organization_compute_time_usage(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["organizationId","innerOrganizationId"];
   const queryParams: string[] = ["startDate","endDate"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/organizations/:innerOrganizationId/usage/computeTime`;
   for (const key of pathParams) {

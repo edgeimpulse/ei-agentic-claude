@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/classify/all/result/page
  */
 export async function get_classify_job_result_page(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId"];
   const queryParams: string[] = ["limit","offset","variant","impulseId","truncateStructuredLabels","labels","filename","maxLength","minLength","minFrequency","maxFrequency","signatureValidity","minLabel","maxLabel","search","dataType","minId","maxId","metadata","minDate","maxDate"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/classify/all/result/page`;
   for (const key of pathParams) {

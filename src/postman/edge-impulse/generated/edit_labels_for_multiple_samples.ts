@@ -4,7 +4,11 @@
  */
 export async function edit_labels_for_multiple_samples(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
+<<<<<<< HEAD
   const queryParams: string[] = ["category","labels","filename","maxLength","minLength","minFrequency","maxFrequency","signatureValidity","includeDisabled","ids","excludeIds","minLabel","maxLabel","search","dataType","minId","maxId","metadata","minDate","maxDate"];
+=======
+  const queryParams: string[] = ["category","labels","filename","maxLength","minLength","minFrequency","maxFrequency","signatureValidity","includeDisabled","ids"];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/batch/edit-labels`;
   for (const key of pathParams) {

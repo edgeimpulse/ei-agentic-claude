@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/batch/edit-bounding-boxes
  */
 export async function batch_edit_bounding_boxes(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId"];
   const queryParams: string[] = ["category","labels","filename","maxLength","minLength","minFrequency","maxFrequency","signatureValidity","includeDisabled","ids","excludeIds","minLabel","maxLabel","search","dataType","minId","maxId","metadata","minDate","maxDate"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/batch/edit-bounding-boxes`;
   for (const key of pathParams) {

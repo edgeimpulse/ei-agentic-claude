@@ -4,7 +4,11 @@
  */
 export async function get_parameter_sets(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
+<<<<<<< HEAD
   const queryParams: string[] = ["impulseId"];
+=======
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/performance-calibration/parameter-sets`;
   for (const key of pathParams) {

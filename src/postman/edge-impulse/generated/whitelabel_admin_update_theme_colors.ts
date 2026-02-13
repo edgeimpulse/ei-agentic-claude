@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/theme/colors
  */
 export async function whitelabel_admin_update_theme_colors(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["organizationId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/whitelabel/theme/colors`;

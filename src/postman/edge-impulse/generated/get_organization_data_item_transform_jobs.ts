@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/data/:dataId/transformation-jobs
  */
 export async function get_organization_data_item_transform_jobs(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["organizationId","dataId"];
   const queryParams: string[] = ["limit","offset"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/data/:dataId/transformation-jobs`;
   for (const key of pathParams) {

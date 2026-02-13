@@ -4,7 +4,11 @@
  */
 export async function build_on_device_model(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
     const queryParams = ["type", "impulseId"];
+=======
+    const queryParams = ["type"];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/build-ondevice-model`;
     for (const key of pathParams) {
         const value = params?.[key];

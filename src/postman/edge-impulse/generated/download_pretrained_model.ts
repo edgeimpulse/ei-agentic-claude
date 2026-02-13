@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/pretrained-model/download/:pretrainedModelDownloadType
  */
 export async function download_pretrained_model(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","pretrainedModelDownloadType"];
   const queryParams: string[] = ["impulseId"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/pretrained-model/download/:pretrainedModelDownloadType`;
   for (const key of pathParams) {

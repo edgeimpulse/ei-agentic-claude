@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/performance
  */
 export async function get_performance_all_variants(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","dspId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/performance`;

@@ -1,0 +1,16 @@
+node_modules
+dist
+.git
+.DS_Store
+*.log
+coverage
+*.tgz
+.env
+.env.*
+*.env
+*.env.*
+outputs
+tmp
+config/projects.json
+.idea
+.vscode

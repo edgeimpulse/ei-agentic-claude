@@ -4,7 +4,11 @@
  */
 export async function test_pretrained_model(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
+<<<<<<< HEAD
   const queryParams: string[] = ["impulseId"];
+=======
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/pretrained-model/test`;
   for (const key of pathParams) {

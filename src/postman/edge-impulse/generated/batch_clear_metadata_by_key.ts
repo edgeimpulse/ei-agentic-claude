@@ -3,8 +3,13 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/batch/clear-metadata-by-key
  */
 export async function batch_clear_metadata_by_key(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId"];
   const queryParams: string[] = ["category","labels","filename","maxLength","minLength","minFrequency","maxFrequency","signatureValidity","includeDisabled","ids","excludeIds","minLabel","maxLabel","search","dataType","minId","maxId","metadata","minDate","maxDate"];
+=======
+  const pathParams: string[] = [];
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/batch/clear-metadata-by-key`;
   for (const key of pathParams) {

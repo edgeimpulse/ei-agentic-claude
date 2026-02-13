@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/trial/request-extension
  */
 export async function request_enterprise_trial_extension(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["organizationId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/trial/request-extension`;

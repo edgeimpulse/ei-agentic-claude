@@ -4,7 +4,11 @@
  */
 export async function get_image_file(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId","sampleId"];
+<<<<<<< HEAD
   const queryParams: string[] = ["afterInputBlock","cacheKey","impulseId"];
+=======
+  const queryParams: string[] = ["afterInputBlock"];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/image`;
   for (const key of pathParams) {

@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/users/:userId/emails
  */
 export async function list_emails_user(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["userId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/users/:userId/emails`;

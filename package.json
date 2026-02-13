@@ -1,11 +1,47 @@
 {
   "name": "ei-agentic-claude",
+<<<<<<< HEAD
   "version": "1.0.6",
+=======
+  "version": "1.0.5",
+  "description": "Claude-compatible MCP server and CLI for Edge Impulse APIs",
+>>>>>>> origin/main
   "type": "module",
-  "main": "src/cli.ts",
-  "bin": {
-    "cli": "./src/cli.ts"
+  "license": "UNLICENSED",
+  "main": "dist/cli.js",
+  "exports": {
+    ".": "./dist/cli.js",
+    "./cli": "./dist/cli.js",
+    "./mcp-server": "./dist/mcp-server.js"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "bin": {
+    "edge-impulse-cli": "./dist/cli.js",
+    "edge-impulse-mcp": "./dist/mcp-server.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgeimpulse/ei-agentic-claude.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edgeimpulse/ei-agentic-claude/issues"
+  },
+  "homepage": "https://github.com/edgeimpulse/ei-agentic-claude#readme",
+  "keywords": [
+    "edge-impulse",
+    "mcp",
+    "model context protocol",
+    "claude",
+    "cli",
+    "edge ai",
+    "embedded ml"
+  ],
   "scripts": {
     "cli": "ts-node-esm src/cli.ts",
     "build": "node scripts/clean-dist.js && tsc && node scripts/fix-dist-imports.js",
@@ -15,7 +51,16 @@
     "list-apis": "node scripts/list-apis.js",
     "smoke": "node ./scripts/smoke-test.js",
     "mcp-server": "node dist/mcp-server.js",
-    "test-mcp": "node scripts/test-mcp-simple.js"
+    "test-mcp": "node scripts/test-mcp-simple.js",
+    "docker:test": "bash ./scripts/docker-test.sh",
+    "project:test": "bash ./scripts/run-project-tests.sh",
+    "assess:projects": "bash ./scripts/record-and-assess.sh",
+    "prompt:test": "bash ./scripts/run-prompt-tests.sh",
+    "llm:run": "node scripts/llm-runner.js",
+    "llm:sim": "node scripts/llm-runner-sim.js",
+    "test:apply-flow": "bash ./scripts/test-apply-flow.sh",
+    "configure:projects": "node scripts/configure-org-projects.js",
+    "llm:integration-sim": "node scripts/llm-integration-sim.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.25.3",

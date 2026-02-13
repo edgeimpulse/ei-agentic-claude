@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/:jobId/status
  */
 export async function get_job_status_openapi_b8230c81(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","jobId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/:jobId/status`;

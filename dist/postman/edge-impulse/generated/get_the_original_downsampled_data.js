@@ -4,7 +4,11 @@
  */
 export async function get_the_original_downsampled_data(params, apiKey) {
     const pathParams = ["projectId", "sampleId"];
+<<<<<<< HEAD
     const queryParams = ["limitPayloadValues", "zoomStart", "zoomEnd", "impulseId", "truncateStructuredLabels"];
+=======
+    const queryParams = ["limitPayloadValues", "zoomStart", "zoomEnd"];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/original`;
     for (const key of pathParams) {
         const value = params?.[key];

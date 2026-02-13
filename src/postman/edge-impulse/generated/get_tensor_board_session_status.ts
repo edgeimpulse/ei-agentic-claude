@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/integrations/tensorboard/:resourceId
  */
 export async function get_tensor_board_session_status(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","resourceId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/integrations/tensorboard/:resourceId`;

@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/impulse/:impulseId/regenerate-model-testing-summary
  */
 export async function regenerate_model_testing_summary(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","impulseId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/impulse/:impulseId/regenerate-model-testing-summary`;

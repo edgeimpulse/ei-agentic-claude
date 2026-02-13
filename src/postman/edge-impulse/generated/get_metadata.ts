@@ -4,7 +4,11 @@
  */
 export async function get_metadata(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId","dspId"];
+<<<<<<< HEAD
   const queryParams: string[] = ["excludeIncludedSamples","category"];
+=======
+  const queryParams: string[] = [];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/metadata`;
   for (const key of pathParams) {

@@ -4,7 +4,11 @@
  */
 export async function list_samples(params: any, apiKey: string) {
   const pathParams: string[] = ["projectId"];
+<<<<<<< HEAD
   const queryParams: string[] = ["category","limit","offset","excludeSensors","labels","filename","maxLength","minLength","minFrequency","maxFrequency","signatureValidity","includeDisabled","minLabel","maxLabel","search","proposedActionsJobId","truncateStructuredLabels","sortBy","dataType","minId","maxId","metadata","minDate","maxDate"];
+=======
+  const queryParams: string[] = ["category","limit","offset","excludeSensors","labels","filename","maxLength","minLength","minFrequency","maxFrequency","signatureValidity","includeDisabled"];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data`;
   for (const key of pathParams) {

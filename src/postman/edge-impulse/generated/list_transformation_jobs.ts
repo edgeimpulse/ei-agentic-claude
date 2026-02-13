@@ -4,7 +4,11 @@
  */
 export async function list_transformation_jobs(params: any, apiKey: string) {
   const pathParams: string[] = ["organizationId"];
+<<<<<<< HEAD
   const queryParams: string[] = ["limit","offset","includePipelineJobs"];
+=======
+  const queryParams: string[] = ["limit","offset"];
+>>>>>>> origin/main
 
   let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/create-project`;
   for (const key of pathParams) {

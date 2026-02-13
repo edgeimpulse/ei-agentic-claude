@@ -4,7 +4,11 @@
  */
 export async function save_parameters_for_pretrained_model(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
     const queryParams = ["impulseId"];
+=======
+    const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/pretrained-model/save`;
     for (const key of pathParams) {
         const value = params?.[key];

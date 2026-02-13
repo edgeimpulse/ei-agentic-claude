@@ -4,7 +4,11 @@
  */
 export async function get_sample_slice(params, apiKey) {
     const pathParams = ["projectId", "sampleId"];
+<<<<<<< HEAD
     const queryParams = ["sliceStart", "sliceEnd", "impulseId", "truncateStructuredLabels"];
+=======
+    const queryParams = ["sliceStart", "sliceEnd"];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/raw-data/:sampleId/slice`;
     for (const key of pathParams) {
         const value = params?.[key];

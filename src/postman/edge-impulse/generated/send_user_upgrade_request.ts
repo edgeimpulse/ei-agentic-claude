@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/users/:userId/upgrade
  */
 export async function send_user_upgrade_request(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["userId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/users/:userId/upgrade`;

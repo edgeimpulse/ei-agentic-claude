@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/post-processing/:postProcessingId
  */
 export async function set_post_processing_config(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","postProcessingId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/post-processing/:postProcessingId`;

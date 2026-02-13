@@ -3,7 +3,11 @@
  * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/ai-actions/:actionId/preview
  */
 export async function create_preview_aiactions_job(params: any, apiKey: string) {
+<<<<<<< HEAD
   const pathParams: string[] = ["projectId","actionId"];
+=======
+  const pathParams: string[] = [];
+>>>>>>> origin/main
   const queryParams: string[] = [];
 
   let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/ai-actions/:actionId/preview`;

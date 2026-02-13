@@ -4,7 +4,11 @@
  */
 export async function optimize_model(params, apiKey) {
     const pathParams = ["projectId"];
+<<<<<<< HEAD
     const queryParams = ["extendedFromJobId"];
+=======
+    const queryParams = [];
+>>>>>>> origin/main
     let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/optimize`;
     for (const key of pathParams) {
         const value = params?.[key];
