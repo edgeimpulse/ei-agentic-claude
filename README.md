@@ -1,17 +1,78 @@
 
 # Edge Impulse Claude Code MCP Integration
 
-A Model Context Protocol (MCP) server that enables Claude Code to interact with Edge Impulse APIs. This project provides integration between Anthropic's Claude Code and Edge Impulse's machine learning platform.
+[![CI](https://github.com/edgeimpulse/ei-agentic-claude/actions/workflows/ci.yml/badge.svg)](https://github.com/edgeimpulse/ei-agentic-claude/actions/workflows/ci.yml)
+[![Publish](https://github.com/edgeimpulse/ei-agentic-claude/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/edgeimpulse/ei-agentic-claude/actions/workflows/npm-publish.yml)
+[![npm](https://img.shields.io/npm/v/ei-agentic-claude.svg)](https://www.npmjs.com/package/ei-agentic-claude)
+[![npm downloads](https://img.shields.io/npm/dm/ei-agentic-claude.svg)](https://www.npmjs.com/package/ei-agentic-claude)
+
+A Model Context Protocol (MCP) server and CLI that lets Claude Code call the Edge Impulse APIs. Installable from npm and pluggable as a Claude skill.
+
+- npm package: https://www.npmjs.com/package/ei-agentic-claude
+- Install (CLI + MCP): `npm install -g ei-agentic-claude`
+- CLI entrypoint: `edge-impulse-cli --help`
+- MCP entrypoint: `edge-impulse-mcp --help`
+- Claude skill: `claude mcp add edge-impulse -- edge-impulse-mcp`
+- Status badges: CI = tests/build, Publish = npm release workflow
+
+## Example of usage
+
+### CLI Usage
+<img width="1111" height="571" alt="Screenshot 2026-01-23 at 16 54 01" src="https://github.com/user-attachments/assets/3fd11801-2948-48ad-b71f-f5117eb9a7f7" />
+
+### Calling API on Block
+<img width="1600" height="109" alt="blur3" src="https://github.com/user-attachments/assets/8256f310-3861-4b94-8d7a-47d9fe3426dc" />
+
+### Job Status
+<img width="1600" height="101" alt="blur2" src="https://github.com/user-attachments/assets/48be3ed8-c0ca-4450-aa09-b4626cb03bb8" />
 
 
-## Features
+### Testing Framework
+<img width="1207" height="274" alt="Screenshot 2026-01-23 at 17 29 24" src="https://github.com/user-attachments/assets/fe91d73b-ec09-4b4d-a669-1286fe43382a" />
 
-- 365+ Edge Impulse APIs: Complete access to projects, training, data, deployments, and more
-- Natural Language Interface: Use Claude Code to manage Edge Impulse through conversation
-- Real-time Integration: Direct API calls with instant responses
-- Secure Authentication: API keys managed through environment variables
-- Full CLI Fallback: Traditional command-line interface still available
-- Comprehensive Testing: Full test coverage with programmatic reporting
+#### Block configuration example
+
+Use it to configure your blocks and review your config, e.g.
+
+#### Ask for optimization to a project aiming for 100% accuracy
+
+<img width="1600" height="289" alt="blur1" src="https://github.com/user-attachments/assets/68f8e293-7f0f-4e3d-832a-251706ba4cb8" />
+
+
+#### An example of the config changes made 
+<img width="800" height="274" alt="dspconfig" src="https://github.com/user-attachments/assets/1fb7e1f1-bcb8-4771-912e-2228ff342a83" />
+
+#### Performance improvement on a simple time series motion project was impressive
+<img width="1198" height="769" alt="improvementspercent" src="https://github.com/user-attachments/assets/b0e37891-24e6-4e0a-a143-bc10fdbad716" />
+
+
+
+
+## Security
+
+### API Key Management
+- API keys are stored in a local `.env` file (not committed to git)
+- Keys are validated for presence and format before API calls
+- Use `cp .env.example .env` to create your secure configuration
+
+### Generated Code Integrity
+- Generated API client files include SHA256 integrity checks
+- Run `npm run generate-integrity` after generating new client files
+- Files are validated at runtime before loading
+- Integrity hashes stored in `integrity.json` alongside generated files
+- Verify the Postman collection source before generating clients
+
+### Dynamic Import Security
+- **Integrity Validation**: SHA256 hashes are computed and verified for all generated API client files
+- **Runtime Checks**: Files are validated before loading to prevent tampering
+- **Sandboxing**: Implemented for MCP server API calls using Node.js vm module with restricted context
+- Generated code runs in sandboxed environment with limited globals (fetch, JSON, timers only)
+- CLI commands run in main process (user-initiated, lower risk)
+
+### Rate Limiting
+- API calls are subject to Edge Impulse's rate limits
+- Consider implementing client-side rate limiting for high-volume usage
+- Monitor API usage in your Edge Impulse dashboard
 
 ## Quick Start
 
@@ -26,6 +87,9 @@ git clone <repository-url>
 cd ei-agentic-claude
 npm install
 npm run build
+
+# Optional: Run the automated setup script (loads .env automatically)
+./setup-claude.sh
 ```
 
 ### 3. Configure Claude Code
@@ -37,25 +101,66 @@ claude mcp add edge-impulse -- node dist/mcp-server.js
 claude mcp list
 ```
 
-### 4. Set API Keys
+### 4. Configure API Keys
+**Secure Setup (Recommended):**
+```bash
+# Copy the example environment file
+cp .env.example .env
+
+# Edit .env with your actual API keys
+# ANTHROPIC_API_KEY=your_anthropic_api_key_here
+# EI_API_KEY=your_edge_impulse_api_key_here
+```
+
+**Quick Setup (for testing):**
 ```bash
 export ANTHROPIC_API_KEY=your_claude_api_key
 export EI_API_KEY=your_edge_impulse_api_key
 ```
+
+> **🔒 Security Note:** API keys are stored in `.env` files (not committed to git). See [API Key Management](#api-key-management) for detailed setup options.
 
 ### 5. Start Using Claude Code
 ```bash
 claude -p "Show me all my Edge Impulse projects"
 ```
 
+## Install from npm + Claude skill
+- npm install: `npm install -g ei-agentic-claude`
+- CLI entrypoint: `edge-impulse-cli --help`
+- MCP server entrypoint: `edge-impulse-mcp --help`
+- Add as Claude skill: `claude mcp add edge-impulse -- edge-impulse-mcp`
+- Verify: `claude mcp list`
+
 ## Table of Contents
 - [Quick Start](#quick-start)
+- [Security](#security)
+- [Automated Setup](#automated-setup)
 - [Screenshots](#screenshots)
 - [Claude Code Integration](#claude-code-integration)
 - [CLI Usage](#cli-usage)
 - [API Coverage](#api-coverage)
 - [Testing](#testing)
 - [Development](#development)
+
+## Automated Setup
+
+For convenience, you can use the included setup script to automate the Claude Code integration:
+
+```bash
+# Ensure you have .env configured first
+cp .env.example .env
+# Edit .env with your API keys
+
+# Run the setup script
+./setup-claude.sh
+```
+
+The script will:
+- Load API keys from your `.env` file
+- Test Claude Code authentication
+- Verify MCP server connectivity
+- Test Edge Impulse API access
 
 ## Screenshots
 
@@ -70,25 +175,6 @@ claude -p "Show me all my Edge Impulse projects"
 
 ### Testing Framework
 <img width="1207" height="274" alt="Screenshot 2026-01-23 at 17 29 24" src="https://github.com/user-attachments/assets/fe91d73b-ec09-4b4d-a669-1286fe43382a" />
-
-## What can claude do?? Well it can configure your project from 99.6 to 100% accuracy on the first try!!
-
-Use it to configure your blocks and review your config, e.g.
-
-<img width="1802" height="326" alt="image" src="https://github.com/user-attachments/assets/4c57622d-44f3-43a7-a80a-b3c1bbe0cf17" />
-<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/85622e5d-13f4-4d4a-a447-e048aef353ac" />
-<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/098071bd-904f-4af2-ab34-72513066c659" />
-<img width="3984" height="2070" alt="image" src="https://github.com/user-attachments/assets/e9c80bdf-1215-4684-8e1a-bbbdcf31457e" />
-
-
-## BC
-<img width="1118" height="2080" alt="image" src="https://github.com/user-attachments/assets/9da7bf78-cd12-4fb9-968b-0136f21af2b2" />
-
-
-## AC
-<img width="1118" height="1942" alt="image" src="https://github.com/user-attachments/assets/135adfba-0814-4b9e-a8bf-16f785baab9b" />
-
-
 
 # Development & Production Usage
 
@@ -138,19 +224,26 @@ Then run commands like:
 npm run cli -- get-all-projects --api-key $EI_API_KEY
 ```
 
-**2. .env file with `dotenv-cli`:**
+**2. .env file with `dotenv-cli` (Most Secure):**
 Install dotenv-cli:
 ```sh
 npm install -g dotenv-cli
 ```
-Create a `.env` file:
+Copy the example file and fill in your keys:
+```sh
+cp .env.example .env
 ```
-EI_API_KEY=your_api_key_here
+Edit `.env` with your actual API keys:
+```
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+EI_API_KEY=your_edge_impulse_api_key_here
 ```
 Run commands with:
 ```sh
 dotenv -e .env -- npm run cli -- get-all-projects --api-key $EI_API_KEY
 ```
+
+> **🔒 Security:** `.env` files are automatically ignored by git and never committed to version control.
 
 **3. Shell alias:**
 Add to your shell profile:
@@ -185,277 +278,89 @@ If you prefer top-level flags, many commands still accept specific flags generat
 
 All Edge Impulse API endpoints are available as CLI commands, auto-generated from the Postman collection. This auto-generation is designed as a secondary, extensible layer—making it easy to add, update, or extend commands as the API evolves.
 
-**Primary focus:** This repo is architected for agentic workflows, enabling Claude (or other LLM agents) to interact with Edge Impulse via a robust, typed interface. The CLI commands are a convenience layer for direct use and future extension.
-
-**Usage Pattern:**
-```
-npm run cli -- <command-name> --api-key <your_api_key> [--params '{"param1":"value1",...}']
-```
-
-**How to discover available commands:**
-- All generated commands are in `src/postman/edge-impulse/generated/cli-commands/` (replace underscores with dashes for CLI usage).
-- Run `npm run cli -- --help` to see all registered commands and options.
-- Use the exact generated command name (e.g., `get-all-projects`, `add-api-key`).
-
-**Unified option:** All commands require `--api-key <your_api_key>`
-
-**Example:**
-```
-npm run cli -- get-all-projects --api-key <your_api_key>
-npm run cli -- add-api-key --api-key <your_api_key> --params '{"projectId":123,"name":"test"}'
-npm run cli -- train-model-keras --api-key <your_api_key> --params '{"projectId":123,"learnId":456,"trainingCycles":10}'
-```
-
-**Troubleshooting:**
-- If a command is not recognized, check the generated file name and use the corresponding CLI name.
-- If no commands appear in `--help`, ensure you have built the project (`npx tsc`) and that the generator does not include `.ts` in import paths.
-- For advanced usage, see the generated files or the Edge Impulse API documentation.
-
-**Tip:** You can add a test script to list all available commands:
-```json
-"scripts": {
-  ...,
-  "cli-list": "npm run cli -- --help"
-}
-```
-
-# Claude Code Integration (MCP)
-
-This project provides a Model Context Protocol (MCP) server that enables Claude Code to interact with Edge Impulse APIs.
-
-## Current Status: Working
-
-The integration is complete and tested. Claude Code can access Edge Impulse APIs through natural language.
-
-## Setup (Already Complete)
-
-### MCP Server Added
-```bash
-claude mcp add edge-impulse -- node dist/mcp-server.js
-claude mcp list  # Shows: edge-impulse: node dist/mcp-server.js - ✓ Connected
-```
-
-### API Keys Configured
-```bash
-export ANTHROPIC_API_KEY=sk-ant-api03-***************************
-export EI_API_KEY=ei_your_actual_api_key_here
-```
-
-## Usage
-
-### Interactive Mode (Recommended)
-```bash
-claude
-# Then ask: "Show me all my Edge Impulse projects"
-```
-
-### Non-Interactive Mode
-```bash
-claude -p "List all my Edge Impulse projects"
-claude -p "Start training a Keras model on project 123"
-claude -p "Check the status of job 456"
-```
-
-## What Claude Can Help You Do
-
-### Project Management
-- List, create, and manage Edge Impulse projects
-- Configure project settings and metadata
-- Handle team collaboration and permissions
-
-### Data Operations
-- Upload datasets (time series, images, audio, sensors)
-- Organize data into training/testing sets
-- Label and annotate data
-- Import from cloud storage
-
-### Model Development
-- Design impulses (DSP + ML blocks)
-- Configure DSP for feature extraction
-- Train ML models (Keras, transfer learning)
-- Run anomaly detection
-- Profile and optimize models
-
-### Deployment
-- Build optimized models for edge devices
-- Generate firmware and libraries
-- Create deployment packages
-- Download trained models
-
-### Testing & Evaluation
-- Test models on validation data
-- Generate performance metrics
-- Analyze confusion matrices
-- Debug feature extraction
-
-## Sample Questions
-
-Here are examples of questions you can ask Claude:
-
-**Getting Started:**
-- "Show me all my Edge Impulse projects"
-- "Create a new project called 'Sensor Classification'"
-- "What projects do I have access to?"
-
-**Data Management:**
-- "Upload data to project 123 from my local files"
-- "How much training data do I have in project 456?"
-- "Split my dataset into training and testing sets"
-
-**Model Training:**
-- "Train a Keras model on project 123"
-- "Start training with learn block 456"
-- "Configure training parameters for better accuracy"
-
-**Job Monitoring:**
-- "Check the status of training job 789"
-- "Is my model training complete?"
-- "What are the results of my latest training run?"
-
-**Model Evaluation:**
-- "Test my trained model on validation data"
-- "Show me the confusion matrix for my model"
-- "What is the accuracy of my trained model?"
-
-**Deployment:**
-- "Build my model for deployment to edge devices"
-- "Download the trained model files"
-- "Create a deployment package for my project"
-
-**Optimization:**
-- "Optimize my Keras model for better performance"
-- "Profile my model to see memory usage"
-- "Run model optimization on project 123"
-
-## MCP Server Features
-
-- 365 APIs Available: All Edge Impulse endpoints accessible through Claude
-- Automatic Parameter Validation: Claude handles required vs optional parameters
-- Error Handling: Clear error messages for API failures
-- JSON Responses: Structured data returned from all API calls
-- No CLI Knowledge Required: Use natural language instead of command syntax
-
-## API Key Management
-
-Set your Edge Impulse API key as an environment variable:
-
-```bash
-export EI_API_KEY=ei_your_api_key_here
-```
-
-Claude will automatically use this key for all API calls through the MCP server.
-
-## Troubleshooting MCP
-
-- Server won't start: Ensure you've run `npm run build` and the `dist/` folder exists
-- Claude can't find tools: Restart Claude Desktop after configuration changes
-- API errors: Check your API key and network connectivity
-- Permission issues: Ensure Claude Desktop has access to the project directory
-
-# Edge Impulse Claude Agentic Example
-
-This project demonstrates a minimal, agentic workflow for Edge Impulse using a TypeScript CLI and Claude. You can list projects, train Keras blocks, and (optionally) fetch evaluation metrics.
-
-## Features
-- List Edge Impulse projects
-- Start model training with advanced Keras config
-- Check training job status
-- (Optional) Fetch evaluation metrics (if available via API)
-- Typed API clients, robust error handling
-
-## Quick Start
-1. **Connect Claude to the Postman MCP server:**
-  ```sh
-  claude mcp add --transport http postman https://mcp.postman.com/code \
-    --header "Authorization: Bearer YOUR_POSTMAN_API_KEY"
-  ```
-2. **Prompt your agent:**
-  > Build a CLI that lists my Edge Impulse projects and starts a training job using the Edge Impulse API collection.
-3. **Generated files:**
-  - src/postman/edge-impulse/projects/list-projects/client.ts
-  - src/postman/edge-impulse/projects/upload-data/client.ts
-  - src/postman/edge-impulse/training/start-training/client.ts
-  - src/postman/edge-impulse/shared/types.ts
-  - src/cli.ts
-4. **Install dependencies:**
-  ```sh
-  npm install
-  ```
-5. **Run the CLI:**
-  ```sh
-  npm run cli -- get-all-projects --api-key <your_api_key>
-  npm run cli -- add-api-key --api-key <your_api_key> --params '{"projectId":123,"name":"test"}'
-  npm run cli -- train-model-keras --api-key <your_api_key> --params '{"projectId":123,"learnId":456,"trainingCycles":10}'
-  ```
-
-## Agentic Workflow Example
-1. **List projects:**
-  ```sh
-  npm run cli -- get-all-projects --api-key <your_api_key>
-  ```
-2. **Start training:**
-  ```sh
-  npm run cli -- train-model-keras --api-key <your_api_key> --params '{"projectId":123,"learnId":456}'
-  ```
- 
-    ### Start training with `--params` (JSON)
-
-    You can pass the full training request as a JSON string using `--params`. This is useful when invoking from agents or scripts.
-
-    ```sh
-    # start training (Keras) with training parameters in --params
-    npm run cli -- train-model-keras --api-key <your_api_key> \
-      --params '{"projectId":123,"learnId":456,"mode":"visual","trainingCycles":30,"learningRate":0.01,"batchSize":64}'
-
-    # some generators use the command name `start-training` — same pattern applies
-    npm run cli -- start-training --api-key <your_api_key> \
-      --params '{"projectId":123,"learnId":456,"mode":"visual","trainingCycles":30}'
-    ```
-3. **Check job status:**
-  ```sh
-  npm run cli -- get-job-status --api-key <your_api_key> --params '{"projectId":123,"jobId":789}'
-  ```
 4. **(Optional) Fetch evaluation metrics:**
-  ```sh
-  npm run cli -- evaluate-block --api-key <your_api_key> --params '{"projectId":123,"learnId":456}'
-  ```
-
-## Advanced: Configure Keras Block Parameters
 You (or Claude) can configure any Keras block parameter at training time using the CLI's `--param` option. Example:
 ```sh
 npm run cli -- start-training --api-key <your_api_key> --projectId <projectId> --learnId <learnId> \
-  --mode visual \
-  --param trainingCycles=50 learningRate=0.005 batchSize=64 autoClassWeights=true selectedModelType=int8
-```
-See the [Edge Impulse API docs](https://docs.edgeimpulse.com/apis/studio/jobs/train-model-keras) for a full list.
+# Edge Impulse Claude Code MCP Integration
 
-## Notes & Troubleshooting
-- If you get a 404 on job status or evaluation, wait a few seconds and retry.
-- Confirm your learnId is valid by checking the Edge Impulse dashboard.
-- All training and evaluation results are always available in the dashboard, even if not exposed via API.
-- Evaluation metrics may not be available via public API for all blocks.
+MCP server and CLI for Edge Impulse APIs, with Docker image, prompt-generation tooling, and CI smoke tests. Claude (or other agents) can call the APIs via stdio MCP or the generated CLI.
 
-## Testing
+## Highlights
+- MCP server (stdio) and universal CLI launcher (`node launch-cli.mjs ...`).
+- Generated CLI commands for all Edge Impulse endpoints (`src/postman/edge-impulse/generated/cli-commands`).
+- Dockerized runtime with healthcheck and non-root user.
+- Tests: Vitest unit suite, Docker smoke, project connectivity, prompt/LLM simulation, apply-flow dry run.
+- Sample env files: `.env.example` and `.env.test.sample` (redacted) — actual secrets stay local.
 
-This repository includes a small smoke test and unit tests to help contributors validate changes quickly.
+## Screenshots (orientation)
+- CLI help and commands: ![CLI usage](https://github.com/user-attachments/assets/3fd11801-2948-48ad-b71f-f5117eb9a7f7)
+- Invoke API block: ![Call block](https://github.com/user-attachments/assets/8821b5da-021f-4fd3-a27d-0ee020ab5960)
+- Job status output: ![Job status](https://github.com/user-attachments/assets/3adb2bd6-da51-4c0e-8f16-a61765c32af1)
 
-- Smoke test: a lightweight Node script that asserts key CLI help text is present. Run:
+## Prerequisites
+- Node 20+
+- npm 9+
+- Docker (for container build/test)
+- Edge Impulse API key (set in `.env` or exported)
 
+## Setup
 ```bash
+git clone https://github.com/edgeimpulse/ei-agentic-claude.git
+cd ei-agentic-claude
 npm install
-npm run smoke
+npm run build
+
+# create envs (keep private)
+cp .env.example .env
+cp .env.test.sample .env.test  # for local tests
 ```
 
-- Unit tests: written with Vitest. Run:
+## Running
+- **CLI (auto-detects ts vs dist)**
+  ```bash
+  node launch-cli.mjs get-all-projects --api-key $EI_API_KEY
+  node launch-cli.mjs wait-job --help
+  ```
+- **MCP server (stdio)**: `node dist/mcp-server.js`
+- **Claude hookup**: `claude mcp add edge-impulse -- node dist/mcp-server.js`
 
-```bash
-npm test
-```
+## Docker
+- Build: `docker build -t ei-agentic-claude:latest .`
+- Run (stdio, env mounted):
+  ```bash
+  docker run --rm -it --name ei-mcp \
+    -v "$PWD/.env.test:/app/.env.test:ro" \
+    ei-agentic-claude:latest
+  ```
+- Smoke test: `npm run docker:test` (waits for readiness line `Edge Impulse MCP server running on stdio`).
 
-Files of interest:
-- `scripts/smoke-test.js` — smoke script that runs basic CLI help checks.
-- `test/cli.spec.ts` — Vitest tests asserting presence of key commands (`train-model-keras`, `wait-job`).
+## Tests (no live LLM calls)
+- Unit: `npm test` (builds first via pretest).
+- Docker smoke: `npm run docker:test`.
+- Project connectivity (needs `.env.test` with EI_API_KEY and project IDs): `npm run project:test`.
+- Prompt generation + simulated LLM/apply flow: `npm run test:apply-flow` (writes prompts to /tmp, simulated responses + dry-run apply scripts to outputs/).
 
-Notes:
-- The project uses ESM (`type: module`), so the smoke script uses ESM imports.
-- CI: consider adding a GitHub Actions workflow to run `npm ci && npm run smoke && npm test` on PRs.
+## Prompt & apply tooling
+- Generate prompts per project/goal: `npm run prompt:test` (uses `/tmp/project-*.json` from project:test).
+- Simulate LLM responses and dry-run apply scripts: `npm run test:apply-flow`.
+- Optional real LLM: add `ANTHROPIC_API_KEY` to `.env.test` and use `npm run llm:run` (not part of CI).
+
+## Security & integrity
+- Secrets stay in `.env` / `.env.test` (git-ignored). Example placeholders only.
+- Generated client integrity hashes live in `src/postman/edge-impulse/integrity.json`; validate with `npm run generate-integrity` after regeneration.
+- Container runs as non-root; healthcheck ensures `dist/mcp-server.js` is alive.
+
+## Troubleshooting
+- CLI shows no commands: run `npm run build` (pretest does this), then `node launch-cli.mjs --help`.
+- Docker test hangs: check for readiness line; ensure `.env.test` is mounted if you need API keys.
+- Prompt tests return HTML: indicates auth/endpoint issue; runners fall back to placeholder JSON so prompts still generate.
+
+## CI
+GitHub Actions (`.github/workflows/ci.yml`) runs `npm ci`, `npm test`, and `npm run docker:test` on push/PR.
+
+## Development tips
+- Generated commands reside under `src/postman/edge-impulse/generated/cli-commands`; names map underscore → dash (e.g., `wait_job.ts` → `wait-job`).
+- Universal launcher prefers ts-node when sources present; otherwise uses `dist`.
+- Keep `outputs/` and `config/projects.json` out of git (ignored).
+Create a local `.env.test` file containing your Edge Impulse API key and project IDs. This repository already includes a `./.env.test` for convenience (it is ignored by git). Do NOT commit credentials to source control.
