@@ -12,7 +12,7 @@ describe('CLI smoke', () => {
   it('shows top-level help', () => {
     const out = run(['--help']);
     expect(out).toContain('train-model-keras');
-    expect(out).toContain('wait-job');
+    expect(out).toContain('get-job-status');
   });
 
   it('train-model-keras has help', () => {
@@ -20,10 +20,9 @@ describe('CLI smoke', () => {
     expect(out).toMatch(/train_model_keras|--projectId/);
   });
 
-  it('wait-job has help and options', () => {
-    const out = run(['wait-job', '--help']);
-    expect(out).toMatch(/Poll a job until completion/);
-    expect(out).toMatch(/--projectId/);
-    expect(out).toMatch(/--jobId/);
+  it('get-job-status has help and options', () => {
+    const out = run(['get-job-status', '--help']);
+    expect(out).toMatch(/get_job_status/);
+    expect(out).toMatch(/--params/);
   });
 });

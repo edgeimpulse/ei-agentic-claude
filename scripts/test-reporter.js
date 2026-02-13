@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 function runTests() {
   try {
     // Run tests with JSON reporter for programmatic output
-    const output = execSync('npm test -- --run --reporter=json', {
+    const output = execSync('npm test -- --reporter=json', {
       cwd: path.resolve(__dirname, '..'),
       encoding: 'utf8',
       stdio: 'pipe'
@@ -57,7 +57,7 @@ function runTests() {
 // Alternative: Parse verbose text output and include API coverage
 function parseVerboseOutput() {
   try {
-    const output = execSync('npm test -- --run --reporter=verbose', {
+    const output = execSync('npm test -- --reporter=verbose', {
       cwd: path.resolve(__dirname, '..'),
       encoding: 'utf8',
       stdio: 'pipe'

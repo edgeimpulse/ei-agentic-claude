@@ -8,9 +8,9 @@
   },
   "scripts": {
     "cli": "ts-node-esm src/cli.ts",
-    "build": "tsc && node scripts/fix-dist-imports.js",
+    "build": "node scripts/clean-dist.js && tsc && node scripts/fix-dist-imports.js",
     "build:tsc": "tsc",
-    "test": "vitest",
+    "test": "vitest --run --pool=forks",
     "test:unittests": "node scripts/test-reporter.js",
     "list-apis": "node scripts/list-apis.js",
     "smoke": "node ./scripts/smoke-test.js",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "ts-node": "^10.9.1",
     "typescript": "^5.0.0",
-    "vitest": "^1.0.0"
+    "vitest": "^1.0.0",
+    "yaml": "^2.5.0"
   }
 }

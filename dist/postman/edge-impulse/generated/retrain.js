@@ -1,32 +1,54 @@
 /**
- * Retrains the current impulse with the last known parameters. Updates are streamed over the websocket API.
  * Method: POST
- * URL: https://studio.edgeimpulse.com/api/:projectId/jobs/retrain
+ * URL: https://studio.edgeimpulse.com/v1/api/:projectId/jobs/retrain
  */
 export async function retrain(params, apiKey) {
-    const projectId = params?.projectId;
-    if (!projectId) {
-        throw new Error('Missing required parameter `projectId`. Pass via --params');
+    const pathParams = ["projectId"];
+    const queryParams = ["impulseId"];
+    let url = `https://studio.edgeimpulse.com/v1/api/:projectId/jobs/retrain`;
+    for (const key of pathParams) {
+        const value = params?.[key];
+        if (value === undefined || value === null) {
+            throw new Error(`Missing required path param: ${key}`);
+        }
+        url = url.replace(`:${key}`, encodeURIComponent(String(value)));
     }
-    const { projectId: _p, ...body } = params || {};
-    const url = `https://studio.edgeimpulse.com/v1/api/${encodeURIComponent(String(projectId))}/jobs/retrain`;
-    const res = await fetch(url, {
+    const urlObj = new URL(url);
+    for (const key of queryParams) {
+        const value = params?.[key];
+        if (value !== undefined && value !== null) {
+            urlObj.searchParams.set(key, String(value));
+        }
+    }
+    const bodyParams = { ...(params || {}) };
+    for (const key of pathParams)
+        delete bodyParams[key];
+    for (const key of queryParams)
+        delete bodyParams[key];
+    const hasBody = !['GET', 'HEAD'].includes('POST') && Object.keys(bodyParams).length > 0;
+    const res = await fetch(urlObj.toString(), {
         method: 'POST',
         headers: {
             'x-api-key': apiKey,
             'Content-Type': 'application/json',
             'Accept': 'application/json',
         },
-        body: JSON.stringify(body || {}),
+        ...(hasBody ? { body: JSON.stringify(bodyParams) } : {}),
     });
-    if (res.ok)
-        return res.json();
+    const contentType = res.headers.get('content-type') || '';
     const text = await res.text();
-    try {
-        const err = JSON.parse(text);
-        throw new Error(`Edge Impulse API error: ${err.message || JSON.stringify(err)}`);
+    let data = null;
+    if (contentType.includes('application/json')) {
+        try {
+            data = JSON.parse(text);
+        }
+        catch {
+            data = null;
+        }
     }
-    catch {
-        throw new Error(`Edge Impulse API error: ${res.status} ${res.statusText} - ${text}`);
+    if (!res.ok) {
+        const message = data?.message || data?.error || text || res.statusText;
+        throw new Error(`HTTP ${res.status}: ${message}`);
     }
+    return data !== null ? data : text;
 }

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { execFileSync } from 'child_process';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 function run(cmd, args = []){
   try{
@@ -11,7 +12,9 @@ function run(cmd, args = []){
   }
 }
 
-const launcher = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', 'launch-cli.mjs');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const launcher = path.resolve(__dirname, '..', 'launch-cli.mjs');
 
 console.log('Running smoke tests...');
 
@@ -20,7 +23,7 @@ const checks = [
     name: 'top-level help',
     cmd: process.execPath,
     args: [launcher, '--help'],
-    expect: /train-model-keras|retrain|wait-job/
+    expect: /train-model-keras|get-job-status|list-active-projects/
   },
   {
     name: 'train-model-keras help',
@@ -29,10 +32,10 @@ const checks = [
     expect: /Auto-generated command for train_model_keras|--projectId|--learnId/
   },
   {
-    name: 'wait-job help',
+    name: 'get-job-status help',
     cmd: process.execPath,
-    args: [launcher, 'wait-job', '--help'],
-    expect: /Poll a job until completion|--projectId|--jobId/
+    args: [launcher, 'get-job-status', '--help'],
+    expect: /Auto-generated command for get_job_status|--params/
   }
 ];
 

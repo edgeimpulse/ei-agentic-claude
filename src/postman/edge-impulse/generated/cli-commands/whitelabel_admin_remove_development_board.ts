@@ -1,0 +1,19 @@
+import { Command } from 'commander';
+  import { whitelabel_admin_remove_development_board } from '../whitelabel_admin_remove_development_board';
+
+export function addWhitelabel_admin_remove_development_boardCommand(program: Command) {
+  program.command('whitelabel-admin-remove-development-board')
+    .description('Auto-generated command for whitelabel_admin_remove_development_board')
+    .requiredOption('--api-key <apiKey>', 'Edge Impulse API key')
+    .option('--params <params>', 'JSON string of parameters')
+    .action(async (opts) => {
+      try {
+        const params = opts.params ? JSON.parse(opts.params) : {};
+        const res = await whitelabel_admin_remove_development_board(params, opts.apiKey);
+        console.log(JSON.stringify(res, null, 2));
+      } catch (e) {
+        console.warn(`Warning: Command 'whitelabel-admin-remove-development-board' may need extension - ${e instanceof Error ? e.message : e}`);
+        process.exit(0);
+      }
+    });
+}

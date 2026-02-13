@@ -1,18 +1,54 @@
 /**
- * Get slice of raw sample data, but with only the axes selected by the DSP block. E.g. if you have selected only accX and accY as inputs for the DSP block, but the raw sample also contains accZ, accZ is filtered out.
  * Method: GET
- * URL: https://studio.edgeimpulse.com/api/:projectId/dsp/:dspId/raw-data/:sampleId/slice?sliceStart=<integer>&sliceEnd=<integer>
+ * URL: https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/raw-data/:sampleId/slice
  */
 export async function get_raw_sample_slice(params, apiKey) {
-    // TODO: Implement parameter mapping
-    const res = await fetch(`https://studio.edgeimpulse.com/api/:projectId/dsp/:dspId/raw-data/:sampleId/slice?sliceStart=<integer>&sliceEnd=<integer>`, {
+    const pathParams = ["projectId", "dspId", "sampleId"];
+    const queryParams = ["sliceStart", "sliceEnd", "truncateStructuredLabels"];
+    let url = `https://studio.edgeimpulse.com/v1/api/:projectId/dsp/:dspId/raw-data/:sampleId/slice`;
+    for (const key of pathParams) {
+        const value = params?.[key];
+        if (value === undefined || value === null) {
+            throw new Error(`Missing required path param: ${key}`);
+        }
+        url = url.replace(`:${key}`, encodeURIComponent(String(value)));
+    }
+    const urlObj = new URL(url);
+    for (const key of queryParams) {
+        const value = params?.[key];
+        if (value !== undefined && value !== null) {
+            urlObj.searchParams.set(key, String(value));
+        }
+    }
+    const bodyParams = { ...(params || {}) };
+    for (const key of pathParams)
+        delete bodyParams[key];
+    for (const key of queryParams)
+        delete bodyParams[key];
+    const hasBody = !['GET', 'HEAD'].includes('GET') && Object.keys(bodyParams).length > 0;
+    const res = await fetch(urlObj.toString(), {
         method: 'GET',
         headers: {
             'x-api-key': apiKey,
             'Content-Type': 'application/json',
             'Accept': 'application/json',
         },
-        // body: JSON.stringify(params), // Uncomment for POST/PUT
+        ...(hasBody ? { body: JSON.stringify(bodyParams) } : {}),
     });
-    return res.json();
+    const contentType = res.headers.get('content-type') || '';
+    const text = await res.text();
+    let data = null;
+    if (contentType.includes('application/json')) {
+        try {
+            data = JSON.parse(text);
+        }
+        catch {
+            data = null;
+        }
+    }
+    if (!res.ok) {
+        const message = data?.message || data?.error || text || res.statusText;
+        throw new Error(`HTTP ${res.status}: ${message}`);
+    }
+    return data !== null ? data : text;
 }

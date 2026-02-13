@@ -1,18 +1,54 @@
 /**
- * Change the role of a member in an organization.
  * Method: POST
- * URL: https://studio.edgeimpulse.com/api/organizations/:organizationId/members/:memberId/role
+ * URL: https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/members/:memberId/role
  */
 export async function set_member_role(params, apiKey) {
-    // TODO: Implement parameter mapping
-    const res = await fetch(`https://studio.edgeimpulse.com/api/organizations/:organizationId/members/:memberId/role`, {
+    const pathParams = ["organizationId", "memberId"];
+    const queryParams = [];
+    let url = `https://studio.edgeimpulse.com/v1/api/organizations/:organizationId/members/:memberId/role`;
+    for (const key of pathParams) {
+        const value = params?.[key];
+        if (value === undefined || value === null) {
+            throw new Error(`Missing required path param: ${key}`);
+        }
+        url = url.replace(`:${key}`, encodeURIComponent(String(value)));
+    }
+    const urlObj = new URL(url);
+    for (const key of queryParams) {
+        const value = params?.[key];
+        if (value !== undefined && value !== null) {
+            urlObj.searchParams.set(key, String(value));
+        }
+    }
+    const bodyParams = { ...(params || {}) };
+    for (const key of pathParams)
+        delete bodyParams[key];
+    for (const key of queryParams)
+        delete bodyParams[key];
+    const hasBody = !['GET', 'HEAD'].includes('POST') && Object.keys(bodyParams).length > 0;
+    const res = await fetch(urlObj.toString(), {
         method: 'POST',
         headers: {
             'x-api-key': apiKey,
             'Content-Type': 'application/json',
             'Accept': 'application/json',
         },
-        // body: JSON.stringify(params), // Uncomment for POST/PUT
+        ...(hasBody ? { body: JSON.stringify(bodyParams) } : {}),
     });
-    return res.json();
+    const contentType = res.headers.get('content-type') || '';
+    const text = await res.text();
+    let data = null;
+    if (contentType.includes('application/json')) {
+        try {
+            data = JSON.parse(text);
+        }
+        catch {
+            data = null;
+        }
+    }
+    if (!res.ok) {
+        const message = data?.message || data?.error || text || res.statusText;
+        throw new Error(`HTTP ${res.status}: ${message}`);
+    }
+    return data !== null ? data : text;
 }
