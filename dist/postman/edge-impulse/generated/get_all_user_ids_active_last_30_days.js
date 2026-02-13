@@ -3,16 +3,8 @@
  * Method: GET
  * URL: https://studio.edgeimpulse.com/api/admin/users-ids/active
  */
+import { buildEiUrl, eiFetchJson } from "./_request.js";
 export async function get_all_user_ids_active_last_30_days(params, apiKey) {
-    // TODO: Implement parameter mapping
-    const res = await fetch(`https://studio.edgeimpulse.com/api/admin/users-ids/active`, {
-        method: 'GET',
-        headers: {
-            'x-api-key': apiKey,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        },
-        // body: JSON.stringify(params), // Uncomment for POST/PUT
-    });
-    return res.json();
+    const url = buildEiUrl("https://studio.edgeimpulse.com/api/admin/users-ids/active", params ?? {});
+    return eiFetchJson(url, apiKey, { method: "GET" });
 }

@@ -3,6 +3,8 @@
  * Method: POST
  * URL: https://studio.edgeimpulse.com/api/:projectId/jobs/retrain
  */
+import { buildEiUrl, eiFetchJson } from "./_request.js";
+
 export async function retrain(params: any, apiKey: string) {
   const projectId = params?.projectId;
   if (!projectId) {

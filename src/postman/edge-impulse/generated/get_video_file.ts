@@ -3,16 +3,9 @@
  * Method: GET
  * URL: https://studio.edgeimpulse.com/api/:projectId/raw-data/:sampleId/video?afterInputBlock=<boolean>
  */
+import { buildEiUrl, eiFetchJson } from "./_request.js";
+
 export async function get_video_file(params: any, apiKey: string) {
-  // TODO: Implement parameter mapping
-  const res = await fetch(`https://studio.edgeimpulse.com/api/:projectId/raw-data/:sampleId/video?afterInputBlock=<boolean>`, {
-    method: 'GET',
-    headers: {
-      'x-api-key': apiKey,
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-    },
-    // body: JSON.stringify(params), // Uncomment for POST/PUT
-  });
-  return res.json();
+  const url = buildEiUrl("https://studio.edgeimpulse.com/api/:projectId/raw-data/:sampleId/video?afterInputBlock=<boolean>", params ?? {});
+  return eiFetchJson(url, apiKey, { method: "GET" });
 }

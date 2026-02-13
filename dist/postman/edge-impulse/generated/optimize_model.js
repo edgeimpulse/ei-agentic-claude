@@ -1,8 +1,3 @@
-/**
- * Evaluates optimal model architecture
- * Method: POST
- * URL: https://studio.edgeimpulse.com/api/:projectId/jobs/optimize
- */
 export async function optimize_model(params, apiKey) {
     const projectId = params?.projectId;
     if (!projectId)
