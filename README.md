@@ -8,6 +8,24 @@
 
 A Model Context Protocol (MCP) server and CLI that lets Claude Code call the Edge Impulse APIs. Installable from npm and pluggable as a Claude skill.
 
+> ⚠️ **Proof of Concept / Experimental — Use at Your Own Risk**
+>
+> This repository is a **proof-of-concept (PoC)** integration using **Model Context Protocol (MCP)** and agent-driven automation. It is **not a production-ready tool** and may be **incomplete, unstable, or incorrect** in places.
+>
+> **What this means:**
+> - **Not fully tested:** flows, commands, and generated changes may fail or behave unexpectedly.
+> - **No guarantees:** outputs produced by agents/LLMs can be wrong, unsafe, or destructive.
+> - **Review before applying:** treat all suggested config/code changes as *untrusted* until you manually verify them.
+>
+> **Safety guidance:**
+> - Use only on **non-production** projects/environments.
+> - Prefer **read-only** operations first (list/inspect) before any write/update actions.
+> - Keep API keys private (use `.env`, never commit secrets).
+> - If you enable “apply” style workflows, run them in **dry-run** mode and require explicit human approval.
+>
+> By using this software, you accept that you are responsible for validating actions and outcomes.
+
+
 - npm package: https://www.npmjs.com/package/ei-agentic-claude
 - Install (CLI + MCP): `npm install -g ei-agentic-claude`
 - CLI entrypoint: `edge-impulse-cli --help`
