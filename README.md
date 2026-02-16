@@ -57,10 +57,10 @@ Safety note: the `skills/` folder is documentation-first and contains `SKILL.md`
 <img width="1111" height="571" alt="Screenshot 2026-01-23 at 16 54 01" src="https://github.com/user-attachments/assets/3fd11801-2948-48ad-b71f-f5117eb9a7f7" />
 
 ### Calling API on Block
-<img width="1600" height="109" alt="blur3" src="https://github.com/user-attachments/assets/8256f310-3861-4b94-8d7a-47d9fe3426dc" />
+<img width="1600" height="101" alt="data-src-image-e30c881f-078c-4452-af17-4ba2401e8e90-1 (1)" src="https://github.com/user-attachments/assets/96c74d29-a4cb-4d38-a0b0-5df11d0cee31" />
 
 ### Job Status
-<img width="1600" height="101" alt="blur2" src="https://github.com/user-attachments/assets/48be3ed8-c0ca-4450-aa09-b4626cb03bb8" />
+<img width="1600" height="101" alt="data-src-image-e30c881f-078c-4452-af17-4ba2401e8e90-1" src="https://github.com/user-attachments/assets/09c6a2d1-4ad6-4096-92f6-2de7ea06bf96" />
 
 
 ### Testing Framework
