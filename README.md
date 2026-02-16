@@ -273,6 +273,24 @@ Edit `.env` with your actual API keys:
 ```
 ANTHROPIC_API_KEY=your_anthropic_api_key_here
 EI_API_KEY=your_edge_impulse_api_key_here
+
+EI_ORG_API_KEY=ei_XXXX
+EI_ORG_ID=XXXX
+EI_PROJECT_ID=XXXX
+
+#Set this flag to 1 if you want the agent to make any POSTs i.e. changes
+EI_RUN_TRAINING=0
+# Project IDs - do not commit this file to source control
+PROJECT_XXXX_ID=ei_XXXXXX
+PROJECT_XXXX_URL=https://studio.edgeimpulse.com/studio/XXXX
+
+
+# Other project settings this can track include
+DSP_BLOCK_IDS=X
+LEARN_BLOCK_IDS=X
+EI_IMPULSE_ID=X
+
+
 ```
 Run commands with:
 ```sh
